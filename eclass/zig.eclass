@@ -29,7 +29,7 @@ zig_src_compile() {
 		--verbose --verbose-cc
 	)
 	zigargs+=(
-		${ezigargs}
+		${ezigargs[@]}
 	)
 
 	echo ${zigargs[@]}
