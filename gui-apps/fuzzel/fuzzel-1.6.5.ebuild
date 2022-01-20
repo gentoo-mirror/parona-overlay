@@ -21,7 +21,7 @@ fi
 LICENSE="MIT"
 SLOT="0"
 
-IUSE="cairo +svg +png nanosvg"
+IUSE="+cairo +svg +png nanosvg"
 
 REQUIRED_USE="
 	cairo? ( !nanosvg )
