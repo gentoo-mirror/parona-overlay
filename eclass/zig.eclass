@@ -7,8 +7,10 @@
 # @AUTHOR:
 # Alfred Wingate <parona@protonmail.com>
 # @SUPPORTED_EAPIS: 8
-# @BLURB:
+# @BLURB: common ebuild function for zig-based packages
 # @DESCRIPTION:
+# This eclass contains the default phase functions for packages which
+# use zig compilers build system
 
 if [[ ! ${_ZIG_ECLASS} ]]; then
 
