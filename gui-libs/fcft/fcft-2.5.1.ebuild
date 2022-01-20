@@ -3,7 +3,8 @@
 
 EAPI=8
 
-inherit meson
+PYTHON_COMPAT=( python3_{8..10} )
+inherit python-any-r1 meson
 
 DESCRIPTION="A simple library for font loading and glyph rasterization"
 HOMEPAGE="https://codeberg.org/dnkl/fcft"
@@ -39,7 +40,7 @@ DEPEND="
 "
 RDEPEND="${COMMON_DEPEND}"
 BDEPEND="
-	>=dev-lang/python-3
+	${PYTHON_DEPS}
 	man? ( app-text/scdoc )
 "
 
