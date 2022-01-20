@@ -1,0 +1,9 @@
+image:  registry.gitlab.com/src_prepare/gentoo-repoman-container:latest
+
+variables:
+  GIT_SUBMODULE_STRATEGY: recursive
+
+repoman:
+  script:
+    - bash scripts/repomanci
+
