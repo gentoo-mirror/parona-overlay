@@ -21,19 +21,18 @@ fi
 LICENSE="MIT"
 SLOT="0"
 
-IUSE="shared wayland X"
+IUSE="mpd shared wayland X"
 
 # e-poll-shim, libinotify, xcb-errors
 DEPEND="
-	dev-libs/json-c
 	dev-libs/libyaml
 	>=dev-libs/tllist-1.0.1
-	>=gui-libs/fcft-2.4.0
-	<gui-libs/fcft-3.0.0
-	media-libs/alsa-lib
-	media-libs/libmpd
-	virtual/libudev
+	>=media-libs/fcft-3.0.0
+	<media-libs/fcft-4.0.0
 	x11-libs/pixman
+	mpd? (
+		media-libs/libmpd
+	)
 	wayland? (
 		dev-libs/wayland
 	)
@@ -48,11 +47,13 @@ RDEPEND="${DEPEND}"
 
 src_prepare() {
 	sed -i "/install_data/,/install_dir/ s/'${PN}'/'${PF}'/" meson.build || die
+	use mpd || sed -i '/- mpd:/,+2 d' test/full-conf-good.yml || die
 	default
 }
 
 src_configure() {
 	local emesonargs=(
+		$(meson_feature mpd plugin-mpd)
 		$(meson_use shared core-plugins-as-shared-libraries)
 		$(meson_feature wayland backend-wayland)
 		$(meson_feature X backend-x11)

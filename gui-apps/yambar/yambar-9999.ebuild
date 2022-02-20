@@ -27,8 +27,8 @@ IUSE="mpd shared wayland X"
 DEPEND="
 	dev-libs/libyaml
 	>=dev-libs/tllist-1.0.1
-	>=gui-libs/fcft-2.4.0
-	<gui-libs/fcft-3.0.0
+	>=media-libs/fcft-3.0.0
+	<media-libs/fcft-4.0.0
 	x11-libs/pixman
 	mpd? (
 		media-libs/libmpd
