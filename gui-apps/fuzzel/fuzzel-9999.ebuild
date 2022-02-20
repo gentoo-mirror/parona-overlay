@@ -21,7 +21,7 @@ fi
 LICENSE="MIT"
 SLOT="0"
 
-IUSE="+cairo +svg +png nanosvg"
+IUSE="cairo +svg +png +nanosvg"
 
 REQUIRED_USE="
 	cairo? ( !nanosvg )
@@ -33,8 +33,8 @@ DEPEND="
 	>=dev-libs/tllist-1.0.1
 	dev-libs/wayland
 	dev-libs/wayland-protocols
-	>=gui-libs/fcft-2.4.0
-	<gui-libs/fcft-3.0.0
+	>=media-libs/fcft-3.0.0
+	<media-libs/fcft-4.0.0
 	media-libs/fontconfig
 	x11-libs/libxkbcommon
 	x11-libs/pixman
