@@ -20,7 +20,10 @@ case ${EAPI} in
 esac
 
 _ZIG_ECLASS=1
-fi
+
+EXPORT_FUNCTIONS src_compile src_install
+
+BDEPEND="dev-lang/zig"
 
 zig_src_compile() {
 	debug-print-function ${FUNCNAME} "$@"
@@ -61,3 +64,5 @@ zig_src_install() {
 
 	popd > /dev/null
 }
+
+fi
