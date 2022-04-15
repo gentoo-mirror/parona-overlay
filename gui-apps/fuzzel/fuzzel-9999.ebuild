@@ -3,7 +3,7 @@
 
 EAPI=8
 
-inherit meson
+inherit flag-o-matic meson
 
 DESCRIPTION="Application launcher for wlroots based Wayland compositors."
 HOMEPAGE="https://codeberg.org/dnkl/fuzzel"
@@ -57,6 +57,7 @@ src_prepare() {
 }
 
 src_configure() {
+	append-flags "-Wno-comment"
 	local emesonargs=(
 		$(meson_feature cairo enable-cairo)
 		-Dpng-backend=$(usex png libpng none)
