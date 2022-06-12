@@ -42,7 +42,7 @@ src_install() {
 	exeinto /opt/waydroid
 	doexe waydroid.py
 
-	dosym ${EPREFIX}/opt/waydroid/waydroid.py ${EPREFIX}/usr/bin/waydroid
+	dosym ../../opt/waydroid/waydroid.py "${EPREFIX}"/usr/bin/waydroid
 
 	insinto /etc/gbinder.d
 	doins gbinder/anbox.conf
