@@ -21,48 +21,38 @@ esac
 
 _ZIG_ECLASS=1
 
-EXPORT_FUNCTIONS src_compile src_install
+EXPORT_FUNCTIONS src_compile src_install src_test
 
 BDEPEND="dev-lang/zig"
+
+# @FUNCTION: ezig
+# @USAGE: [arg] ...
+# @DESCRIPTION:
+# Wrapper for zig
+ezig() {
+    debug-print-function ${FUNCNAME} "$@"
+
+    ebegin "Invoking \"zig ${*}\""
+    zig "${@}"
+    eend $? "\"zig ${*}\" failed" || die
+}
 
 zig_src_compile() {
 	debug-print-function ${FUNCNAME} "$@"
 
-	local zigargs=(
-		zig build
-		-Drelease-safe
-		--verbose --verbose-cc
-	)
-	zigargs+=(
-		${ezigargs[@]}
-	)
-
-	echo ${zigargs[@]}
-	${zigargs[@]} || die
+	ezig build --verbose -Drelease-safe ${ezigargs[@]}|| die
 }
 
 zig_src_install() {
 	debug-print-function ${FUNCNAME} "$@"
 
-	pushd zig-out > /dev/null
+	ezig build --verbose --prefix "${D}"/usr install
+}
 
-	if [[ -d bin ]]; then
-		dobin bin/*
-	fi
+zig_src_test() {
+	debug-print-function ${FUNCNAME} "$@"
 
-	if [[ -d lib ]]; then
-		pushd lib > /dev/null
-		[[ -f *.so ]] && dolib.so $(find . -name "*.so")
-		[[ -f *.a ]] && dolib.a $(find . -name "*.a")
-		popd > /dev/null
-	fi
-
-	if [[ -d share ]]; then
-		insinto /usr
-		doins -r share
-	fi
-
-	popd > /dev/null
+	ezig build --verbose test
 }
 
 fi
