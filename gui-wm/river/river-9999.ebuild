@@ -72,9 +72,10 @@ src_compile() {
 
 src_install() {
 	zig_src_install
+
 	insinto /etc/xdg/river
 	doins example/init
-	if use man; then
-		doman doc/river{,ctl,tile}.1
-	fi
+
+	insinto /usr/share/wayland-sessions
+	doins contrib/river.desktop
 }
