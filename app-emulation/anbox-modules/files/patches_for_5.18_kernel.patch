@@ -1,0 +1,22 @@
+From f06ba5869503f8bc07cede1ed77241438d1fea20 Mon Sep 17 00:00:00 2001
+From: Etaash Mathamsetty
+ <45927311+Etaash-mathamsetty@users.noreply.github.com>
+Date: Tue, 24 May 2022 21:52:05 -0400
+Subject: [PATCH] patches for 5.18 kernel
+
+---
+ binder/deps.c | 1 +
+ 1 file changed, 1 insertion(+)
+
+diff --git a/binder/deps.c b/binder/deps.c
+index a97d546..726b1b1 100644
+--- a/binder/deps.c
++++ b/binder/deps.c
+@@ -9,6 +9,7 @@
+ #include <linux/kallsyms.h>
+ #include <linux/kprobes.h>
+ #include <linux/version.h>
++#include <linux/task_work.h>
+ 
+ #include "deps.h"
+ 
