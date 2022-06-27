@@ -38,7 +38,9 @@ src_install() {
 	doins -r tools
 
 	insinto /opt/waydroid/data
-	doins -r data/configs data/scripts
+	exeinto /opt/waydroid/data/scripts
+	doins -r data/configs
+	doexe data/scripts/waydroid-net.sh
 
 	exeinto /opt/waydroid
 	doexe waydroid.py
