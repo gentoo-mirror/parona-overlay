@@ -20,7 +20,9 @@ RDEPEND="${DEPEND}"
 src_compile() {
 	emake KEEP_SYMBOLS=1
 }
-
+src_test() {
+	emake -j1 test
+}
 src_install() {
 	emake DESTDIR="${D}" LIBDIR="/usr/$(get_libdir)" install install-dev
 }
