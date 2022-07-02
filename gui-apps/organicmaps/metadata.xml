@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "https://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+	<use>
+		<flag name="clang">Use Clang compiler instead of GCC</flag>
+		<flag name="jumbo-build">Combine source files to speed up build process</flag>
+		<flag name="native-cflags">Use -Ofast as is set in CMakeLists.txt</flag>
+	</use>
+</pkgmetadata>
