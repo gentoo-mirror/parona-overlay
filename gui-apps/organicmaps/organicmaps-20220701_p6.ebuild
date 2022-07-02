@@ -46,8 +46,7 @@ fi
 LICENSE="Apache-2.0 BSD MIT"
 SLOT="0"
 
-RESTRICT="!test? ( test )"
-IUSE="+clang +native-cflags +jumbo-build python test"
+IUSE="+clang +native-cflags +jumbo-build python"
 
 DEPEND="
 	dev-db/sqlite:=
@@ -75,7 +74,6 @@ BDEPEND="
 "
 
 PATCHES=(
-	"${FILESDIR}/CMakeLists.txt-Turn-SKIP_TESTS-into-a-proper-option.patch"
 	"${FILESDIR}/CMakeLists.txt-Allow-feeding-OM_VERSION-info.patch"
 	"${FILESDIR}/Unvendor-minizip.patch"
 )
@@ -187,7 +185,8 @@ src_configure() {
 	local mycmakeargs=(
 		-DNJOBS=$(makeopts_jobs)
 		-DPYBINDINGS=$(usex python)
-		-DSKIP_TESTS=$(usex test OFF ON)
+# Skipping test doesnt work and causes issue
+#		-DSKIP_TESTS=$(usex test OFF ON)
 		-DUNITY_DISABLE=$(usex jumbo-build OFF ON)
 		-DBUILD_DESIGNER=OFF
 		-DBUILD_MAPSHOT=OFF
