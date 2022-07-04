@@ -3,7 +3,20 @@ image:  registry.gitlab.com/src_prepare/gentoo-repoman-container:latest
 variables:
   GIT_SUBMODULE_STRATEGY: recursive
 
-repoman:
+pkgcheck_ci:
   script:
-    - bash scripts/repomanci
+    - pkgcheck ci
+  allow_failure: true
+
+pkgcheck_commit:
+  rules:
+    - if: $CI_PIPELINE_SOURCE != 'merge_request_event'
+  script:
+    - pkgcheck scan --commits $CI_COMMIT_SHA
+
+pkgcheck_merge:
+  rules:
+    - if: $CI_PIPELINE_SOURCE == 'merge_request_event'
+  script:
+    - pkgcheck scan --commits $CI_MERGE_REQUEST_DIFF_BASE_SHA..$CI_COMMIT_SHA
 
