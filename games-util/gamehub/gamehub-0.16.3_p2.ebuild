@@ -3,7 +3,6 @@
 
 EAPI=8
 
-inherit vala xdg gnome2-utils meson
 inherit gnome2-utils meson optfeature vala xdg
 
 DESCRIPTION="All your games in one place"
