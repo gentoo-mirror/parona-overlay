@@ -1,22 +1,22 @@
 image:  registry.gitlab.com/src_prepare/gentoo-repoman-container:latest
 
 variables:
-  GIT_SUBMODULE_STRATEGY: recursive
+  common_pkgcheck_args: "--color 1"
 
 pkgcheck_ci:
-  script:
-    - pkgcheck ci --color 1
-  allow_failure: true
-
-pkgcheck_commit:
   rules:
-    - if: $CI_PIPELINE_SOURCE != 'merge_request_event'
+    - allow_failure: true
   script:
-    - pkgcheck scan --color 1 --commits $CI_COMMIT_SHA
+    - pkgcheck ci $common_pkgcheck_args
+
+pkgcheck_push:
+  rules:
+    - if: $CI_PIPELINE_SOURCE == 'push'
+  script:
+    - pkgcheck scan $common_pkgcheck_args --commits $CI_COMMIT_SHA
 
 pkgcheck_merge:
   rules:
     - if: $CI_PIPELINE_SOURCE == 'merge_request_event'
   script:
-    - pkgcheck scan --color 1 --commits $CI_MERGE_REQUEST_DIFF_BASE_SHA..$CI_COMMIT_SHA
-
+    - pkgcheck scan $common_pkgcheck_args --commits $CI_MERGE_REQUEST_DIFF_BASE_SHA..$CI_COMMIT_SHA
