@@ -5,18 +5,18 @@ variables:
 
 pkgcheck_ci:
   script:
-    - pkgcheck ci
+    - pkgcheck ci --color 1
   allow_failure: true
 
 pkgcheck_commit:
   rules:
     - if: $CI_PIPELINE_SOURCE != 'merge_request_event'
   script:
-    - pkgcheck scan --commits $CI_COMMIT_SHA
+    - pkgcheck scan --color 1 --commits $CI_COMMIT_SHA
 
 pkgcheck_merge:
   rules:
     - if: $CI_PIPELINE_SOURCE == 'merge_request_event'
   script:
-    - pkgcheck scan --commits $CI_MERGE_REQUEST_DIFF_BASE_SHA..$CI_COMMIT_SHA
+    - pkgcheck scan --color 1 --commits $CI_MERGE_REQUEST_DIFF_BASE_SHA..$CI_COMMIT_SHA
 
