@@ -22,7 +22,7 @@ LICENSE="MIT"
 SLOT="0"
 
 # Nanosvg is enabled by default by upstream, but cairo is enabled by default by desktop profile.
-IUSE="cairo +svg +png nanosvg"
+IUSE="+cairo +svg +png nanosvg"
 
 REQUIRED_USE="
 	cairo? ( !nanosvg )
