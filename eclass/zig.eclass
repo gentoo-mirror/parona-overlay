@@ -46,13 +46,31 @@ zig_src_compile() {
 zig_src_install() {
 	debug-print-function ${FUNCNAME} "$@"
 
-	ezig build --verbose --prefix "${D}"/usr install
+	pushd zig-out > /dev/null
+
+	if [[ -d bin ]]; then
+		dobin bin/*
+	fi
+
+	if [[ -d lib ]]; then
+		pushd lib > /dev/null
+		[[ -f *.so ]] && dolib.so $(find . -name "*.so")
+		[[ -f *.a ]] && dolib.a $(find . -name "*.a")
+		popd > /dev/null
+	fi
+
+	if [[ -d share ]]; then
+		insinto /usr
+		doins -r share
+	fi
+
+	popd > /dev/null
 }
 
 zig_src_test() {
 	debug-print-function ${FUNCNAME} "$@"
 
-	ezig build --verbose test
+	ezig test --verbose
 }
 
 fi
