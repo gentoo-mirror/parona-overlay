@@ -35,8 +35,8 @@ SLOT="0"
 IUSE="+man X"
 
 DEPEND="
-	dev-libs/libevdev
-	dev-libs/libinput
+	dev-libs/libevdev:=
+	dev-libs/libinput:=
 	dev-libs/wayland
 	x11-libs/libxkbcommon
 	x11-libs/pixman
