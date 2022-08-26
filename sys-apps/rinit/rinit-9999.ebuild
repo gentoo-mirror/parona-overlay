@@ -33,6 +33,5 @@ src_unpack() {
 }
 
 src_install() {
-	rinstall install --prefix="${ED}" --system -y || die
-	rm "${ED}/var/rinstall/rinit.pkg" || die
+	rinstall install --system --destdir="${ED}" --prefix="/" --exec-prefix="@prefix@/usr" --skip-pkginfo -y || die
 }
