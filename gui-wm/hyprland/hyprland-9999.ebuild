@@ -36,16 +36,6 @@ DEPEND="
 RDEPEND="${DEPEND}"
 BDEPEND=""
 
-src_prepare() {
-	eapply_user
-	#sed -i "s/install: true/install: not meson.is_subproject()/" subprojects/wlroots/meson.build || die
-	#sed -i "s/pkgconfig.generate/not meson.is_subproject() ? pkgconfig.generate/" subprojects/wlroots/include/meson.build || die
-	#sed -i "s/install_subdir/not meson.is_subproject() ? install_subdir/" subprojects/wlroots/include/meson.build || die
-	#sed -i "s/subproject('wlroots',.*$/dependency('wlroots')/" meson.build || die
-	#sed -i "s/wlroots.get_variable('features').get('xwayland')/wlroots.get_variable(pkgconfig: 'have_xwayland') == 'true'/" meson.build || die
-	#sed -i "s/.get_variable('wlroots')//" src/meson.build || die
-}
-
 src_configure() {
 	local emesonargs=(
 		$(meson_feature X xwayland)
