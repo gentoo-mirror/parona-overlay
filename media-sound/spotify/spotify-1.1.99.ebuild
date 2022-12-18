@@ -11,15 +11,22 @@ HOMEPAGE="https://www.spotify.com/download/linux/"
 # Pipe the command below in jq and you can see the available versions and their download urls
 # curl -H "Snap-Device-Series: 16" https://api.snapcraft.io/v2/snaps/info/spotify
 
+# Hopefully helpfup jq expression to parse version, revision and the arch its for
+# jq '.["channel-map"][] | {"version": .version, "arch": .channel.architecture, "revision": .revision}'
+
 SNAP_ID="pOBIoZ2LrCB3rDohMxoYGnbN14EHOgD7"
-REVISION="62"
-SRC_URI="https://api.snapcraft.io/api/v1/snaps/download/${SNAP_ID}_${REVISION}.snap -> ${P}.snap"
+AMD64_REVISION="62"
+SRC_URI="
+	amd64? ( https://api.snapcraft.io/api/v1/snaps/download/${SNAP_ID}_${AMD64_REVISION}.snap -> ${P}.snap )
+"
 
 LICENSE="Spotify"
 SLOT="0"
 KEYWORDS="-* ~amd64"
 IUSE="libnotify local-playback pax-kernel pulseaudio"
+
 RESTRICT="mirror strip"
+REQUIRED_USE="elibc_glibc"
 
 BDEPEND="
 	>=dev-util/patchelf-0.10
@@ -50,7 +57,6 @@ RDEPEND="
 	!gnome-extra/gnome-integration-spotify
 "
 	#gnome-integration-spotify causes spotify to fail to launch
-	#sys-libs/glibc
 
 QA_PREBUILT="
 	opt/spotify/spotify-client/spotify
