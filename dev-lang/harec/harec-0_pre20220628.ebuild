@@ -26,7 +26,12 @@ BDEPEND="
 DOCS=( "README.md" "docs" )
 
 src_configure() {
-	./configure --prefix="${EPREFIX}"/usr --mandir="${EPREFIX}"/usr/share/man --sysconfdir="${EPREFIX}"/etc --libdir="${EPREFIX}"/usr/lib$(get_libdir) || die
+	./configure \
+		--prefix="${EPREFIX}"/usr \
+		--mandir="${EPREFIX}"/usr/share/man \
+		--sysconfdir="${EPREFIX}"/etc \
+		--libdir="${EPREFIX}"/usr/lib$(get_libdir) \
+		|| die
 }
 
 src_test() {
