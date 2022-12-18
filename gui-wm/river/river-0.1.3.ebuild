@@ -20,10 +20,14 @@ else
 
 	SRC_URI="
 		https://github.com/riverwm/river/archive/refs/tags/v${PV}.tar.gz -> ${P}.tar.gz
-		https://github.com/ifreund/zig-pixman/archive/${ZIG_PIXMAN_COMMIT}.tar.gz -> zig-pixman-${ZIG_PIXMAN_COMMIT}.tar.gz
-		https://github.com/ifreund/zig-wayland/archive/${ZIG_WAYLAND_COMMIT}.tar.gz -> zig-wayland-${ZIG_WAYLAND_COMMIT}.tar.gz
-		https://github.com/swaywm/zig-wlroots/archive/${ZIG_WLROOTS_COMMIT}.tar.gz -> zig-wlroots-${ZIG_WLROOTS_COMMIT}.tar.gz
-		https://github.com/ifreund/zig-xkbcommon/archive/${ZIG_XKBCOMMON_COMMIT}.tar.gz -> zig-xkbcommon-${ZIG_XKBCOMMON_COMMIT}.tar.gz
+		https://github.com/ifreund/zig-pixman/archive/${ZIG_PIXMAN_COMMIT}.tar.gz
+			-> zig-pixman-${ZIG_PIXMAN_COMMIT}.tar.gz
+		https://github.com/ifreund/zig-wayland/archive/${ZIG_WAYLAND_COMMIT}.tar.gz
+			-> zig-wayland-${ZIG_WAYLAND_COMMIT}.tar.gz
+		https://github.com/swaywm/zig-wlroots/archive/${ZIG_WLROOTS_COMMIT}.tar.gz
+			-> zig-wlroots-${ZIG_WLROOTS_COMMIT}.tar.gz
+		https://github.com/ifreund/zig-xkbcommon/archive/${ZIG_XKBCOMMON_COMMIT}.tar.gz
+			-> zig-xkbcommon-${ZIG_XKBCOMMON_COMMIT}.tar.gz
 	"
 
 	KEYWORDS="~amd64"
