@@ -99,14 +99,20 @@ SKIP_TESTS=(
 	"opening_hours_tests"
 )
 
-# Skip individual tests, doesnt affect tests in routing_consistency_tests, opening_hours_integration_tests, opening_hours_supported_features_test or opening_hours_tests
-# Is converted to regex (SUPPRESS_TEST[1]|SUPPRESS_TEST[2]) type expression. Individual indexes can include regex in them
+# Skip individual tests, doesnt affect tests in routing_consistency_tests, opening_hours_integration_tests,
+# opening_hours_supported_features_test or opening_hours_tests
+# Is converted to regex (SUPPRESS_TEST[1]|SUPPRESS_TEST[2]) type expression.
+# Individual indexes can include regex in them
 SUPPRESS_TESTS=(
-	#FIX: routing_tests/opening_hours_serdes_tests.cpp:749 TEST(oh.IsOpen(GetUnixtimeByDate(2023, Month::Apr, Weekday::Saturday, 13 , 30 )))
+	#FIX: routing_tests/opening_hours_serdes_tests.cpp:749
+	#TEST(oh.IsOpen(GetUnixtimeByDate(2023, Month::Apr, Weekday::Saturday, 13 , 30 )))
 	"opening_hours_serdes_tests.cpp::OHSerDesTestFixture_OpeningHoursSerDes_Weekday_Usage_2"
-	#FIX: routing_tests/opening_hours_serdes_tests.cpp:822 TEST(oh.IsClosed(GetUnixtimeByDate(2020, Month::May, 6, 01 , 00 )))
+	#FIX: routing_tests/opening_hours_serdes_tests.cpp:822
+	#TEST(oh.IsClosed(GetUnixtimeByDate(2020, Month::May, 6, 01 , 00 )))
 	"opening_hours_serdes_tests.cpp::OHSerDesTestFixture_OpeningHoursSerDes_MonthHours_Usage"
-	#FIX: routing_tests/index_graph_tools.cpp:607 TEST(base::AlmostEqualAbs(pathWeight, expectedWeight, kEpsilon)) 10804 12802 [5: (0, 1) (1, 2) (2, 3) (3, 4) (4, 5) ]
+	#FIX: routing_tests/index_graph_tools.cpp:607
+	#TEST(base::AlmostEqualAbs(pathWeight, expectedWeight, kEpsilon)) 10804 12802 ...
+	#[5: (0, 1) (1, 2) (2, 3) (3, 4) (4, 5) ]
 	"road_access_test.cpp::RoadAccess_WayBlockedWhenStartButOpenWhenReac"
 	#FIX: SEGFAULT
 	"batcher_tests.cpp::BatchList"
