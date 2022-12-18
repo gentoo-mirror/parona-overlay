@@ -62,7 +62,7 @@ QA_PREBUILT="
 	opt/spotify/spotify-client/swiftshader/libGLESv2.so
 "
 
-EXTRACT=( meta/gui/spotify.desktop /usr/share/doc/spotify-client /usr/share/spotify )
+EXTRACT=( /usr/share/doc/spotify-client /usr/share/spotify )
 
 src_unpack() {
 	unsquashfs -no-progress -p $(makeopts_jobs) -d "${S}" "${DISTDIR}/${P}".snap ${EXTRACT[@]} || die
