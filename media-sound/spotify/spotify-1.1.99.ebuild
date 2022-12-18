@@ -16,7 +16,7 @@ SRC_URI="https://api.snapcraft.io/api/v1/snaps/download/${SNAP_ID}.snap -> ${P}.
 
 LICENSE="Spotify"
 SLOT="0"
-KEYWORDS="amd64"
+KEYWORDS="-* ~amd64"
 IUSE="libnotify local-playback pax-kernel pulseaudio"
 RESTRICT="mirror strip"
 
