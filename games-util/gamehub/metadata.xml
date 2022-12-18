@@ -8,4 +8,7 @@
 	<use>
 		<flag name="overlayfs">Build support for OverlayFS</flag>
 	</use>
+	<upstream>
+		<remote-id type="github">tkashkin/GameHub</remote-id>
+	</upstream>
 </pkgmetadata>
