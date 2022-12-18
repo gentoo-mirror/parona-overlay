@@ -8,11 +8,12 @@ inherit desktop optfeature multiprocessing pax-utils unpacker xdg
 DESCRIPTION="Spotify is a social music platform"
 HOMEPAGE="https://www.spotify.com/download/linux/"
 
-# Pipe the command below in jq and you can see the download urls for different snap versions
+# Pipe the command below in jq and you can see the available versions and their download urls
 # curl -H "Snap-Device-Series: 16" https://api.snapcraft.io/v2/snaps/info/spotify
 
-SNAP_ID="pOBIoZ2LrCB3rDohMxoYGnbN14EHOgD7_62"
-SRC_URI="https://api.snapcraft.io/api/v1/snaps/download/${SNAP_ID}.snap -> ${P}.snap"
+SNAP_ID="pOBIoZ2LrCB3rDohMxoYGnbN14EHOgD7"
+REVISION="62"
+SRC_URI="https://api.snapcraft.io/api/v1/snaps/download/${SNAP_ID}_${REVISION}.snap -> ${P}.snap"
 
 LICENSE="Spotify"
 SLOT="0"
