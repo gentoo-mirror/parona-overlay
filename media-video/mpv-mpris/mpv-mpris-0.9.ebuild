@@ -26,7 +26,7 @@ BDEPEND="
 		media-sound/playerctl
 		net-misc/socat
 		sys-apps/dbus
-		virtual/awk
+		app-alternatives/awk
 		x11-themes/sound-theme-freedesktop
 	)
 "
