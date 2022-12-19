@@ -81,7 +81,7 @@ src_prepare() {
 	patchelf --replace-needed libcurl-gnutls.so.4 libcurl.so.4 usr/share/spotify/spotify \
 		|| die "failed to patch libcurl library dependency"
 	# Fix icon entry in desktop file
-	sed -i 's/Icon=.*/Icon=spotify-linux/' usr/share/spotify/spotify.desktop || die
+	sed -i 's/Icon=.*/Icon=spotify-client/' usr/share/spotify/spotify.desktop || die
 }
 
 src_install() {
