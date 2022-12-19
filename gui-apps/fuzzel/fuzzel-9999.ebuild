@@ -30,7 +30,6 @@ REQUIRED_USE="
 "
 
 CDEPEND="
-	>=dev-libs/tllist-1.0.1
 	dev-libs/wayland
 	>=media-libs/fcft-3.0.0
 	<media-libs/fcft-4.0.0
@@ -38,12 +37,13 @@ CDEPEND="
 	x11-libs/libxkbcommon
 	x11-libs/pixman
 	cairo? ( x11-libs/cairo )
-	png? ( media-libs/libpng )
+	png? ( media-libs/libpng:= )
 	svg? (
 		!nanosvg? ( gnome-base/librsvg:2 )
 	)
 "
 DEPEND="${CDEPEND}
+	>=dev-libs/tllist-1.0.1
 	dev-libs/wayland-protocols
 "
 RDEPEND="${CDEPEND}"
