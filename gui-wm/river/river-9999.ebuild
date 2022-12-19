@@ -36,19 +36,24 @@ fi
 LICENSE="GPL-3"
 SLOT="0"
 
-IUSE="+man X"
+IUSE="X +man"
 
-DEPEND="
+CDEPEND="
 	dev-libs/libevdev:=
 	dev-libs/libinput:=
 	dev-libs/wayland
 	x11-libs/libxkbcommon
 	x11-libs/pixman
-	gui-libs/wlroots:0/15
+	gui-libs/wlroots:0/16
 "
-RDEPEND="${DEPEND}"
+DEPEND="${CDEPEND}
+	dev-libs/wayland-protocols
+"
+RDEPEND="${CDEPEND}"
 BDEPEND="
 	>=dev-lang/zig-0.9
+	dev-util/wayland-scanner
+	virtual/pkgconfig
 	man? ( app-text/scdoc )
 "
 
@@ -68,8 +73,11 @@ src_prepare() {
 
 src_compile() {
 	local ezigargs=(
-		$(usev man -Dman-pages)
 		$(usev X -Dxwayland)
+		$(usev man -Dman-pages)
+		-Dbash-completion
+		-Dzsh-completion
+		-Dfish-completion
 	)
 	zig_src_compile
 }
