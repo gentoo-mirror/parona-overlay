@@ -1,19 +1,15 @@
 image:  registry.gitlab.com/src_prepare/gentoo-repoman-container:latest
 
 variables:
-  common_pkgcheck_args: "--color 1"
+  common_pkgcheck_args: '--color 1'
 
 pkgcheck_ci:
   rules:
+    - if: $CI_PIPELINE_SOURCE == 'merge_request_event'
+      when: never
     - allow_failure: true
   script:
     - pkgcheck ci $common_pkgcheck_args
-
-pkgcheck_push:
-  rules:
-    - if: $CI_PIPELINE_SOURCE == 'push'
-  script:
-    - pkgcheck scan $common_pkgcheck_args --commits $CI_COMMIT_SHA
 
 pkgcheck_merge:
   rules:
