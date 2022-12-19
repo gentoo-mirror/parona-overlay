@@ -3,7 +3,7 @@
 
 EAPI=8
 
-inherit desktop optfeature multiprocessing pax-utils unpacker xdg
+inherit desktop optfeature multiprocessing pax-utils xdg
 
 DESCRIPTION="Spotify is a social music platform"
 HOMEPAGE="https://www.spotify.com/download/linux/"
@@ -72,7 +72,7 @@ QA_PREBUILT="
 EXTRACT=( /usr/share/doc/spotify-client /usr/share/spotify )
 
 src_unpack() {
-	unsquashfs -no-progress -p $(makeopts_jobs) -d "${S}" "${DISTDIR}/${P}".snap ${EXTRACT[@]} || die
+	unsquashfs -no-progress -p $(makeopts_jobs) -d "${S}" "${DISTDIR}/${P}.snap" ${EXTRACT[@]} || die
 }
 
 src_prepare() {
