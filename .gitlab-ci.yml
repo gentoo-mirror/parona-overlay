@@ -7,6 +7,8 @@ pkgcheck_ci:
   rules:
     - if: $CI_PIPELINE_SOURCE == 'merge_request_event'
       when: never
+    - if: $CI_COMMIT_BRANCH != $CI_DEFAULT_BRANCH
+      when: manual
     - allow_failure: true
   script:
     - pkgcheck ci $common_pkgcheck_args
