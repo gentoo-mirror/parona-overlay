@@ -39,19 +39,19 @@ SLOT="0"
 IUSE="X +man"
 
 CDEPEND="
-	dev-libs/libevdev:=
+	dev-libs/libevdev
 	dev-libs/libinput:=
 	dev-libs/wayland
-	x11-libs/libxkbcommon
+	x11-libs/libxkbcommon[X?,wayland]
 	x11-libs/pixman
-	gui-libs/wlroots:0/16
+	gui-libs/wlroots:0/16[X?]
 "
 DEPEND="${CDEPEND}
 	dev-libs/wayland-protocols
 "
 RDEPEND="${CDEPEND}"
 BDEPEND="
-	>=dev-lang/zig-0.10
+	|| ( >=dev-lang/zig-0.10 >=dev-lang/zig-bin-0.10 )
 	dev-util/wayland-scanner
 	virtual/pkgconfig
 	man? ( app-text/scdoc )
