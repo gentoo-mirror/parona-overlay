@@ -9,7 +9,7 @@ inherit distutils-r1
 
 DESCRIPTION="Python bindings for libgbinder"
 HOMEPAGE="
-	https://pypi.org/project/gbinder/
+	https://github.com/erfanoabdi/gbinder-python
 "
 
 MY_PN="gbinder-python"
