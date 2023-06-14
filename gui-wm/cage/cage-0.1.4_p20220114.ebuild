@@ -8,7 +8,7 @@ inherit meson
 DESCRIPTION="A Wayland kiosk"
 HOMEPAGE="https://www.hjdskes.nl/projects/cage/"
 COMMIT="f71844ab54dbb3192d8c2f0a1db84d50e18536d9"
-SRC_URI="https://github.com/Hjdskes/cage/archive/${COMMIT}.tar.gz -> ${P}.tar.gz"
+SRC_URI="https://github.com/cage-kiosk/cage/archive/${COMMIT}.tar.gz -> ${P}.tar.gz"
 S="${WORKDIR}/${PN}-${COMMIT}"
 
 LICENSE="MIT"
