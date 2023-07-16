@@ -9,4 +9,7 @@
 		<remote-id type="github">waydroid/waydroid</remote-id>
 		<doc>https://docs.waydro.id/</doc>
 	</upstream>
+	<use>
+		<flag name="nftables">Add support for net-firewall/nftables</flag>
+	</use>
 </pkgmetadata>
