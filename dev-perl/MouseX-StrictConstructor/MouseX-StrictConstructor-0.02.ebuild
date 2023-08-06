@@ -16,5 +16,4 @@ RDEPEND="
 DEPEND="${RDEPEND}"
 BDEPEND="
 	dev-perl/Module-Install
-	test? ( virtual/perl-Test-Simple )
 "
