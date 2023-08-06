@@ -26,12 +26,6 @@ RDEPEND="
 	dev-perl/Regexp-Common
 	dev-perl/Test-Synopsis-Expectation
 	dev-perl/YAML-Tiny
-	virtual/perl-Carp
-	virtual/perl-Data-Dumper
-	virtual/perl-Encode
-	virtual/perl-File-Path
-	virtual/perl-Pod-Simple
-	virtual/perl-Storable
 	|| (
 		dev-perl/Term-ReadLine-Gnu
 		dev-perl/Term-ReadLine-Perl
@@ -52,7 +46,6 @@ BDEPEND="
 		dev-perl/Test-Perl-Critic
 		dev-perl/Test-Pod
 		dev-perl/Test-Warn
-		virtual/perl-File-Spec
 	)
 "
 
