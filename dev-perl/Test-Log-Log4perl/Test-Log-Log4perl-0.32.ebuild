@@ -17,7 +17,4 @@ RDEPEND="
 DEPEND="${RDEPEND}"
 BDEPEND="
 	dev-perl/Module-Build
-	test? (
-		  virtual/perl-Test-Simple
-	)
 "
