@@ -7,7 +7,7 @@ inherit latex-package
 
 DESCRIPTION="Yet another alternative curriculum vitae/résumé class with LaTeX"
 HOMEPAGE="https://github.com/liantze/AltaCV"
-COMMIT="a41572b0e46c0b390c25f12b6042d0a7145ee3ce"
+COMMIT="74bc05df383c08ceacfcc6d438c1aa2b207cd1dc"
 SRC_URI="https://github.com/liantze/AltaCV/archive/${COMMIT}.tar.gz -> ${P}.tar.gz"
 S="${WORKDIR}/AltaCV-${COMMIT}"
 
