@@ -11,7 +11,7 @@ APPNAME="net.davidotek.pupgui2"
 
 DESCRIPTION="Install and manage proton with Steam and Lutris"
 HOMEPAGE="
-	https://davidotek.github.io/protonup-qtfro
+	https://davidotek.github.io/protonup-qt
 	https://github.com/DavidoTek/ProtonUp-Qt
 "
 SRC_URI="https://github.com/DavidoTek/ProtonUp-Qt/archive/refs/tags/v${PV}.tar.gz -> ${P}.tar.gz"
