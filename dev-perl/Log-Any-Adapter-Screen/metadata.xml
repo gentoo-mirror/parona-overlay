@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "https://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+	<maintainer type="person">
+		<email>parona@protonmail.com</email>
+		<name>Alfred Wingate</name>
+	</maintainer>
+	<upstream>
+		<remote-id type="cpan">Log-Any-Adapter-Screen</remote-id>
+		<remote-id type="cpan-module">Log::Any::Adapter::Screen</remote-id>
+	</upstream>
+</pkgmetadata>
