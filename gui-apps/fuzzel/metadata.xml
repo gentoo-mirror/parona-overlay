@@ -5,6 +5,9 @@
 		<email>parona@protonmail.com</email>
 		<name>Alfred Wingate</name>
 	</maintainer>
+	<upstream>
+		<remote-id type="codeberg">dnkl/fuzzel</remote-id>
+	</upstream>
 	<use>
 		<flag name="nanosvg">VG image support via bundled nanosvg instead of gnome-base/librsvg</flag>
 	</use>
