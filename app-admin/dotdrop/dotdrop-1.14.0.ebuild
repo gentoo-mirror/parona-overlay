@@ -45,7 +45,7 @@ distutils_enable_tests pytest
 src_prepare() {
 	eapply_user
 
-	# Lets remove the eye candy spinner, GITHUB_WORKFLOW means it wont be used eitherway.
+	# Lets remove the eye candy spinner, we disable it eitherway
 	sed -i '/from halo/d' tests-ng/tests_launcher.py || die
 
 	# directories getting removed on failure doesnt help with debugging.
@@ -69,7 +69,8 @@ src_install() {
 python_test() {
 	epytest -n "$(makeopts_jobs)" --dist=worksteal
 
-	local -x GITHUB_WORKFLOW=1 # no need for a spinner, would make logs harder to read
-	local -x DOTDROP_WORKDIR="${T}/dotdrop_workdir/" # hardcoded tmp dir outside sandbox otherwise
-	${EPYTHON} tests-ng/tests_launcher.py "$(makeopts_jobs)" || die
+	# trailing / WILL cause a test failure
+	local -x DOTDROP_WORKDIR="${T}/dotdrop_workdir" # hardcoded tmp dir outside sandbox otherwise
+	local -x USER="portage" # tests-ng/actions-args-template.sh: line 56: USER: unbound variable
+	${EPYTHON} tests-ng/tests_launcher.py -n -p "$(makeopts_jobs)" || die
 }
