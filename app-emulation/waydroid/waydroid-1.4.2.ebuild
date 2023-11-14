@@ -4,7 +4,7 @@
 EAPI=8
 
 PYTHON_COMPAT=( python3_{10..12} )
-inherit desktop python-single-r1 systemd
+inherit python-single-r1
 
 DESCRIPTION="Container-based approach to boot a full Android system"
 HOMEPAGE="https://waydro.id/"
