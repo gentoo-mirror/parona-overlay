@@ -43,4 +43,6 @@ src_install() {
 	emake \
 		DESTDIR="${D}" USE_SYSTEMD=1 USE_DBUS_ACTIVATION=1 USE_NFTABLES=$(usex nftables 1 0) \
 		install install_apparmor
+
+	python_optimize "${D}/usr/lib/waydroid"
 }
