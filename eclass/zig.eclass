@@ -12,16 +12,13 @@
 # This eclass contains the default phase functions for packages which
 # use zig compilers build system
 
-if [[ ! ${_ZIG_ECLASS} ]]; then
-
 case ${EAPI} in
 	8) ;;
 	*) die "${ECLASS}: EAPI ${EAPI} unsupported."
 esac
 
+if [[ ! ${_ZIG_ECLASS} ]]; then
 _ZIG_ECLASS=1
-
-EXPORT_FUNCTIONS src_compile src_install src_test
 
 BDEPEND="dev-lang/zig"
 
@@ -74,3 +71,5 @@ zig_src_test() {
 }
 
 fi
+
+EXPORT_FUNCTIONS src_compile src_install src_test
