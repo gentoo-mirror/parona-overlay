@@ -34,12 +34,18 @@ ezig() {
     eend $? "\"zig ${*}\" failed" || die
 }
 
+# @FUNCTION: zig_src_compile
+# @DESCRIPTION:
+# This is the zig_src_compile function.
 zig_src_compile() {
 	debug-print-function ${FUNCNAME} "$@"
 
 	ezig build --verbose -Drelease-safe ${ezigargs[@]}|| die
 }
 
+# @FUNCTION: zig_src_install
+# @DESCRIPTION:
+# This is the zig_src_install function.
 zig_src_install() {
 	debug-print-function ${FUNCNAME} "$@"
 
@@ -64,6 +70,9 @@ zig_src_install() {
 	popd > /dev/null
 }
 
+# @FUNCTION: zig_src_test
+# @DESCRIPTION:
+# This is the zig_src_test function.
 zig_src_test() {
 	debug-print-function ${FUNCNAME} "$@"
 
