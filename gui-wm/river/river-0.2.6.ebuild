@@ -3,6 +3,8 @@
 
 EAPI=8
 
+ZIG_MAX_VERSION="0.11"
+ZIG_MIN_VERSION="0.11"
 inherit zig
 
 DESCRIPTION="A dynamic tiling Wayland compositor"
