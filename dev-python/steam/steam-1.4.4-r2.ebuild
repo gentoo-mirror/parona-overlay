@@ -29,7 +29,6 @@ RDEPEND="
 	>=dev-python/pycryptodomex-3.7.0[${PYTHON_USEDEP}]
 	>=dev-python/requests-2.9.1[${PYTHON_USEDEP}]
 	>=dev-python/six-1.10.0[${PYTHON_USEDEP}]
-	<dev-python/urllib3-2[${PYTHON_USEDEP}]
 	>=dev-python/vdf-3.3[${PYTHON_USEDEP}]
 "
 BDEPEND="
