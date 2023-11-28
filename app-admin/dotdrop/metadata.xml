@@ -6,6 +6,7 @@
 		<name>Alfred Wingate</name>
 	</maintainer>
 	<upstream>
+		<doc>https://dotdrop.readthedocs.io/en/latest/</doc>
 		<remote-id type="github">deadc0de6/dotdrop</remote-id>
 		<remote-id type="pypi">dotdrop</remote-id>
 	</upstream>
