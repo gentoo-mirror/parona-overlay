@@ -11,7 +11,6 @@ inherit distutils-r1 multiprocessing shell-completion
 
 DESCRIPTION="Save your dotfiles once, deploy them everywhere"
 HOMEPAGE="
-	https://deadc0de.re/dotdrop/
 	https://github.com/deadc0de6/dotdrop
 	https://pypi.org/project/dotdrop/
 "
