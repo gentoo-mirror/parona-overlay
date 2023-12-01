@@ -51,6 +51,7 @@ RDEPEND="
 	x11-libs/libxcb
 	x11-libs/libxkbcommon
 	x11-libs/pango
+	x11-terms/xterm
 "
 
 pkg_setup() {
