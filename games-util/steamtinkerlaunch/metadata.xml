@@ -6,6 +6,7 @@
 		<name>Alfred Wingate</name>
 	</maintainer>
 	<upstream>
+		<doc>https://github.com/sonic2kk/steamtinkerlaunch/wiki/</doc>
 		<remote-id type="github">sonic2kk/steamtinkerlaunch</remote-id>
 	</upstream>
 </pkgmetadata>

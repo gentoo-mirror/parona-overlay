@@ -3,7 +3,7 @@
 
 EAPI=8
 
-inherit optfeature
+inherit optfeature xdg
 
 DESCRIPTION="Tool for use with the Steam client for custom launch options"
 HOMEPAGE="https://github.com/sonic2kk/steamtinkerlaunch"
@@ -49,6 +49,8 @@ src_prepare() {
 }
 
 pkg_postinst() {
+	xdg_pkg_postinst
+
 	# TODO: go through optional dependencies properly
 	optfeature_header "Optional programs for extra features:"
 	# optfeature "boxtron support" games-engines/boxtron
