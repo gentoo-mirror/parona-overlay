@@ -64,7 +64,7 @@ pkg_postinst() {
 	optfeature "game network activity monitoring" sys-apps/net-tools
 	#optfeature "Utility for putting games and applications to sleep to free up resources." ?/nyrna
 	optfeature "SpecialK archive support" app-arch/p7zip
-	#pev
+	optfeature "analysing and extracting data from windows executables" app-misc/readpe
 	#replay-sorcery?
 	optfeature "backing up and restoring the steamuser folder of a Proton prefix" net-misc/rsync
 	optfeature "ScummVM support" games-engines/scummvm
