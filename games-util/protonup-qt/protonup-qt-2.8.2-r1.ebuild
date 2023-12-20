@@ -39,6 +39,11 @@ src_prepare() {
 
 	# User friendly'er executable name
 	sed -i "s/Exec=${APPNAME}/Exec=${PN}/" share/applications/${APPNAME}.desktop || die
+
+	sed -i \
+		-e '/PySide6-Essentials/d' \
+		-e 's/PyYAML==6.0/PyYAML/' \
+		setup.cfg || die
 }
 
 python_install() {
