@@ -1,0 +1,14 @@
+BDEPEND=>=dev-vcs/git-1.8.2.1[curl]
+DEFINED_PHASES=postinst postrm preinst prepare unpack
+DESCRIPTION=Tool for use with the Steam client for custom launch options
+EAPI=8
+HOMEPAGE=https://github.com/sonic2kk/steamtinkerlaunch
+IDEPEND=dev-util/desktop-file-utils x11-misc/shared-mime-info
+INHERIT=optfeature xdg git-r3
+LICENSE=GPL-3
+PROPERTIES=live
+RDEPEND=app-alternatives/awk app-alternatives/tar app-arch/unzip app-editors/vim-core app-shells/bash dev-vcs/git gnome-extra/yad net-misc/wget sys-process/procps x11-apps/xprop x11-apps/xrandr x11-apps/xwininfo x11-misc/xdotool
+RESTRICT=test
+SLOT=0
+_eclasses_=optfeature	222cb475c5a4f7ae7cfb0bf510a6fe54	xdg-utils	baea6080dd821f5562d715887954c9d3	xdg	4a14c5c24f121e7da66e5aab4a168c6e	git-r3	86fa1f157b70b9d2ff340c4633b1cf4b
+_md5_=87dc307e97929bd80a63423dfcec9411

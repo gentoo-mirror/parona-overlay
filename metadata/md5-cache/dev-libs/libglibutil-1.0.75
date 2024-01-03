@@ -1,0 +1,11 @@
+DEFINED_PHASES=compile install
+DEPEND=>=dev-libs/glib-2.32:2
+DESCRIPTION=Library of glib utilities
+EAPI=8
+HOMEPAGE=https://github.com/sailfishos/libglibutil
+KEYWORDS=~amd64
+LICENSE=BSD
+RDEPEND=>=dev-libs/glib-2.32:2
+SLOT=0
+SRC_URI=https://github.com/sailfishos/libglibutil/archive/refs/tags/1.0.75.tar.gz -> libglibutil-1.0.75.tar.gz
+_md5_=f32fab296c72cfd8b6cff8ce6581b696

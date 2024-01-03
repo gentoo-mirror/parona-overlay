@@ -1,0 +1,13 @@
+# This file is deprecated as per GLEP 56 in favor of metadata.xml.
+# Please add your descriptions to your package's metadata.xml ONLY.
+# * generated automatically using pmaint *
+
+app-emulation/waydroid:nftables - Add support for net-firewall/nftables
+dev-libs/vala-language-server:gnome - Build GNOME Builder plugin
+games-util/gamehub:overlayfs - Build support for OverlayFS
+gnome-extra/yad:sourceview - Enable syntax highlighting in text-info dialog with x11-libs/gtksourceview:3.0
+gnome-extra/yad:spell - Enable support spell checking in text fields
+gnome-extra/yad:tools - Install extra tools such as yad-tools, yad-icon-browser, yad-settings
+gui-apps/fuzzel:nanosvg - VG image support via bundled nanosvg instead of gnome-base/librsvg
+gui-apps/yambar:mpd - Enable support for the Music Player Daemon
+gui-apps/yambar:shared - Build modules, particles and decorations as shared libraries

@@ -1,0 +1,13 @@
+BDEPEND=dev-util/wayland-scanner
+DEFINED_PHASES=install prepare
+DEPEND=dev-libs/wayland
+DESCRIPTION=stacktile is a layout generator for the river Wayland compositor.
+EAPI=8
+HOMEPAGE=https://sr.ht/~leon_plickat/stacktile/
+KEYWORDS=~amd64
+LICENSE=GPL-3
+RDEPEND=dev-libs/wayland gui-wm/river
+RESTRICT=test
+SLOT=0
+SRC_URI=https://git.sr.ht/~leon_plickat/stacktile/archive/v1.0.0.tar.gz -> stacktile-1.0.0.tar.gz
+_md5_=f01e96f43465e6f5d24d3b17fcd3e04b

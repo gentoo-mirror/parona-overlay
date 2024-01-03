@@ -1,0 +1,16 @@
+BDEPEND=test? ( dev-libs/glib:2[dbus] media-video/ffmpeg:= media-video/mpv[cplugins(+),libmpv,lua] app-misc/jq media-sound/playerctl net-misc/socat sys-apps/dbus app-alternatives/awk x11-themes/sound-theme-freedesktop ) test? ( x11-base/xorg-server[xvfb] x11-apps/xhost )
+DEFINED_PHASES=install prepare test
+DEPEND=dev-libs/glib:2[dbus] media-video/ffmpeg:= media-video/mpv[cplugins(+),libmpv,lua]
+DESCRIPTION=MPRIS plugin for mpv
+EAPI=8
+HOMEPAGE=https://github.com/hoyon/mpv-mpris
+INHERIT=virtualx
+IUSE=test
+KEYWORDS=~amd64
+LICENSE=MIT
+RDEPEND=dev-libs/glib:2[dbus] media-video/ffmpeg:= media-video/mpv[cplugins(+),libmpv,lua]
+RESTRICT=!test? ( test )
+SLOT=0
+SRC_URI=https://github.com/hoyon/mpv-mpris/archive/refs/tags/1.1.tar.gz -> mpv-mpris-1.1.tar.gz
+_eclasses_=virtualx	817571665ee28575da44ee08135089e5
+_md5_=a202e6c9aaade3307a6ac45c027f44db

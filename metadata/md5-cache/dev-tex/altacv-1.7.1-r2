@@ -1,0 +1,15 @@
+BDEPEND=virtual/latex-base >=sys-apps/texinfo-4.2-r5
+DEFINED_PHASES=compile install postinst postrm
+DEPEND=dev-tex/biber dev-texlive/texlive-latex dev-texlive/texlive-fontsextra
+DESCRIPTION=Yet another alternative curriculum vitae/résumé class with LaTeX
+EAPI=8
+HOMEPAGE=https://github.com/liantze/AltaCV
+INHERIT=latex-package
+KEYWORDS=~amd64
+LICENSE=LPPL-1.3
+RDEPEND=dev-tex/biber dev-texlive/texlive-latex dev-texlive/texlive-fontsextra virtual/latex-base
+RESTRICT=test
+SLOT=0
+SRC_URI=https://github.com/liantze/AltaCV/archive/74bc05df383c08ceacfcc6d438c1aa2b207cd1dc.tar.gz -> altacv-1.7.1-r2.tar.gz
+_eclasses_=latex-package	c20e442c3953c765f636630631c96194
+_md5_=415d6bf7d97f62342a55bbac3629b67a

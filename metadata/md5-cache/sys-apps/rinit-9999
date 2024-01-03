@@ -1,0 +1,12 @@
+BDEPEND=>=dev-lang/rust-1.60[nightly] dev-util/rinstall >=virtual/rust-1.53 >=dev-vcs/git-1.8.2.1[curl]
+DEFINED_PHASES=compile configure install test unpack
+DESCRIPTION=Next-gen init and service-manager written in Rust
+EAPI=8
+HOMEPAGE=https://github.com/rinit-org/rinit
+INHERIT=cargo git-r3
+IUSE=debug
+LICENSE=GPL-3
+PROPERTIES=live
+SLOT=0
+_eclasses_=toolchain-funcs	e56c7649b804f051623c8bc1a1c44084	multilib	c19072c3cd7ac5cb21de013f7e9832e0	flag-o-matic	78cf3cc2d5572fddf5e5e10c70f7c81a	multiprocessing	30ead54fa2e2b5f9cd4e612ffc34d0fe	cargo	8e446589282567c95e483e238d8dd120	git-r3	86fa1f157b70b9d2ff340c4633b1cf4b
+_md5_=f9d602cb45b66a9eb75905cbeab66cb3
