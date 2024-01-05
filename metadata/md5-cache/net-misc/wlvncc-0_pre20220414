@@ -10,5 +10,5 @@ LICENSE=ISC
 RDEPEND=dev-libs/aml dev-libs/wayland media-video/ffmpeg media-libs/libglvnd media-libs/mesa >=net-libs/libvncserver-0.9.13_p20201130 x11-libs/libdrm x11-libs/libxkbcommon x11-libs/pixman
 SLOT=0
 SRC_URI=https://github.com/any1/wlvncc/archive/b725a08b47e3264366b90eb74ea0e823e1bfd9a4.tar.gz -> wlvncc-0_pre20220414.tar.gz
-_eclasses_=multiprocessing	30ead54fa2e2b5f9cd4e612ffc34d0fe	ninja-utils	c8951c1dfcc1d43e3f967f61fd0ec59c	toolchain-funcs	e56c7649b804f051623c8bc1a1c44084	multilib	c19072c3cd7ac5cb21de013f7e9832e0	python-utils-r1	474cb53a7d1b62721a91809a1d702661	meson	576e6bbef90e9753368f8b4ad0bd5383
+_eclasses_=multiprocessing	30ead54fa2e2b5f9cd4e612ffc34d0fe	ninja-utils	c8951c1dfcc1d43e3f967f61fd0ec59c	toolchain-funcs	e56c7649b804f051623c8bc1a1c44084	multilib	c19072c3cd7ac5cb21de013f7e9832e0	python-utils-r1	042f4cc53680245bf99a84669b94155a	meson	576e6bbef90e9753368f8b4ad0bd5383
 _md5_=0e1a348453c71db4f8322b2744b56aad
