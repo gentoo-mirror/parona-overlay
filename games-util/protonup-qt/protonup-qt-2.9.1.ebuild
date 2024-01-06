@@ -30,7 +30,7 @@ RDEPEND="
 		dev-python/inputs[${PYTHON_USEDEP}]
 		>=dev-python/pyxdg-0.27[${PYTHON_USEDEP}]
 		>=dev-python/steam-1.4.4[${PYTHON_USEDEP}]
-		dev-python/pyyaml[${PYTHON_USEDEP}]
+		>=dev-python/pyyaml-6.0[${PYTHON_USEDEP}]
 		>=dev-python/zstandard-0.19.0[${PYTHON_USEDEP}]
 "
 
