@@ -34,7 +34,7 @@ dev-perl/match-simple 0.012: simplified clone of smartmatch operator
 dev-python/gbinder 1.1.2: Python bindings for libgbinder
 dev-python/inputs 0.5: Cross-platform Python support for keyboards, mice and gamepads.
 dev-python/log-symbols 0.0.14-r1: Colored symbols for various log levels for Python
-dev-python/pycryptodomex 3.19.0 3.19.1: A self-contained cryptographic library for Python
+dev-python/pycryptodomex 3.19.0 3.19.1 3.20.0: A self-contained cryptographic library for Python
 dev-python/spinners 0.0.24-r1: Spinners for terminals
 dev-python/steam 1.4.4-r2: Python package for interacting with Steam
 dev-tex/altacv 1.7.1-r2: Yet another alternative curriculum vitae/résumé class with LaTeX
