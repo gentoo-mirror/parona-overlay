@@ -1,6 +1,6 @@
 app-admin/dotdrop 1.14.0: Save your dotfiles once, deploy them everywhere
 app-arch/gztool 1.6.1: GZIP files indexer, compressor and data retriever.
-app-emulation/anbox-modules 20231101 20231203: Anbox kernel modules (ashmem and binder) fork
+app-emulation/anbox-modules 20231101 20231203 20240114: Anbox kernel modules (ashmem and binder) fork
 app-emulation/waydroid 1.4.2-r1: Container-based approach to boot a full Android system
 app-misc/readpe 0.83: The PE file analysis toolkit
 dev-libs/libgbinder 1.1.35: GLib-style interface to binder
