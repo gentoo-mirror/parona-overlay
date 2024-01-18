@@ -3,6 +3,7 @@
 # * generated automatically using pmaint *
 
 app-emulation/waydroid:nftables - Add support for net-firewall/nftables
+app-misc/parona-scripts:efibootmgr - Install installkernel hook for efibootmgr
 dev-libs/vala-language-server:gnome - Build GNOME Builder plugin
 games-util/gamehub:overlayfs - Build support for OverlayFS
 gnome-extra/yad:sourceview - Enable syntax highlighting in text-info dialog with x11-libs/gtksourceview:3.0
