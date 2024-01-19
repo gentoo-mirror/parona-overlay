@@ -11,4 +11,4 @@ RDEPEND=sys-kernel/installkernel efibootmgr? ( sys-kernel/installkernel[-grub] )
 RESTRICT=test
 SLOT=0
 _eclasses_=git-r3	86fa1f157b70b9d2ff340c4633b1cf4b
-_md5_=ba745bc0173815a7af06dd911713e95c
+_md5_=dfe34c1f27e0991010258a8e2fd5df2f
