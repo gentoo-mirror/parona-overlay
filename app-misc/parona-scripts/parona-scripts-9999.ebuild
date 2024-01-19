@@ -24,8 +24,9 @@ RDEPEND="
 "
 
 src_install() {
+	emake DESTDIR="${D}" install
+
 	if use efibootmgr; then
-		exeinto /etc/kernel/postinst.d
-		doexe installkernel-hooks/postinst.d/92-efibootmgr.install
+		emake DESTDIR="${D}" efibootmgr
 	fi
 }
