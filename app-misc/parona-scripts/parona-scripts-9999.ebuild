@@ -19,6 +19,7 @@ RESTRICT="test" # no tests
 RDEPEND="
 	sys-kernel/installkernel
 	efibootmgr? (
+		app-portage/eix
 		sys-kernel/installkernel[-grub]
 	)
 "
