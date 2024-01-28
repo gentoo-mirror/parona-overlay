@@ -5,7 +5,7 @@ app-emulation/waydroid 1.4.2-r1: Container-based approach to boot a full Android
 app-misc/parona-scripts 9999: Scripts and hooks that I use on my machines
 app-misc/readpe 0.83: The PE file analysis toolkit
 dev-libs/libgbinder 1.1.35: GLib-style interface to binder
-dev-libs/libglibutil 1.0.75: Library of glib utilities
+dev-libs/libglibutil 1.0.75 1.0.76: Library of glib utilities
 dev-libs/vala-language-server 0.48.7 9999: Code Intelligence for Vala & Genie
 dev-perl/Color-ANSI-Util 0.164: Routines for dealing with ANSI colors
 dev-perl/Color-RGB-Util 0.606: Utilities related to RGB colors
