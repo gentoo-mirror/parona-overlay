@@ -23,6 +23,7 @@ src_prepare() {
 
 	# Let prefix be overriden
 	sed -i -e 's/prefix =/prefix :=/' src/Makefile lib/libpe/Makefile || die
+
 	# Don't compress man pages by default
 	sed -i \
 		-e 's:gzip -c -9 \($(MANDIR)/$$prog$(man1ext)\) > \($(DESTDIR)$(man1dir)/$$prog$(man1ext)\).gz:$(INSTALL_PROGRAM) $(INSTALL_FLAGS) \1 \2:' \
@@ -59,7 +60,7 @@ src_test() {
 	pe32_ret=$?
 
 	if [[ ${pe32_ret} == 0 ]]; then
-		einfo "All tests s!cceeded"
+		einfo "All tests succeeded"
 	else
 		[[ ${pe32_ret} != 0 ]] && ewarn "pe32 failed: ${pe32_ret}"
 		eerror "Some tests failed"
