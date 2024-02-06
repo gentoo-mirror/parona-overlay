@@ -12,5 +12,5 @@ LICENSE=GPL-3
 RDEPEND=>=x11-libs/gtk+-3.22.0:3 sourceview? ( x11-libs/gtksourceview:3.0 ) spell? ( app-text/gspell:= ) webkit? ( net-libs/webkit-gtk:4 )
 SLOT=0
 SRC_URI=https://github.com/v1cont/yad/releases/download/v13.0/yad-13.0.tar.xz
-_eclasses_=toolchain-funcs	e56c7649b804f051623c8bc1a1c44084	multilib	c19072c3cd7ac5cb21de013f7e9832e0	xdg-utils	baea6080dd821f5562d715887954c9d3	gnome2-utils	b0183db3b2e07b18f3b77bffec72e116	xdg	4a14c5c24f121e7da66e5aab4a168c6e
+_eclasses_=toolchain-funcs	e56c7649b804f051623c8bc1a1c44084	multilib	c19072c3cd7ac5cb21de013f7e9832e0	xdg-utils	baea6080dd821f5562d715887954c9d3	gnome2-utils	30dbce54b89e77b86f366548f94419ad	xdg	4a14c5c24f121e7da66e5aab4a168c6e
 _md5_=c2e33410e5ad9c31a99972336f093fa1
