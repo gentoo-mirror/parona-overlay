@@ -1,4 +1,4 @@
-# Copyright 2023 Gentoo Authors
+# Copyright 2023-2024 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=8
@@ -18,10 +18,9 @@ COMMIT="eb527ec951e3d02c828efdb56e9f78e364c109b2"
 SRC_URI="https://github.com/manrajgrover/py-log-symbols/archive/${COMMIT}.tar.gz -> ${P}.gh.tar.gz"
 S="${WORKDIR}/py-${PN}-${COMMIT}"
 
-KEYWORDS="~amd64"
-
 LICENSE="MIT"
 SLOT="0"
+KEYWORDS="~amd64"
 
 RDEPEND=">=dev-python/colorama-0.3.9[${PYTHON_USEDEP}]"
 BDEPEND="test? ( ${RDEPEND} )"

@@ -1,4 +1,4 @@
-# Copyright 2022-2023 Gentoo Authors
+# Copyright 2022-2024 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=8
@@ -21,11 +21,9 @@ fi
 LICENSE="MIT"
 SLOT="0"
 
-#no tests
-RESTRICT="test"
-
 # Nanosvg is enabled by default by upstream, but cairo is enabled by default by desktop profile.
 IUSE="+cairo +svg +png nanosvg"
+RESTRICT="test" # no tests
 
 REQUIRED_USE="
 	cairo? ( !nanosvg )
