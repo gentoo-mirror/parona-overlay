@@ -12,4 +12,4 @@ RDEPEND=dev-libs/libevdev dev-libs/libinput:= dev-libs/wayland x11-libs/libxkbco
 RESTRICT=test
 SLOT=0
 _eclasses_=zig	5638fac06353945a33c05ab928a48767	git-r3	86fa1f157b70b9d2ff340c4633b1cf4b
-_md5_=e9532c0e9476616608e9cd8ef28766ce
+_md5_=f47e48462e0713cb90f9fed1d0b174c7
