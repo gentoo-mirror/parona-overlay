@@ -1,7 +1,7 @@
 app-admin/dotdrop 1.14.0: Save your dotfiles once, deploy them everywhere
 app-arch/gztool 1.6.1: GZIP files indexer, compressor and data retriever.
 app-emulation/anbox-modules 20240114 20240210: Anbox kernel modules (ashmem and binder) fork
-app-emulation/waydroid 1.4.2-r1: Container-based approach to boot a full Android system
+app-emulation/waydroid 1.4.2-r1 1.4.2-r2: Container-based approach to boot a full Android system
 app-misc/parona-scripts 9999: Scripts and hooks that I use on my machines
 app-misc/readpe 0.83 0.84: The PE file analysis toolkit
 dev-libs/libgbinder 1.1.35 1.1.36: GLib-style interface to binder
@@ -41,7 +41,7 @@ dev-python/steam 1.4.4-r2: Python package for interacting with Steam
 dev-tex/altacv 1.7.1-r2: Yet another alternative curriculum vitae/résumé class with LaTeX
 games-util/gamehub 0.16.3_p2: All your games in one place
 games-util/mangohud 0.6.9_p1: Overlay for monitoring FPS, temperatures, CPU/GPU load and more
-games-util/nexusmodsapp 0.2.1_p20231130: Nexus Mods App, a mod installer, creator and manager for all your popular games
+games-util/nexusmodsapp 0.3: Nexus Mods App, a mod installer, creator and manager for all your popular games
 games-util/protonup-qt 2.9.1: Install and manage proton with Steam and Lutris
 games-util/r2modman 3.1.46: A simple and easy to use mod manager for several games using Thunderstore
 games-util/steamtinkerlaunch 9999: Tool for use with the Steam client for custom launch options
