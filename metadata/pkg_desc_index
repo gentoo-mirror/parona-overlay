@@ -43,7 +43,7 @@ games-util/gamehub 0.16.3_p2: All your games in one place
 games-util/mangohud 0.6.9_p1: Overlay for monitoring FPS, temperatures, CPU/GPU load and more
 games-util/nexusmodsapp 0.3: Nexus Mods App, a mod installer, creator and manager for all your popular games
 games-util/protonup-qt 2.9.1: Install and manage proton with Steam and Lutris
-games-util/r2modman 3.1.46: A simple and easy to use mod manager for several games using Thunderstore
+games-util/r2modman 3.1.46 3.1.47: A simple and easy to use mod manager for several games using Thunderstore
 games-util/steamtinkerlaunch 9999: Tool for use with the Steam client for custom launch options
 gnome-extra/yad 13.0: Display GTK+ dialog boxes from command line or shell scripts
 gui-apps/fuzzel 1.9.2 9999: Application launcher for wlroots based Wayland compositors.
