@@ -1,4 +1,4 @@
-# Copyright 2022-2023 Gentoo Authors
+# Copyright 2022-2024 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=8
@@ -16,6 +16,9 @@ DEPEND="
 	dev-libs/libglibutil
 "
 RDEPEND="${DEPEND}"
+BDEPEND="
+	virtual/pkgconfig
+"
 
 src_compile() {
 	emake KEEP_SYMBOLS=1 LIBDIR="/usr/$(get_libdir)"
