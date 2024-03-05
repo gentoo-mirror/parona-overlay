@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "https://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+	<maintainer type="person">
+		<email>parona@protonmail.com</email>
+		<name>Alfred Wingate</name>
+	</maintainer>
+	<upstream>
+		<remote-id type="github">herrhotzenplotz/gcli</remote-id>
+		<remote-id type="gitlab">herrhotzenplotz/gcli</remote-id>
+		<remote-id type="sourceforge">gcli</remote-id>
+	</upstream>
+</pkgmetadata>
