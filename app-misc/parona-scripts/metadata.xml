@@ -10,5 +10,6 @@
 	</upstream>
 	<use>
 		<flag name="efibootmgr">Install installkernel hook for efibootmgr</flag>
+		<flag name="perl">Install perl scripts</flag>
 	</use>
 </pkgmetadata>
