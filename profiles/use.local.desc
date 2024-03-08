@@ -4,6 +4,7 @@
 
 app-emulation/waydroid:nftables - Add support for net-firewall/nftables
 app-misc/parona-scripts:efibootmgr - Install installkernel hook for efibootmgr
+app-misc/parona-scripts:perl - Install perl scripts
 dev-libs/vala-language-server:gnome - Build GNOME Builder plugin
 games-util/gamehub:overlayfs - Build support for OverlayFS
 gnome-extra/yad:sourceview - Enable syntax highlighting in text-info dialog with x11-libs/gtksourceview:3.0
