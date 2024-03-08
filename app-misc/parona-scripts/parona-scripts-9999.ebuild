@@ -12,20 +12,22 @@ EGIT_REPO_URI="https://gitlab.com/Parona/parona-scripts.git"
 LICENSE="GPL-3"
 SLOT="0"
 
-IUSE="efibootmgr"
+IUSE="efibootmgr perl"
 
 RESTRICT="test" # no tests
 
 RDEPEND="
-	dev-perl/GitLab-API-v4
 	app-text/ansifilter
-	dev-lang/perl
-	dev-perl/DateTime-Format-ISO8601
-	dev-perl/Number-Bytes-Human
 	net-misc/curl
 	efibootmgr? (
 		app-portage/eix
 		sys-kernel/installkernel[-grub]
+	)
+	perl? (
+		dev-perl/GitLab-API-v4
+		dev-lang/perl
+		dev-perl/DateTime-Format-ISO8601
+		dev-perl/Number-Bytes-Human
 	)
 "
 
@@ -34,5 +36,9 @@ src_install() {
 
 	if use efibootmgr; then
 		emake DESTDIR="${D}" efibootmgr
+	fi
+
+	if use perl; then
+		emake DESTDIR="${D}" perl
 	fi
 }
