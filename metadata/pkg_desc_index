@@ -4,6 +4,7 @@ app-emulation/anbox-modules 20240114 20240210: Anbox kernel modules (ashmem and 
 app-emulation/waydroid 1.4.2-r1 1.4.2-r2: Container-based approach to boot a full Android system
 app-misc/parona-scripts 9999: Scripts and hooks that I use on my machines
 app-misc/readpe 0.83 0.84: The PE file analysis toolkit
+app-misc/rivalcfg 4.12.0: CLI tool and Python library to configure SteelSeries gaming mice
 dev-libs/libgbinder 1.1.37 1.1.38: GLib-style interface to binder
 dev-libs/libglibutil 1.0.75 1.0.76: Library of glib utilities
 dev-libs/vala-language-server 0.48.7 9999: Code Intelligence for Vala & Genie
