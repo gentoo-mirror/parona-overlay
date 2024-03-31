@@ -5,6 +5,7 @@ app-emulation/waydroid 1.4.2-r1 1.4.2-r2: Container-based approach to boot a ful
 app-misc/parona-scripts 9999: Scripts and hooks that I use on my machines
 app-misc/readpe 0.83 0.84: The PE file analysis toolkit
 app-misc/rivalcfg 4.12.0: CLI tool and Python library to configure SteelSeries gaming mice
+dev-build/cargo-make 0.37.10: Rust task runner and build tool
 dev-cpp/trompeloeil 47: Header only C++14 mocking framework
 dev-libs/libgbinder 1.1.37 1.1.38: GLib-style interface to binder
 dev-libs/libglibutil 1.0.75 1.0.76: Library of glib utilities
