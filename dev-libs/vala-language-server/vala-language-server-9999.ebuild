@@ -21,7 +21,7 @@ fi
 LICENSE="LGPL-2.1"
 SLOT="0"
 
-IUSE="debug gnome +man"
+IUSE="debug +man"
 # Tests nonexistant
 RESTRICT="test"
 
@@ -34,7 +34,6 @@ RDEPEND="
 DEPEND="${RDEPEND}"
 BDEPEND="
 	$(vala_depend)
-	gnome? ( dev-util/gnome-builder )
 	man? ( >=app-text/scdoc-1.9.2 )
 "
 
@@ -50,7 +49,6 @@ src_prepare() {
 src_configure() {
 	local emesonargs=(
 		$(meson_use debug debug_mem)
-		$(meson_use gnome plugins)
 		$(meson_feature man man_pages)
 		#$(meson_use test tests)
 		-Dactive_parameter=false
