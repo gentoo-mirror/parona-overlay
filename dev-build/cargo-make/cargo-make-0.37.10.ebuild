@@ -225,9 +225,16 @@ REQUIRED_USE="?? ( openssl rustls )"
 
 RESTRICT="!test? ( test )"
 
-DEPEND="openssl? ( dev-libs/openssl:= )"
-RDEPEND="${DEPEND}"
-BDEPEND="test? ( dev-build/cargo-make )"
+DEPEND="
+	openssl? ( dev-libs/openssl:= )
+"
+RDEPEND="
+	!dev-util/cargo-make
+	${DEPEND}
+"
+BDEPEND="
+	test? ( dev-build/cargo-make )
+"
 
 QA_FLAGS_IGNORED="*"
 
