@@ -10,5 +10,5 @@ PROPERTIES=live
 RDEPEND=app-text/ansifilter net-misc/curl efibootmgr? ( app-portage/eix sys-kernel/installkernel[-grub] ) perl? ( dev-perl/GitLab-API-v4 dev-lang/perl dev-perl/DateTime-Format-ISO8601 dev-perl/Number-Bytes-Human )
 RESTRICT=test
 SLOT=0
-_eclasses_=git-r3	86fa1f157b70b9d2ff340c4633b1cf4b
+_eclasses_=git-r3	fbb2889c81f3a05910c1524db69425c1
 _md5_=9f5fb302fbbc31727dc436b3ba8049b6
