@@ -1,9 +1,9 @@
-# Copyright 2022-2023 Gentoo Authors
+# Copyright 2022-2024 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=8
 
-inherit linux-mod-r1
+inherit linux-mod-r1 udev
 
 DESCRIPTION="Anbox kernel modules (ashmem and binder) fork"
 HOMEPAGE="https://github.com/choff/anbox-modules"
@@ -12,7 +12,7 @@ if [[ "${PV}" == "99999999" ]]; then
 	inherit git-r3
 	EGIT_REPO_URI="https://github.com/choff/anbox-modules"
 else
-	COMMIT="13a93a4f7c17de5c5b9ab354aaf34b230583110e"
+	COMMIT="2c0645225170df487c386ad488ff287e644b7db6"
 	SRC_URI="https://github.com/choff/anbox-modules/archive/${COMMIT}.tar.gz -> ${PN}-choff_fork-${PV}.tar.gz"
 	S="${WORKDIR}/${PN}-${COMMIT}"
 	KEYWORDS="~amd64"
@@ -26,4 +26,18 @@ src_compile() {
 	local modargs=( KERNEL_SRC="${KV_OUT_DIR}" )
 
 	linux-mod-r1_src_compile
+}
+
+src_install() {
+	linux-mod-r1_src_compile
+	udev_dorules 99-anbox.rules
+}
+
+pkg_postinst() {
+	linux-mod-r1_pkg_postinst
+	udev_reload
+}
+
+pkg_postrm() {
+	udev_reload
 }
