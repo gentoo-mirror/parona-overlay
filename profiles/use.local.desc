@@ -14,6 +14,9 @@ dev-db/mysql:profiling - Add support for statement profiling (requires USE=commu
 dev-db/mysql:router - Build the MySQL router program
 dev-db/mysql:server - Build the server program
 dev-db/mysql:test - Install upstream testsuites for end use.
+dev-libs/elfutils:debuginfod - Enable debuginfod support, both the debuginfod server and the libdebuginfod client library
+dev-libs/elfutils:lzma - Support automatic decompression of LZMA-compressed files and kernel images
+dev-libs/elfutils:utils - Install command-line utilities (all the eu-* programs)
 dev-libs/vala-language-server:gnome - Build GNOME Builder plugin
 games-util/gamehub:overlayfs - Build support for OverlayFS
 gnome-extra/yad:sourceview - Enable syntax highlighting in text-info dialog with x11-libs/gtksourceview:3.0
