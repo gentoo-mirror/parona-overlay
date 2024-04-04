@@ -11,5 +11,5 @@ LICENSE=MIT
 RDEPEND=dev-libs/libyaml >=dev-libs/tllist-1.0.1 >=media-libs/fcft-3.0.0 <media-libs/fcft-4.0.0 x11-libs/pixman mpd? ( media-libs/libmpd ) wayland? ( dev-libs/wayland ) X? ( x11-libs/libxcb x11-libs/xcb-util x11-libs/xcb-util-cursor x11-libs/xcb-util-wm )
 SLOT=0
 SRC_URI=https://codeberg.org/dnkl/yambar/archive/1.10.0.tar.gz -> yambar-1.10.0.tar.gz
-_eclasses_=toolchain-funcs	e56c7649b804f051623c8bc1a1c44084	multilib	c19072c3cd7ac5cb21de013f7e9832e0	flag-o-matic	288c54efeb5e2aa70775e39032695ad4	multiprocessing	30ead54fa2e2b5f9cd4e612ffc34d0fe	ninja-utils	2df4e452cea39a9ec8fb543ce059f8d6	python-utils-r1	a1229a86bd0db058e474a2d7d9191cca	meson	56446e0ef4b4c9af0e2dd4cdef1a086e
+_eclasses_=toolchain-funcs	e56c7649b804f051623c8bc1a1c44084	multilib	c19072c3cd7ac5cb21de013f7e9832e0	flag-o-matic	288c54efeb5e2aa70775e39032695ad4	multiprocessing	30ead54fa2e2b5f9cd4e612ffc34d0fe	ninja-utils	2df4e452cea39a9ec8fb543ce059f8d6	python-utils-r1	a1229a86bd0db058e474a2d7d9191cca	meson	92696988eaddba122c4cedc191f59bcb
 _md5_=ea09f5595d4f902a68641762ea3b1ca7
