@@ -10,7 +10,7 @@ dev-cpp/trompeloeil 47: Header only C++14 mocking framework
 dev-db/mysql 8.0.36 8.3.0: Fast, multi-threaded, multi-user SQL database server
 dev-libs/elfutils 0.191-r1: Libraries/utilities to handle ELF objects (drop in replacement for libelf)
 dev-libs/libgbinder 1.1.37 1.1.38: GLib-style interface to binder
-dev-libs/libglibutil 1.0.75 1.0.76: Library of glib utilities
+dev-libs/libglibutil 1.0.76 1.0.77: Library of glib utilities
 dev-libs/vala-language-server 0.48.7 9999: Code Intelligence for Vala & Genie
 dev-perl/Color-ANSI-Util 0.164: Routines for dealing with ANSI colors
 dev-perl/Color-RGB-Util 0.606: Utilities related to RGB colors
