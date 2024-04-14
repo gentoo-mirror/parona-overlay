@@ -46,7 +46,7 @@ dev-python/steam 1.4.4-r2: Python package for interacting with Steam
 dev-tex/altacv 1.7.1-r2: Yet another alternative curriculum vitae/résumé class with LaTeX
 dev-vcs/gcli 2.2.0: Portable CLI tool for interacting with Git(Hub|Lab|Tea) from the command line.
 games-util/gamehub 0.16.3_p2: All your games in one place
-games-util/mangohud 0.6.9_p1: Overlay for monitoring FPS, temperatures, CPU/GPU load and more
+games-util/mangohud 0.6.9_p1 0.7.1: Overlay for monitoring FPS, temperatures, CPU/GPU load and more
 games-util/nexusmodsapp 0.3: Nexus Mods App, a mod installer, creator and manager for all your popular games
 games-util/protonup-qt 2.9.1 2.9.2: Install and manage proton with Steam and Lutris
 games-util/r2modman 3.1.46 3.1.47 3.1.48: A simple and easy to use mod manager for several games using Thunderstore
