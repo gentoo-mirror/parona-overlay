@@ -52,7 +52,7 @@ games-util/protonup-qt 2.9.1 2.9.2: Install and manage proton with Steam and Lut
 games-util/r2modman 3.1.46 3.1.47 3.1.48: A simple and easy to use mod manager for several games using Thunderstore
 games-util/steamtinkerlaunch 9999: Tool for use with the Steam client for custom launch options
 gnome-extra/yad 13.0: Display GTK+ dialog boxes from command line or shell scripts
-gui-apps/fuzzel 1.9.2 9999: Application launcher for wlroots based Wayland compositors.
+gui-apps/fuzzel 1.9.2 1.10.1 9999: Application launcher for wlroots based Wayland compositors.
 gui-apps/waycheck 1.2.0: Simple GUI that displays the protocols implemented by a Wayland compositor.
 gui-apps/wbg 1.1.0: Super simple wallpaper application for Wayland compositors
 gui-apps/yambar 1.10.0 9999: Modular status panel for X11 and Wayland, inspired by polybar
