@@ -45,7 +45,7 @@ CDEPEND="
 "
 DEPEND="${CDEPEND}
 	>=dev-libs/tllist-1.0.1
-	dev-libs/wayland-protocols
+	>=dev-libs/wayland-protocols-1.32
 "
 RDEPEND="${CDEPEND}"
 BDEPEND="
