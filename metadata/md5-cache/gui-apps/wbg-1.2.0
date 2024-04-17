@@ -1,0 +1,16 @@
+BDEPEND=dev-util/wayland-scanner >=dev-build/meson-1.2.3 app-alternatives/ninja dev-build/meson-format-array
+DEFINED_PHASES=compile configure install test
+DEPEND=x11-libs/pixman:= dev-libs/wayland:= >=dev-libs/tllist-1.0.1:= png? ( media-libs/libpng:= ) jpeg? ( media-libs/libjpeg-turbo:= ) webp? ( media-libs/libwebp:= ) dev-libs/wayland-protocols
+DESCRIPTION=Super simple wallpaper application for Wayland compositors
+EAPI=8
+HOMEPAGE=https://codeberg.org/dnkl/wbg
+INHERIT=meson
+IUSE=+jpeg +png +svg +webp
+KEYWORDS=~amd64
+LICENSE=MIT ZLIB
+RDEPEND=x11-libs/pixman:= dev-libs/wayland:= >=dev-libs/tllist-1.0.1:= png? ( media-libs/libpng:= ) jpeg? ( media-libs/libjpeg-turbo:= ) webp? ( media-libs/libwebp:= )
+REQUIRED_USE=|| ( jpeg png svg webp )
+SLOT=0
+SRC_URI=https://codeberg.org/dnkl/wbg/archive/1.2.0.tar.gz -> wbg-1.2.0.tar.gz
+_eclasses_=toolchain-funcs	e56c7649b804f051623c8bc1a1c44084	multilib	c19072c3cd7ac5cb21de013f7e9832e0	flag-o-matic	288c54efeb5e2aa70775e39032695ad4	multiprocessing	30ead54fa2e2b5f9cd4e612ffc34d0fe	ninja-utils	2df4e452cea39a9ec8fb543ce059f8d6	python-utils-r1	a1229a86bd0db058e474a2d7d9191cca	meson	92696988eaddba122c4cedc191f59bcb
+_md5_=ffc511ca14f4b96a2a3a31db10b65356
