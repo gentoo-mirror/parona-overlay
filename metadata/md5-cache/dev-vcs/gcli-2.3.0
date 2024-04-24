@@ -1,0 +1,14 @@
+BDEPEND=virtual/pkgconfig
+DEFINED_PHASES=configure
+DEPEND=net-misc/curl libedit? ( dev-libs/libedit ) !libedit? ( sys-libs/readline:= ) test? ( dev-libs/atf dev-util/kyua )
+DESCRIPTION=Portable CLI tool for interacting with Git(Hub|Lab|Tea) from the command line.
+EAPI=8
+HOMEPAGE=https://herrhotzenplotz.de/gcli/
+IUSE=+libedit test
+KEYWORDS=~amd64
+LICENSE=BSD-2 Unlicense
+RDEPEND=net-misc/curl libedit? ( dev-libs/libedit ) !libedit? ( sys-libs/readline:= )
+RESTRICT=!test? ( test )
+SLOT=0
+SRC_URI=https://herrhotzenplotz.de/gcli/releases/gcli-2.3.0/gcli-2.3.0.tar.xz
+_md5_=975d52bbaf7475b2be94af790260f1aa

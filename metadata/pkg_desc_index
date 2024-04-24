@@ -1,19 +1,19 @@
 app-admin/dotdrop 1.14.0: Save your dotfiles once, deploy them everywhere
 app-arch/gztool 1.6.1: GZIP files indexer, compressor and data retriever.
-app-emulation/anbox-modules 20240210 20240402: Anbox kernel modules (ashmem and binder) fork
-app-emulation/waydroid 1.4.2-r1 1.4.2-r2: Container-based approach to boot a full Android system
+app-emulation/anbox-modules 20240402: Anbox kernel modules (ashmem and binder) fork
+app-emulation/waydroid 1.4.2-r2: Container-based approach to boot a full Android system
 app-misc/parona-scripts 9999: Scripts and hooks that I use on my machines
-app-misc/readpe 0.83 0.84: The PE file analysis toolkit
-app-misc/rivalcfg 4.12.0: CLI tool and Python library to configure SteelSeries gaming mice
-dev-build/cargo-make 0.37.10: Rust task runner and build tool
+app-misc/readpe 0.84: The PE file analysis toolkit
+app-misc/rivalcfg 4.12.0 4.13.0: CLI tool and Python library to configure SteelSeries gaming mice
+dev-build/cargo-make 0.37.10 0.37.11: Rust task runner and build tool
 dev-cpp/trompeloeil 47: Header only C++14 mocking framework
-dev-db/mysql 8.0.36 8.3.0: Fast, multi-threaded, multi-user SQL database server
+dev-db/mysql 8.3.0: Fast, multi-threaded, multi-user SQL database server
 dev-libs/elfutils 0.191-r1: Libraries/utilities to handle ELF objects (drop in replacement for libelf)
-dev-libs/libgbinder 1.1.37 1.1.38: GLib-style interface to binder
-dev-libs/libglibutil 1.0.76 1.0.77: Library of glib utilities
+dev-libs/libgbinder 1.1.38: GLib-style interface to binder
+dev-libs/libglibutil 1.0.77: Library of glib utilities
 dev-libs/vala-language-server 0.48.7 9999: Code Intelligence for Vala & Genie
-dev-perl/Color-ANSI-Util 0.164: Routines for dealing with ANSI colors
-dev-perl/Color-RGB-Util 0.606: Utilities related to RGB colors
+dev-perl/Color-ANSI-Util 0.164 0.165: Routines for dealing with ANSI colors
+dev-perl/Color-RGB-Util 0.606 0.607: Utilities related to RGB colors
 dev-perl/ColorThemeBase-Static 0.008: Base class for color theme modules with static list of items
 dev-perl/ColorThemeRole-ANSI 0.001: Roles for using ColorTheme::* with ANSI codes
 dev-perl/ColorThemeUtil-ANSI 0.002: Utility routines related to color themes and ANSI code
@@ -26,8 +26,8 @@ dev-perl/Graphics-ColorNamesLite-WWW 1.14.000: WWW color names and equivalent RG
 dev-perl/HTTP-Tiny-Multipart 0.08: Add post_multipart to HTTP::Tiny
 dev-perl/IO-Prompter 0.005001: Prompt for input, read it, clean it, return it.
 dev-perl/JSON-Color 0.134: Encode to colored JSON
-dev-perl/Log-Any-Adapter-Screen 0.140: Send logs to screen, with colors and some other features
-dev-perl/Module-Load-Util 0.009: Some utility routines related to module loading
+dev-perl/Log-Any-Adapter-Screen 0.140 0.141: Send logs to screen, with colors and some other features
+dev-perl/Module-Load-Util 0.009 0.011: Some utility routines related to module loading
 dev-perl/MouseX-StrictConstructor 0.02: Make your object constructors blow up on unknown attributes
 dev-perl/Regexp-Pattern-Perl 0.007: Regexp patterns related to Perl modules
 dev-perl/String-LineNumber 0.01: Give line number to each line of string
@@ -37,27 +37,27 @@ dev-perl/Test-Log-Log4perl 0.32: Test log4perl
 dev-perl/Test-RandomResult 0.001: Test that results of a running code look random
 dev-perl/Test-Synopsis-Expectation 0.12: Test that SYNOPSIS code produces expected results
 dev-perl/match-simple 0.012: simplified clone of smartmatch operator
-dev-python/gbinder 1.1.2 1.1.2-r1: Python bindings for libgbinder
+dev-python/gbinder 1.1.2-r1: Python bindings for libgbinder
 dev-python/inputs 0.5: Cross-platform Python support for keyboards, mice and gamepads.
 dev-python/log-symbols 0.0.14-r1: Colored symbols for various log levels for Python
 dev-python/pycryptodomex 3.20.0: A self-contained cryptographic library for Python
 dev-python/spinners 0.0.24-r1: Spinners for terminals
 dev-python/steam 1.4.4-r2: Python package for interacting with Steam
 dev-tex/altacv 1.7.1-r2: Yet another alternative curriculum vitae/résumé class with LaTeX
-dev-vcs/gcli 2.2.0: Portable CLI tool for interacting with Git(Hub|Lab|Tea) from the command line.
+dev-vcs/gcli 2.2.0 2.3.0: Portable CLI tool for interacting with Git(Hub|Lab|Tea) from the command line.
 games-util/gamehub 0.16.3_p2: All your games in one place
-games-util/mangohud 0.6.9_p1 0.7.1: Overlay for monitoring FPS, temperatures, CPU/GPU load and more
+games-util/mangohud 0.7.1: Overlay for monitoring FPS, temperatures, CPU/GPU load and more
 games-util/nexusmodsapp 0.3: Nexus Mods App, a mod installer, creator and manager for all your popular games
-games-util/protonup-qt 2.9.1 2.9.2: Install and manage proton with Steam and Lutris
-games-util/r2modman 3.1.46 3.1.47 3.1.48: A simple and easy to use mod manager for several games using Thunderstore
+games-util/protonup-qt 2.9.2: Install and manage proton with Steam and Lutris
+games-util/r2modman 3.1.48: A simple and easy to use mod manager for several games using Thunderstore
 games-util/steamtinkerlaunch 9999: Tool for use with the Steam client for custom launch options
 gnome-extra/yad 13.0: Display GTK+ dialog boxes from command line or shell scripts
-gui-apps/fuzzel 1.9.2 1.10.2 9999: Application launcher for wlroots based Wayland compositors.
+gui-apps/fuzzel 1.10.2 9999: Application launcher for wlroots based Wayland compositors.
 gui-apps/waycheck 1.2.0: Simple GUI that displays the protocols implemented by a Wayland compositor.
-gui-apps/wbg 1.1.0 1.2.0: Super simple wallpaper application for Wayland compositors
-gui-apps/yambar 1.10.0 1.11.0 9999: Modular status panel for X11 and Wayland, inspired by polybar
+gui-apps/wbg 1.2.0: Super simple wallpaper application for Wayland compositors
+gui-apps/yambar 1.11.0 9999: Modular status panel for X11 and Wayland, inspired by polybar
 gui-wm/cage 0.1.5: A Wayland kiosk
-gui-wm/river 0.2.6 0.3.0 9999: A dynamic tiling Wayland compositor
+gui-wm/river 0.3.0 9999: A dynamic tiling Wayland compositor
 gui-wm/stacktile 1.0.0 9999: stacktile is a layout generator for the river Wayland compositor.
 media-fonts/intel-one-mono 1.3.0: Intel's monospaced font family with clarity and legibility in mind.
 media-fonts/juliamono 0.051: JuliaMono - a monospaced font for scientific and technical computing
@@ -65,7 +65,7 @@ media-video/mpv-mpris 1.1: MPRIS plugin for mpv
 net-misc/wlvncc 0_pre20220414: A Wayland Native VNC Client
 sec-keys/openpgp-keys-mysql 20231023: OpenPGP keys used to sign MySQL releases
 sys-apps/rinit 9999: Next-gen init and service-manager written in Rust
-sys-power/corectrl 1.3.11 1.4.0: Profile based system control utility
-sys-process/nvtop 3.0.2 3.1.0: AMD and NVIDIA GPUs htop like monitoring tool
+sys-power/corectrl 1.4.0: Profile based system control utility
+sys-process/nvtop 3.1.0: AMD and NVIDIA GPUs htop like monitoring tool
 www-apps/rdrview 0.1: Firefox Reader View as a command line tool
 www-plugins/firefoxpwa 2.11.1: A tool to install, manage and use Progressive Web Apps (PWAs) in Mozilla Firefox
