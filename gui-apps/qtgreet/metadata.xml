@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "https://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+	<maintainer type="person">
+		<email>parona@protonmail.com</email>
+		<name>Alfred Wingate</name>
+	</maintainer>
+	<upstream>
+		<remote-id type="gitlab">marcusbritanicus/QtGreet</remote-id>
+		<remote-id type="github">marcusbritanicus/QtGreet</remote-id>
+	</upstream>
+	<use>
+		<flag name="greetwl">Build the greetwl compositor to use it instead of requiring other compositors.</flag>
+	</use>
+</pkgmetadata>
