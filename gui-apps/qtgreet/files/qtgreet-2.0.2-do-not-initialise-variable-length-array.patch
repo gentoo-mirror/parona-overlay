@@ -1,0 +1,25 @@
+https://gitlab.com/marcusbritanicus/QtGreet/-/merge_requests/9
+
+From da321e58d3540d0f3e04f1d65ea44472db96d004 Mon Sep 17 00:00:00 2001
+From: Alfred Wingate <parona@protonmail.com>
+Date: Fri, 26 Apr 2024 00:34:01 +0300
+Subject: [PATCH] Do not initialise variable length array
+
+* Clang is more litigious than GCC with allowing this, even so the
+  variable is memset so this doesn't change behavior.
+
+Signed-off-by: Alfred Wingate <parona@protonmail.com>
+--- a/src/backends/greetd/GreetdManager.cpp
++++ b/src/backends/greetd/GreetdManager.cpp
+@@ -497,7 +497,7 @@ QByteArray GreetdLogin::roundtrip( QByteArray payload ) {
+         return QByteArray();
+     }
+ 
+-    char message[ retLen + 1 ] = { '\0' };
++    char message[ retLen + 1 ];
+ 
+     memset( message, '\0', retLen + 1 );
+ 
+-- 
+2.44.0
+

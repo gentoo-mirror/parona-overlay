@@ -51,6 +51,10 @@ BDEPEND="
 	virtual/pkgconfig
 "
 
+PATCHES=(
+	"${FILESDIR}"/qtgreet-2.0.2-do-not-initialise-variable-length-array.patch
+)
+
 src_prepare() {
 	default
 
