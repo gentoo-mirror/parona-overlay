@@ -1,0 +1,16 @@
+BDEPEND=virtual/pkgconfig >=dev-build/meson-1.2.3 app-alternatives/ninja dev-build/meson-format-array
+DEFINED_PHASES=compile configure install postinst postrm preinst prepare test
+DEPEND=media-video/mpv:= greetwl? ( dev-libs/wayland gui-libs/wlroots:0/17 x11-libs/libxkbcommon ) qt6? ( dev-qt/qtbase:6[gui,dbus,opengl,widgets] gui-libs/dfl-applications[qt6] gui-libs/dfl-ipc[qt6] gui-libs/dfl-login1[qt6] gui-libs/dfl-utils[qt6] gui-libs/wayqt[qt6] ) !qt6? ( dev-qt/qtcore:5 dev-qt/qtdbus:5 dev-qt/qtgui:5 dev-qt/qtwidgets:5 gui-libs/dfl-applications[qt5] gui-libs/dfl-ipc[qt5] gui-libs/dfl-login1[qt5] gui-libs/dfl-utils[qt5] gui-libs/wayqt[qt5] )
+DESCRIPTION=Qt based greeter for greetd
+EAPI=8
+HOMEPAGE=https://marcusbritanicus.gitlab.io/QtGreet/
+IDEPEND=dev-util/desktop-file-utils x11-misc/shared-mime-info
+INHERIT=flag-o-matic meson xdg
+IUSE=+greetwl qt6
+KEYWORDS=~amd64
+LICENSE=GPL-3
+RDEPEND=media-video/mpv:= greetwl? ( dev-libs/wayland gui-libs/wlroots:0/17 x11-libs/libxkbcommon ) qt6? ( dev-qt/qtbase:6[gui,dbus,opengl,widgets] gui-libs/dfl-applications[qt6] gui-libs/dfl-ipc[qt6] gui-libs/dfl-login1[qt6] gui-libs/dfl-utils[qt6] gui-libs/wayqt[qt6] ) !qt6? ( dev-qt/qtcore:5 dev-qt/qtdbus:5 dev-qt/qtgui:5 dev-qt/qtwidgets:5 gui-libs/dfl-applications[qt5] gui-libs/dfl-ipc[qt5] gui-libs/dfl-login1[qt5] gui-libs/dfl-utils[qt5] gui-libs/wayqt[qt5] )
+SLOT=0
+SRC_URI=https://gitlab.com/marcusbritanicus/QtGreet/-/archive/v2.0.2/QtGreet-v2.0.2.tar.bz2
+_eclasses_=toolchain-funcs	e56c7649b804f051623c8bc1a1c44084	multilib	c19072c3cd7ac5cb21de013f7e9832e0	flag-o-matic	288c54efeb5e2aa70775e39032695ad4	multiprocessing	30ead54fa2e2b5f9cd4e612ffc34d0fe	ninja-utils	2df4e452cea39a9ec8fb543ce059f8d6	python-utils-r1	a1229a86bd0db058e474a2d7d9191cca	meson	aecae905c2e0c201d7925fae52a5576d	xdg-utils	baea6080dd821f5562d715887954c9d3	xdg	4a14c5c24f121e7da66e5aab4a168c6e
+_md5_=fd0a3c9d2c7594d037a9759983c4c8ea

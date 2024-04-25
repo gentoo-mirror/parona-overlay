@@ -53,9 +53,15 @@ games-util/r2modman 3.1.48: A simple and easy to use mod manager for several gam
 games-util/steamtinkerlaunch 9999: Tool for use with the Steam client for custom launch options
 gnome-extra/yad 13.0: Display GTK+ dialog boxes from command line or shell scripts
 gui-apps/fuzzel 1.10.2 9999: Application launcher for wlroots based Wayland compositors.
+gui-apps/qtgreet 2.0.2: Qt based greeter for greetd
 gui-apps/waycheck 1.2.0: Simple GUI that displays the protocols implemented by a Wayland compositor.
 gui-apps/wbg 1.2.0: Super simple wallpaper application for Wayland compositors
 gui-apps/yambar 1.11.0 9999: Modular status panel for X11 and Wayland, inspired by polybar
+gui-libs/dfl-applications 0.2.0: This library provides a thin wrapper around QApplication and the rest.
+gui-libs/dfl-ipc 0.2.0: Two very simple classes for IPC. Used by DFL::Application.
+gui-libs/dfl-login1 0.2.0: DFL Login1 class implements a part of the systemd logind dbus protocol.
+gui-libs/dfl-utils 0.2.0: This library provides single-instance Application classes for various utilities.
+gui-libs/wayqt 0.2.0: A Qt-based wrapper for various wayland protocols.
 gui-wm/cage 0.1.5: A Wayland kiosk
 gui-wm/river 0.3.0 9999: A dynamic tiling Wayland compositor
 gui-wm/stacktile 1.0.0 9999: stacktile is a layout generator for the river Wayland compositor.
