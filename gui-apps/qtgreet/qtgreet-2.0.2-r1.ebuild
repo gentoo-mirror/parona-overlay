@@ -63,6 +63,7 @@ src_prepare() {
 
 src_configure() {
 	# violates ODR
+	# https://gitlab.com/marcusbritanicus/QtGreet/-/merge_requests/10
 	filter-lto
 
 	local emesonargs=(
