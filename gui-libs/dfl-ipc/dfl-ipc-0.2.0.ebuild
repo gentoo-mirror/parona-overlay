@@ -37,6 +37,10 @@ BDEPEND="
 	virtual/pkgconfig
 "
 
+PATCHES=(
+	"${FILESDIR}"/dfl-ipc-0.2.0-stop-using-internal-header-for-signal.patch
+)
+
 pkg_setup() {
 	MULTIBUILD_VARIANTS=( qt5 $(usev qt6) )
 }
