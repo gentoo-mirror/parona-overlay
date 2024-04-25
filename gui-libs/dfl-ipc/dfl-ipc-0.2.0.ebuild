@@ -38,7 +38,7 @@ BDEPEND="
 "
 
 PATCHES=(
-	"${FILESDIR}"/files/dfl-ipc-0.2.0-stop-using-internal-header-for-signal.patch
+	"${FILESDIR}"/dfl-ipc-0.2.0-stop-using-internal-header-for-signal.patch
 )
 
 pkg_setup() {
