@@ -75,4 +75,4 @@ sys-apps/rinit 9999: Next-gen init and service-manager written in Rust
 sys-power/corectrl 1.4.0: Profile based system control utility
 sys-process/nvtop 3.1.0: AMD and NVIDIA GPUs htop like monitoring tool
 www-apps/rdrview 0.1: Firefox Reader View as a command line tool
-www-plugins/firefoxpwa 2.11.1: A tool to install, manage and use Progressive Web Apps (PWAs) in Mozilla Firefox
+www-plugins/firefoxpwa 2.11.1 2.12.0: A tool to install, manage and use Progressive Web Apps (PWAs) in Mozilla Firefox
