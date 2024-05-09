@@ -10,7 +10,7 @@ dev-cpp/hjson-cpp 2.4.1: Hjson for C++
 dev-cpp/trompeloeil 47: Header only C++14 mocking framework
 dev-db/mysql 8.3.0: Fast, multi-threaded, multi-user SQL database server
 dev-libs/elfutils 0.191-r1: Libraries/utilities to handle ELF objects (drop in replacement for libelf)
-dev-libs/libgbinder 1.1.38: GLib-style interface to binder
+dev-libs/libgbinder 1.1.38 1.1.39: GLib-style interface to binder
 dev-libs/libglibutil 1.0.77 1.0.78 1.0.79: Library of glib utilities
 dev-libs/vala-language-server 0.48.7 9999: Code Intelligence for Vala & Genie
 dev-perl/Color-ANSI-Util 0.164 0.165: Routines for dealing with ANSI colors
