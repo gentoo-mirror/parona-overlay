@@ -5,7 +5,7 @@ app-emulation/waydroid 1.4.2-r2: Container-based approach to boot a full Android
 app-misc/parona-scripts 9999: Scripts and hooks that I use on my machines
 app-misc/readpe 0.84: The PE file analysis toolkit
 app-misc/rivalcfg 4.12.0 4.13.0: CLI tool and Python library to configure SteelSeries gaming mice
-dev-build/cargo-make 0.37.10 0.37.11: Rust task runner and build tool
+dev-build/cargo-make 0.37.11 0.37.12: Rust task runner and build tool
 dev-cpp/hjson-cpp 2.4.1: Hjson for C++
 dev-cpp/trompeloeil 47: Header only C++14 mocking framework
 dev-db/mysql 8.3.0: Fast, multi-threaded, multi-user SQL database server
