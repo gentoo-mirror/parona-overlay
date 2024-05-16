@@ -28,7 +28,7 @@ dev-perl/HTTP-Tiny-Multipart 0.08: Add post_multipart to HTTP::Tiny
 dev-perl/IO-Prompter 0.005001: Prompt for input, read it, clean it, return it.
 dev-perl/JSON-Color 0.134: Encode to colored JSON
 dev-perl/Log-Any-Adapter-Screen 0.140 0.141: Send logs to screen, with colors and some other features
-dev-perl/Module-Load-Util 0.009 0.011: Some utility routines related to module loading
+dev-perl/Module-Load-Util 0.011 0.012: Some utility routines related to module loading
 dev-perl/MouseX-StrictConstructor 0.02: Make your object constructors blow up on unknown attributes
 dev-perl/Regexp-Pattern-Perl 0.007: Regexp patterns related to Perl modules
 dev-perl/String-LineNumber 0.01: Give line number to each line of string
