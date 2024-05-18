@@ -1,0 +1,26 @@
+#!/sbin/openrc-run
+# Copyright 2024 Gentoo Authors
+# Distributed under the terms of the GNU General Public License v2
+
+name="vikunja daemon"
+description="Vikunja"
+command=/usr/bin/vikunja
+pidfile="/var/run/vikunja.pid"
+command_background="true"
+command_user="vikunja:vikunja"
+
+start_stop_daemon_args="
+    --env VIKUNJA_SERVICE_ROOTPATH=${VIKUNJA_SERVICE_ROOTPATH:-/var/lib/vikunja}
+    --env VIKUNJA_FILES_BASEPATH=${VIKUNJA_FILES_BASEPATH:-/var/lib/vikunja/files}
+    --env VIKUNJA_DATABASE_PATH=${VIKUNJA_DATABASE_PATH:-/var/lib/vikunja/vikunja.db}
+    --env VIKUNJA_LOG_PATH=${VIKUNJA_LOG_PATH:-/var/lib/vikunja/logs}
+    --env VIKUNJA_LOG_STANDARD=${VIKUNJA_LOG_STANDARD:-file}
+    --env VIKUNJA_LOG_LEVEL=${VIKUNJA_LOG_LEVEL:-INFO}
+"
+
+directory="/var/lib/vikunja"
+required_dirs="${VIKUNJA_SERVICE_ROOTPATH}"
+
+depend() {
+    need logger net
+}
