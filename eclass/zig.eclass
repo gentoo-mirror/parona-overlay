@@ -80,11 +80,11 @@ fi
 # @DESCRIPTION:
 # Wrapper for zig
 ezig() {
-    debug-print-function ${FUNCNAME} "$@"
+	debug-print-function ${FUNCNAME} "$@"
 
-    ebegin "Invoking \"${ZIG} ${*}\""
-    ${ZIG} "${@}"
-    eend $? "\"${ZIG} ${*}\" failed" || die
+	ebegin "Invoking \"${ZIG} ${*}\""
+	${ZIG} "${@}"
+	eend $? "\"${ZIG} ${*}\" failed" || die
 }
 
 # @FUNCTION: zig_pkg_setup
