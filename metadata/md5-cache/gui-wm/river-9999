@@ -11,5 +11,5 @@ PROPERTIES=live
 RDEPEND=dev-libs/libevdev dev-libs/libinput:= dev-libs/wayland media-libs/libdisplay-info x11-libs/libxkbcommon[X?,wayland] x11-libs/pixman gui-libs/wlroots:0/17[X?]
 RESTRICT=test
 SLOT=0
-_eclasses_=zig	5638fac06353945a33c05ab928a48767	git-r3	fbb2889c81f3a05910c1524db69425c1
+_eclasses_=zig	b77ddd977e34f949e5e33b5e18b66657	git-r3	fbb2889c81f3a05910c1524db69425c1
 _md5_=157e0a272b5f8bdf9096d852f6235c68
