@@ -3,24 +3,27 @@
 
 EAPI=8
 
-ZIG_MAX_VERSION="0.11"
-ZIG_MIN_VERSION="0.11"
+ZIG_MAX_VERSION="0.12"
+ZIG_MIN_VERSION="0.12"
+
+# build.zig.zon
+declare -A ZIG_VENDOR=(
+	[zig-pixman]="https://codeberg.org/ifreund/zig-pixman/archive/v0.1.0.tar.gz"
+	[zig-wayland]="https://codeberg.org/ifreund/zig-wayland/archive/v0.1.0.tar.gz"
+	[zig-wlroots]="https://codeberg.org/ifreund/zig-wlroots/archive/v0.17.0.tar.gz"
+	[zig-xkbcommon]="https://codeberg.org/ifreund/zig-xkbcommon/archive/v0.1.0.tar.gz"
+)
+
 inherit zig
 
 DESCRIPTION="A dynamic tiling Wayland compositor"
 HOMEPAGE="https://codeberg.org/river/river/"
+SRC_URI="
+	https://codeberg.org/river/river/releases/download/v${PV}/${P}.tar.gz
+	${ZIG_VENDOR_URIS}
+"
 
-if [[ "${PV}" == "9999" ]];  then
-	inherit git-r3
-	EGIT_REPO_URI="https://codeberg.org/river/river/"
-	EGIT_SUBMODULES=( "*" )
-else
-	SRC_URI="
-		https://codeberg.org/river/river/releases/download/v${PV}/${P}.tar.gz
-	"
-
-	KEYWORDS="~amd64"
-fi
+KEYWORDS="~amd64"
 
 LICENSE="GPL-3"
 SLOT="0"
@@ -33,13 +36,13 @@ CDEPEND="
 	dev-libs/libevdev
 	dev-libs/libinput:=
 	dev-libs/wayland
-	media-libs/libdisplay-info
 	x11-libs/libxkbcommon[X?,wayland]
 	x11-libs/pixman
 	gui-libs/wlroots:0/17[X?]
 "
 DEPEND="${CDEPEND}
 	dev-libs/wayland-protocols
+	media-libs/libdisplay-info
 "
 RDEPEND="${CDEPEND}"
 BDEPEND="

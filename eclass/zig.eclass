@@ -82,10 +82,40 @@ fi
 ezig() {
 	debug-print-function ${FUNCNAME} "$@"
 
-	ebegin "Invoking \"${ZIG} ${*}\""
-	${ZIG} "${@}"
-	eend $? "\"${ZIG} ${*}\" failed" || die
+	local command=${1}
+	shift
+
+	set -- ${ZIG} ${command} --global-cache-dir "${T}"/zig_vendor ${@}
+
+	ebegin "Invoking \"${@}\""
+	${@}
+	eend $? "\"${@}\" failed" || die
 }
+
+# @ECLASS_VARIABLE: ZIG_VENDOR
+# @DEFAULT_UNSET
+# @PRE_INHERIT
+# @DESCRIPTION:
+# Bash associative array containing vendored zig dependencies.
+
+# @ECLASS_VARIABLE: ZIG_VENDOR_URIS
+# @OUTPUT_VARIABLE
+# @DESCRIPTION:
+# List of URIs to put into SRC_URI created from ZIG_VENDOR.
+
+# @FUNCTION: zig_vendor_uris
+# @DESCRIPTION:
+# Generate the URIs to put into SRC_URI to help fetch the vendored dependencies. It uses the ZIG_VENDOR variable.
+zig_vendor_uris() {
+	ZIG_VENDOR_URIS=
+
+	local uri
+	for dependency in ${!ZIG_VENDOR[@]}; do
+		uri="${ZIG_VENDOR[${dependency}]}"
+		ZIG_VENDOR_URIS+=" ${uri} -> ${dependency}-${uri##*/}"
+	done
+}
+zig_vendor_uris
 
 # @FUNCTION: zig_pkg_setup
 # @DESCRIPTION:
@@ -127,6 +157,31 @@ zig_pkg_setup() {
 	fi
 
 	export zig_ver
+}
+
+
+# @FUNCTION: zig_src_unpack
+# @DESCRIPTION:
+# This is the zig_src_unpack function.
+zig_src_unpack() {
+	if [[ $(declare -p ZIG_VENDOR) == "declare -A"* ]]; then
+		local zig_files
+		local uri
+		for dependency in ${!ZIG_VENDOR[@]}; do
+			uri="${ZIG_VENDOR[${dependency}]}"
+			zig_files+="${dependency}-${uri##*/}"
+		done
+
+		for dist in ${A}; do
+			if [[ ${zig_files} =~ ${dist} ]]; then
+				ezig fetch "${DISTDIR}/${dist}"
+			else
+				unpack ${dist}
+			fi
+		done
+	else
+		default
+	fi
 }
 
 # @FUNCTION: zig_src_compile
@@ -182,4 +237,4 @@ zig_src_test() {
 
 fi
 
-EXPORT_FUNCTIONS pkg_setup src_compile src_install src_test
+EXPORT_FUNCTIONS pkg_setup src_unpack src_compile src_install src_test

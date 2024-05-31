@@ -29,6 +29,6 @@ RDEPEND="
 "
 DEPEND="
 	${RDEPEND}
-	dev-perl/Test2-Suite
+	perl-core/Test2-Suite
 "
 BDEPEND="dev-perl/Module-Build-Tiny"
