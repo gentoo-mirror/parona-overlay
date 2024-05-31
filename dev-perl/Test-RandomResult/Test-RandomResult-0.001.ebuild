@@ -13,6 +13,6 @@ SLOT="0"
 KEYWORDS="~amd64"
 
 RDEPEND="
-	dev-perl/Test2-Suite
+	perl-core/Test2-Suite
 "
 DEPEND="${RDEPEND}"
