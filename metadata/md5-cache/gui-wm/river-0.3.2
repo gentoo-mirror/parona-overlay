@@ -1,0 +1,16 @@
+BDEPEND=dev-util/wayland-scanner virtual/pkgconfig man? ( app-text/scdoc ) || ( dev-lang/zig-bin:0.12 dev-lang/zig:0.12 )
+DEFINED_PHASES=compile install setup test unpack
+DEPEND=dev-libs/libevdev dev-libs/libinput:= dev-libs/wayland x11-libs/libxkbcommon[X?,wayland] x11-libs/pixman gui-libs/wlroots:0/17[X?] dev-libs/wayland-protocols media-libs/libdisplay-info
+DESCRIPTION=A dynamic tiling Wayland compositor
+EAPI=8
+HOMEPAGE=https://codeberg.org/river/river/
+INHERIT=zig
+IUSE=X +man
+KEYWORDS=~amd64
+LICENSE=GPL-3
+RDEPEND=dev-libs/libevdev dev-libs/libinput:= dev-libs/wayland x11-libs/libxkbcommon[X?,wayland] x11-libs/pixman gui-libs/wlroots:0/17[X?]
+RESTRICT=test
+SLOT=0
+SRC_URI=https://codeberg.org/river/river/releases/download/v0.3.2/river-0.3.2.tar.gz https://codeberg.org/ifreund/zig-xkbcommon/archive/v0.1.0.tar.gz -> zig-xkbcommon-v0.1.0.tar.gz https://codeberg.org/ifreund/zig-pixman/archive/v0.1.0.tar.gz -> zig-pixman-v0.1.0.tar.gz https://codeberg.org/ifreund/zig-wlroots/archive/v0.17.0.tar.gz -> zig-wlroots-v0.17.0.tar.gz https://codeberg.org/ifreund/zig-wayland/archive/v0.1.0.tar.gz -> zig-wayland-v0.1.0.tar.gz
+_eclasses_=zig	abf47bb6e7bcc0e86ee6395bd2e67f04
+_md5_=d87c0f8b6848fc91c585cc3f3c90269d

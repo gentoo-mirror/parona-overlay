@@ -1,5 +1,5 @@
 BDEPEND=dev-util/wayland-scanner virtual/pkgconfig man? ( app-text/scdoc ) || ( dev-lang/zig-bin:0.11 dev-lang/zig:0.11 )
-DEFINED_PHASES=compile install setup test
+DEFINED_PHASES=compile install setup test unpack
 DEPEND=dev-libs/libevdev dev-libs/libinput:= dev-libs/wayland media-libs/libdisplay-info x11-libs/libxkbcommon[X?,wayland] x11-libs/pixman gui-libs/wlroots:0/17[X?] dev-libs/wayland-protocols
 DESCRIPTION=A dynamic tiling Wayland compositor
 EAPI=8
@@ -12,5 +12,5 @@ RDEPEND=dev-libs/libevdev dev-libs/libinput:= dev-libs/wayland media-libs/libdis
 RESTRICT=test
 SLOT=0
 SRC_URI=https://codeberg.org/river/river/releases/download/v0.3.1/river-0.3.1.tar.gz
-_eclasses_=zig	b77ddd977e34f949e5e33b5e18b66657
+_eclasses_=zig	abf47bb6e7bcc0e86ee6395bd2e67f04
 _md5_=157e0a272b5f8bdf9096d852f6235c68

@@ -10,5 +10,5 @@ PROPERTIES=live
 RDEPEND=dev-libs/wayland gui-wm/river
 RESTRICT=test
 SLOT=0
-_eclasses_=zig	b77ddd977e34f949e5e33b5e18b66657	git-r3	fbb2889c81f3a05910c1524db69425c1
+_eclasses_=zig	abf47bb6e7bcc0e86ee6395bd2e67f04	git-r3	fbb2889c81f3a05910c1524db69425c1
 _md5_=7fccdf6ef3be016edd3f62b1cecfca4b
