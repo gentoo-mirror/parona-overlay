@@ -51,7 +51,7 @@ dev-vcs/gcli 2.2.0 2.3.0: Portable CLI tool for interacting with Git(Hub|Lab|Tea
 games-util/gamehub 0.16.3_p2: All your games in one place
 games-util/heroic-gogdl 9999: GOG Downloading module for Heroic Games Launcher
 games-util/mangohud 0.7.1: Overlay for monitoring FPS, temperatures, CPU/GPU load and more
-games-util/nexusmodsapp 0.4.1 0.5: Nexus Mods App, a mod installer, creator and manager for all your popular games
+games-util/nexusmodsapp 0.5 0.5.1: Nexus Mods App, a mod installer, creator and manager for all your popular games
 games-util/protonup-qt 2.9.2: Install and manage proton with Steam and Lutris
 games-util/r2modman 3.1.48: A simple and easy to use mod manager for several games using Thunderstore
 games-util/steamtinkerlaunch 9999: Tool for use with the Steam client for custom launch options
