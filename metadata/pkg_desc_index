@@ -2,7 +2,7 @@ acct-group/vikunja 1: System group: vikunja
 acct-user/vikunja 1: Dedicated user for vikunja
 app-admin/dotdrop 1.14.0: Save your dotfiles once, deploy them everywhere
 app-arch/gztool 1.6.1: GZIP files indexer, compressor and data retriever.
-app-emulation/anbox-modules 20240402: Anbox kernel modules (ashmem and binder) fork
+app-emulation/anbox-modules 20240402 20240526: Anbox kernel modules (ashmem and binder) fork
 app-emulation/waydroid 1.4.2-r2: Container-based approach to boot a full Android system
 app-misc/parona-scripts 9999: Scripts and hooks that I use on my machines
 app-misc/readpe 0.84: The PE file analysis toolkit
