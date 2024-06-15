@@ -21,7 +21,7 @@ dev-perl/ColorThemeBase-Static 0.008: Base class for color theme modules with st
 dev-perl/ColorThemeRole-ANSI 0.001: Roles for using ColorTheme::* with ANSI codes
 dev-perl/ColorThemeUtil-ANSI 0.002: Utility routines related to color themes and ANSI code
 dev-perl/ColorThemes-Standard 0.003: A standard collection of generic color themes
-dev-perl/Config-Model 2.153-r1: A framework to validate, migrate and edit configuration files
+dev-perl/Config-Model 2.153-r1 2.154: A framework to validate, migrate and edit configuration files
 dev-perl/Config-Model-Tester 4.007: Test framework for Config::Model
 dev-perl/Data-Format-Pretty-JSON 0.12: Pretty-print data structure as JSON
 dev-perl/GitLab-API-v4 0.27: A complete GitLab API v4 client.
