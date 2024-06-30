@@ -11,11 +11,18 @@ LICENSE="BSD-2 Unlicense"
 SLOT="0"
 KEYWORDS="~amd64"
 
-IUSE="test"
+IUSE="+libedit test"
 RESTRICT="!test? ( test )"
 
 RDEPEND="
-	net-misc/curl
+	dev-libs/openssl:=
+	net-misc/curl[openssl]
+	libedit? (
+		dev-libs/libedit
+	)
+	!libedit? (
+		sys-libs/readline:=
+	)
 "
 DEPEND="
 	${RDEPEND}
@@ -29,5 +36,8 @@ BDEPEND="
 "
 
 src_configure() {
-	econf --disable-shared
+	# use ccache via portage
+	local -x CCACHE=" " # whitespace required...
+
+	./configure --prefix="${EPREFIX}/usr" $(use_enable libedit) $(use_enable !libedit libreadline) || die
 }
