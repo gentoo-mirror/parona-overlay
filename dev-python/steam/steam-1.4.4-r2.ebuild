@@ -1,4 +1,4 @@
-# Copyright 2023 Gentoo Authors
+# Copyright 2023-2024 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=8
@@ -21,8 +21,11 @@ LICENSE="MIT"
 SLOT="0"
 KEYWORDS="~amd64"
 
-RESTRICT="test !test? ( test )"
-PROPERTIES="test_network"
+RESTRICT="!test? ( test )"
+
+PATCHES=(
+	"${FILESDIR}"/steam-1.4.4-fix-tests-with-urllib3-2.patch
+)
 
 RDEPEND="
 	>=dev-python/cachetools-3.0.0[${PYTHON_USEDEP}]
