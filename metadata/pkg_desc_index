@@ -55,7 +55,7 @@ games-util/nexusmodsapp 0.5 0.5.1 0.5.2: Nexus Mods App, a mod installer, creato
 games-util/protonup-qt 2.9.2: Install and manage proton with Steam and Lutris
 games-util/r2modman 3.1.48 3.1.49: A simple and easy to use mod manager for several games using Thunderstore
 games-util/steamtinkerlaunch 9999: Tool for use with the Steam client for custom launch options
-gnome-extra/yad 13.0 14.0: Display GTK+ dialog boxes from command line or shell scripts
+gnome-extra/yad 13.0 14.0 14.1: Display GTK+ dialog boxes from command line or shell scripts
 gui-apps/fuzzel 1.10.2 9999: Application launcher for wlroots based Wayland compositors.
 gui-apps/qtgreet 2.0.2-r1: Qt based greeter for greetd
 gui-apps/waycheck 1.2.0: Simple GUI that displays the protocols implemented by a Wayland compositor.
@@ -71,6 +71,7 @@ gui-wm/river 0.3.1 0.3.2: A dynamic tiling Wayland compositor
 gui-wm/stacktile 1.0.0 9999: stacktile is a layout generator for the river Wayland compositor.
 media-fonts/intel-one-mono 1.3.0: Intel's monospaced font family with clarity and legibility in mind.
 media-fonts/juliamono 0.051: JuliaMono - a monospaced font for scientific and technical computing
+media-libs/phonon-mpv 0.1.0: Phonon Backend using MPV Player(libmpv)
 media-sound/spotify 1.2.37: Spotify is a social music platform
 media-video/mpv-mpris 1.1: MPRIS plugin for mpv
 net-im/discord 0.0.58: All-in-one voice and text chat for gamers
