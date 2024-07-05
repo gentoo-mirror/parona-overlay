@@ -1,0 +1,74 @@
+https://github.com/ValvePython/steam/pull/466
+
+From e313e05d03cfbb9413cfb279a4a14fa55d0b3c4e Mon Sep 17 00:00:00 2001
+From: Alfred Wingate <parona@protonmail.com>
+Date: Fri, 5 Jul 2024 13:36:48 +0300
+Subject: [PATCH] Remove urllib3 pin
+
+https://github.com/kevin1024/vcrpy/issues/719
+
+Signed-off-by: Alfred Wingate <parona@protonmail.com>
+--- a/tests/test_steamid.py
++++ b/tests/test_steamid.py
+@@ -351,7 +351,7 @@ def scrub_resp(r):
+                               mode='once',
+                               serializer='yaml',
+                               filter_query_parameters=['nocache'],
+-                              decode_compressed_response=False,
++                              decode_compressed_response=True,
+                               before_record_request=scrub_req,
+                               before_record_response=scrub_resp,
+                               ):
+--- a/tests/test_webapi.py
++++ b/tests/test_webapi.py
+@@ -30,7 +30,7 @@ def scrub_resp(r):
+ )
+ 
+ class TCwebapi(unittest.TestCase):
+-    @test_vcr.use_cassette('webapi.yaml')
++    @test_vcr.use_cassette('webapi.yaml', decode_compressed_response=True)
+     def setUp(self):
+         self.api = WebAPI(test_api_key)
+         self.api.session.headers['Accept-Encoding'] = 'identity'
+@@ -38,27 +38,27 @@ def setUp(self):
+     def test_docs(self):
+         self.assertTrue(len(self.api.doc()) > 0)
+ 
+-    @test_vcr.use_cassette('webapi.yaml')
++    @test_vcr.use_cassette('webapi.yaml', decode_compressed_response=True)
+     def test_simple_api_call(self):
+         resp = self.api.ISteamWebAPIUtil.GetServerInfo_v1()
+         self.assertTrue('servertime' in resp)
+ 
+-    @test_vcr.use_cassette('webapi.yaml')
++    @test_vcr.use_cassette('webapi.yaml', decode_compressed_response=True)
+     def test_simple_api_call_vdf(self):
+         resp = self.api.ISteamWebAPIUtil.GetServerInfo(format='vdf')
+         self.assertTrue('servertime' in resp['response'])
+ 
+-    @test_vcr.use_cassette('webapi.yaml')
++    @test_vcr.use_cassette('webapi.yaml', decode_compressed_response=True)
+     def test_resolve_vanity(self):
+         resp = self.api.ISteamUser.ResolveVanityURL(vanityurl='valve', url_type=2)
+         self.assertEqual(resp['response']['steamid'], '103582791429521412')
+ 
+-    @test_vcr.use_cassette('webapi.yaml')
++    @test_vcr.use_cassette('webapi.yaml', decode_compressed_response=True)
+     def test_post_publishedfile(self):
+         resp = self.api.ISteamRemoteStorage.GetPublishedFileDetails(itemcount=5, publishedfileids=[1,1,1,1,1])
+         self.assertEqual(resp['response']['resultcount'], 5)
+ 
+-    @test_vcr.use_cassette('webapi.yaml')
++    @test_vcr.use_cassette('webapi.yaml', decode_compressed_response=True)
+     def test_get(self):
+         resp = webapi.get('ISteamUser', 'ResolveVanityURL', 1,
+                            session=self.api.session, params={
+@@ -68,7 +68,7 @@ def test_get(self):
+                                })
+         self.assertEqual(resp['response']['steamid'], '103582791429521412')
+ 
+-    @test_vcr.use_cassette('webapi.yaml')
++    @test_vcr.use_cassette('webapi.yaml', decode_compressed_response=True)
+     def test_post(self):
+         resp = webapi.post('ISteamRemoteStorage', 'GetPublishedFileDetails', 1,
+                            session=self.api.session, params={

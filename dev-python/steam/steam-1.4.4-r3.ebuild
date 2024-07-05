@@ -24,19 +24,22 @@ KEYWORDS="~amd64"
 RESTRICT="!test? ( test )"
 
 PATCHES=(
+	"${FILESDIR}"/steam-1.4.4-appinfo.vdf-v29-support.patch
 	"${FILESDIR}"/steam-1.4.4-fix-tests-with-urllib3-2.patch
 )
 
 RDEPEND="
 	>=dev-python/cachetools-3.0.0[${PYTHON_USEDEP}]
 	>=dev-python/pycryptodomex-3.7.0[${PYTHON_USEDEP}]
+	dev-python/protobuf-python[${PYTHON_USEDEP}]
 	>=dev-python/requests-2.9.1[${PYTHON_USEDEP}]
 	>=dev-python/six-1.10.0[${PYTHON_USEDEP}]
-	>=dev-python/vdf-3.3[${PYTHON_USEDEP}]
+	>=dev-python/vdf-3.4-r2[${PYTHON_USEDEP}]
 "
 BDEPEND="
 	test? (
 		${RDEPEND}
+		dev-python/mock[${PYTHON_USEDEP}]
 		dev-python/vcrpy[${PYTHON_USEDEP}]
 	)
 "
