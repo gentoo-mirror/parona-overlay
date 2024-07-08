@@ -74,8 +74,12 @@ python_check_deps() {
 src_prepare() {
 	default
 
+	# TODO: remove on next bump
+	# https://github.com/flightlessmango/MangoHud/issues/1336
+	sed -i -e "s/version : 'v0.7.1'/version : 'v0.7.2'/" meson.build || die
+
 	# Install documents into versioned dir
-	sed -i "s/'doc', 'mangohud'/'doc', '${P}'/" data/meson.build || die
+	sed -i "s/'doc', 'mangohud'/'doc', '${PF}'/" data/meson.build || die
 }
 
 src_configure() {
