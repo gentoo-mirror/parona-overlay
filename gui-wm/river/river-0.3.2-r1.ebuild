@@ -14,7 +14,7 @@ declare -A ZIG_VENDOR=(
 	[zig-xkbcommon]="https://codeberg.org/ifreund/zig-xkbcommon/archive/v0.1.0.tar.gz"
 )
 
-inherit zig
+inherit toolchain-funcs zig
 
 DESCRIPTION="A dynamic tiling Wayland compositor"
 HOMEPAGE="https://codeberg.org/river/river/"
@@ -23,10 +23,9 @@ SRC_URI="
 	${ZIG_VENDOR_URIS}
 "
 
-KEYWORDS="~amd64"
-
 LICENSE="GPL-3"
 SLOT="0"
+KEYWORDS="~amd64"
 
 IUSE="X +man"
 
@@ -51,6 +50,8 @@ BDEPEND="
 	man? ( app-text/scdoc )
 "
 
+QA_FLAGS_IGNORED=".*"
+
 src_compile() {
 	local ezigargs=(
 		-Dxwayland=$(usex X true false)
@@ -58,7 +59,15 @@ src_compile() {
 		-Dbash-completion=true
 		-Dzsh-completion=true
 		-Dfish-completion=true
+		-Dstrip=false
 	)
+
+	if tc-enables-pie; then
+		ezigargs+=( -Dpie=true )
+	else
+		ezigargs+=( -Dpie=false )
+	fi
+
 	zig_src_compile
 }
 
