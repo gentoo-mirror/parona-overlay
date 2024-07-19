@@ -12,7 +12,7 @@ dev-cpp/hjson-cpp 2.4.1: Hjson for C++
 dev-cpp/trompeloeil 47 48: Header only C++14 mocking framework
 dev-db/mysql 8.3.0: Fast, multi-threaded, multi-user SQL database server
 dev-libs/elfutils 0.191-r1: Libraries/utilities to handle ELF objects (drop in replacement for libelf)
-dev-libs/libgbinder 1.1.39: GLib-style interface to binder
+dev-libs/libgbinder 1.1.39 1.1.40: GLib-style interface to binder
 dev-libs/libglibutil 1.0.79: Library of glib utilities
 dev-libs/vala-language-server 0.48.7 9999: Code Intelligence for Vala & Genie
 dev-perl/Color-ANSI-Util 0.165: Routines for dealing with ANSI colors
@@ -52,7 +52,7 @@ dev-vcs/gcli 2.3.0 2.4.0: Portable CLI tool for interacting with Git(Hub|Lab|Tea
 games-util/gamehub 0.16.3_p2: All your games in one place
 games-util/heroic-gogdl 9999: GOG Downloading module for Heroic Games Launcher
 games-util/mangohud 0.7.2-r1: Overlay for monitoring FPS, temperatures, CPU/GPU load and more
-games-util/nexusmodsapp 0.5 0.5.1 0.5.2: Nexus Mods App, a mod installer, creator and manager for all your popular games
+games-util/nexusmodsapp 0.5 0.5.1 0.5.2 0.5.3: Nexus Mods App, a mod installer, creator and manager for all your popular games
 games-util/protonup-qt 2.9.2: Install and manage proton with Steam and Lutris
 games-util/r2modman 3.1.49: A simple and easy to use mod manager for several games using Thunderstore
 games-util/steamtinkerlaunch 9999: Tool for use with the Steam client for custom launch options
