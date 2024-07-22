@@ -7,7 +7,7 @@ app-emulation/waydroid 1.4.2-r2: Container-based approach to boot a full Android
 app-misc/parona-scripts 9999: Scripts and hooks that I use on my machines
 app-misc/readpe 0.84: The PE file analysis toolkit
 app-misc/rivalcfg 4.13.0: CLI tool and Python library to configure SteelSeries gaming mice
-dev-build/cargo-make 0.37.12 0.37.13: Rust task runner and build tool
+dev-build/cargo-make 0.37.12 0.37.13 0.37.14: Rust task runner and build tool
 dev-cpp/hjson-cpp 2.4.1: Hjson for C++
 dev-cpp/trompeloeil 47 48: Header only C++14 mocking framework
 dev-db/mysql 8.3.0: Fast, multi-threaded, multi-user SQL database server
@@ -17,7 +17,7 @@ dev-libs/libglibutil 1.0.79: Library of glib utilities
 dev-libs/vala-language-server 0.48.7 9999: Code Intelligence for Vala & Genie
 dev-perl/Color-ANSI-Util 0.165: Routines for dealing with ANSI colors
 dev-perl/Color-RGB-Util 0.607: Utilities related to RGB colors
-dev-perl/ColorThemeBase-Static 0.008: Base class for color theme modules with static list of items
+dev-perl/ColorThemeBase-Static 0.008 0.009: Base class for color theme modules with static list of items
 dev-perl/ColorThemeRole-ANSI 0.001: Roles for using ColorTheme::* with ANSI codes
 dev-perl/ColorThemeUtil-ANSI 0.002: Utility routines related to color themes and ANSI code
 dev-perl/ColorThemes-Standard 0.003: A standard collection of generic color themes
