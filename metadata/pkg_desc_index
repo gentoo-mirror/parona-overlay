@@ -10,7 +10,7 @@ app-misc/rivalcfg 4.13.0: CLI tool and Python library to configure SteelSeries g
 dev-build/cargo-make 0.37.12 0.37.13 0.37.14: Rust task runner and build tool
 dev-cpp/hjson-cpp 2.4.1: Hjson for C++
 dev-cpp/trompeloeil 47 48: Header only C++14 mocking framework
-dev-db/mysql 8.3.0: Fast, multi-threaded, multi-user SQL database server
+dev-db/mysql 8.0.39 8.3.0: Fast, multi-threaded, multi-user SQL database server
 dev-libs/elfutils 0.191-r1: Libraries/utilities to handle ELF objects (drop in replacement for libelf)
 dev-libs/libgbinder 1.1.39 1.1.40: GLib-style interface to binder
 dev-libs/libglibutil 1.0.79: Library of glib utilities
