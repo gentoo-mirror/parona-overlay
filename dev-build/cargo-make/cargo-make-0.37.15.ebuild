@@ -12,18 +12,18 @@ CRATES="
 	autocfg@1.3.0
 	base64@0.21.7
 	bitflags@1.3.2
-	bitflags@2.5.0
+	bitflags@2.6.0
 	block-buffer@0.10.4
-	bstr@1.9.1
+	bstr@1.10.0
 	bumpalo@3.16.0
 	byteorder@1.5.0
-	bytes@1.6.0
+	bytes@1.6.1
 	bzip2-sys@0.1.11+1.0.8
 	bzip2@0.4.4
-	camino@1.1.6
+	camino@1.1.7
 	cargo-platform@0.1.8
 	cargo_metadata@0.18.1
-	cc@1.0.96
+	cc@1.1.6
 	cfg-if@1.0.0
 	cfg_aliases@0.1.1
 	chrono@0.4.38
@@ -33,25 +33,25 @@ CRATES="
 	core-foundation-sys@0.8.6
 	core-foundation@0.9.4
 	cpufeatures@0.2.12
-	crc32fast@1.4.0
+	crc32fast@1.4.2
 	crossbeam-deque@0.8.5
 	crossbeam-epoch@0.9.18
-	crossbeam-utils@0.8.19
+	crossbeam-utils@0.8.20
 	crypto-common@0.1.6
 	ctrlc@3.4.4
 	deranged@0.3.11
 	digest@0.10.7
 	dirs-next@2.0.0
 	dirs-sys-next@0.1.2
-	dissimilar@1.0.8
+	dissimilar@1.0.9
 	duckscript@0.8.0
 	duckscriptsdk@0.9.3
 	dunce@1.0.4
-	either@1.11.0
+	either@1.13.0
 	encoding_rs@0.8.34
 	envmnt@0.10.4
 	equivalent@1.0.1
-	errno@0.3.8
+	errno@0.3.9
 	evalexpr@11.3.0
 	expect-test@1.5.0
 	fastrand@2.1.0
@@ -64,14 +64,18 @@ CRATES="
 	form_urlencoded@1.2.1
 	fs_extra@1.3.0
 	fsio@0.4.0
+	futures-core@0.3.30
+	futures-io@0.3.30
+	futures-lite@2.3.0
 	generic-array@0.14.7
-	getrandom@0.2.14
+	getrandom@0.2.15
 	git_info@0.1.2
 	glob@0.3.1
 	globset@0.4.14
 	hashbrown@0.12.3
 	hashbrown@0.14.5
 	heck@0.4.1
+	heck@0.5.0
 	hermit-abi@0.3.9
 	home@0.5.9
 	http@0.2.12
@@ -81,94 +85,98 @@ CRATES="
 	ignore@0.4.22
 	indexmap@1.9.3
 	indexmap@2.2.6
-	itertools@0.12.1
+	itertools@0.13.0
 	itoa@1.0.11
 	java-properties@2.0.0
 	js-sys@0.3.69
-	lazy-regex-proc_macros@3.1.0
-	lazy-regex@3.1.0
-	lazy_static@1.4.0
+	lazy-regex-proc_macros@3.2.0
+	lazy-regex@3.2.0
+	lazy_static@1.5.0
 	lenient_semver@0.4.2
 	lenient_semver_parser@0.4.2
 	lenient_semver_version_builder@0.4.2
-	libc@0.2.154
+	libc@0.2.155
 	libredox@0.1.3
-	linux-raw-sys@0.4.13
-	log@0.4.21
-	memchr@2.7.2
-	miniz_oxide@0.7.2
-	native-tls@0.2.11
+	linux-raw-sys@0.4.14
+	log@0.4.22
+	memchr@2.7.4
+	miniz_oxide@0.7.4
+	native-tls@0.2.12
 	nix@0.28.0
-	nu-ansi-term@0.50.0
+	nu-ansi-term@0.50.1
 	num-conv@0.1.0
 	num-traits@0.2.19
 	num_cpus@1.16.0
 	once_cell@1.19.0
 	openssl-macros@0.1.1
 	openssl-probe@0.1.5
-	openssl-sys@0.9.102
-	openssl@0.10.64
+	openssl-sys@0.9.103
+	openssl@0.10.66
+	parking@2.2.0
 	percent-encoding@2.3.1
-	petgraph@0.6.4
+	petgraph@0.6.5
+	pin-project-lite@0.2.14
 	pkg-config@0.3.30
 	powerfmt@0.2.0
 	ppv-lite86@0.2.17
-	proc-macro2@1.0.81
+	proc-macro2@1.0.86
 	quote@1.0.36
 	rand@0.8.5
 	rand_chacha@0.3.1
 	rand_core@0.6.4
 	redox_syscall@0.4.1
 	redox_users@0.4.5
-	regex-automata@0.4.6
-	regex-syntax@0.8.3
-	regex@1.10.4
+	regex-automata@0.4.7
+	regex-syntax@0.8.4
+	regex@1.10.5
 	ring@0.17.8
 	run_script@0.10.1
 	rust_info@0.3.2
 	rustix@0.38.34
 	rustls-webpki@0.101.7
 	rustls@0.21.12
-	ryu@1.0.17
+	rustversion@1.0.17
+	ryu@1.0.18
 	same-file@1.0.6
 	schannel@0.1.23
 	sct@0.7.1
-	security-framework-sys@2.10.0
-	security-framework@2.10.0
-	semver@1.0.22
-	serde@1.0.200
-	serde_derive@1.0.200
+	security-framework-sys@2.11.1
+	security-framework@2.11.1
+	semver@1.0.23
+	serde@1.0.204
+	serde_derive@1.0.204
 	serde_ignored@0.1.10
-	serde_json@1.0.116
-	serde_spanned@0.6.5
+	serde_json@1.0.121
+	serde_spanned@0.6.7
 	sha2@0.10.8
 	shell2batch@0.4.5
 	spin@0.9.8
 	strip-ansi-escapes@0.2.0
-	suppaftp@5.3.1
-	syn@2.0.60
+	strum_macros@0.26.4
+	suppaftp@5.4.0
+	syn@2.0.72
 	tempfile@3.10.1
-	thiserror-impl@1.0.59
-	thiserror@1.0.59
+	thiserror-impl@1.0.63
+	thiserror@1.0.63
 	time-core@0.1.2
 	time@0.3.36
-	tinyvec@1.6.0
+	tinyvec@1.8.0
 	tinyvec_macros@0.1.1
-	toml@0.8.12
-	toml_datetime@0.6.5
-	toml_edit@0.22.12
+	toml@0.8.16
+	toml_datetime@0.6.7
+	toml_edit@0.22.17
 	typenum@1.17.0
 	uname@0.1.1
 	unicode-bidi@0.3.15
 	unicode-ident@1.0.12
 	unicode-normalization@0.1.23
 	untrusted@0.9.0
-	url@2.5.0
-	utf8parse@0.2.1
+	url@2.5.2
+	utf8parse@0.2.2
 	vcpkg@0.2.15
-	version_check@0.9.4
+	version_check@0.9.5
 	vte@0.11.1
-	vte_generate_state_changes@0.1.1
+	vte_generate_state_changes@0.1.2
 	walkdir@2.5.0
 	wasi@0.11.0+wasi-snapshot-preview1
 	wasite@0.1.0
@@ -189,23 +197,23 @@ CRATES="
 	windows-sys@0.48.0
 	windows-sys@0.52.0
 	windows-targets@0.48.5
-	windows-targets@0.52.5
+	windows-targets@0.52.6
 	windows_aarch64_gnullvm@0.48.5
-	windows_aarch64_gnullvm@0.52.5
+	windows_aarch64_gnullvm@0.52.6
 	windows_aarch64_msvc@0.48.5
-	windows_aarch64_msvc@0.52.5
+	windows_aarch64_msvc@0.52.6
 	windows_i686_gnu@0.48.5
-	windows_i686_gnu@0.52.5
-	windows_i686_gnullvm@0.52.5
+	windows_i686_gnu@0.52.6
+	windows_i686_gnullvm@0.52.6
 	windows_i686_msvc@0.48.5
-	windows_i686_msvc@0.52.5
+	windows_i686_msvc@0.52.6
 	windows_x86_64_gnu@0.48.5
-	windows_x86_64_gnu@0.52.5
+	windows_x86_64_gnu@0.52.6
 	windows_x86_64_gnullvm@0.48.5
-	windows_x86_64_gnullvm@0.52.5
+	windows_x86_64_gnullvm@0.52.6
 	windows_x86_64_msvc@0.48.5
-	windows_x86_64_msvc@0.52.5
-	winnow@0.6.7
+	windows_x86_64_msvc@0.52.6
+	winnow@0.6.16
 	winsafe@0.0.19
 	zip@0.6.6
 "
