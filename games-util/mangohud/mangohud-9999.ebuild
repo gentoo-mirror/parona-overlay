@@ -11,7 +11,29 @@ HOMEPAGE="https://github.com/flightlessmango/MangoHud"
 
 if [[ "${PV}" == "9999" ]]; then
 	inherit git-r3
+
+	VULKAN_HEADER_VER="1.2.158"
+	VULKAN_HEADER_WRAP_VER="${VULKAN_HEADER_VER}-2"
+	IMGUI_VER="1.89.9"
+	IMGUI_WRAP="${IMGUI_VER}-2"
+	IMPLOT_VER="0.16"
+	IMPLOT_WRAP="${IMPLOT_VER}-1"
+
 	EGIT_REPO_URI="https://github.com/flightlessmango/MangoHud"
+	SRC_URI="
+		https://github.com/KhronosGroup/Vulkan-Headers/archive/v${VULKAN_HEADER_VER}.tar.gz
+			-> vulkan-headers-${VULKAN_HEADER_VER}.tar.gz
+		https://wrapdb.mesonbuild.com/v2/vulkan-headers_${VULKAN_HEADER_WRAP_VER}/get_patch
+			-> vulkan-headers-${VULKAN_HEADER_WRAP_VER}-wrap.zip
+		https://github.com/ocornut/imgui/archive/refs/tags/v${IMGUI_VER}.tar.gz
+			-> imgui-${IMGUI_VER}.tar.gz
+		https://wrapdb.mesonbuild.com/v2/imgui_${IMGUI_WRAP}/get_patch
+			-> imgui_${IMGUI_WRAP}_patch.zip
+		https://github.com/epezent/implot/archive/refs/tags/v${IMPLOT_VER}.tar.gz
+			-> implot-${IMPLOT_VER}.tar.gz
+		https://wrapdb.mesonbuild.com/v2/implot_${IMPLOT_WRAP}/get_patch
+			-> implot_${IMPLOT_WRAP}_patch.zip
+	"
 else
 	SUFFIX="$(ver_cut 5)"
 	MY_PV1="$(ver_cut 1-3)${SUFFIX:+-}${SUFFIX}"
@@ -72,13 +94,29 @@ BDEPEND="
 		${RDEPEND}
 	)
 "
+if [[ ${PV} == "9999" ]]; then
+	BDEPEND+=" app-arch/unzip"
+fi
 
 python_check_deps() {
 	python_has_version "dev-python/mako[${PYTHON_USEDEP}]"
 }
 
+src_unpack() {
+	if [[ "${PV}" == "9999" ]]; then
+		git-r3_src_unpack
+	fi
+	default
+}
+
 src_prepare() {
 	default
+
+	if [[ "${PV}" == "9999" ]]; then
+		mv "${WORKDIR}/Vulkan-Headers-${VULKAN_HEADER_VER}" "${S}/subprojects/Vulkan-Headers-${VULKAN_HEADER_VER}" || die
+		mv "${WORKDIR}/imgui-${IMGUI_VER}" "${S}/subprojects/imgui-${IMGUI_VER}" || die
+		mv "${WORKDIR}/implot-${IMPLOT_VER}" "${S}/subprojects/implot-${IMPLOT_VER}" || die
+	fi
 
 	# Install documents into versioned dir
 	sed -i "s/'doc', 'mangohud'/'doc', '${PF}'/" data/meson.build || die
