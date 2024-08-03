@@ -40,10 +40,13 @@ dev-perl/Test-Log-Log4perl 0.32: Test log4perl
 dev-perl/Test-RandomResult 0.001: Test that results of a running code look random
 dev-perl/Test-Synopsis-Expectation 0.12: Test that SYNOPSIS code produces expected results
 dev-perl/match-simple 0.012: simplified clone of smartmatch operator
+dev-python/fastapi 0.112.0: FastAPI framework, high performance, easy to learn, ready for production
 dev-python/gbinder 1.1.2-r1: Python bindings for libgbinder
 dev-python/inputs 0.5: Cross-platform Python support for keyboards, mice and gamepads.
 dev-python/log-symbols 0.0.14-r1: Colored symbols for various log levels for Python
 dev-python/pycryptodomex 3.20.0: A self-contained cryptographic library for Python
+dev-python/pydantic-settings 2.4.0: Settings management using pydantic
+dev-python/pytest-examples 0.0.12: Pytest plugin for testing Python code examples in docstrings and markdown files.
 dev-python/spinners 0.0.24-r1: Spinners for terminals
 dev-python/steam 1.4.4-r2 1.4.4-r3 1.6.0: Python package for interacting with Steam
 dev-python/vdf 3.4-r2 3.5: A module for (de)serialization to and from VDF, Valve's key-value text format
@@ -81,6 +84,9 @@ net-im/discord 0.0.62: All-in-one voice and text chat for gamers
 net-im/discord-ptb 0.0.98: All-in-one voice and text chat for gamers
 net-misc/wlvncc 0_pre20240407: A Wayland Native VNC Client
 sec-keys/openpgp-keys-mysql 20231023: OpenPGP keys used to sign MySQL releases
+sys-apps/coolercontrol 1.4.0: Monitor and control your cooling and other devices
+sys-apps/coolercontrol-liqctld 1.4.0: Monitor and control your cooling and other devices (liqctld)
+sys-apps/coolercontrold 1.4.0: Monitor and control your cooling and other devices (daemon)
 sys-apps/fancontrol-gui 0.8_p20200825: GUI for Fancontrol.
 sys-apps/gsmartcontrol 9999: Hard Disk Drive and SSD Health Inspection Tool
 sys-apps/rinit 9999: Next-gen init and service-manager written in Rust
