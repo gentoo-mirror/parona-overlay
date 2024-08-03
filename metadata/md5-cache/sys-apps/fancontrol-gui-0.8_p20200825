@@ -1,0 +1,17 @@
+BDEPEND=>=kde-frameworks/extra-cmake-modules-5.38 app-alternatives/ninja >=dev-build/cmake-3.20.5
+DEFINED_PHASES=compile configure install postinst postrm preinst prepare test
+DEPEND=>=dev-qt/qtcore-5.8.0:5 >=dev-qt/qtwidgets-5.8.0:5 >=dev-qt/qtgui-5.8.0:5 >=dev-qt/qtdeclarative-5.8.0:5 kde-frameworks/kauth:5 kde-frameworks/kconfig:5 kde-frameworks/kcoreaddons:5 kde-frameworks/kdbusaddons:5 kde-frameworks/kdeclarative:5 kde-frameworks/ki18n:5 kde-frameworks/knotifications:5 kde-frameworks/kpackage:5 kde-plasma/libplasma:5 systemd? ( >=dev-qt/qtdbus-5.8.0:5 ) test? ( >=dev-qt/qttest-5.8.0:5 )
+DESCRIPTION=GUI for Fancontrol.
+EAPI=8
+HOMEPAGE=https://github.com/Maldela/Fancontrol-GUI
+IDEPEND=dev-util/desktop-file-utils x11-misc/shared-mime-info
+INHERIT=cmake xdg
+IUSE=systemd test
+KEYWORDS=~amd64
+LICENSE=GPL-2
+RDEPEND=>=dev-qt/qtcore-5.8.0:5 >=dev-qt/qtwidgets-5.8.0:5 >=dev-qt/qtgui-5.8.0:5 >=dev-qt/qtdeclarative-5.8.0:5 kde-frameworks/kauth:5 kde-frameworks/kconfig:5 kde-frameworks/kcoreaddons:5 kde-frameworks/kdbusaddons:5 kde-frameworks/kdeclarative:5 kde-frameworks/ki18n:5 kde-frameworks/knotifications:5 kde-frameworks/kpackage:5 kde-plasma/libplasma:5 systemd? ( >=dev-qt/qtdbus-5.8.0:5 )
+RESTRICT=!test? ( test )
+SLOT=0
+SRC_URI=https://github.com/Maldela/fancontrol-gui/archive/12c5e7eea33ea1cc6feebf0a504d3de231a931ee.tar.gz -> fancontrol-gui-12c5e7eea33ea1cc6feebf0a504d3de231a931ee.tar.gz
+_eclasses_=toolchain-funcs	e56c7649b804f051623c8bc1a1c44084	multilib	c19072c3cd7ac5cb21de013f7e9832e0	flag-o-matic	e503ea5acc20410237ba33ec3f7c857d	multiprocessing	30ead54fa2e2b5f9cd4e612ffc34d0fe	ninja-utils	2df4e452cea39a9ec8fb543ce059f8d6	xdg-utils	baea6080dd821f5562d715887954c9d3	cmake	258a4691fd43b8cd5814cb1acbb3c7df	xdg	4a14c5c24f121e7da66e5aab4a168c6e
+_md5_=4e24d76cbeb5e67dd1fd424823942d7f

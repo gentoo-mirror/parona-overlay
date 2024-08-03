@@ -81,6 +81,7 @@ net-im/discord 0.0.62: All-in-one voice and text chat for gamers
 net-im/discord-ptb 0.0.98: All-in-one voice and text chat for gamers
 net-misc/wlvncc 0_pre20240407: A Wayland Native VNC Client
 sec-keys/openpgp-keys-mysql 20231023: OpenPGP keys used to sign MySQL releases
+sys-apps/fancontrol-gui 0.8_p20200825: GUI for Fancontrol.
 sys-apps/gsmartcontrol 9999: Hard Disk Drive and SSD Health Inspection Tool
 sys-apps/rinit 9999: Next-gen init and service-manager written in Rust
 sys-power/corectrl 1.4.1: Profile based system control utility
