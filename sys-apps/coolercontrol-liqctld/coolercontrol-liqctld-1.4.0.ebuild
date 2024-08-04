@@ -14,7 +14,7 @@ SRC_URI="
 "
 S="${WORKDIR}/coolercontrol-${PV}/${PN}"
 
-LICENSE="GPL-3"
+LICENSE="GPL-3+"
 SLOT="0"
 KEYWORDS="~amd64"
 
