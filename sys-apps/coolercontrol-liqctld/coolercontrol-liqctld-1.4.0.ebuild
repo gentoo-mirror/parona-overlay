@@ -25,6 +25,12 @@ RDEPEND="
 	dev-python/uvicorn[${PYTHON_USEDEP}]
 "
 
+src_prepare() {
+	pushd .. >/dev/null || die
+	default
+	popd >/dev/null || die
+}
+
 python_install_all() {
 	doinitd ../packaging/openrc/init.d/coolercontrol-liqctld
 	doconfd ../packaging/openrc/conf.d/coolercontrol-liqctld
