@@ -27,7 +27,6 @@ RDEPEND="
 		dev-python/pygobject[${PYTHON_USEDEP}]
 		dev-python/pyclip[${PYTHON_USEDEP}]
 	')
-	app-admin/sudo
 	app-containers/anbox-modules
 	app-containers/lxc[apparmor,tools]
 "
@@ -48,5 +47,7 @@ src_install() {
 		DESTDIR="${D}" USE_SYSTEMD=1 USE_DBUS_ACTIVATION=1 USE_NFTABLES=$(usex nftables 1 0) \
 		install install_apparmor
 
-	python_optimize "${D}/usr/lib/waydroid"
+	python_optimize "${D}"/usr/lib/waydroid
+
+	newinitd "${FILESDIR}"/waydroid.initd waydroid
 }
