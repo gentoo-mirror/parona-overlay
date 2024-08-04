@@ -1,0 +1,19 @@
+https://github.com/spyoungtech/pyclip/pull/22
+https://github.com/spyoungtech/pyclip/commit/d5ee80c1a2410217c024e2724e9296591eb7499c
+
+From d5ee80c1a2410217c024e2724e9296591eb7499c Mon Sep 17 00:00:00 2001
+From: Alessandro Astone <ales.astone@gmail.com>
+Date: Wed, 2 Nov 2022 23:36:15 +0100
+Subject: [PATCH] Don't run xclip test on wayland
+
+--- a/tests/test_clipboard.py
++++ b/tests/test_clipboard.py
+@@ -161,7 +161,7 @@ def test_xclip_missing_raises_error():
+             c = XclipClipboard()
+ 
+ 
+-@pytest.mark.skipif(sys.platform != 'linux', reason='This test is for Linux only')
++@pytest.mark.skipif(sys.platform != 'linux' or os.environ.get("WAYLAND_DISPLAY", "") != "", reason='This test is for Xorg only')
+ @pytest.mark.parametrize('targets, expected', [
+     (["TARGETS", "TIMESTAMP", "image/png"], ["-t", "image/png"]),
+     ([], []),
