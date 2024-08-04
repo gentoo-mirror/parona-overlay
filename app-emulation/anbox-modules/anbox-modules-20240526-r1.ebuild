@@ -29,7 +29,7 @@ src_compile() {
 }
 
 src_install() {
-	linux-mod-r1_src_compile
+	linux-mod-r1_src_install
 	udev_dorules 99-anbox.rules
 }
 
