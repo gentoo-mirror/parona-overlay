@@ -565,7 +565,9 @@ src_unpack() {
 }
 
 src_prepare() {
+	pushd ../.. >/dev/null || die
 	default
+	popd >/dev/null || die
 
 	# Disable stripping
 	sed -i -e '/^strip =/d' Cargo.toml || die
