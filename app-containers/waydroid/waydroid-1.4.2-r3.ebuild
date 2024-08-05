@@ -28,7 +28,7 @@ RDEPEND="
 		dev-python/pyclip[${PYTHON_USEDEP}]
 	')
 	app-admin/sudo
-	app-emulation/anbox-modules
+	app-containers/anbox-modules
 	app-containers/lxc[apparmor,tools]
 "
 
