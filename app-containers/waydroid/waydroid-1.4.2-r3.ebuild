@@ -3,7 +3,7 @@
 
 EAPI=8
 
-PYTHON_COMPAT=( python3_{10..12} )
+PYTHON_COMPAT=( python3_{10..13} )
 inherit python-single-r1
 
 DESCRIPTION="Container-based approach to boot a full Android system"
@@ -25,12 +25,14 @@ RDEPEND="
 		dev-python/dbus-python[${PYTHON_USEDEP}]
 		dev-python/gbinder[${PYTHON_USEDEP}]
 		dev-python/pygobject[${PYTHON_USEDEP}]
+		dev-python/pyclip[${PYTHON_USEDEP}]
 	')
 	app-admin/sudo
-	app-emulation/anbox-modules
-	app-containers/lxc[tools]
+	app-containers/anbox-modules
+	app-containers/lxc[apparmor,tools]
 "
-BDEPEND="${RDEPEND}"
+
+# TODO: kernel config requirements
 
 src_prepare() {
 	eapply_user

@@ -1,0 +1,2 @@
+move app-emulation/waydroid app-containers/waydroid
+move app-emulation/anobx-modules app-containers/anbox-modules
