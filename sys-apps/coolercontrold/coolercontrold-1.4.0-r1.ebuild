@@ -388,16 +388,26 @@ LICENSE+="
 SLOT="0"
 KEYWORDS="~amd64"
 
+IUSE="video_cards_amdgpu"
+
 RDEPEND="
 	app-arch/zstd:=
-	x11-libs/libdrm
+	video_cards_amdgpu? (
+		x11-libs/libdrm[video_cards_amdgpu]
+	)
 "
 DEPEND="${RDEPEND}"
 
 QA_FLAGS_IGNORED=".*"
 
+PATCHES=(
+	"${FILESDIR}"/coolercontrold-1.4.0-optional-libdrm_amdgpu.patch
+)
+
 src_prepare() {
+	pushd .. >/dev/null || die
 	default
+	popd >/dev/null || die
 
 	# Disable stripping
 	sed -i -e '/^strip =/d' Cargo.toml || die
@@ -405,6 +415,10 @@ src_prepare() {
 
 src_configure() {
 	export ZSTD_SYS_USE_PKG_CONFIG=1
+
+	local myfeatures=(
+		$(usev video_cards_amdgpu libdrm_amdgpu)
+	)
 
 	cargo_src_configure
 }
