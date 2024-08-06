@@ -12,5 +12,5 @@ RDEPEND=dev-libs/libevdev dev-libs/libinput:= dev-libs/wayland x11-libs/libxkbco
 RESTRICT=test
 SLOT=0
 SRC_URI=https://codeberg.org/river/river/releases/download/v0.3.2/river-0.3.2.tar.gz https://codeberg.org/ifreund/zig-xkbcommon/archive/v0.1.0.tar.gz -> zig-xkbcommon-v0.1.0.tar.gz https://codeberg.org/ifreund/zig-pixman/archive/v0.1.0.tar.gz -> zig-pixman-v0.1.0.tar.gz https://codeberg.org/ifreund/zig-wlroots/archive/v0.17.0.tar.gz -> zig-wlroots-v0.17.0.tar.gz https://codeberg.org/ifreund/zig-wayland/archive/v0.1.0.tar.gz -> zig-wayland-v0.1.0.tar.gz
-_eclasses_=toolchain-funcs	e56c7649b804f051623c8bc1a1c44084	multilib	c19072c3cd7ac5cb21de013f7e9832e0	zig	abf47bb6e7bcc0e86ee6395bd2e67f04
+_eclasses_=toolchain-funcs	e7e7331166166e7a516d19e264b098c2	multilib	c19072c3cd7ac5cb21de013f7e9832e0	zig	abf47bb6e7bcc0e86ee6395bd2e67f04
 _md5_=79c272a2c0ef14fc7f61050e127d7682
