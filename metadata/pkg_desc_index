@@ -3,7 +3,7 @@ acct-user/vikunja 1: Dedicated user for vikunja
 app-admin/dotdrop 1.14.0: Save your dotfiles once, deploy them everywhere
 app-arch/gztool 1.6.1: GZIP files indexer, compressor and data retriever.
 app-containers/anbox-modules 20240526-r1: Anbox kernel modules (ashmem and binder) fork
-app-containers/waydroid 1.4.2-r3: Container-based approach to boot a full Android system
+app-containers/waydroid 1.4.2-r4: Container-based approach to boot a full Android system
 app-misc/parona-scripts 9999: Scripts and hooks that I use on my machines
 app-misc/readpe 0.84: The PE file analysis toolkit
 app-misc/rivalcfg 4.13.0: CLI tool and Python library to configure SteelSeries gaming mice
@@ -81,13 +81,13 @@ media-fonts/juliamono 0.051: JuliaMono - a monospaced font for scientific and te
 media-libs/phonon-mpv 0.1.0: Phonon Backend using MPV Player(libmpv)
 media-sound/spotify 1.2.42: Spotify is a social music platform
 media-video/mpv-mpris 1.1: MPRIS plugin for mpv
-net-im/discord 0.0.62: All-in-one voice and text chat for gamers
+net-im/discord 0.0.62 0.0.63: All-in-one voice and text chat for gamers
 net-im/discord-ptb 0.0.98: All-in-one voice and text chat for gamers
 net-misc/wlvncc 0_pre20240407: A Wayland Native VNC Client
 sec-keys/openpgp-keys-mysql 20231023: OpenPGP keys used to sign MySQL releases
 sys-apps/coolercontrol 1.4.0: Monitor and control your cooling and other devices
 sys-apps/coolercontrol-liqctld 1.4.0: Monitor and control your cooling and other devices (liqctld)
-sys-apps/coolercontrold 1.4.0: Monitor and control your cooling and other devices (daemon)
+sys-apps/coolercontrold 1.4.0-r1: Monitor and control your cooling and other devices (daemon)
 sys-apps/fancontrol-gui 0.8_p20200825: GUI for Fancontrol.
 sys-apps/gsmartcontrol 9999: Hard Disk Drive and SSD Health Inspection Tool
 sys-apps/rinit 9999: Next-gen init and service-manager written in Rust
