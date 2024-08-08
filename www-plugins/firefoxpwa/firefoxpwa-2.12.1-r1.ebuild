@@ -392,6 +392,7 @@ RDEPEND="
 	dev-libs/openssl:=
 "
 DEPEND="
+	app-arch/bzip2
 	${RDEPEND}
 "
 BDEPEND="
@@ -407,17 +408,24 @@ src_prepare() {
 	sed -i -E \
 		-e 's/\$SUDO //' \
 		-e 's/((install|mkdir|cp) .*) (\S*)$/\1 ${DESTDIR}\3/' \
+		-e '/^\[tasks.install-linux\]/,/^\[/ { /dependencies = \["build"\]/d }' \
 		Makefile.toml || die
 }
 
 src_configure() {
 	makers set-version ${PV} || die
 
+	# no easy way to unvendor blake3 and bzip2
+
 	export PKG_CONFIG_ALLOW_CROSS=1
 	export ZSTD_SYS_USE_PKG_CONFIG=1
 	export OPENSSL_NO_VENDOR=1
 
-	cargo_src_configure
+	local myfeatures=(
+		linked-runtime
+	)
+
+	cargo_src_configure --no-default-features
 }
 
 src_install() {
