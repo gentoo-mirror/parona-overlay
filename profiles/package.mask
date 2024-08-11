@@ -1,0 +1,4 @@
+# Alfred Wingate <parona@protonmail.com> (2024-08-11)
+# Rquires masked version of dev-libs/libfmt.
+# See tracker bug https://bugs.gentoo.org/906077
+>=games-emulation/dolphin-2407
