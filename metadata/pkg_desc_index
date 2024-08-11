@@ -54,6 +54,7 @@ dev-python/steam 1.4.4-r3 1.6.0 1.6.1: Python package for interacting with Steam
 dev-python/vdf 3.4-r2 3.5: A module for (de)serialization to and from VDF, Valve's key-value text format
 dev-tex/altacv 1.7.1-r2: Yet another alternative curriculum vitae/résumé class with LaTeX
 dev-vcs/gcli 2.4.0: Portable CLI tool for interacting with Git(Hub|Lab|Tea) from the command line.
+games-emulation/dolphin 2407: Gamecube and Wii game emulator
 games-util/gamehub 0.16.3_p2: All your games in one place
 games-util/goverlay 1.2: Graphical UI to help manage Linux overlays.
 games-util/heroic-gogdl 9999: GOG Downloading module for Heroic Games Launcher
