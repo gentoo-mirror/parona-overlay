@@ -86,8 +86,8 @@ media-libs/libspng 0.7.4: Simple, modern libpng alternative
 media-libs/phonon-mpv 0.1.0: Phonon Backend using MPV Player(libmpv)
 media-sound/spotify 1.2.42: Spotify is a social music platform
 media-video/mpv-mpris 1.1: MPRIS plugin for mpv
-net-im/discord 0.0.62 0.0.63: All-in-one voice and text chat for gamers
-net-im/discord-ptb 0.0.98: All-in-one voice and text chat for gamers
+net-im/discord 0.0.62 0.0.63 0.0.64: All-in-one voice and text chat for gamers
+net-im/discord-ptb 0.0.98 0.0.99: All-in-one voice and text chat for gamers
 net-libs/enet 1.3.18: Relatively thin, simple and robust network communication layer on top of UDP
 net-misc/wlvncc 0_pre20240407: A Wayland Native VNC Client
 sec-keys/openpgp-keys-mysql 20231023: OpenPGP keys used to sign MySQL releases
