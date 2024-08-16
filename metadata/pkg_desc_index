@@ -41,7 +41,7 @@ dev-perl/Test-Log-Log4perl 0.32: Test log4perl
 dev-perl/Test-RandomResult 0.001: Test that results of a running code look random
 dev-perl/Test-Synopsis-Expectation 0.12: Test that SYNOPSIS code produces expected results
 dev-perl/match-simple 0.012: simplified clone of smartmatch operator
-dev-python/fastapi 0.112.0: FastAPI framework, high performance, easy to learn, ready for production
+dev-python/fastapi 0.112.0 0.112.1: FastAPI framework, high performance, easy to learn, ready for production
 dev-python/gbinder 1.1.2-r1: Python bindings for libgbinder
 dev-python/inputs 0.5: Cross-platform Python support for keyboards, mice and gamepads.
 dev-python/log-symbols 0.0.14-r1: Colored symbols for various log levels for Python
