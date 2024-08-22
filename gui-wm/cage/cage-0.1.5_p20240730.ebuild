@@ -1,45 +1,44 @@
-# Copyright 2022-2023 Gentoo Authors
+# Copyright 2022-2024 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=8
 
 inherit meson
 
+COMMIT="d3fb99d6654325ec46277cfdb589f89316bed701"
+
 DESCRIPTION="A Wayland kiosk"
 HOMEPAGE="https://www.hjdskes.nl/projects/cage/"
-SRC_URI="https://github.com/cage-kiosk/cage/archive/v${PV}.tar.gz -> ${P}.tar.gz"
+SRC_URI="
+	https://github.com/cage-kiosk/cage/archive/${COMMIT}.tar.gz
+		-> ${PN}-${COMMIT}.tar.gz
+"
+S="${WORKDIR}/${PN}-${COMMIT}"
 
 LICENSE="MIT"
 SLOT="0"
 KEYWORDS="~amd64"
 
-IUSE="+man X"
+IUSE="X"
 
 # No tests
 RESTRICT="test"
 
 DEPEND="
-	gui-libs/wlroots:0/16[X?]
+	gui-libs/wlroots:0/17[X=]
 	dev-libs/wayland
 	>=dev-libs/wayland-protocols-1.14
 	x11-libs/libxkbcommon
-	x11-libs/pixman
 "
 RDEPEND="${DEPEND}"
 BDEPEND="
 	dev-util/wayland-scanner
-	man? ( >=app-text/scdoc-1.9.2 )
+	>=app-text/scdoc-1.9.2
 "
-
-src_prepare() {
-	sed -i "s/\(if scdoc.found()\)/\1 and get_option('man-pages').enabled()/" meson.build || die
-	default
-}
 
 src_configure() {
 	local emesonargs=(
-		$(meson_feature man man-pages)
-		$(meson_use X xwayland)
+		-Dman-pages=enabled
 	)
 	meson_src_configure
 }
