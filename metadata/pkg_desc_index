@@ -50,8 +50,8 @@ dev-python/pycryptodomex 3.20.0: A self-contained cryptographic library for Pyth
 dev-python/pydantic-settings 2.4.0: Settings management using pydantic
 dev-python/pytest-examples 0.0.12 0.0.13: Pytest plugin for testing Python code examples in docstrings and markdown files.
 dev-python/spinners 0.0.24-r1: Spinners for terminals
-dev-python/steam 1.4.4-r3 1.6.0 1.6.1: Python package for interacting with Steam
-dev-python/vdf 3.4-r2 3.5: A module for (de)serialization to and from VDF, Valve's key-value text format
+dev-python/steam 1.6.1: Python package for interacting with Steam
+dev-python/vdf 3.5: A module for (de)serialization to and from VDF, Valve's key-value text format
 dev-tex/altacv 1.7.1-r2: Yet another alternative curriculum vitae/résumé class with LaTeX
 dev-vcs/gcli 2.4.0: Portable CLI tool for interacting with Git(Hub|Lab|Tea) from the command line.
 games-util/gamehub 0.16.3_p2: All your games in one place
@@ -59,7 +59,7 @@ games-util/goverlay 1.2: Graphical UI to help manage Linux overlays.
 games-util/heroic-gogdl 9999: GOG Downloading module for Heroic Games Launcher
 games-util/mangohud 0.7.2-r1 9999: Overlay for monitoring FPS, temperatures, CPU/GPU load and more
 games-util/nexusmodsapp 0.5.3 0.6.0_rc1: Nexus Mods App, a mod installer, creator and manager for all your popular games
-games-util/protonup-qt 2.9.2 2.10.2: Install and manage proton with Steam and Lutris
+games-util/protonup-qt 2.10.2: Install and manage proton with Steam and Lutris
 games-util/r2modman 3.1.49: A simple and easy to use mod manager for several games using Thunderstore
 games-util/steamtinkerlaunch 9999: Tool for use with the Steam client for custom launch options
 gnome-extra/yad 14.1: Display GTK+ dialog boxes from command line or shell scripts
@@ -73,7 +73,7 @@ gui-libs/dfl-ipc 0.2.0: Two very simple classes for IPC. Used by DFL::Applicatio
 gui-libs/dfl-login1 0.2.0: DFL Login1 class implements a part of the systemd logind dbus protocol.
 gui-libs/dfl-utils 0.2.0: This library provides single-instance Application classes for various utilities.
 gui-libs/wayqt 0.2.0: A Qt-based wrapper for various wayland protocols.
-gui-wm/cage 0.1.5: A Wayland kiosk
+gui-wm/cage 0.1.5_p20240730: A Wayland kiosk
 gui-wm/river 0.3.2-r1 0.3.5: A dynamic tiling Wayland compositor
 gui-wm/stacktile 1.0.0 9999: stacktile is a layout generator for the river Wayland compositor.
 kde-apps/toad 9999: Organize your tasks
