@@ -74,7 +74,7 @@ gui-libs/dfl-login1 0.2.0: DFL Login1 class implements a part of the systemd log
 gui-libs/dfl-utils 0.2.0: This library provides single-instance Application classes for various utilities.
 gui-libs/wayqt 0.2.0: A Qt-based wrapper for various wayland protocols.
 gui-wm/cage 0.1.5_p20240730: A Wayland kiosk
-gui-wm/river 0.3.2-r1 0.3.5: A dynamic tiling Wayland compositor
+gui-wm/river 0.3.5: A dynamic tiling Wayland compositor
 gui-wm/stacktile 1.0.0 9999: stacktile is a layout generator for the river Wayland compositor.
 kde-apps/toad 9999: Organize your tasks
 kde-misc/kio-admin 24.07.80: Manage files as administrator using the admin:// KIO protocol.
@@ -84,7 +84,7 @@ media-fonts/juliamono 0.051: JuliaMono - a monospaced font for scientific and te
 media-libs/phonon-mpv 0.1.0: Phonon Backend using MPV Player(libmpv)
 media-sound/spotify 1.2.42: Spotify is a social music platform
 media-video/mpv-mpris 1.1: MPRIS plugin for mpv
-net-im/discord 0.0.62 0.0.63 0.0.64: All-in-one voice and text chat for gamers
+net-im/discord 0.0.64 0.0.65: All-in-one voice and text chat for gamers
 net-im/discord-ptb 0.0.98 0.0.99: All-in-one voice and text chat for gamers
 net-misc/wlvncc 0_pre20240407: A Wayland Native VNC Client
 sec-keys/openpgp-keys-mysql 20231023: OpenPGP keys used to sign MySQL releases
