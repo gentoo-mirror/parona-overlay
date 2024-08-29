@@ -3,7 +3,7 @@
 
 EAPI=8
 
-inherit meson multibuild
+inherit flag-o-matic meson multibuild
 
 DESCRIPTION="A Qt-based wrapper for various wayland protocols."
 HOMEPAGE="https://gitlab.com/desktop-frameworks/wayqt"
@@ -44,6 +44,9 @@ pkg_setup() {
 }
 
 src_configure() {
+	# violates ODR
+	filter-lto
+
 	myconfigure() {
 		local emesonargs=(
 			-Duse_qt_version=${MULTIBUILD_VARIANT}
