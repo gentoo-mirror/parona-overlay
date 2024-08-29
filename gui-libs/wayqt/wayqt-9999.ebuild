@@ -7,14 +7,21 @@ inherit flag-o-matic meson multibuild
 
 DESCRIPTION="A Qt-based wrapper for various wayland protocols."
 HOMEPAGE="https://gitlab.com/desktop-frameworks/wayqt"
-SRC_URI="
-	https://gitlab.com/desktop-frameworks/wayqt/-/archive/v${PV}/wayqt-v${PV}.tar.bz2
-"
-S="${WORKDIR}/${PN}-v${PV}"
+
+if [[ ${PV} == 9999 ]]; then
+	inherit git-r3
+	EGIT_REPO_URI="https://gitlab.com/desktop-frameworks/wayqt"
+else
+	SRC_URI="
+		https://gitlab.com/desktop-frameworks/wayqt/-/archive/v${PV}/wayqt-v${PV}.tar.bz2
+	"
+	S="${WORKDIR}/${PN}-v${PV}"
+
+	KEYWORDS="~amd64"
+fi
 
 LICENSE="MIT"
 SLOT="0"
-KEYWORDS="~amd64"
 
 IUSE="+qt5 qt6"
 REQUIRED_USE="|| ( qt5 qt6 )"
