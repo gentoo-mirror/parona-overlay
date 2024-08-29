@@ -1,6 +1,6 @@
 acct-group/vikunja 1: System group: vikunja
 acct-user/vikunja 1: Dedicated user for vikunja
-app-admin/dotdrop 1.14.0: Save your dotfiles once, deploy them everywhere
+app-admin/dotdrop 1.14.0 1.14.2: Save your dotfiles once, deploy them everywhere
 app-arch/gztool 1.6.1: GZIP files indexer, compressor and data retriever.
 app-containers/anbox-modules 20240526-r1: Anbox kernel modules (ashmem and binder) fork
 app-containers/waydroid 1.4.2-r4: Container-based approach to boot a full Android system
@@ -64,7 +64,7 @@ games-util/r2modman 3.1.49: A simple and easy to use mod manager for several gam
 games-util/steamtinkerlaunch 9999: Tool for use with the Steam client for custom launch options
 gnome-extra/yad 14.1: Display GTK+ dialog boxes from command line or shell scripts
 gui-apps/fuzzel 1.10.2 9999: Application launcher for wlroots based Wayland compositors.
-gui-apps/qtgreet 2.0.2-r1: Qt based greeter for greetd
+gui-apps/qtgreet 2.0.2-r1 9999: Qt based greeter for greetd
 gui-apps/waycheck 1.2.0: Simple GUI that displays the protocols implemented by a Wayland compositor.
 gui-apps/wbg 1.2.0: Super simple wallpaper application for Wayland compositors
 gui-apps/yambar 1.11.0 9999: Modular status panel for X11 and Wayland, inspired by polybar
@@ -72,7 +72,7 @@ gui-libs/dfl-applications 0.2.0: This library provides a thin wrapper around QAp
 gui-libs/dfl-ipc 0.2.0: Two very simple classes for IPC. Used by DFL::Application.
 gui-libs/dfl-login1 0.2.0: DFL Login1 class implements a part of the systemd logind dbus protocol.
 gui-libs/dfl-utils 0.2.0: This library provides single-instance Application classes for various utilities.
-gui-libs/wayqt 0.2.0: A Qt-based wrapper for various wayland protocols.
+gui-libs/wayqt 0.2.0 9999: A Qt-based wrapper for various wayland protocols.
 gui-wm/cage 0.1.5_p20240730: A Wayland kiosk
 gui-wm/river 0.3.5: A dynamic tiling Wayland compositor
 gui-wm/stacktile 1.0.0 9999: stacktile is a layout generator for the river Wayland compositor.
