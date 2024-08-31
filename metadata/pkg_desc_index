@@ -7,7 +7,7 @@ app-containers/waydroid 1.4.2-r4: Container-based approach to boot a full Androi
 app-misc/parona-scripts 9999: Scripts and hooks that I use on my machines
 app-misc/readpe 0.84: The PE file analysis toolkit
 app-misc/rivalcfg 4.13.0: CLI tool and Python library to configure SteelSeries gaming mice
-dev-build/cargo-make 0.37.15: Rust task runner and build tool
+dev-build/cargo-make 0.37.15 0.37.16: Rust task runner and build tool
 dev-cpp/hjson-cpp 2.4.1: Hjson for C++
 dev-cpp/tinygltf 2.9.3: Header only C++11 tiny glTF 2.0 library
 dev-cpp/trompeloeil 48: Header only C++14 mocking framework
@@ -53,7 +53,7 @@ dev-python/spinners 0.0.24-r1: Spinners for terminals
 dev-python/steam 1.6.1: Python package for interacting with Steam
 dev-python/vdf 3.5: A module for (de)serialization to and from VDF, Valve's key-value text format
 dev-tex/altacv 1.7.1-r2: Yet another alternative curriculum vitae/résumé class with LaTeX
-dev-vcs/gcli 2.4.0: Portable CLI tool for interacting with Git(Hub|Lab|Tea) from the command line.
+dev-vcs/gcli 2.4.0 2.5.0: Portable CLI tool for interacting with Git(Hub|Lab|Tea) from the command line.
 games-util/gamehub 0.16.3_p2: All your games in one place
 games-util/goverlay 1.2: Graphical UI to help manage Linux overlays.
 games-util/heroic-gogdl 9999: GOG Downloading module for Heroic Games Launcher
