@@ -10,4 +10,7 @@
 		<remote-id type="gitlab">herrhotzenplotz/gcli</remote-id>
 		<remote-id type="sourceforge">gcli</remote-id>
 	</upstream>
+	<use>
+		<flag name="lowdown">Use lowdown to render markdown.</flag>
+	</use>
 </pkgmetadata>
