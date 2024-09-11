@@ -49,7 +49,7 @@ dev-python/inputs 0.5: Cross-platform Python support for keyboards, mice and gam
 dev-python/log-symbols 0.0.14-r1: Colored symbols for various log levels for Python
 dev-python/pyclip 0.7.0: Cross-platform Clipboard module for Python with binary support.
 dev-python/pycryptodomex 3.20.0: A self-contained cryptographic library for Python
-dev-python/pydantic-settings 2.4.0: Settings management using pydantic
+dev-python/pydantic-settings 2.4.0 2.5.0: Settings management using pydantic
 dev-python/pytest-examples 0.0.12 0.0.13: Pytest plugin for testing Python code examples in docstrings and markdown files.
 dev-python/spinners 0.0.24-r1: Spinners for terminals
 dev-python/steam 1.6.1: Python package for interacting with Steam
