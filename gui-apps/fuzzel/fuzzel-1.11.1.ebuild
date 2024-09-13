@@ -37,7 +37,11 @@ CDEPEND="
 	media-libs/fontconfig
 	x11-libs/libxkbcommon
 	x11-libs/pixman
-	cairo? ( x11-libs/cairo )
+	cairo? (
+		dev-libs/glib:2
+		x11-libs/cairo
+	)
+	nanosvg? ( media-libs/nanosvg )
 	png? ( media-libs/libpng:= )
 	svg? (
 		!nanosvg? ( gnome-base/librsvg:2 )
@@ -64,5 +68,6 @@ src_configure() {
 		-Dpng-backend=$(usex png libpng none)
 		-Dsvg-backend=$(usex svg $(usex nanosvg nanosvg librsvg) none)
 	)
+	use nanosvg && emesonargs+=( -Dsystem-nanosvg=enabled )
 	meson_src_configure
 }
