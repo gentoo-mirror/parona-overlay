@@ -26,7 +26,9 @@ RDEPEND="
 "
 BDEPEND="
 	test? (
+		dev-python/aiosqlite[${PYTHON_USEDEP}]
 		dev-python/anyio[${PYTHON_USEDEP}]
+		dev-python/databases[${PYTHON_USEDEP}]
 		dev-python/dirty-equals[${PYTHON_USEDEP}]
 		dev-python/email-validator[${PYTHON_USEDEP}]
 		dev-python/flask[${PYTHON_USEDEP}]
@@ -37,6 +39,7 @@ BDEPEND="
 		dev-python/pyyaml[${PYTHON_USEDEP}]
 		dev-python/sqlalchemy[${PYTHON_USEDEP}]
 		dev-python/trio[${PYTHON_USEDEP}]
+		dev-python/ujson[${PYTHON_USEDEP}]
 
 	)
 "
@@ -46,8 +49,6 @@ distutils_enable_tests pytest
 EPYTEST_DESELECT=(
 	# Depends on coverage
 	"tests/test_fastapi_cli.py::test_fastapi_cli"
-	# Failed: DID NOT WARN. No warnings of type (<class 'DeprecationWarning'>,) were emitted
-	"tests/test_tutorial/test_async_sql_databases/test_tutorial001.py::test_openapi_schema"
 )
 
 pkg_postinst() {
@@ -57,4 +58,7 @@ pkg_postinst() {
 	optfeature "forms and file uploads" dev-python/python-multipart
 	optfeature "validate emails" dev-python/email-validator
 	optfeature "uvicorn with uvloop" dev-python/uvicorn
+	optfeature_header "Alternative JSON responses"
+	optfeature "ORJSONResponse" dev-python/orjson
+	optfeature "UJSONResponse" dev-python/ujson
 }
