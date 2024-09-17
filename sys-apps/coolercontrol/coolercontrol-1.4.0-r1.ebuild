@@ -550,7 +550,9 @@ DEPEND="
 "
 RDEPEND="
 	${DEPEND}
+	dev-libs/libayatana-appindicator
 	sys-apps/coolercontrold
+	virtual/pkgconfig
 "
 BDEPEND="
 	net-libs/nodejs[npm]
