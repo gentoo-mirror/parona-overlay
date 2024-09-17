@@ -90,14 +90,14 @@ net-im/discord 0.0.68: All-in-one voice and text chat for gamers
 net-im/discord-ptb 0.0.103: All-in-one voice and text chat for gamers
 net-misc/wlvncc 0_pre20240407: A Wayland Native VNC Client
 sec-keys/openpgp-keys-mysql 20231023: OpenPGP keys used to sign MySQL releases
-sys-apps/coolercontrol 1.4.0: Monitor and control your cooling and other devices
+sys-apps/coolercontrol 1.4.0-r1: Monitor and control your cooling and other devices
 sys-apps/coolercontrol-liqctld 1.4.0: Monitor and control your cooling and other devices (liqctld)
 sys-apps/coolercontrold 1.4.0-r1: Monitor and control your cooling and other devices (daemon)
 sys-apps/fancontrol-gui 0.8_p20200825: GUI for Fancontrol.
 sys-apps/gsmartcontrol 9999: Hard Disk Drive and SSD Health Inspection Tool
 sys-apps/rinit 9999: Next-gen init and service-manager written in Rust
 sys-boot/uefitool 68_alpha: UEFI firmware image viewer and editor
-sys-power/corectrl 1.4.1: Profile based system control utility
+sys-power/corectrl 1.4.1 1.4.2: Profile based system control utility
 sys-process/nvtop 3.1.0: AMD and NVIDIA GPUs htop like monitoring tool
 www-apps/rdrview 0.1: Firefox Reader View as a command line tool
 www-apps/vikunja 0.24.2: The to-do app to organize your life.
