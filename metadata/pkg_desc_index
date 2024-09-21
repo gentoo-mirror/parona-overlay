@@ -101,5 +101,5 @@ sys-boot/uefitool 68_alpha: UEFI firmware image viewer and editor
 sys-power/corectrl 1.4.1 1.4.2: Profile based system control utility
 sys-process/nvtop 3.1.0: AMD and NVIDIA GPUs htop like monitoring tool
 www-apps/rdrview 0.1: Firefox Reader View as a command line tool
-www-apps/vikunja 0.24.2: The to-do app to organize your life.
+www-apps/vikunja 0.24.2 0.24.3: The to-do app to organize your life.
 www-plugins/firefoxpwa 2.12.1-r1 2.12.3 2.12.4: A tool to install, manage and use Progressive Web Apps (PWAs) in Mozilla Firefox
