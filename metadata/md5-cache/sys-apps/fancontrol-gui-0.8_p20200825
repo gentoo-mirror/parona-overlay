@@ -13,5 +13,5 @@ RDEPEND=>=dev-qt/qtcore-5.8.0:5 >=dev-qt/qtwidgets-5.8.0:5 >=dev-qt/qtgui-5.8.0:
 RESTRICT=!test? ( test )
 SLOT=0
 SRC_URI=https://github.com/Maldela/fancontrol-gui/archive/12c5e7eea33ea1cc6feebf0a504d3de231a931ee.tar.gz -> fancontrol-gui-12c5e7eea33ea1cc6feebf0a504d3de231a931ee.tar.gz
-_eclasses_=toolchain-funcs	948855ec7ad9f11351edf9066708dfa9	multilib	7e1347c006a76bb812f3a9f663b79991	flag-o-matic	fa33e3696fe4689dda7e9affe92e2c94	multiprocessing	e644caa6eb7ce7e5ab0864383ac13ad9	ninja-utils	2df4e452cea39a9ec8fb543ce059f8d6	xdg-utils	5465aed08f1dfc2a75f14cbea4272961	cmake	10a50dfaf728b802fcfd37f8d0da9056	xdg	8d7d90c01b1b1c2602dab6fc6b177097
+_eclasses_=toolchain-funcs	948855ec7ad9f11351edf9066708dfa9	multilib	7e1347c006a76bb812f3a9f663b79991	flag-o-matic	fa33e3696fe4689dda7e9affe92e2c94	multiprocessing	e644caa6eb7ce7e5ab0864383ac13ad9	ninja-utils	2df4e452cea39a9ec8fb543ce059f8d6	xdg-utils	5465aed08f1dfc2a75f14cbea4272961	cmake	10a50dfaf728b802fcfd37f8d0da9056	xdg	854eae304447322625df5991e20ed18f
 _md5_=4e24d76cbeb5e67dd1fd424823942d7f
