@@ -1,0 +1,16 @@
+BDEPEND=test? ( >=dev-python/dirty-equals-0.7.0[python_targets_python3_12(-)?,python_targets_python3_13(-)?] >=dev-python/hypothesis-6.75.5[python_targets_python3_12(-)?,python_targets_python3_13(-)?] >=dev-python/mypy-1.2.0[python_targets_python3_12(-)?,python_targets_python3_13(-)?] dev-python/pydantic[python_targets_python3_12(-)?,python_targets_python3_13(-)?] >=dev-python/pytest-subtests-0.11.0[python_targets_python3_12(-)?,python_targets_python3_13(-)?] >=dev-python/time-machine-2.10.0[python_targets_python3_12(-)?,python_targets_python3_13(-)?] ) test? ( >=dev-python/asttokens-2.0.5[python_targets_python3_12(-)?,python_targets_python3_13(-)?] >=dev-python/black-23.3.0[python_targets_python3_12(-)?,python_targets_python3_13(-)?] >=dev-python/click-8.1.4[python_targets_python3_12(-)?,python_targets_python3_13(-)?] >=dev-python/executing-2.1.0[python_targets_python3_12(-)?,python_targets_python3_13(-)?] >=dev-python/rich-13.7.1[python_targets_python3_12(-)?,python_targets_python3_13(-)?] dev-python/typing-extensions[python_targets_python3_12(-)?,python_targets_python3_13(-)?] >=dev-python/pytest-7.4.4[python_targets_python3_12(-)?,python_targets_python3_13(-)?] dev-python/pytest-xdist[python_targets_python3_12(-)?,python_targets_python3_13(-)?] ) python_targets_python3_12? ( dev-lang/python:3.12 ) python_targets_python3_13? ( dev-lang/python:3.13 ) >=dev-python/gpep517-15[python_targets_python3_12(-)?,python_targets_python3_13(-)?] >=dev-python/hatchling-1.21.1[python_targets_python3_12(-)?,python_targets_python3_13(-)?]
+DEFINED_PHASES=compile configure install prepare test
+DESCRIPTION=Create and update inline snapshots in your python tests
+EAPI=8
+HOMEPAGE=https://15r10nk.github.io/inline-snapshot/ https://github.com/15r10nk/inline-snapshot/ https://pypi.org/project/inline-snapshot/
+INHERIT=distutils-r1
+IUSE=test python_targets_python3_12 python_targets_python3_13
+KEYWORDS=~amd64
+LICENSE=MIT
+RDEPEND=>=dev-python/asttokens-2.0.5[python_targets_python3_12(-)?,python_targets_python3_13(-)?] >=dev-python/black-23.3.0[python_targets_python3_12(-)?,python_targets_python3_13(-)?] >=dev-python/click-8.1.4[python_targets_python3_12(-)?,python_targets_python3_13(-)?] >=dev-python/executing-2.1.0[python_targets_python3_12(-)?,python_targets_python3_13(-)?] >=dev-python/rich-13.7.1[python_targets_python3_12(-)?,python_targets_python3_13(-)?] dev-python/typing-extensions[python_targets_python3_12(-)?,python_targets_python3_13(-)?] python_targets_python3_12? ( dev-lang/python:3.12 ) python_targets_python3_13? ( dev-lang/python:3.13 )
+REQUIRED_USE=|| ( python_targets_python3_12 python_targets_python3_13 )
+RESTRICT=!test? ( test )
+SLOT=0
+SRC_URI=https://github.com/15r10nk/inline-snapshot/archive/refs/tags/v0.13.3.tar.gz -> inline-snapshot-0.13.3.gh.tar.gz
+_eclasses_=toolchain-funcs	948855ec7ad9f11351edf9066708dfa9	multilib	7e1347c006a76bb812f3a9f663b79991	flag-o-matic	fa33e3696fe4689dda7e9affe92e2c94	out-of-source-utils	a0eb740debe3d472355e8bc52f62e0ac	multibuild	45df57b1877333d70a9e894f6c8fdb3a	multiprocessing	e644caa6eb7ce7e5ab0864383ac13ad9	ninja-utils	2df4e452cea39a9ec8fb543ce059f8d6	python-utils-r1	6881b056477c23167d9a6b33e146374e	python-r1	c1fc393cd1e72f093b4838e29d27918c	distutils-r1	515591e76fa89a2359ed45d26bf9c774
+_md5_=966fea60fb0d49bca5ca84cca0792f52
