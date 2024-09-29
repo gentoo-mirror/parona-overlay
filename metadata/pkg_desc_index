@@ -7,7 +7,7 @@ app-containers/waydroid 1.4.2-r4: Container-based approach to boot a full Androi
 app-misc/parona-scripts 9999: Scripts and hooks that I use on my machines
 app-misc/readpe 0.84: The PE file analysis toolkit
 app-misc/rivalcfg 4.13.0: CLI tool and Python library to configure SteelSeries gaming mice
-dev-build/cargo-make 0.37.16 0.37.17: Rust task runner and build tool
+dev-build/cargo-make 0.37.16 0.37.17 0.37.18: Rust task runner and build tool
 dev-cpp/hjson-cpp 2.4.1: Hjson for C++
 dev-cpp/tinygltf 2.9.3: Header only C++11 tiny glTF 2.0 library
 dev-cpp/trompeloeil 48: Header only C++14 mocking framework
@@ -101,5 +101,5 @@ sys-boot/uefitool 68_alpha: UEFI firmware image viewer and editor
 sys-power/corectrl 1.4.1 1.4.2: Profile based system control utility
 sys-process/nvtop 3.1.0: AMD and NVIDIA GPUs htop like monitoring tool
 www-apps/rdrview 0.1: Firefox Reader View as a command line tool
-www-apps/vikunja 0.24.2 0.24.3: The to-do app to organize your life.
+www-apps/vikunja 0.24.3 0.24.4: The to-do app to organize your life.
 www-plugins/firefoxpwa 2.12.4 2.12.5: A tool to install, manage and use Progressive Web Apps (PWAs) in Mozilla Firefox
