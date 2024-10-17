@@ -41,6 +41,11 @@ EPYTEST_DESELECT=(
 	"tests/test_settings.py::test_protected_namespace_defaults"
 )
 
+EPYTEST_IGNORE=(
+	# TODO: requires azure package
+	"tests/test_source_azure_key_vault.py"
+)
+
 python_test() {
 	# parsing --help output is width dependent
 	local -x COLUMNS=80
