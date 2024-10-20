@@ -7,12 +7,11 @@ app-containers/waydroid 1.4.2-r4: Container-based approach to boot a full Androi
 app-misc/parona-scripts 9999: Scripts and hooks that I use on my machines
 app-misc/readpe 0.84: The PE file analysis toolkit
 app-misc/rivalcfg 4.13.0: CLI tool and Python library to configure SteelSeries gaming mice
-dev-build/cargo-make 0.37.21 0.37.22: Rust task runner and build tool
+dev-build/cargo-make 0.37.21 0.37.22 0.37.23: Rust task runner and build tool
 dev-cpp/hjson-cpp 2.4.1: Hjson for C++
 dev-cpp/tinygltf 2.9.3: Header only C++11 tiny glTF 2.0 library
 dev-cpp/trompeloeil 48 49: Header only C++14 mocking framework
 dev-db/mysql 8.0.39 8.3.0: Fast, multi-threaded, multi-user SQL database server
-dev-libs/elfutils 0.191-r1: Libraries/utilities to handle ELF objects (drop in replacement for libelf)
 dev-libs/libgbinder 1.1.40: GLib-style interface to binder
 dev-libs/libglibutil 1.0.79: Library of glib utilities
 dev-libs/vala-language-server 0.48.7 9999: Code Intelligence for Vala & Genie
@@ -41,7 +40,7 @@ dev-perl/Test-Log-Log4perl 0.32: Test log4perl
 dev-perl/Test-RandomResult 0.001: Test that results of a running code look random
 dev-perl/Test-Synopsis-Expectation 0.12: Test that SYNOPSIS code produces expected results
 dev-perl/match-simple 0.012: simplified clone of smartmatch operator
-dev-python/asyncpg 0.29.0: A fast PostgreSQL Database Client Library for Python/asyncio.
+dev-python/asyncpg 0.29.0 0.30.0: A fast PostgreSQL Database Client Library for Python/asyncio.
 dev-python/databases 0.9.0: Async database support for Python.
 dev-python/fastapi 0.115.0 0.115.2: FastAPI framework, high performance, easy to learn, ready for production
 dev-python/gbinder 1.1.2-r1: Python bindings for libgbinder
