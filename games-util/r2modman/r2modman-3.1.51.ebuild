@@ -87,7 +87,11 @@ src_install() {
 	# See #903616 and #890595
 	[[ -x chrome_crashpad_handler ]] && doins chrome_crashpad_handler
 
-	dosym "${DESTDIR}/r2modman" "/usr/bin/r2modman"
+	newbin - r2modman <<-EOF
+	#!/usr/bin/env sh
+	# https://gitlab.com/Parona/parona-overlay/-/issues/1
+	GDK_BACKEND=x11 exec "${DESTDIR}/r2modman"
+	EOF
 
 	popd >/dev/null || die
 
