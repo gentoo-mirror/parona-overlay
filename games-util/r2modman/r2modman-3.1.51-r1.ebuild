@@ -95,6 +95,7 @@ src_install() {
 
 	popd >/dev/null || die
 
+	sed -i -e "/Exec=/ s|${DESTDIR}/||" usr/share/applications/r2modman.desktop || die
 	domenu usr/share/applications/r2modman.desktop
 
 	for size in {16,24,32,48,64,96,128,192,256}; do
