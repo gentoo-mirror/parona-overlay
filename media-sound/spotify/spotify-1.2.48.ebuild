@@ -7,8 +7,8 @@ inherit desktop pax-utils unpacker xdg
 
 DESCRIPTION="Spotify is a social music platform"
 HOMEPAGE="https://www.spotify.com/download/linux/"
-SRC_BASE="http://repository.spotify.com/pool/non-free/s/${PN}-client/"
-BUILD_ID_AMD64="290.g242057a2"
+SRC_BASE="http://repository.spotify.com/pool/non-free/s/spotify-client/"
+BUILD_ID_AMD64="405.gf2c48e6f"
 SRC_URI="${SRC_BASE}${PN}-client_${PV}.${BUILD_ID_AMD64}_amd64.deb"
 S="${WORKDIR}/"
 
@@ -64,9 +64,6 @@ QA_PREBUILT="
 "
 
 src_install() {
-	gunzip usr/share/doc/spotify-client/changelog.gz || die
-	dodoc usr/share/doc/spotify-client/changelog
-
 	SPOTIFY_PKG_HOME=usr/share/spotify
 	insinto /usr/share/pixmaps
 	doins ${SPOTIFY_PKG_HOME}/icons/*.png
