@@ -44,7 +44,7 @@ dev-python/asyncpg 0.29.0 0.30.0: A fast PostgreSQL Database Client Library for 
 dev-python/databases 0.9.0: Async database support for Python.
 dev-python/fastapi 0.115.2 0.115.4: FastAPI framework, high performance, easy to learn, ready for production
 dev-python/gbinder 1.1.2-r1: Python bindings for libgbinder
-dev-python/inline-snapshot 0.13.1 0.13.3: Create and update inline snapshots in your python tests
+dev-python/inline-snapshot 0.13.3 0.13.4: Create and update inline snapshots in your python tests
 dev-python/inputs 0.5: Cross-platform Python support for keyboards, mice and gamepads.
 dev-python/log-symbols 0.0.14-r1: Colored symbols for various log levels for Python
 dev-python/pyclip 0.7.0: Cross-platform Clipboard module for Python with binary support.
@@ -61,9 +61,9 @@ games-util/gamehub 0.16.3_p2: All your games in one place
 games-util/goverlay 1.2: Graphical UI to help manage Linux overlays.
 games-util/heroic-gogdl 9999: GOG Downloading module for Heroic Games Launcher
 games-util/mangohud 0.7.2-r1 9999: Overlay for monitoring FPS, temperatures, CPU/GPU load and more
-games-util/nexusmodsapp 0.6.1 0.6.2: Nexus Mods App, a mod installer, creator and manager for all your popular games
+games-util/nexusmodsapp 0.6.2 0.6.3: Nexus Mods App, a mod installer, creator and manager for all your popular games
 games-util/protonup-qt 2.10.2: Install and manage proton with Steam and Lutris
-games-util/r2modman 3.1.50 3.1.51-r1: A simple and easy to use mod manager for several games using Thunderstore
+games-util/r2modman 3.1.51-r1 3.1.52: A simple and easy to use mod manager for several games using Thunderstore
 games-util/steamtinkerlaunch 9999: Tool for use with the Steam client for custom launch options
 gnome-extra/yad 14.1: Display GTK+ dialog boxes from command line or shell scripts
 gui-apps/fuzzel 1.11.0 1.11.1 9999: Application launcher for wlroots based Wayland compositors.
@@ -101,4 +101,4 @@ sys-power/corectrl 1.4.1 1.4.2: Profile based system control utility
 sys-process/nvtop 3.1.0: AMD and NVIDIA GPUs htop like monitoring tool
 www-apps/rdrview 0.1: Firefox Reader View as a command line tool
 www-apps/vikunja 0.24.3 0.24.4: The to-do app to organize your life.
-www-plugins/firefoxpwa 2.12.4 2.12.5: A tool to install, manage and use Progressive Web Apps (PWAs) in Mozilla Firefox
+www-plugins/firefoxpwa 2.12.5 2.13.1: A tool to install, manage and use Progressive Web Apps (PWAs) in Mozilla Firefox
