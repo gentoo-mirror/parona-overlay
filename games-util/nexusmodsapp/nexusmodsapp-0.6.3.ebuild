@@ -7,40 +7,40 @@ DOTNET_PKG_COMPAT=8.0
 NUGETS="
 argon@0.11.0
 argon@0.17.0
+argon@0.21.0
 autofixture.xunit2@4.18.1
 autofixture@4.18.1
 avalonia.angle.windows.natives@2.1.22045.20230930
 avalonia.avaloniaedit@11.1.0
 avalonia.buildservices@0.0.28
 avalonia.buildservices@0.0.29
-avalonia.controls.colorpicker@11.1.3
-avalonia.controls.datagrid@11.1.3
+avalonia.controls.colorpicker@11.1.4
+avalonia.controls.datagrid@11.1.4
 avalonia.controls.treedatagrid@11.0.10
-avalonia.desktop@11.1.3
-avalonia.diagnostics@11.1.3
-avalonia.freedesktop@11.1.3
-avalonia.headless@11.1.3
-avalonia.labs.panels@11.1.0
-avalonia.native@11.1.3
-avalonia.reactiveui@11.1.3
+avalonia.desktop@11.1.4
+avalonia.diagnostics@11.1.4
+avalonia.freedesktop@11.1.4
+avalonia.headless@11.1.4
+avalonia.labs.panels@11.2.0
+avalonia.native@11.1.4
+avalonia.reactiveui@11.1.4
 avalonia.remote.protocol@11.0.0
-avalonia.remote.protocol@11.1.0
-avalonia.remote.protocol@11.1.3
+avalonia.remote.protocol@11.1.4
 avalonia.skia@11.0.0
 avalonia.skia@11.1.0
-avalonia.skia@11.1.3
-avalonia.svg.skia@11.1.0
-avalonia.themes.fluent@11.1.3
-avalonia.themes.simple@11.1.3
-avalonia.win32@11.1.3
-avalonia.x11@11.1.3
+avalonia.skia@11.1.4
+avalonia.svg.skia@11.1.0.1
+avalonia.themes.fluent@11.1.4
+avalonia.themes.simple@11.1.4
+avalonia.win32@11.1.4
+avalonia.x11@11.1.4
 avalonia@11.0.0
-avalonia@11.1.0
-avalonia@11.1.3
+avalonia@11.1.4
 avaloniaedit.textmate@11.1.0
 benchmarkdotnet.annotations@0.13.12
 benchmarkdotnet@0.13.12
 bitfaster.caching@2.5.0
+bsdiff@1.1.0
 castle.core@5.1.1
 cliwrap@3.6.6
 colordocument.avalonia@11.0.3-a1
@@ -49,16 +49,16 @@ commandlineparser@2.9.1
 coverlet.collector@6.0.2
 diffengine@12.3.0
 diffengine@15.4.0
-diffplex@1.5.0
+diffengine@15.5.1
+diffplex@1.7.2
 dynamicdata@8.3.27
 dynamicdata@8.4.1
 dynamicdata@9.0.4
 emptyfiles@4.5.1
 emptyfiles@8.2.0
+emptyfiles@8.4.0
 excss@4.2.3
 fare@2.1.1
-flatsharp.compiler@7.6.0
-flatsharp.runtime@7.6.0
 fluentassertions.analyzers@0.31.0
 fluentassertions.oneof@0.0.5
 fluentassertions@6.12.0
@@ -68,16 +68,17 @@ fomodinstaller.interface@1.2.0
 fomodinstaller.scripting.xmlscript@1.0.0
 fomodinstaller.scripting@1.0.0
 fomodinstaller.utils@1.0.0
-gamefinder.common@4.2.4
-gamefinder.registryutils@4.2.4
-gamefinder.storehandlers.eadesktop@4.2.4
-gamefinder.storehandlers.egs@4.2.4
-gamefinder.storehandlers.gog@4.2.4
-gamefinder.storehandlers.origin@4.2.4
-gamefinder.storehandlers.steam@4.2.4
-gamefinder.storehandlers.xbox@4.2.4
-gamefinder.wine@4.2.4
-gamefinder@4.2.4
+gamefinder.common@4.3.3
+gamefinder.launcher.heroic@4.3.3
+gamefinder.registryutils@4.3.3
+gamefinder.storehandlers.eadesktop@4.3.3
+gamefinder.storehandlers.egs@4.3.3
+gamefinder.storehandlers.gog@4.3.3
+gamefinder.storehandlers.origin@4.3.3
+gamefinder.storehandlers.steam@4.3.3
+gamefinder.storehandlers.xbox@4.3.3
+gamefinder.wine@4.3.3
+gamefinder@4.3.3
 gee.external.capstone@2.3.0
 githubactionstestlogger@2.3.3
 google.protobuf@3.22.5
@@ -171,14 +172,15 @@ memorypack.streaming@1.21.1
 memorypack@1.21.1
 microcom.runtime@0.11.0
 microsoft.aspnet.webapi.client@5.2.9
-microsoft.aspnetcore.webutilities@8.0.7
+microsoft.aspnetcore.webutilities@8.0.8
 microsoft.bcl.asyncinterfaces@1.1.0
 microsoft.bcl.asyncinterfaces@1.1.1
 microsoft.bcl.asyncinterfaces@6.0.0
 microsoft.bcl.asyncinterfaces@7.0.0
 microsoft.build.tasks.git@8.0.0
-microsoft.codeanalysis.analyzer.testing@1.1.1
-microsoft.codeanalysis.analyzers@3.3.2
+microsoft.codeanalysis.analyzer.testing@1.1.2
+microsoft.codeanalysis.analyzers@1.0.0
+microsoft.codeanalysis.analyzers@3.0.0
 microsoft.codeanalysis.analyzers@3.3.3
 microsoft.codeanalysis.analyzers@3.3.4
 microsoft.codeanalysis.common@1.0.1
@@ -186,29 +188,28 @@ microsoft.codeanalysis.common@3.8.0
 microsoft.codeanalysis.common@4.1.0
 microsoft.codeanalysis.common@4.7.0
 microsoft.codeanalysis.common@4.8.0
-microsoft.codeanalysis.csharp.sourcegenerators.testing.xunit@1.1.1
-microsoft.codeanalysis.csharp.sourcegenerators.testing@1.1.1
+microsoft.codeanalysis.csharp.sourcegenerators.testing.xunit@1.1.2
+microsoft.codeanalysis.csharp.sourcegenerators.testing@1.1.2
 microsoft.codeanalysis.csharp.workspaces@3.8.0
 microsoft.codeanalysis.csharp.workspaces@4.8.0
 microsoft.codeanalysis.csharp@3.8.0
 microsoft.codeanalysis.csharp@4.1.0
 microsoft.codeanalysis.csharp@4.7.0
 microsoft.codeanalysis.csharp@4.8.0
-microsoft.codeanalysis.sourcegenerators.testing@1.1.1
-microsoft.codeanalysis.testing.verifiers.xunit@1.1.1
+microsoft.codeanalysis.sourcegenerators.testing@1.1.2
+microsoft.codeanalysis.testing.verifiers.xunit@1.1.2
 microsoft.codeanalysis.workspaces.common@1.0.1
 microsoft.codeanalysis.workspaces.common@3.8.0
 microsoft.codeanalysis.workspaces.common@4.8.0
-microsoft.codecoverage@17.10.0
+microsoft.codecoverage@17.11.1
 microsoft.composition@1.0.27
-microsoft.csharp@4.0.1
 microsoft.csharp@4.7.0
 microsoft.diagnostics.netcore.client@0.2.251802
 microsoft.diagnostics.runtime@2.2.332302
 microsoft.diagnostics.tracing.traceevent@3.0.2
 microsoft.dotnet.platformabstractions@3.1.6
-microsoft.extensions.ambientmetadata.application@8.8.0
-microsoft.extensions.compliance.abstractions@8.8.0
+microsoft.extensions.ambientmetadata.application@8.9.1
+microsoft.extensions.compliance.abstractions@8.9.1
 microsoft.extensions.configuration.abstractions@2.1.1
 microsoft.extensions.configuration.abstractions@8.0.0
 microsoft.extensions.configuration.binder@2.1.1
@@ -226,18 +227,18 @@ microsoft.extensions.dependencyinjection.abstractions@2.0.0
 microsoft.extensions.dependencyinjection.abstractions@2.1.1
 microsoft.extensions.dependencyinjection.abstractions@8.0.0
 microsoft.extensions.dependencyinjection.abstractions@8.0.1
-microsoft.extensions.dependencyinjection.autoactivation@8.8.0
+microsoft.extensions.dependencyinjection.autoactivation@8.9.1
 microsoft.extensions.dependencyinjection@8.0.0
 microsoft.extensions.diagnostics.abstractions@8.0.0
-microsoft.extensions.diagnostics.exceptionsummarization@8.8.0
+microsoft.extensions.diagnostics.exceptionsummarization@8.9.1
 microsoft.extensions.diagnostics@8.0.0
 microsoft.extensions.fileproviders.abstractions@8.0.0
 microsoft.extensions.fileproviders.physical@8.0.0
 microsoft.extensions.filesystemglobbing@8.0.0
 microsoft.extensions.hosting.abstractions@8.0.0
 microsoft.extensions.hosting@8.0.0
-microsoft.extensions.http.diagnostics@8.8.0
-microsoft.extensions.http.resilience@8.8.0
+microsoft.extensions.http.diagnostics@8.9.1
+microsoft.extensions.http.resilience@8.9.1
 microsoft.extensions.http@8.0.0
 microsoft.extensions.logging.abstractions@2.0.0
 microsoft.extensions.logging.abstractions@2.1.1
@@ -254,7 +255,6 @@ microsoft.extensions.logging@2.1.1
 microsoft.extensions.logging@8.0.0
 microsoft.extensions.objectpool@8.0.0
 microsoft.extensions.objectpool@8.0.6
-microsoft.extensions.objectpool@8.0.7
 microsoft.extensions.objectpool@8.0.8
 microsoft.extensions.options.configurationextensions@8.0.0
 microsoft.extensions.options@2.0.0
@@ -264,12 +264,12 @@ microsoft.extensions.options@8.0.2
 microsoft.extensions.primitives@2.0.0
 microsoft.extensions.primitives@2.1.1
 microsoft.extensions.primitives@8.0.0
-microsoft.extensions.resilience@8.8.0
-microsoft.extensions.telemetry.abstractions@8.8.0
-microsoft.extensions.telemetry@8.8.0
+microsoft.extensions.resilience@8.9.1
+microsoft.extensions.telemetry.abstractions@8.9.1
+microsoft.extensions.telemetry@8.9.1
 microsoft.io.recyclablememorystream@3.0.0
-microsoft.net.http.headers@8.0.7
-microsoft.net.test.sdk@17.10.0
+microsoft.net.http.headers@8.0.8
+microsoft.net.test.sdk@17.11.1
 microsoft.netcore.platforms@1.0.1
 microsoft.netcore.platforms@1.1.0
 microsoft.netcore.platforms@2.0.0
@@ -279,10 +279,9 @@ microsoft.netcore.targets@1.0.1
 microsoft.netcore.targets@1.1.0
 microsoft.sourcelink.common@8.0.0
 microsoft.sourcelink.github@8.0.0
-microsoft.testplatform.objectmodel@17.10.0
+microsoft.testplatform.objectmodel@17.11.1
 microsoft.testplatform.objectmodel@17.7.1
-microsoft.testplatform.testhost@17.10.0
-microsoft.visualbasic@10.0.1
+microsoft.testplatform.testhost@17.11.1
 microsoft.visualstudio.composition.netfxattributes@16.1.8
 microsoft.visualstudio.composition@16.1.8
 microsoft.visualstudio.threading.analyzers@17.10.48
@@ -291,7 +290,6 @@ microsoft.visualstudio.validation@15.0.82
 microsoft.visualstudio.validation@17.8.8
 microsoft.win32.primitives@4.0.1
 microsoft.win32.primitives@4.3.0
-microsoft.win32.registry@4.3.0
 microsoft.win32.registry@5.0.0
 nerdbank.fullduplexstream@1.1.12
 nerdbank.streams@2.11.74
@@ -302,35 +300,35 @@ netstandard.library@2.0.3
 newtonsoft.json.bson@1.0.1
 newtonsoft.json@13.0.1
 newtonsoft.json@13.0.3
-newtonsoft.json@9.0.1
-nexusmods.archives.nx@0.5.0
-nexusmods.hashing.xxhash64@2.0.1
-nexusmods.mnemonicdb.abstractions@0.9.81
-nexusmods.mnemonicdb.sourcegenerator@0.9.81
-nexusmods.mnemonicdb@0.9.81
+nexusmods.archives.nx@0.6.1
+nexusmods.hashing.xxhash3.paths@3.0.2
+nexusmods.hashing.xxhash3@3.0.2
+nexusmods.mnemonicdb.abstractions@0.9.95
+nexusmods.mnemonicdb.sourcegenerator@0.9.95
+nexusmods.mnemonicdb@0.9.95
 nexusmods.paths.extensions.nx@0.10.0
-nexusmods.paths.testinghelpers@0.9.5
+nexusmods.paths.testinghelpers@0.10.0
 nexusmods.paths@0.10.0
-nexusmods.paths@0.9.4
 nexusmods.paths@0.9.5
 nlog.extensions.logging@5.3.11
 nlog@5.3.2
 noggog.csharpext@2.64.0
 nsubstitute.analyzers.csharp@1.0.17
 nsubstitute@5.1.0
-nuget.common@5.6.0
-nuget.configuration@5.6.0
-nuget.frameworks@5.6.0
+nuget.common@6.3.4
+nuget.configuration@6.3.4
+nuget.frameworks@6.3.4
 nuget.frameworks@6.5.0
-nuget.packaging@5.6.0
-nuget.protocol@5.6.0
-nuget.resolver@5.6.0
-nuget.versioning@5.6.0
-observablecollections.r3@3.0.1
-observablecollections@3.0.1
+nuget.packaging@6.3.4
+nuget.protocol@6.3.4
+nuget.resolver@6.3.4
+nuget.versioning@6.3.4
+observablecollections.r3@3.1.0
+observablecollections@3.1.0
 oneof.extended@2.1.125
 oneof@2.1.125
 oneof@3.0.271
+onigwrap@1.0.6
 opentelemetry.api.providerbuilderextensions@1.8.1
 opentelemetry.api@1.8.1
 opentelemetry.exporter.opentelemetryprotocol@1.8.1
@@ -339,18 +337,21 @@ opentelemetry@1.8.1
 pathoschild.http.fluentclient@4.3.0
 perfolizer@0.2.1
 polly.core@8.4.1
+polly.core@8.4.2
 polly.extensions@8.4.1
 polly.ratelimiting@8.4.1
-polly@8.4.1
-projektanker.icons.avalonia.materialdesign@9.3.0
-projektanker.icons.avalonia@9.3.0
+polly@8.4.2
+projektanker.icons.avalonia.materialdesign@9.4.0
+projektanker.icons.avalonia@9.4.0
+qoisharp@1.0.0
 r3@1.0.0
 r3@1.2.8
-r3extensions.avalonia@1.2.8
+r3@1.2.9
+r3extensions.avalonia@1.2.9
 reactiveui.fody@19.5.41
 reactiveui@18.3.1
 reactiveui@19.5.41
-reactiveui@20.1.1
+reactiveui@20.1.63
 reloaded.memory@9.4.1
 rocksdb@8.11.3.46984
 runtime.any.system.collections@4.3.0
@@ -399,10 +400,12 @@ runtime.unix.system.net.sockets@4.3.0
 runtime.unix.system.private.uri@4.3.0
 runtime.unix.system.runtime.extensions@4.3.0
 sha3.net@2.0.0
+sharpziplib@1.4.2
 sharpzstd.interop@1.5.6
-shimskiasharp@2.0.0
+shimskiasharp@2.0.0.1
 simpleinfoname@2.1.1
 simpleinfoname@2.2.0
+simpleinfoname@2.3.0
 skiasharp.harfbuzz@2.88.6
 skiasharp.harfbuzz@2.88.8
 skiasharp.nativeassets.linux@2.88.3
@@ -421,19 +424,19 @@ skiasharp@2.88.8
 spectre.console.cli@0.49.1
 spectre.console.testing@0.49.1
 spectre.console@0.49.1
-splat.microsoft.extensions.logging@15.0.1
+splat.microsoft.extensions.logging@15.2.22
 splat@14.4.1
 splat@14.8.12
-splat@15.0.1
 splat@15.1.1
+splat@15.2.22
 strawberryshake.core@13.9.12
 strawberryshake.resources@13.9.12
 strawberryshake.server@13.9.12
 strawberryshake.transport.http@13.9.12
 strawberryshake.transport.websockets@13.9.12
-svg.custom@2.0.0
-svg.model@2.0.0
-svg.skia@2.0.0
+svg.custom@2.0.0.1
+svg.model@2.0.0.1
+svg.skia@2.0.0.1
 system.appcontext@4.1.0
 system.appcontext@4.3.0
 system.buffers@4.0.0
@@ -480,14 +483,13 @@ system.diagnostics.diagnosticsource@4.3.0
 system.diagnostics.diagnosticsource@8.0.0
 system.diagnostics.eventlog@6.0.0
 system.diagnostics.eventlog@8.0.0
-system.diagnostics.process@4.3.0
 system.diagnostics.tools@4.0.0
 system.diagnostics.tools@4.0.1
 system.diagnostics.tools@4.3.0
 system.diagnostics.tracing@4.1.0
 system.diagnostics.tracing@4.3.0
 system.dynamic.runtime@4.0.11
-system.dynamic.runtime@4.3.0
+system.formats.asn1@5.0.0
 system.globalization.calendars@4.0.1
 system.globalization.calendars@4.3.0
 system.globalization.extensions@4.0.1
@@ -580,7 +582,6 @@ system.runtime.interopservices@4.1.0
 system.runtime.interopservices@4.3.0
 system.runtime.numerics@4.0.1
 system.runtime.numerics@4.3.0
-system.runtime.serialization.primitives@4.1.1
 system.runtime@4.0.0
 system.runtime@4.1.0
 system.runtime@4.3.0
@@ -591,15 +592,16 @@ system.security.cryptography.algorithms@4.2.0
 system.security.cryptography.algorithms@4.3.0
 system.security.cryptography.cng@4.2.0
 system.security.cryptography.cng@4.3.0
+system.security.cryptography.cng@5.0.0
 system.security.cryptography.csp@4.0.0
 system.security.cryptography.csp@4.3.0
 system.security.cryptography.encoding@4.0.0
 system.security.cryptography.encoding@4.3.0
 system.security.cryptography.openssl@4.0.0
 system.security.cryptography.openssl@4.3.0
+system.security.cryptography.pkcs@5.0.0
 system.security.cryptography.primitives@4.0.0
 system.security.cryptography.primitives@4.3.0
-system.security.cryptography.protecteddata@4.3.0
 system.security.cryptography.protecteddata@4.4.0
 system.security.cryptography.x509certificates@4.1.0
 system.security.cryptography.x509certificates@4.3.0
@@ -629,21 +631,20 @@ system.threading.tasks.extensions@4.5.4
 system.threading.tasks@4.0.0
 system.threading.tasks@4.0.11
 system.threading.tasks@4.3.0
-system.threading.thread@4.3.0
 system.threading.threadpool@4.3.0
 system.threading.timer@4.0.1
 system.threading.timer@4.3.0
 system.threading@4.0.11
 system.threading@4.3.0
-system.valuetuple@4.5.0
 system.xml.readerwriter@4.0.11
 system.xml.readerwriter@4.3.0
 system.xml.xdocument@4.0.11
 system.xml.xdocument@4.3.0
 testableio.system.io.abstractions.wrappers@20.0.28
 testableio.system.io.abstractions@20.0.28
-textmatesharp.grammars@1.0.59
+textmatesharp.grammars@1.0.63
 textmatesharp@1.0.59
+textmatesharp@1.0.63
 tmds.dbus.protocol@0.16.0
 transparentvalueobjects@1.0.1
 validation@2.3.7
@@ -651,31 +652,33 @@ validation@2.4.18
 valvekeyvalue@0.10.0.360
 verify.imagemagick@3.4.2
 verify.sourcegenerators@2.2.0
-verify.xunit@24.2.0
+verify.xunit@26.6.0
 verify@21.3.0
 verify@24.2.0
-vogen@3.0.20
-vogen@3.0.24
+verify@26.6.0
 xunit.abstractions@2.0.1
 xunit.abstractions@2.0.2
 xunit.abstractions@2.0.3
-xunit.analyzers@1.13.0
+xunit.analyzers@1.16.0
 xunit.assert@2.3.0
-xunit.assert@2.8.0
-xunit.core@2.8.0
+xunit.assert@2.9.2
+xunit.core@2.9.2
 xunit.dependencyinjection.logging@9.0.0
 xunit.dependencyinjection.skippablefact@9.0.0
-xunit.dependencyinjection@9.3.0
+xunit.dependencyinjection@9.4.0
 xunit.extensibility.core@2.2.0
 xunit.extensibility.core@2.4.0
 xunit.extensibility.core@2.4.2
-xunit.extensibility.core@2.8.0
+xunit.extensibility.core@2.9.0
+xunit.extensibility.core@2.9.2
 xunit.extensibility.execution@2.4.0
 xunit.extensibility.execution@2.4.2
-xunit.extensibility.execution@2.8.0
-xunit.runner.visualstudio@2.8.0
+xunit.extensibility.execution@2.9.0
+xunit.extensibility.execution@2.9.2
+xunit.runner.visualstudio@2.8.2
 xunit.skippablefact@1.4.13
-xunit@2.8.0
+xunit@2.9.2
+zstdsharp.port@0.8.1
 "
 
 SMAPI_COMMIT="a284d86b9eee4d79083ae322715f129637d548d2"
@@ -727,6 +730,17 @@ src_prepare() {
 		-e '/Test_LoadAndCache_\(RemoteImage\|ImageStoredFile\)/i    [Trait("RequiresNetworking", "True")]' \
 		tests/NexusMods.UI.Tests/ImageCacheTests.cs || die
 
+	if ! use debug; then
+		# xunit doesnt support conditional unit tests like this
+		sed -i \
+			-e '
+			/\[Fact\]/,/Constructor_WithItemsFromDifferentGames_ShouldThrowArgumentException_InDebug/ {
+				s/\[Fact\]/[Fact (Skip = "requires a debug build")]/
+			}
+			' \
+			tests/Networking/NexusMods.Networking.ModUpdates.Tests/PerFeedCacheUpdaterTests.cs || die
+	fi
+
 	default
 }
 
@@ -738,8 +752,21 @@ src_test() {
 
 src_install() {
 	dotnet-pkg-base_install
-	dotnet-pkg-base_dolauncher "/usr/share/${P}/NexusMods.App" "${PN}-gui"
+	dotnet-pkg-base_dolauncher "/usr/share/${P}/NexusMods.App" "NexusMods.App"
 
 	doicon Nexus-Icon.png
-	make_desktop_entry nexusmodsapp-gui NexusMods.App Nexus-Icon
+	make_desktop_entry NexusMods.App NexusMods.App Nexus-Icon
+}
+
+pkg_postinst() {
+	xdg_pkg_postinst
+
+	elog "The Nexus Mods app is still in the very early stages of development. This means"
+	elog "that some of the core backend functionality of the app may still change"
+	elog "significantly between releases. When this changes all existing data becomes"
+	elog "incompatible with the new versions and users who wish to update will need to"
+	elog "start over."
+	elog "To do so run:"
+	elog "$ NexusMods.App uninstall-app"
+	elog "See https://nexus-mods.github.io/NexusMods.App/users/Uninstall/ for further instructions"
 }

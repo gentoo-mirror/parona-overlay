@@ -4,9 +4,9 @@
 EAPI=8
 
 CHROMIUM_LANGS="
-	am ar bg bn ca cs da de el en-GB es-419 es et fa fi fil fr gu he hi
+	af am ar bg bn ca cs da de el en-GB es-419 es et fa fi fil fr gu he hi
 	hr hu id it ja kn ko lt lv ml mr ms nb nl pl pt-BR pt-PT ro ru sk
-	sl sr sv sw ta te th tr uk vi zh-CN zh-TW
+	sl sr sv sw ta te th tr uk ur vi zh-CN zh-TW
 "
 
 inherit chromium-2 desktop unpacker xdg
@@ -69,7 +69,7 @@ src_install() {
 	pushd "opt/r2modman" >/dev/null || die
 
 	exeinto "${DESTDIR}"
-	doexe r2modman chrome-sandbox libEGL.so libffmpeg.so libGLESv2.so libvk_swiftshader.so libvulkan.so
+	doexe r2modman chrome-sandbox libEGL.so libffmpeg.so libGLESv2.so libvk_swiftshader.so libvulkan.so.1
 
 	insinto "${DESTDIR}"
 	doins chrome_100_percent.pak chrome_200_percent.pak icudtl.dat resources.pak snapshot_blob.bin \
@@ -87,10 +87,15 @@ src_install() {
 	# See #903616 and #890595
 	[[ -x chrome_crashpad_handler ]] && doins chrome_crashpad_handler
 
-	dosym "${DESTDIR}/r2modman" "/usr/bin/r2modman"
+	newbin - r2modman <<-EOF
+	#!/usr/bin/env sh
+	# https://gitlab.com/Parona/parona-overlay/-/issues/1
+	GDK_BACKEND=x11 exec "${DESTDIR}/r2modman"
+	EOF
 
 	popd >/dev/null || die
 
+	sed -i -e "/Exec=/ s|${DESTDIR}/||" usr/share/applications/r2modman.desktop || die
 	domenu usr/share/applications/r2modman.desktop
 
 	for size in {16,24,32,48,64,96,128,192,256}; do

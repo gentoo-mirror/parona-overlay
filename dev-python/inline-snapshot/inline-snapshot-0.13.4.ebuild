@@ -49,3 +49,17 @@ EPYTEST_DESELECT=(
 )
 EPYTEST_XDIST=1
 distutils_enable_tests pytest
+
+src_prepare() {
+	default
+
+	sed -i -e 's/project.run(\(.*\))/project.run(\1, "-p no:asyncio", "-p no:aiohttp")/' tests/test_xdist.py || die
+	sed -i \
+		-e '/^def test_disable_option/,/^def test_black_config/ {
+			s/project.run(\(.*\))/project.run(\1, "-p no:asyncio", "-p no:aiohttp")/
+		}' tests/test_pytest_plugin.py || die
+}
+
+python_test() {
+	epytest -p no:asyncio -p no:aiohttp
+}
