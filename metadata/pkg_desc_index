@@ -12,7 +12,7 @@ dev-cpp/hjson-cpp 2.4.1: Hjson for C++
 dev-cpp/tinygltf 2.9.3: Header only C++11 tiny glTF 2.0 library
 dev-cpp/trompeloeil 48 49: Header only C++14 mocking framework
 dev-db/mysql 8.0.39 8.3.0: Fast, multi-threaded, multi-user SQL database server
-dev-libs/libgbinder 1.1.40: GLib-style interface to binder
+dev-libs/libgbinder 1.1.40 1.1.41: GLib-style interface to binder
 dev-libs/libglibutil 1.0.79: Library of glib utilities
 dev-libs/vala-language-server 0.48.7 9999: Code Intelligence for Vala & Genie
 dev-perl/Color-ANSI-Util 0.165: Routines for dealing with ANSI colors
@@ -44,7 +44,6 @@ dev-python/asyncpg 0.29.0 0.30.0: A fast PostgreSQL Database Client Library for 
 dev-python/databases 0.9.0: Async database support for Python.
 dev-python/fastapi 0.115.2 0.115.4: FastAPI framework, high performance, easy to learn, ready for production
 dev-python/gbinder 1.1.2-r1: Python bindings for libgbinder
-dev-python/inline-snapshot 0.13.3 0.13.4: Create and update inline snapshots in your python tests
 dev-python/inputs 0.5: Cross-platform Python support for keyboards, mice and gamepads.
 dev-python/log-symbols 0.0.14-r1: Colored symbols for various log levels for Python
 dev-python/pyclip 0.7.0: Cross-platform Clipboard module for Python with binary support.
