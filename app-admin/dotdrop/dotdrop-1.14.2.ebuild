@@ -23,7 +23,7 @@ KEYWORDS="~amd64"
 RDEPEND="
 	dev-python/distro[${PYTHON_USEDEP}]
 	dev-python/docopt[${PYTHON_USEDEP}]
-	dev-python/jinja[${PYTHON_USEDEP}]
+	dev-python/jinja2[${PYTHON_USEDEP}]
 	dev-python/packaging[${PYTHON_USEDEP}]
 	dev-python/python-magic[${PYTHON_USEDEP}]
 	dev-python/requests[${PYTHON_USEDEP}]
