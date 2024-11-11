@@ -6,7 +6,7 @@ app-containers/anbox-modules 20240526-r1: Anbox kernel modules (ashmem and binde
 app-containers/waydroid 1.4.2-r4: Container-based approach to boot a full Android system
 app-misc/parona-scripts 9999: Scripts and hooks that I use on my machines
 app-misc/readpe 0.84: The PE file analysis toolkit
-app-misc/rivalcfg 4.13.0 4.14.0: CLI tool and Python library to configure SteelSeries gaming mice
+app-misc/rivalcfg 4.14.0: CLI tool and Python library to configure SteelSeries gaming mice
 dev-build/cargo-make 0.37.21 0.37.22 0.37.23: Rust task runner and build tool
 dev-cpp/hjson-cpp 2.4.1: Hjson for C++
 dev-cpp/tinygltf 2.9.3: Header only C++11 tiny glTF 2.0 library
@@ -40,15 +40,15 @@ dev-perl/Test-Log-Log4perl 0.32: Test log4perl
 dev-perl/Test-RandomResult 0.001: Test that results of a running code look random
 dev-perl/Test-Synopsis-Expectation 0.12: Test that SYNOPSIS code produces expected results
 dev-perl/match-simple 0.012: simplified clone of smartmatch operator
-dev-python/asyncpg 0.29.0 0.30.0: A fast PostgreSQL Database Client Library for Python/asyncio.
+dev-python/asyncpg 0.30.0: A fast PostgreSQL Database Client Library for Python/asyncio.
 dev-python/databases 0.9.0: Async database support for Python.
-dev-python/fastapi 0.115.2 0.115.4: FastAPI framework, high performance, easy to learn, ready for production
+dev-python/fastapi 0.115.4: FastAPI framework, high performance, easy to learn, ready for production
 dev-python/gbinder 1.1.2-r1: Python bindings for libgbinder
 dev-python/inputs 0.5: Cross-platform Python support for keyboards, mice and gamepads.
 dev-python/log-symbols 0.0.14-r1: Colored symbols for various log levels for Python
 dev-python/pyclip 0.7.0: Cross-platform Clipboard module for Python with binary support.
-dev-python/pycryptodomex 3.20.0 3.21.0: A self-contained cryptographic library for Python
-dev-python/pydantic-settings 2.5.2 2.6.0 2.6.1: Settings management using pydantic
+dev-python/pycryptodomex 3.21.0: A self-contained cryptographic library for Python
+dev-python/pydantic-settings 2.6.1: Settings management using pydantic
 dev-python/pytest-examples 0.0.13: Pytest plugin for testing Python code examples in docstrings and markdown files.
 dev-python/spinners 0.0.24-r1: Spinners for terminals
 dev-python/sqlmodel 0.0.22: SQL databases in Python, designed for simplicity, compatibility, and robustness.
@@ -86,12 +86,12 @@ media-fonts/juliamono 0.051: JuliaMono - a monospaced font for scientific and te
 media-libs/phonon-mpv 0.1.0: Phonon Backend using MPV Player(libmpv)
 media-sound/spotify 1.2.47 1.2.48: Spotify is a social music platform
 media-video/mpv-mpris 1.1: MPRIS plugin for mpv
-net-im/discord 0.0.71 0.0.72: All-in-one voice and text chat for gamers
-net-im/discord-ptb 0.0.111 0.0.114: All-in-one voice and text chat for gamers
+net-im/discord 0.0.72 0.0.73: All-in-one voice and text chat for gamers
+net-im/discord-ptb 0.0.114 0.0.115: All-in-one voice and text chat for gamers
 net-misc/wlvncc 0_pre20240407: A Wayland Native VNC Client
 sec-keys/openpgp-keys-mysql 20231023: OpenPGP keys used to sign MySQL releases
 sys-apps/coolercontrol 1.4.2 1.4.4: Monitor and control your cooling and other devices
-sys-apps/coolercontrol-liqctld 1.4.2 1.4.4: Monitor and control your cooling and other devices (liqctld)
+sys-apps/coolercontrol-liqctld 1.4.4: Monitor and control your cooling and other devices (liqctld)
 sys-apps/coolercontrold 1.4.2 1.4.4: Monitor and control your cooling and other devices (daemon)
 sys-apps/gsmartcontrol 9999: Hard Disk Drive and SSD Health Inspection Tool
 sys-apps/rinit 9999: Next-gen init and service-manager written in Rust
