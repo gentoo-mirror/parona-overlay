@@ -29,7 +29,7 @@ PATCHES=(
 RDEPEND="
 	>=dev-python/cachetools-3.0.0[${PYTHON_USEDEP}]
 	>=dev-python/pycryptodomex-3.7.0[${PYTHON_USEDEP}]
-	dev-python/protobuf-python[${PYTHON_USEDEP}]
+	dev-python/protobuf[${PYTHON_USEDEP}]
 	>=dev-python/requests-2.9.1[${PYTHON_USEDEP}]
 	>=dev-python/six-1.10.0[${PYTHON_USEDEP}]
 	>=dev-python/vdf-3.4-r2[${PYTHON_USEDEP}]
