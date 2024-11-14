@@ -43,7 +43,7 @@ dev-perl/Test-Synopsis-Expectation 0.12: Test that SYNOPSIS code produces expect
 dev-perl/match-simple 0.012: simplified clone of smartmatch operator
 dev-python/asyncpg 0.30.0: A fast PostgreSQL Database Client Library for Python/asyncio.
 dev-python/databases 0.9.0: Async database support for Python.
-dev-python/fastapi 0.115.4: FastAPI framework, high performance, easy to learn, ready for production
+dev-python/fastapi 0.115.4 0.115.5: FastAPI framework, high performance, easy to learn, ready for production
 dev-python/gbinder 1.1.2-r1: Python bindings for libgbinder
 dev-python/inputs 0.5: Cross-platform Python support for keyboards, mice and gamepads.
 dev-python/log-symbols 0.0.14-r1: Colored symbols for various log levels for Python
@@ -63,7 +63,7 @@ games-util/heroic-gogdl 9999: GOG Downloading module for Heroic Games Launcher
 games-util/mangohud 0.7.2-r1 9999: Overlay for monitoring FPS, temperatures, CPU/GPU load and more
 games-util/nexusmodsapp 0.6.2 0.6.3: Nexus Mods App, a mod installer, creator and manager for all your popular games
 games-util/protonup-qt 2.10.2: Install and manage proton with Steam and Lutris
-games-util/r2modman 3.1.51-r1 3.1.52: A simple and easy to use mod manager for several games using Thunderstore
+games-util/r2modman 3.1.51-r1 3.1.52 3.1.53: A simple and easy to use mod manager for several games using Thunderstore
 games-util/steamtinkerlaunch 9999: Tool for use with the Steam client for custom launch options
 gnome-extra/yad 14.1: Display GTK+ dialog boxes from command line or shell scripts
 gui-apps/fuzzel 1.11.0 1.11.1 9999: Application launcher for wlroots based Wayland compositors.
