@@ -22,6 +22,7 @@ RESTRICT="!test? ( test )"
 RDEPEND="
 	>=dev-libs/libfmt-5:=
 	dev-libs/botan:3=
+	dev-libs/glib:2
 	>=dev-libs/quazip-1.0:=[qt5(+)]
 	>=dev-libs/spdlog-1.4:=
 	>=dev-libs/pugixml-1.11
