@@ -12,14 +12,18 @@ if [[ "${PV}" == "9999" ]]; then
 	inherit git-r3
 	EGIT_REPO_URI="https://github.com/any1/wlvncc"
 else
-	COMMIT="0c1308fbb1e73e3498252ce2238549330d050d04"
-	SRC_URI="https://github.com/any1/wlvncc/archive/${COMMIT}.tar.gz -> ${P}.tar.gz"
+	COMMIT="78ebdcb970ce583cb727fa02af1a123a0302d6de"
+	SRC_URI="
+		https://github.com/any1/wlvncc/archive/${COMMIT}.tar.gz
+			-> ${PN}-${COMMIT}.tar.gz
+	"
 	S="${WORKDIR}/${PN}-${COMMIT}"
+
+	KEYWORDS="~amd64"
 fi
 
 LICENSE="ISC GPL-2"
 SLOT="0"
-KEYWORDS="~amd64"
 
 # automagic: cyrus-sasl, libgcrypt, lzo, gnutls, libjpeg-turbo, libpng, zlib
 RDEPEND="
@@ -27,7 +31,6 @@ RDEPEND="
 	dev-libs/cyrus-sasl:2
 	dev-libs/libgcrypt:=
 	dev-libs/lzo:2
-	dev-libs/openssl
 	dev-libs/wayland
 	media-libs/libglvnd
 	media-libs/libjpeg-turbo:=
