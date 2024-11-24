@@ -134,7 +134,6 @@ src_configure() {
 		-Dglibcxx_asserts=false
 		-Dinclude_doc=true
 		-Dmangoapp=true
-		-Dmangoapp_layer=true
 		-Dmangohudctl=true
 		-Duse_system_spdlog=enabled
 		-Dwith_xnvctrl=disabled
