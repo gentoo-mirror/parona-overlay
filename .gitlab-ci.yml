@@ -4,13 +4,12 @@ image:  ghcr.io/pkgcore/pkgcheck:latest
   cache:
     key: pkgcheck
     paths:
-      - ~/.cache/pkgcore
-      - ~/.cache/pkgcheck
+      - .cache/pkgcheck
   script:
     - pmaint sync gentoo
-    - pmaint regen --dir ~/.cache/pkgcheck/repos .
+    - pmaint regen --dir "$CI_PROJECT_DIR/.cache/pkgcheck/repos" .
     - git config --global --add safe.directory '*'
-    - pkgcheck --color y ci --failures ~/failures.json --exit GentooCI $PKGCHECK_ARGS
+    - pkgcheck --color y ci --cache-dir .cache/pkgcheck --failures ~/failures.json --exit GentooCI $PKGCHECK_ARGS
     - pkgcheck replay --color y ~/failures.json
 
 pkgcheck_ci:
@@ -20,7 +19,6 @@ pkgcheck_ci:
       when: never
     - if: $CI_COMMIT_BRANCH != $CI_DEFAULT_BRANCH
       when: manual
-    - allow_failure: true
 
 pkgcheck_merge:
   <<: *pkgcheck
