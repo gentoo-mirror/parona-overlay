@@ -1,13 +1,15 @@
-DEFINED_PHASES=configure install prepare test
+BDEPEND=doc? ( app-text/docbook-xsl-stylesheets dev-libs/libxslt )
+DEFINED_PHASES=compile configure install prepare test
 DEPEND=dev-libs/openssl:=
 DESCRIPTION=The PE file analysis toolkit
 EAPI=8
 HOMEPAGE=https://github.com/mentebinaria/readpe
 INHERIT=shell-completion toolchain-funcs
+IUSE=doc
 KEYWORDS=~amd64
 LICENSE=GPL-2+-with-openssl-exception
 RDEPEND=dev-libs/openssl:=
 SLOT=0
 SRC_URI=https://github.com/mentebinaria/readpe/archive/refs/tags/v0.84.tar.gz -> readpe-0.84.tar.gz
 _eclasses_=toolchain-funcs	d3d42b22a610ce81c267b644bcec9b87	multilib	b2a329026f2e404e9e371097dda47f96	bash-completion-r1	767861f3744f589ee5291c1698b1c082	shell-completion	0b655d0d825e157a5e99c463bddaac16
-_md5_=8831d2f110caf9a7320ffd8c747e64c7
+_md5_=44b61905c79e059f706086812c69da01

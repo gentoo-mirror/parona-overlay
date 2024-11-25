@@ -6,7 +6,7 @@ app-containers/anbox-modules 20240526-r1: Anbox kernel modules (ashmem and binde
 app-containers/waydroid 1.4.2-r4: Container-based approach to boot a full Android system
 app-misc/francis 9999: Track your time
 app-misc/parona-scripts 9999: Scripts and hooks that I use on my machines
-app-misc/readpe 0.84: The PE file analysis toolkit
+app-misc/readpe 0.84-r1: The PE file analysis toolkit
 app-misc/rivalcfg 4.14.0: CLI tool and Python library to configure SteelSeries gaming mice
 dev-build/cargo-make 0.37.21 0.37.22 0.37.23: Rust task runner and build tool
 dev-cpp/hjson-cpp 2.4.1: Hjson for C++
