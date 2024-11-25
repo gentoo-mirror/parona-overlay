@@ -7,16 +7,27 @@ inherit shell-completion toolchain-funcs
 
 DESCRIPTION="The PE file analysis toolkit"
 HOMEPAGE="https://github.com/mentebinaria/readpe"
-SRC_URI="https://github.com/mentebinaria/readpe/archive/refs/tags/v${PV}.tar.gz -> ${P}.tar.gz"
+SRC_URI="
+	https://github.com/mentebinaria/readpe/archive/refs/tags/v${PV}.tar.gz
+		-> ${P}.tar.gz
+"
 
 LICENSE="GPL-2+-with-openssl-exception" # gpl-2+ or gpl-2?
 SLOT="0"
 KEYWORDS="~amd64"
 
+IUSE="doc"
+
 DEPEND="
 	dev-libs/openssl:=
 "
 RDEPEND="${DEPEND}"
+BDEPEND="
+	doc? (
+		app-text/docbook-xsl-stylesheets
+		dev-libs/libxslt
+	)
+"
 
 src_prepare() {
 	default
@@ -47,6 +58,16 @@ src_configure() {
 	tc-export CC
 }
 
+src_compile() {
+	emake prefix="${EPREFIX}/usr" libdir="${EPREFIX}/usr/$(get_libdir)" all
+	if use doc; then
+		emake \
+			XSL="${EPREFIX}/usr/share/sgml/docbook/xsl-stylesheets/html/chunk.xsl" \
+			FOXSL="${EPREFIX}/usr/share/sgml/docbook/xsl-stylesheets/fo/docbook.xsl" \
+			-C doc/manual/en_us html
+	fi
+}
+
 src_test() {
 	export LD_LIBRARY_PATH="${S}/lib/libpe"
 	cp "${S}"/lib/libpe/libpe.so{,.1} || die
@@ -69,6 +90,7 @@ src_test() {
 
 src_install() {
 	emake DESTDIR="${D}" prefix="${EPREFIX}/usr" libdir="${EPREFIX}/usr/$(get_libdir)" install
+	use doc && HTML_DOCS="doc/manual/en_us/html/*"
 	einstalldocs
 
 	dobashcomp completion/bash/readpe
