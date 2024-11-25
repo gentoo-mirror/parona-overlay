@@ -1,20 +1,30 @@
-image:  registry.gitlab.com/src_prepare/gentoo-repoman-container:latest
+image:  ghcr.io/pkgcore/pkgcheck:latest
 
-variables:
-  common_pkgcheck_args: '--color 1'
+.pkgcheck: &pkgcheck
+  cache:
+    key: pkgcheck
+    paths:
+      - ~/.cache/pkgcore
+      - ~/.cache/pkgcheck
+  script:
+    - pmaint sync gentoo
+    - pmaint regen --dir ~/.cache/pkgcheck/repos .
+    - git config --global --add safe.directory '*'
+    - pkgcheck --color y ci --failures ~/failures.json --exit GentooCI $PKGCHECK_ARGS
+    - pkgcheck replay --color y ~/failures.json
 
 pkgcheck_ci:
+  <<: *pkgcheck
   rules:
     - if: $CI_PIPELINE_SOURCE == 'merge_request_event'
       when: never
     - if: $CI_COMMIT_BRANCH != $CI_DEFAULT_BRANCH
       when: manual
     - allow_failure: true
-  script:
-    - pkgcheck ci $common_pkgcheck_args
 
 pkgcheck_merge:
+  <<: *pkgcheck
   rules:
     - if: $CI_PIPELINE_SOURCE == 'merge_request_event'
-  script:
-    - pkgcheck scan $common_pkgcheck_args --commits $CI_MERGE_REQUEST_DIFF_BASE_SHA..$CI_COMMIT_SHA
+  variables:
+    PKGCHECK_ARGS: "--commits $CI_MERGE_REQUEST_DIFF_BASE_SHA..$CI_COMMIT_SHA"
