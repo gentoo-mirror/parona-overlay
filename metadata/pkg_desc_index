@@ -84,7 +84,7 @@ kde-misc/plasma-gamemode 9999: Plasma widget to show processes running in gamemo
 media-fonts/intel-one-mono 1.4.0: Intel's monospaced font family with clarity and legibility in mind.
 media-fonts/juliamono 0.051: JuliaMono - a monospaced font for scientific and technical computing
 media-libs/phonon-mpv 0.1.0: Phonon Backend using MPV Player(libmpv)
-media-sound/spotify 1.2.47 1.2.48: Spotify is a social music platform
+media-sound/spotify 1.2.48 1.2.50: Spotify is a social music platform
 media-video/mpv-mpris 1.1: MPRIS plugin for mpv
 net-im/discord 0.0.73 0.0.74: All-in-one voice and text chat for gamers
 net-im/discord-ptb 0.0.115 0.0.116: All-in-one voice and text chat for gamers
