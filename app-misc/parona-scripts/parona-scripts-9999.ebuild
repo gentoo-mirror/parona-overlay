@@ -17,6 +17,7 @@ IUSE="efibootmgr perl"
 RESTRICT="test" # no tests
 
 RDEPEND="
+	app-misc/jq
 	app-text/ansifilter
 	net-misc/curl
 	efibootmgr? (
