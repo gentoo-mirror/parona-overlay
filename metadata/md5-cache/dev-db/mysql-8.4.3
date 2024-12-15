@@ -5,13 +5,13 @@ DESCRIPTION=Fast, multi-threaded, multi-user SQL database server
 EAPI=8
 HOMEPAGE=https://www.mysql.com/
 INHERIT=check-reqs cmake edo flag-o-matic linux-info multiprocessing prefix verify-sig
-IUSE=cjk cracklib debug jemalloc numa +perl profiling router selinux +server tcmalloc test verify-sig
+IUSE=cjk cracklib debug jemalloc numa +perl profiling router selinux +server tcmalloc test test-install verify-sig
 LICENSE=GPL-2
 PDEPEND=perl? ( >=dev-perl/DBD-mysql-2.9004 )
-RDEPEND=>=app-arch/lz4-1.9.4:= >=app-arch/zstd-1.2.0:= >=dev-libs/openssl-1.0.0:= sys-apps/tcp-wrappers:= sys-libs/ncurses:= >=sys-libs/zlib-1.2.13:= server? ( dev-libs/icu:= dev-libs/libevent:=[ssl,threads(+)] net-libs/libtirpc:= cjk? ( app-text/mecab:= ) jemalloc? ( dev-libs/jemalloc:= ) kernel_linux? ( dev-libs/libaio:= sys-process/procps:= ) numa? ( sys-process/numactl ) tcmalloc? ( dev-util/google-perftools:= ) ) !dev-db/mariadb !dev-db/mariadb-galera !dev-db/percona-server !dev-db/mysql-cluster !dev-db/mysql:0 !dev-db/mysql:5.7 !dev-db/mysql:8.0 selinux? ( sec-policy/selinux-mysql ) !prefix? ( acct-group/mysql acct-user/mysql dev-db/mysql-init-scripts )
-REQUIRED_USE=?? ( tcmalloc jemalloc ) cjk? ( server ) jemalloc? ( server ) numa? ( server ) profiling? ( server ) router? ( server ) test? ( server ) tcmalloc? ( server )
+RDEPEND=>=app-arch/lz4-1.9.4:= >=app-arch/zstd-1.2.0:= >=dev-libs/openssl-1.0.0:= sys-apps/tcp-wrappers:= sys-libs/ncurses:= >=sys-libs/zlib-1.2.13:= server? ( dev-libs/icu:= dev-libs/libevent:=[ssl,threads(+)] net-libs/libtirpc:= cjk? ( app-text/mecab:= ) jemalloc? ( dev-libs/jemalloc:= ) kernel_linux? ( dev-libs/libaio:= sys-process/procps:= ) numa? ( sys-process/numactl ) tcmalloc? ( dev-util/google-perftools:= ) ) !dev-db/mariadb !dev-db/mariadb-galera !dev-db/percona-server !dev-db/mysql-cluster !dev-db/mysql:0 !dev-db/mysql:5.7 !dev-db/mysql:8.0 selinux? ( sec-policy/selinux-mysql ) !prefix? ( acct-group/mysql acct-user/mysql dev-db/mysql-init-scripts ) test-install? ( app-arch/zip dev-perl/Expect dev-perl/JSON sys-libs/timezone-data )
+REQUIRED_USE=?? ( tcmalloc jemalloc ) cjk? ( server ) jemalloc? ( server ) numa? ( server ) profiling? ( server ) router? ( server ) tcmalloc? ( server ) test? ( server )
 RESTRICT=!test? ( test )
-SLOT=8.3
-SRC_URI=https://cdn.mysql.com/Downloads/MySQL-8.3/mysql-boost-8.3.0.tar.gz verify-sig? ( https://cdn.mysql.com/Downloads/MySQL-8.3/mysql-boost-8.3.0.tar.gz.asc ) https://github.com/parona-source/mysql-server/releases/download/mysql-8.3.0-patches-01/mysql-8.3.0-patches-01.tar.xz
+SLOT=8.4
+SRC_URI=https://cdn.mysql.com/Downloads/MySQL-8.4/mysql-8.4.3.tar.gz verify-sig? ( https://cdn.mysql.com/Downloads/MySQL-8.4/mysql-8.4.3.tar.gz.asc ) https://github.com/parona-source/mysql-server/releases/download/mysql-8.4.3-patches-01/mysql-8.4.3-patches-01.tar.xz
 _eclasses_=check-reqs	2a9731073c152554078a9a8df8fc0f1b	toolchain-funcs	fa554cc3cff825d21dfe3f24841e29cf	multilib	b2a329026f2e404e9e371097dda47f96	flag-o-matic	f14aba975c94ccaa9f357a27e3b17ffe	multiprocessing	1e32df7deee68372153dca65f4a7c21f	ninja-utils	2df4e452cea39a9ec8fb543ce059f8d6	xdg-utils	42869b3c8d86a70ef3cf75165a395e09	cmake	10a50dfaf728b802fcfd37f8d0da9056	edo	367e103a74bf77e6a8da7894d999fa3c	linux-info	ea4122ba1d8791a12b78e53f9510a2e3	prefix	c3c4c93ebda319c0fa7ed6f942ba1010	verify-sig	745dccb7d4656514f1e966cce314d7db
-_md5_=a31b6d6384fecf5b36c76a379c593c3a
+_md5_=33a3d1c3491620849df378e319b7b6b2
