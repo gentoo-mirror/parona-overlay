@@ -5,17 +5,14 @@ EAPI=8
 
 inherit check-reqs cmake edo flag-o-matic linux-info multiprocessing prefix verify-sig
 
-MY_PV="${PV//_pre*}"
-MY_P="${PN}-${MY_PV}"
-
 # Patch version
-PATCH_SET=( https://github.com/parona-source/mysql-server/releases/download/mysql-8.3.0-patches-01/mysql-8.3.0-patches-01.tar.xz )
+PATCH_SET=( https://github.com/parona-source/mysql-server/releases/download/mysql-8.4.3-patches-01/mysql-8.4.3-patches-01.tar.xz )
 
 DESCRIPTION="Fast, multi-threaded, multi-user SQL database server"
 HOMEPAGE="https://www.mysql.com/"
 SRC_URI="
-	https://cdn.mysql.com/Downloads/MySQL-$(ver_cut 1-2)/mysql-boost-${MY_PV}.tar.gz
-	verify-sig? ( https://cdn.mysql.com/Downloads/MySQL-$(ver_cut 1-2)/mysql-boost-${MY_PV}.tar.gz.asc )
+	https://cdn.mysql.com/Downloads/MySQL-$(ver_cut 1-2)/mysql-${PV}.tar.gz
+	verify-sig? ( https://cdn.mysql.com/Downloads/MySQL-$(ver_cut 1-2)/mysql-${PV}.tar.gz.asc )
 	${PATCH_SET[@]}
 "
 # Shorten the path because the socket path length must be shorter than 107 chars
@@ -26,14 +23,14 @@ VERIFY_SIG_OPENPGP_KEY_PATH="/usr/share/openpgp-keys/mysql.asc"
 
 LICENSE="GPL-2"
 # https://dev.mysql.com/blog-archive/introducing-mysql-innovation-and-long-term-support-lts-versions/
-# innovation release
+# LTS
 SLOT="$(ver_cut 1-2)"
 # 64-bit only since 8.2.0
 # https://github.com/mysql/mysql-server/commit/07bf1bdb620daf62c02ead0d5439d65c7c34aa00
 # -arm -hppa -mips -ppc -x86 -x86-linux
 # -ppc for bug #761715
 #KEYWORDS="~amd64 -arm ~arm64 -hppa ~ia64 -mips -ppc ~ppc64 ~riscv ~s390 ~sparc -x86 ~amd64-linux -x86-linux ~x64-macos ~x64-solaris"
-IUSE="cjk cracklib debug jemalloc numa +perl profiling router selinux +server tcmalloc test"
+IUSE="cjk cracklib debug jemalloc numa +perl profiling router selinux +server tcmalloc test test-install"
 RESTRICT="!test? ( test )"
 
 REQUIRED_USE="
@@ -43,8 +40,8 @@ REQUIRED_USE="
 	numa? ( server )
 	profiling? ( server )
 	router? ( server )
-	test? ( server )
 	tcmalloc? ( server )
+	test? ( server )
 "
 
 # Be warned, *DEPEND are version-dependent
@@ -98,6 +95,12 @@ RDEPEND="
 		acct-group/mysql acct-user/mysql
 		dev-db/mysql-init-scripts
 	)
+	test-install? (
+		app-arch/zip
+		dev-perl/Expect
+		dev-perl/JSON
+		sys-libs/timezone-data
+	)
 "
 # For other stuff to bring us in
 # dev-perl/DBD-mysql is needed by some scripts installed by MySQL
@@ -121,54 +124,47 @@ mysql_init_vars() {
 }
 
 pkg_pretend() {
-	if [[ ${MERGE_TYPE} != binary ]] ; then
-		CHECKREQS_DISK_BUILD="3G"
+	CHECKREQS_DISK_BUILD="3G"
 
-		if has test ${FEATURES} ; then
-			# <parona@protonmail.com> i've seen it take 17GB on musl with FEATURES="test" USE="perl server"
-			CHECKREQS_DISK_BUILD="18G"
+	if has test ${FEATURES} ; then
+		# <parona@protonmail.com> i've seen it take 17GB on musl with FEATURES="test" USE="perl server"
+		CHECKREQS_DISK_BUILD="18G"
 
-			# Bug #213475 - MySQL _will_ object strenuously if your machine is named
-			# localhost. Also causes weird failures.
-			[[ "${HOSTNAME}" == "localhost" ]] && die "Your machine must NOT be named localhost"
+		# Bug #213475 - MySQL _will_ object strenuously if your machine is named
+		# localhost. Also causes weird failures.
+		[[ "${HOSTNAME}" == "localhost" ]] && die "Your machine must NOT be named localhost"
 
-			if ! has userpriv ${FEATURES} ; then
-				die "Testing with FEATURES=-userpriv is no longer supported by upstream. Tests MUST be run as non-root."
-			fi
-
-			local aio_max_nr=$(sysctl -n fs.aio-max-nr 2>/dev/null)
-			if [[ -z "${aio_max_nr}" || ${aio_max_nr} -lt 250000 ]] ; then
-				die "FEATURES=test requires fs.aio-max-nr=250000 at minimum!"
-			fi
+		if ! has userpriv ${FEATURES} ; then
+			die "Testing with FEATURES=-userpriv is no longer supported by upstream. Tests MUST be run as non-root."
 		fi
 
-		if use kernel_linux && use numa ; then
-			linux-info_get_any_version
-
-			local CONFIG_CHECK="~NUMA"
-
-			local WARNING_NUMA="This package expects NUMA support in kernel which this system does not have at the moment;"
-			WARNING_NUMA+=" Either expect runtime errors, enable NUMA support in kernel or rebuild the package without NUMA support"
-
-			check_extra_config
+		local aio_max_nr=$(sysctl -n fs.aio-max-nr 2>/dev/null)
+		if [[ -z "${aio_max_nr}" || ${aio_max_nr} -lt 250000 ]] ; then
+			die "FEATURES=test requires fs.aio-max-nr=250000 at minimum!"
 		fi
 	fi
-}
 
-pkg_setup() {
-	if [[ ${MERGE_TYPE} != binary ]] ; then
-		use server && check-reqs_pkg_setup
+	if use kernel_linux && use numa ; then
+		linux-info_get_any_version
+
+		local CONFIG_CHECK="~NUMA"
+
+		local WARNING_NUMA="This package expects NUMA support in kernel which this system does not have at the moment;"
+		WARNING_NUMA+=" Either expect runtime errors, enable NUMA support in kernel or rebuild the package without NUMA support"
+
+		check_extra_config
 	fi
+	check-reqs_pkg_pretend
 }
 
 src_unpack() {
 	if use verify-sig; then
-		verify-sig_verify_detached "${DISTDIR}/mysql-boost-${PV}.tar.gz" "${DISTDIR}/mysql-boost-${PV}.tar.gz.asc"
+		verify-sig_verify_detached "${DISTDIR}/mysql-${PV}.tar.gz" "${DISTDIR}/mysql-${PV}.tar.gz.asc"
 	fi
 
 	unpack ${A}
 
-	mv -f "${WORKDIR}/${MY_P}" "${S}" || die
+	mv -f "${WORKDIR}/${P}" "${S}" || die
 }
 
 src_prepare() {
@@ -186,7 +182,6 @@ src_prepare() {
 	rm \
 		man/my_print_defaults.1 \
 		man/perror.1 \
-		man/zlib_decompress.1 \
 		|| die
 
 	cmake_src_prepare
@@ -250,7 +245,7 @@ src_configure() {
 		-DWITH_ZSTD=system
 
 		-DWITH_UNIT_TESTS=$(usex test ON OFF)
-		-DINSTALL_MYSQLTESTDIR=$(usev test 'share/mysql/mysql-test')
+		-DINSTALL_MYSQLTESTDIR=$(usev test-install 'share/mysql/mysql-test')
 	)
 
 	if use debug; then
@@ -374,7 +369,7 @@ src_test() {
 	esac
 
 	# Documentation for mysql-test-run (MTR_* variables and so on)
-	# https://dev.mysql.com/doc/dev/mysql-server/8.3.0/PAGE_MYSQL_CLIENT_TEST.html
+	# https://dev.mysql.com/doc/dev/mysql-server/8.4.0/PAGE_MYSQL_CLIENT_TEST.html
 
 	# Ensure that parallel runs don't die
 	local -x MTR_BUILD_THREAD="$((${RANDOM} % 100))"
@@ -395,7 +390,7 @@ src_test() {
 	sed \
 		-e "s/@GENTOO_PORTAGE_EPREFIX@/${EPREFIX}/" \
 		-e "s/@DATADIR@/${MY_DATADIR}/" \
-		"${FILESDIR}"/my.cnf-8.3.distro-server > "${T}"/my.cnf || die
+		"${FILESDIR}"/my.cnf-8.4.distro-server > "${T}"/my.cnf || die
 	local -X PATH_CONFIG_FILE="${T}/my.cnf"
 
 	# Create directories because mysqladmin might run out of order
@@ -569,11 +564,11 @@ src_install() {
 	eprefixify "${TMPDIR}/my.cnf"
 	doins "${TMPDIR}/my.cnf"
 	insinto "${MY_SYSCONFDIR#${EPREFIX}}/mysql.d"
-	cp "${FILESDIR}/my.cnf-8.3.distro-client" "${TMPDIR}/50-distro-client.cnf" || die
+	cp "${FILESDIR}/my.cnf-8.4.distro-client" "${TMPDIR}/50-distro-client.cnf" || die
 	eprefixify "${TMPDIR}/50-distro-client.cnf"
 	doins "${TMPDIR}/50-distro-client.cnf"
 
-	mycnf_src="my.cnf-8.3.distro-server"
+	mycnf_src="my.cnf-8.4.distro-server"
 	sed -e "s!@DATADIR@!${MY_DATADIR}!g" \
 		"${FILESDIR}/${mycnf_src}" \
 		> "${TMPDIR}/my.cnf.ok" || die
@@ -632,7 +627,7 @@ pkg_postinst() {
 	else
 		einfo
 		elog "Upgrade process for ${PN}-8.x has changed. Please read"
-		elog "https://dev.mysql.com/doc/refman/8.3/en/upgrade-binary-package.html"
+		elog "https://dev.mysql.com/doc/refman/8.4/en/upgrade-binary-package.html"
 		einfo
 	fi
 }
