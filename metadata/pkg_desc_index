@@ -94,9 +94,9 @@ net-im/discord 0.0.76 0.0.77: All-in-one voice and text chat for gamers
 net-im/discord-ptb 0.0.119 0.0.121: All-in-one voice and text chat for gamers
 net-misc/wlvncc 9999: A Wayland Native VNC Client
 sec-keys/openpgp-keys-mysql 20231023: OpenPGP keys used to sign MySQL releases
-sys-apps/coolercontrol 1.4.2 1.4.4: Monitor and control your cooling and other devices
-sys-apps/coolercontrol-liqctld 1.4.4: Monitor and control your cooling and other devices (liqctld)
-sys-apps/coolercontrold 1.4.2 1.4.4: Monitor and control your cooling and other devices (daemon)
+sys-apps/coolercontrol 1.4.4 1.4.5: Monitor and control your cooling and other devices
+sys-apps/coolercontrol-liqctld 1.4.4 1.4.5: Monitor and control your cooling and other devices (liqctld)
+sys-apps/coolercontrold 1.4.4 1.4.5: Monitor and control your cooling and other devices (daemon)
 sys-apps/gsmartcontrol 9999: Hard Disk Drive and SSD Health Inspection Tool
 sys-apps/rinit 9999: Next-gen init and service-manager written in Rust
 sys-boot/uefitool 68_alpha: UEFI firmware image viewer and editor
