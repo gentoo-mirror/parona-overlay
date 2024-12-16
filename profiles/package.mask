@@ -1,0 +1,7 @@
+# Copyright 1999-2024 Gentoo Authors
+# Distributed under the terms of the GNU General Public License v2
+
+# Alfred Wingate <parona@protonmail.com> (2024-12-16)
+# Haven't used river in a long while. There are other overlays where it should be updated.
+gui-wm/river
+gui-wm/stacktile
