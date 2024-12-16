@@ -4,41 +4,39 @@
 EAPI=8
 
 CRATES="
-	addr2line@0.24.1
+	addr2line@0.24.2
 	adler2@2.0.0
-	adler@1.0.2
 	aho-corasick@1.1.3
 	alloc-no-stdlib@2.0.4
 	alloc-stdlib@0.2.2
 	android-tzdata@0.1.1
 	android_system_properties@0.1.5
-	anstream@0.6.15
-	anstyle-parse@0.2.5
-	anstyle-query@1.1.1
-	anstyle-wincon@3.0.4
-	anstyle@1.0.8
-	anyhow@1.0.89
+	anstream@0.6.18
+	anstyle-parse@0.2.6
+	anstyle-query@1.1.2
+	anstyle-wincon@3.0.6
+	anstyle@1.0.10
+	anyhow@1.0.94
 	arboard@3.4.1
 	ascii@1.1.0
 	async-broadcast@0.7.1
 	async-channel@2.3.1
 	async-executor@1.13.1
 	async-fs@2.1.2
-	async-io@2.3.4
+	async-io@2.4.0
 	async-lock@3.4.0
 	async-process@2.3.0
 	async-recursion@1.1.1
 	async-signal@0.2.10
 	async-task@4.7.1
-	async-trait@0.1.82
+	async-trait@0.1.83
 	atk-sys@0.18.0
 	atk@0.18.0
 	atomic-waker@1.1.2
-	autocfg@1.3.0
+	autocfg@1.4.0
 	backtrace@0.3.74
 	base64@0.21.7
 	base64@0.22.1
-	bit_field@0.10.2
 	bitflags@1.3.2
 	bitflags@2.6.0
 	block-buffer@0.10.4
@@ -46,19 +44,19 @@ CRATES="
 	block@0.1.6
 	blocking@1.6.1
 	brotli-decompressor@4.0.1
-	brotli@6.0.0
+	brotli@7.0.0
 	bumpalo@3.16.0
-	bytemuck@1.18.0
+	bytemuck@1.20.0
 	byteorder-lite@0.1.0
 	byteorder@1.5.0
-	bytes@1.7.1
+	bytes@1.9.0
 	cairo-rs@0.18.5
 	cairo-sys-rs@0.18.2
 	camino@1.1.9
-	cargo-platform@0.1.8
+	cargo-platform@0.1.9
 	cargo_metadata@0.18.1
 	cargo_toml@0.17.2
-	cc@1.1.20
+	cc@1.2.3
 	cesu8@1.1.0
 	cfb@0.7.3
 	cfg-expr@0.15.8
@@ -66,17 +64,17 @@ CRATES="
 	cfg_aliases@0.2.1
 	chrono@0.4.38
 	chunked_transfer@1.5.0
-	clap@4.5.17
-	clap_builder@4.5.17
-	clap_lex@0.7.2
+	clap@4.5.23
+	clap_builder@4.5.23
+	clap_lex@0.7.4
 	clipboard-win@5.4.0
 	cocoa-foundation@0.2.0
 	cocoa@0.26.0
-	color_quant@1.1.0
-	colorchoice@1.0.2
+	colorchoice@1.0.3
 	combine@4.6.7
 	concurrent-queue@2.5.0
 	convert_case@0.4.0
+	cookie@0.18.1
 	core-foundation-sys@0.8.7
 	core-foundation@0.10.0
 	core-foundation@0.9.4
@@ -84,17 +82,14 @@ CRATES="
 	core-graphics-types@0.2.0
 	core-graphics@0.23.2
 	core-graphics@0.24.0
-	cpufeatures@0.2.14
+	cpufeatures@0.2.16
 	crc32fast@1.4.2
 	crossbeam-channel@0.5.13
-	crossbeam-deque@0.8.5
-	crossbeam-epoch@0.9.18
 	crossbeam-utils@0.8.20
-	crunchy@0.2.2
 	crypto-common@0.1.6
 	cssparser-macros@0.6.1
 	cssparser@0.27.2
-	ctor@0.2.8
+	ctor@0.2.9
 	darling@0.20.10
 	darling_core@0.20.10
 	darling_macro@0.20.10
@@ -105,6 +100,7 @@ CRATES="
 	dirs-sys@0.4.1
 	dirs@5.0.1
 	dispatch@0.2.0
+	displaydoc@0.2.5
 	dlopen2@0.7.0
 	dlopen2_derive@0.4.0
 	dpi@0.1.1
@@ -112,41 +108,37 @@ CRATES="
 	dtoa@1.0.9
 	dunce@1.0.5
 	dyn-clone@1.0.17
-	either@1.13.0
-	embed-resource@2.4.3
+	embed-resource@2.5.1
 	embed_plist@1.2.2
-	encoding_rs@0.8.34
+	encoding_rs@0.8.35
 	endi@1.1.0
 	enumflags2@0.7.10
 	enumflags2_derive@0.7.10
 	equivalent@1.0.1
 	erased-serde@0.4.5
-	errno@0.3.9
+	errno@0.3.10
 	error-code@3.3.1
-	event-listener-strategy@0.5.2
+	event-listener-strategy@0.5.3
 	event-listener@5.3.1
-	exr@1.72.0
-	fastrand@2.1.1
-	fdeflate@0.3.4
+	fastrand@2.2.0
+	fdeflate@0.3.7
 	field-offset@0.3.6
-	flate2@1.0.33
-	fluent-uri@0.1.4
-	flume@0.11.0
+	flate2@1.0.35
 	fnv@1.0.7
 	foreign-types-macros@0.2.3
 	foreign-types-shared@0.3.1
 	foreign-types@0.5.0
 	form_urlencoded@1.2.1
 	futf@0.1.5
-	futures-channel@0.3.30
-	futures-core@0.3.30
-	futures-executor@0.3.30
-	futures-io@0.3.30
-	futures-lite@2.3.0
-	futures-macro@0.3.30
-	futures-sink@0.3.30
-	futures-task@0.3.30
-	futures-util@0.3.30
+	futures-channel@0.3.31
+	futures-core@0.3.31
+	futures-executor@0.3.31
+	futures-io@0.3.31
+	futures-lite@2.5.0
+	futures-macro@0.3.31
+	futures-sink@0.3.31
+	futures-task@0.3.31
+	futures-util@0.3.31
 	fxhash@0.2.1
 	gdk-pixbuf-sys@0.18.0
 	gdk-pixbuf@0.18.5
@@ -155,13 +147,11 @@ CRATES="
 	gdkwayland-sys@0.18.0
 	gdkx11-sys@0.18.0
 	gdkx11@0.18.0
-	generator@0.7.5
 	generic-array@0.14.7
 	gethostname@0.4.3
 	getrandom@0.1.16
 	getrandom@0.2.15
-	gif@0.13.1
-	gimli@0.31.0
+	gimli@0.31.1
 	gio-sys@0.18.1
 	gio@0.18.4
 	glib-macros@0.18.5
@@ -172,108 +162,118 @@ CRATES="
 	gtk-sys@0.18.0
 	gtk3-macros@0.18.0
 	gtk@0.18.1
-	half@2.4.1
 	hashbrown@0.12.3
-	hashbrown@0.14.5
+	hashbrown@0.15.2
 	heck@0.4.1
 	heck@0.5.0
-	hermit-abi@0.3.9
 	hermit-abi@0.4.0
 	hex@0.4.3
 	html5ever@0.26.0
 	http-body-util@0.1.2
 	http-body@1.0.1
-	http@1.1.0
-	httparse@1.9.4
+	http@1.2.0
+	httparse@1.9.5
 	httpdate@1.0.3
-	hyper-util@0.1.8
-	hyper@1.4.1
+	hyper-util@0.1.10
+	hyper@1.5.1
 	iana-time-zone-haiku@0.1.2
 	iana-time-zone@0.1.61
 	ico@0.3.0
+	icu_collections@1.5.0
+	icu_locid@1.5.0
+	icu_locid_transform@1.5.0
+	icu_locid_transform_data@1.5.0
+	icu_normalizer@1.5.0
+	icu_normalizer_data@1.5.0
+	icu_properties@1.5.1
+	icu_properties_data@1.5.0
+	icu_provider@1.5.0
+	icu_provider_macros@1.5.0
 	ident_case@1.0.1
-	idna@0.5.0
-	image@0.24.9
-	image@0.25.2
+	idna@1.0.3
+	idna_adapter@1.2.0
+	image@0.25.5
 	indexmap@1.9.3
-	indexmap@2.5.0
+	indexmap@2.7.0
 	infer@0.16.0
 	instant@0.1.13
-	ipnet@2.10.0
+	ipnet@2.10.1
 	is-docker@0.2.0
 	is-wsl@0.4.0
 	is_terminal_polyfill@1.70.1
 	itoa@0.4.8
-	itoa@1.0.11
+	itoa@1.0.14
 	javascriptcore-rs-sys@1.1.1
 	javascriptcore-rs@1.1.2
 	jni-sys@0.3.0
 	jni@0.21.1
 	jpeg-decoder@0.3.1
-	js-sys@0.3.70
-	json-patch@2.0.0
-	jsonptr@0.4.7
+	js-sys@0.3.76
+	json-patch@3.0.1
+	jsonptr@0.6.3
 	keyboard-types@0.7.0
 	kuchikiki@0.8.2
 	lazy_static@1.5.0
-	lebe@0.5.2
 	libappindicator-sys@0.9.0
 	libappindicator@0.9.0
-	libc@0.2.158
+	libc@0.2.167
 	libloading@0.7.4
 	libredox@0.1.3
 	linux-raw-sys@0.4.14
+	litemap@0.7.4
 	lock_api@0.4.12
 	log@0.4.22
-	loom@0.5.6
 	mac@0.1.1
 	malloc_buf@0.0.6
 	markup5ever@0.11.0
-	matchers@0.1.0
 	matches@0.1.10
 	memchr@2.7.4
 	memoffset@0.9.1
 	mime@0.3.17
-	miniz_oxide@0.7.4
 	miniz_oxide@0.8.0
-	mio@1.0.2
-	muda@0.14.1
+	mio@1.0.3
+	muda@0.15.3
 	ndk-context@0.1.1
 	ndk-sys@0.6.0+11769913
 	ndk@0.9.0
 	new_debug_unreachable@1.0.6
 	nix@0.27.1
 	nodrop@0.1.14
-	nu-ansi-term@0.46.0
 	num-conv@0.1.0
 	num-traits@0.2.19
 	num_enum@0.7.3
 	num_enum_derive@0.7.3
 	objc-sys@0.3.5
 	objc2-app-kit@0.2.2
+	objc2-cloud-kit@0.2.2
+	objc2-contacts@0.2.2
 	objc2-core-data@0.2.2
 	objc2-core-image@0.2.2
+	objc2-core-location@0.2.2
 	objc2-encode@4.0.3
 	objc2-foundation@0.2.2
+	objc2-link-presentation@0.2.2
 	objc2-metal@0.2.2
 	objc2-quartz-core@0.2.2
+	objc2-symbols@0.2.2
+	objc2-ui-kit@0.2.2
+	objc2-uniform-type-identifiers@0.2.2
+	objc2-user-notifications@0.2.2
+	objc2-web-kit@0.2.2
 	objc2@0.5.2
 	objc@0.2.7
-	objc_exception@0.1.2
-	objc_id@0.1.1
-	object@0.36.4
-	once_cell@1.19.0
-	open@5.3.0
+	object@0.36.5
+	once_cell@1.20.2
+	open@5.3.1
 	option-ext@0.2.0
 	ordered-stream@0.2.0
 	os_pipe@1.2.1
-	overload@0.1.1
 	pango-sys@0.18.0
 	pango@0.18.3
 	parking@2.2.1
 	parking_lot@0.12.3
 	parking_lot_core@0.9.10
-	pathdiff@0.2.1
+	pathdiff@0.2.3
 	percent-encoding@2.3.1
 	phf@0.10.1
 	phf@0.11.2
@@ -288,15 +288,13 @@ CRATES="
 	phf_shared@0.10.0
 	phf_shared@0.11.2
 	phf_shared@0.8.0
-	pin-project-internal@1.1.5
-	pin-project-lite@0.2.14
-	pin-project@1.1.5
+	pin-project-lite@0.2.15
 	pin-utils@0.1.0
 	piper@0.2.4
-	pkg-config@0.3.30
+	pkg-config@0.3.31
 	plist@1.7.0
-	png@0.17.13
-	polling@3.7.3
+	png@0.17.15
+	polling@3.7.4
 	powerfmt@0.2.0
 	ppv-lite86@0.2.20
 	precomputed-hash@0.1.1
@@ -305,8 +303,7 @@ CRATES="
 	proc-macro-error-attr@1.0.4
 	proc-macro-error@1.0.4
 	proc-macro-hack@0.5.20+deprecated
-	proc-macro2@1.0.86
-	qoi@0.4.1
+	proc-macro2@1.0.92
 	quick-xml@0.32.0
 	quote@1.0.37
 	rand@0.7.3
@@ -318,44 +315,37 @@ CRATES="
 	rand_hc@0.2.0
 	rand_pcg@0.2.1
 	raw-window-handle@0.6.2
-	rayon-core@1.12.1
-	rayon@1.10.0
-	redox_syscall@0.5.4
+	redox_syscall@0.5.7
 	redox_users@0.4.6
-	regex-automata@0.1.10
-	regex-automata@0.4.7
-	regex-syntax@0.6.29
-	regex-syntax@0.8.4
-	regex@1.10.6
-	reqwest@0.12.7
+	regex-automata@0.4.9
+	regex-syntax@0.8.5
+	regex@1.11.1
+	reqwest@0.12.9
 	rustc-demangle@0.1.24
 	rustc_version@0.4.1
-	rustix@0.38.37
-	rustversion@1.0.17
+	rustix@0.38.41
 	ryu@1.0.18
 	same-file@1.0.6
 	schemars@0.8.21
 	schemars_derive@0.8.21
-	scoped-tls@1.0.1
 	scopeguard@1.2.0
 	selectors@0.22.0
 	semver@1.0.23
 	serde-untagged@0.1.6
-	serde@1.0.210
-	serde_derive@1.0.210
+	serde@1.0.215
+	serde_derive@1.0.215
 	serde_derive_internals@0.29.1
-	serde_json@1.0.128
+	serde_json@1.0.133
 	serde_repr@0.1.19
-	serde_spanned@0.6.7
+	serde_spanned@0.6.8
 	serde_urlencoded@0.7.1
-	serde_with@3.9.0
-	serde_with_macros@3.9.0
+	serde_with@3.11.0
+	serde_with_macros@3.11.0
 	serialize-to-javascript-impl@0.1.1
 	serialize-to-javascript@0.1.1
 	servo_arc@0.1.1
 	sha1@0.10.6
 	sha2@0.10.8
-	sharded-slab@0.1.7
 	shared_child@1.0.1
 	shlex@1.3.0
 	signal-hook-registry@1.4.2
@@ -363,66 +353,65 @@ CRATES="
 	siphasher@0.3.11
 	slab@0.4.9
 	smallvec@1.13.2
-	socket2@0.5.7
+	socket2@0.5.8
 	softbuffer@0.4.6
 	soup3-sys@0.5.0
 	soup3@0.5.0
-	spin@0.9.8
 	stable_deref_trait@1.2.0
-	state@0.6.0
 	static_assertions@1.1.0
 	string_cache@0.8.7
 	string_cache_codegen@0.5.2
 	strsim@0.11.1
 	swift-rs@1.0.7
 	syn@1.0.109
-	syn@2.0.77
-	sync_wrapper@1.0.1
+	syn@2.0.90
+	sync_wrapper@1.0.2
+	synstructure@0.13.1
 	system-deps@6.2.2
 	tao-macros@0.1.3
-	tao@0.30.0
+	tao@0.30.8
 	target-lexicon@0.12.16
-	tauri-build@2.0.0-rc.12
-	tauri-codegen@2.0.0-rc.12
-	tauri-macros@2.0.0-rc.11
-	tauri-plugin-clipboard-manager@2.0.0-rc.4
-	tauri-plugin-localhost@2.0.0-rc.1
-	tauri-plugin-window-state@2.0.0-rc.5
-	tauri-plugin@2.0.0-rc.12
-	tauri-runtime-wry@2.0.0-rc.13
-	tauri-runtime@2.0.0-rc.12
-	tauri-utils@2.0.0-rc.12
+	tauri-build@2.0.3
+	tauri-codegen@2.0.3
+	tauri-macros@2.0.3
+	tauri-plugin-cli@2.0.1
+	tauri-plugin-clipboard-manager@2.0.2
+	tauri-plugin-localhost@2.1.0
+	tauri-plugin-shell@2.0.2
+	tauri-plugin-store@2.1.0
+	tauri-plugin-window-state@2.0.2
+	tauri-plugin@2.0.3
+	tauri-runtime-wry@2.2.0
+	tauri-runtime@2.2.0
+	tauri-utils@2.1.0
 	tauri-winres@0.1.1
-	tauri@2.0.0-rc.15
-	tempfile@3.12.0
+	tauri@2.1.1
+	tempfile@3.14.0
 	tendril@0.4.3
 	thin-slice@0.1.1
-	thiserror-impl@1.0.63
-	thiserror@1.0.63
-	thread_local@1.1.8
+	thiserror-impl@1.0.69
+	thiserror-impl@2.0.5
+	thiserror@1.0.69
+	thiserror@2.0.5
 	tiff@0.9.1
 	time-core@0.1.2
-	time-macros@0.2.18
-	time@0.3.36
+	time-macros@0.2.19
+	time@0.3.37
 	tiny_http@0.12.0
-	tinyvec@1.8.0
-	tinyvec_macros@0.1.1
-	tokio-util@0.7.12
-	tokio@1.40.0
+	tinystr@0.7.6
+	tokio-macros@2.4.0
+	tokio-util@0.7.13
+	tokio@1.42.0
 	toml@0.7.8
 	toml@0.8.2
 	toml_datetime@0.6.3
 	toml_edit@0.19.15
 	toml_edit@0.20.2
-	tower-layer@0.3.3
 	tower-service@0.3.3
-	tower@0.4.13
-	tracing-attributes@0.1.27
-	tracing-core@0.1.32
-	tracing-log@0.2.0
-	tracing-subscriber@0.3.18
-	tracing@0.1.40
-	tray-icon@0.17.0
+	tracing-attributes@0.1.28
+	tracing-core@0.1.33
+	tracing@0.1.41
+	tray-icon@0.19.2
 	try-lock@0.2.5
 	typeid@1.0.2
 	typenum@1.17.0
@@ -432,16 +421,15 @@ CRATES="
 	unic-common@0.9.0
 	unic-ucd-ident@0.9.0
 	unic-ucd-version@0.9.0
-	unicode-bidi@0.3.15
-	unicode-ident@1.0.13
-	unicode-normalization@0.1.23
+	unicode-ident@1.0.14
 	unicode-segmentation@1.12.0
-	url@2.5.2
+	url@2.5.4
 	urlpattern@0.3.0
 	utf-8@0.7.6
+	utf16_iter@1.0.5
+	utf8_iter@1.0.4
 	utf8parse@0.2.2
-	uuid@1.10.0
-	valuable@0.1.0
+	uuid@1.11.0
 	version-compare@0.2.0
 	version_check@0.9.5
 	vswhom-sys@0.1.2
@@ -450,14 +438,14 @@ CRATES="
 	want@0.3.1
 	wasi@0.11.0+wasi-snapshot-preview1
 	wasi@0.9.0+wasi-snapshot-preview1
-	wasm-bindgen-backend@0.2.93
-	wasm-bindgen-futures@0.4.43
-	wasm-bindgen-macro-support@0.2.93
-	wasm-bindgen-macro@0.2.93
-	wasm-bindgen-shared@0.2.93
-	wasm-bindgen@0.2.93
-	wasm-streams@0.4.0
-	web-sys@0.3.70
+	wasm-bindgen-backend@0.2.99
+	wasm-bindgen-futures@0.4.49
+	wasm-bindgen-macro-support@0.2.99
+	wasm-bindgen-macro@0.2.99
+	wasm-bindgen-shared@0.2.99
+	wasm-bindgen@0.2.99
+	wasm-streams@0.4.2
+	web-sys@0.3.76
 	webkit2gtk-sys@2.0.1
 	webkit2gtk@2.0.1
 	webview2-com-macros@0.8.0
@@ -484,7 +472,6 @@ CRATES="
 	windows-targets@0.48.5
 	windows-targets@0.52.6
 	windows-version@0.1.1
-	windows@0.48.0
 	windows@0.58.0
 	windows_aarch64_gnullvm@0.42.2
 	windows_aarch64_gnullvm@0.48.5
@@ -510,37 +497,37 @@ CRATES="
 	windows_x86_64_msvc@0.52.6
 	winnow@0.5.40
 	winreg@0.52.0
-	wry@0.43.1
+	write16@1.0.0
+	writeable@0.5.5
+	wry@0.47.2
 	x11-dl@2.21.0
 	x11@2.21.0
 	x11rb-protocol@0.13.1
 	x11rb@0.13.1
 	xdg-home@1.3.0
+	yoke-derive@0.7.5
+	yoke@0.7.5
 	zbus@4.0.1
 	zbus_macros@4.0.1
 	zbus_names@3.0.0
 	zerocopy-derive@0.7.35
 	zerocopy@0.7.35
-	zune-inflate@0.2.54
+	zerofrom-derive@0.1.5
+	zerofrom@0.1.5
+	zerovec-derive@0.10.3
+	zerovec@0.10.4
 	zvariant@4.0.0
 	zvariant_derive@4.0.0
 	zvariant_utils@1.1.0
 "
 
-declare -A GIT_CRATES=(
-	[tauri-plugin-cli]='https://github.com/tauri-apps/plugins-workspace;fb85e5dd76688f3ae836890160f9bde843b70167;plugins-workspace-%commit%/plugins/cli'
-	[tauri-plugin-shell]='https://github.com/tauri-apps/plugins-workspace;fb85e5dd76688f3ae836890160f9bde843b70167;plugins-workspace-%commit%/plugins/shell'
-	[tauri-plugin-store]='https://github.com/tauri-apps/plugins-workspace;fb85e5dd76688f3ae836890160f9bde843b70167;plugins-workspace-%commit%/plugins/store'
-)
-
-inherit cargo desktop optfeature unpacker xdg
+inherit cargo desktop xdg
 
 DESCRIPTION="Monitor and control your cooling and other devices"
 HOMEPAGE="https://gitlab.com/coolercontrol/coolercontrol"
 SRC_URI="
 	https://gitlab.com/coolercontrol/coolercontrol/-/archive/${PV}/${P}.tar.bz2
-	https://gitlab.com/coolercontrol/coolercontrol/-/releases/${PV}/downloads/packages/coolercontrol-ui.tzst
-		-> ${P}-ui.tar.zst
+	https://gitlab.com/api/v4/projects/32909921/packages/generic/coolercontrol/${PV}/coolercontrol-${PV}-dist.tar.xz
 	${CARGO_CRATE_URIS}
 "
 S="${WORKDIR}/coolercontrol-${PV}/coolercontrol-ui/src-tauri"
@@ -549,7 +536,7 @@ LICENSE="GPL-3+ CC0-1.0"
 # Dependent crate licenses
 LICENSE+="
 	Apache-2.0 Apache-2.0-with-LLVM-exceptions BSD Boost-1.0 ISC MIT
-	MPL-2.0 Unicode-DFS-2016
+	MPL-2.0 Unicode-3.0
 "
 SLOT="0"
 KEYWORDS="~amd64"
@@ -568,17 +555,8 @@ RDEPEND="
 	sys-apps/coolercontrold
 	virtual/pkgconfig
 "
-BDEPEND="
-	net-libs/nodejs[npm]
-"
 
 QA_FLAGS_IGNORED=".*"
-
-src_unpack() {
-	# Yes, there will be a double unpack
-	cargo_src_unpack
-	unpacker ${P}-ui.tar.zst
-}
 
 src_prepare() {
 	pushd ../.. >/dev/null || die
@@ -588,7 +566,7 @@ src_prepare() {
 	# Disable stripping
 	sed -i -e '/^strip =/d' Cargo.toml || die
 
-	mv "${WORKDIR}"/node_modules "${S}"/.. || die
+	mv -T "${WORKDIR}"/dist "${S}"/../dist || die
 }
 
 src_configure() {
@@ -597,22 +575,6 @@ src_configure() {
 		custom-protocol
 	)
 	cargo_src_configure
-}
-
-src_compile() {
-	pushd .. >/dev/null || die
-	npm run build-only || die
-	popd >/dev/null || die
-
-	cargo_src_compile
-}
-
-src_test() {
-	cargo_src_test
-
-	pushd .. >/dev/null || die
-	npm run test:unit || die
-	popd >/dev/null || die
 }
 
 src_install() {
@@ -625,10 +587,4 @@ src_install() {
 	doicon ../../packaging/metadata/org.coolercontrol.CoolerControl.svg
 	insinto /usr/share/metainfo
 	doins ../../packaging/metadata/org.coolercontrol.CoolerControl.metainfo.xml
-}
-
-pkg_postinst() {
-	xdg_pkg_postinst
-
-	optfeature "interact with AIO liquid coolers and other devices" sys-apps/coolercontrol-liqctld
 }

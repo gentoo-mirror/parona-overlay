@@ -2,11 +2,11 @@
 set -e
 
 version="${1}"
-srcdir="${HOME}/sources/vikunja"
+srcdir="${HOME}/sources/coolercontrol"
 projectid="32909921"
 
 if [[ -z ${version} ]]; then
-    echo "No version specified"
+    echo "No version given"
     exit 1
 fi
 
@@ -14,17 +14,13 @@ if ! git --version >/dev/null ; then
     echo "dev-vcs/git missing"
     exit 1
 fi
-if ! go version >/dev/null ; then
-    echo "dev-lang/go missing"
-    exit 1
-fi
-if ! pnpm --version >/dev/null ; then
+if ! npm --version >/dev/null ; then
     echo "pnpm missing"
-    echo "either net-libs/nodejs[corepack] or locally install pnpm with npm"
+    echo "either net-libs/nodejs[npm]"
     exit 1
 fi
-if ! xz --version >/dev/null ; then
-    echo "app-arch/xz-utils missing"
+if ! zstd --version >/dev/null ; then
+    echo "app-arch/zstd missing"
     exit 1
 fi
 if ! tar --version >/dev/null ; then
@@ -40,12 +36,12 @@ if ! [[ -d ${srcdir} ]]; then
     echo "${srcdir} missing"
     exit 1
 fi
-pushd "${srcdir}"
+pushd "${srcdir}" >/dev/null
 if ! git status >/dev/null ; then
     echo "${srcdir} is not a git directory"
     exit 1
 fi
-popd
+popd >/dev/null
 
 gitlab_upload_package -v
 
@@ -54,17 +50,13 @@ echo "Output directory: ${outdir}"
 
 pushd "${srcdir}"
 git fetch
-git checkout "v${version}"
-GOMODCACHE="${srcdir}"/go-mod go mod download -modcacherw
-XZ_OPT='-T0 -9' tar -acf "${outdir}/vikunja-${version}-deps.tar.xz" go-mod
-pushd frontend
-pnpm install
-pnpm run build
-XZ_OPT='-T0 -9' tar -acf "${outdir}/vikunja-${version}-dist.tar.xz" dist
+git checkout "${version}"
+pushd coolercontrol-ui
+make dist
+XZ_OPT='-T0 -9' tar -acf "${outdir}/coolercontrol-${version}-dist.tar.xz" dist
 popd
 
-gitlab_upload_package "${projectid}" vikunja "${version}" "${outdir}/vikunja-${version}-deps.tar.xz"
-gitlab_upload_package "${projectid}" vikunja "${version}" "${outdir}/vikunja-${version}-dist.tar.xz"
+gitlab_upload_package "${projectid}" coolercontrol "${version}" "${outdir}/coolercontrol-${version}-dist.tar.xz"
 
 rm -rf "${outdir}"
 git clean -fdx
