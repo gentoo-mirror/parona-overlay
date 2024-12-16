@@ -19,8 +19,8 @@ if ! npm --version >/dev/null ; then
     echo "either net-libs/nodejs[npm]"
     exit 1
 fi
-if ! zstd --version >/dev/null ; then
-    echo "app-arch/zstd missing"
+if ! xz --version >/dev/null ; then
+    echo "app-arch/xz missing"
     exit 1
 fi
 if ! tar --version >/dev/null ; then
