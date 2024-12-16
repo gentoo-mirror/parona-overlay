@@ -3,8 +3,12 @@ set -e
 
 version="${1}"
 srcdir="${HOME}/sources/vikunja"
-outdir="${PWD}/out"
 projectid="32909921"
+
+if [[ -z ${version} ]]; then
+    echo "No version specified"
+    exit 1
+fi
 
 if ! git --version >/dev/null ; then
     echo "dev-vcs/git missing"
@@ -27,10 +31,6 @@ if ! tar --version >/dev/null ; then
     echo "app-arch/tar missing"
     exit 1
 fi
-if ! jq --version >/dev/null ;then
-    echo "app-misc/jq missing"
-    exit 1
-fi
 if ! gitlab_upload_package -h >/dev/null ; then
     echo "app-misc/parona-scripts missing"
     exit 1
@@ -49,7 +49,8 @@ popd
 
 gitlab_upload_package -v
 
-mkdir -p "${outdir}"
+outdir="$(mktemp -d)"
+echo "Output directory: ${outdir}"
 
 pushd "${srcdir}"
 git fetch
