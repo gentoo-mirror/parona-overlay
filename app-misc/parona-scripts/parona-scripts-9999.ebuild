@@ -17,9 +17,18 @@ IUSE="efibootmgr perl"
 RESTRICT="test" # no tests
 
 RDEPEND="
+	app-admin/eclean-kernel
 	app-misc/jq
+	app-portage/gentoolkit
+	app-portage/portage-utils
+	app-portage/smart-live-rebuild
 	app-text/ansifilter
 	net-misc/curl
+	sys-apps/file
+	sys-apps/grep
+	sys-apps/pkgcore
+	sys-apps/portage
+	sys-apps/util-linux
 	efibootmgr? (
 		app-portage/eix
 		sys-kernel/installkernel[-grub]
