@@ -6,6 +6,7 @@
 		<name>Alfred Wingate</name>
 	</maintainer>
 	<upstream>
+		<doc>https://nexus-mods.github.io/NexusMods.App/</doc>
 		<remote-id type="github">Nexus-Mods/NexusMods.App</remote-id>
 	</upstream>
 </pkgmetadata>
