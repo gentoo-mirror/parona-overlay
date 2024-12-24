@@ -21,17 +21,15 @@ LICENSE="GPL-3"
 SLOT="0"
 KEYWORDS="~amd64"
 
-#RESTRICT="test"
-
 RDEPEND="
-		>=dev-python/pyside6-6.3.0[designer,gui,widgets,${PYTHON_USEDEP}]
-		>=dev-python/requests-2.27.0[${PYTHON_USEDEP}]
-		>=dev-python/vdf-3.5[${PYTHON_USEDEP}]
-		dev-python/inputs[${PYTHON_USEDEP}]
-		>=dev-python/pyxdg-0.27[${PYTHON_USEDEP}]
-		>=dev-python/steam-1.5.0[${PYTHON_USEDEP}]
-		>=dev-python/pyyaml-6.0[${PYTHON_USEDEP}]
-		>=dev-python/zstandard-0.19.0[${PYTHON_USEDEP}]
+	>=dev-python/pyside6-6.3.0[dbus,designer,gui,uitools(+),widgets,${PYTHON_USEDEP}]
+	>=dev-python/requests-2.27.0[${PYTHON_USEDEP}]
+	>=dev-python/vdf-3.5[${PYTHON_USEDEP}]
+	dev-python/inputs[${PYTHON_USEDEP}]
+	>=dev-python/pyxdg-0.27[${PYTHON_USEDEP}]
+	>=dev-python/steam-1.5.0[${PYTHON_USEDEP}]
+	>=dev-python/pyyaml-6.0[${PYTHON_USEDEP}]
+	>=dev-python/zstandard-0.19.0[${PYTHON_USEDEP}]
 "
 
 distutils_enable_tests pytest
