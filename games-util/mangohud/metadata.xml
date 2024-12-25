@@ -9,6 +9,7 @@
 		<remote-id type="github">flightlessmango/MangoHud</remote-id>
 	</upstream>
 	<use>
+		<flag name="mangoapp">Install mangoapp, a transparent background application with a built in mangohud.</flag>
 		<flag name="plots">Install mangoplot plotting script which generates a 1D heatmap of a log files framerates.</flag>
 	</use>
 </pkgmetadata>
