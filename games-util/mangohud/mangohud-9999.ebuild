@@ -47,10 +47,11 @@ fi
 LICENSE="MIT"
 SLOT="0"
 
-IUSE="dbus plots test wayland +X"
+IUSE="dbus mangoapp plots test wayland +X"
 
 REQUIRED_USE="
 	|| ( wayland X )
+	mangoapp? ( X )
 	${PYTHON_REQUIRED_USE}
 "
 RESTRICT="!test? ( test )"
@@ -126,6 +127,7 @@ src_configure() {
 	local emesonargs=(
 		$(meson_feature X with_x11)
 		$(meson_feature dbus with_dbus)
+		$(meson_use mangoapp)
 		$(meson_feature plots mangoplot)
 		$(meson_feature test tests)
 		$(meson_feature wayland with_wayland)
@@ -133,7 +135,6 @@ src_configure() {
 		-Ddynamic_string_tokens=true
 		-Dglibcxx_asserts=false
 		-Dinclude_doc=true
-		-Dmangoapp=true
 		-Dmangohudctl=true
 		-Duse_system_spdlog=enabled
 		-Dwith_xnvctrl=disabled
