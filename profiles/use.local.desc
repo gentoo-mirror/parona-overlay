@@ -17,6 +17,7 @@ dev-db/mysql:test - Install upstream testsuites for end use.
 dev-libs/vala-language-server:gnome - Build GNOME Builder plugin
 dev-vcs/gcli:lowdown - Use lowdown to render markdown.
 games-util/gamehub:overlayfs - Build support for OverlayFS
+games-util/mangohud:mangoapp - Install mangoapp, a transparent background application with a built in mangohud.
 games-util/mangohud:plots - Install mangoplot plotting script which generates a 1D heatmap of a log files framerates.
 gnome-extra/yad:sourceview - Enable syntax highlighting in text-info dialog with x11-libs/gtksourceview:3.0
 gnome-extra/yad:spell - Enable support spell checking in text fields
