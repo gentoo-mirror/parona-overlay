@@ -13,7 +13,6 @@ if [[ "${PV}" == "9999" ]]; then
 	EGIT_REPO_URI="https://github.com/Syllo/nvtop"
 else
 	SRC_URI="https://github.com/Syllo/nvtop/archive/refs/tags/${PV}.tar.gz -> ${P}.tar.gz"
-	KEYWORDS="~amd64"
 fi
 
 LICENSE="GPL-3"
