@@ -68,6 +68,11 @@ BDEPEND="
 	)
 "
 
+PATCHES=(
+	"${FILESDIR}"/mangohud-0.7.2-include-map.patch
+	"${FILESDIR}"/mangohud-0.7.2-fix-llvm.patch
+)
+
 python_check_deps() {
 	python_has_version "dev-python/mako[${PYTHON_USEDEP}]"
 }
