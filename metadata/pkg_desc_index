@@ -52,13 +52,14 @@ dev-python/inputs 0.5: Cross-platform Python support for keyboards, mice and gam
 dev-python/log-symbols 0.0.14-r1: Colored symbols for various log levels for Python
 dev-python/pyclip 0.7.0: Cross-platform Clipboard module for Python with binary support.
 dev-python/pycryptodomex 3.21.0: A self-contained cryptographic library for Python
-dev-python/pydantic-settings 2.6.1 2.7.0: Settings management using pydantic
+dev-python/pydantic-settings 2.6.1 2.7.0 2.7.1: Settings management using pydantic
 dev-python/pytest-examples 0.0.14 0.0.15: Pytest plugin for testing Python code examples in docstrings and markdown files.
 dev-python/spinners 0.0.24-r1: Spinners for terminals
 dev-python/sqlmodel 0.0.22: SQL databases in Python, designed for simplicity, compatibility, and robustness.
 dev-python/steam 1.6.1: Python package for interacting with Steam
 dev-python/vdf 3.5: A module for (de)serialization to and from VDF, Valve's key-value text format
 dev-tex/altacv 1.7.2 1.7.3_p20241216: Yet another alternative curriculum vitae/résumé class with LaTeX
+dev-util/umr 1.0.10: umr is a userspace debugging and diagnostic tool for AMD GPUs
 dev-vcs/gcli 2.5.0: Portable CLI tool for interacting with Git(Hub|Lab|Tea) from the command line.
 games-util/gamehub 0.16.3_p2: All your games in one place
 games-util/goverlay 1.2: Graphical UI to help manage Linux overlays.
@@ -108,4 +109,4 @@ virtual/dist-kernel 6.6.68 6.12.7: Virtual to depend on any Distribution Kernel
 www-apps/rdrview 0.1: Firefox Reader View as a command line tool
 www-apps/vikunja 0.24.4 0.24.5: The to-do app to organize your life.
 www-client/icecat 115.18.0: GNU IceCat Web Browser
-www-plugins/firefoxpwa 2.12.5 2.13.1: A tool to install, manage and use Progressive Web Apps (PWAs) in Mozilla Firefox
+www-plugins/firefoxpwa 2.12.5 2.13.1 2.13.2: A tool to install, manage and use Progressive Web Apps (PWAs) in Mozilla Firefox
