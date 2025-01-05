@@ -4,7 +4,7 @@ app-admin/dotdrop 1.14.2: Save your dotfiles once, deploy them everywhere
 app-arch/gztool 1.8.0: GZIP files indexer, compressor and data retriever.
 app-containers/anbox-modules 20240526-r1: Anbox kernel modules (ashmem and binder) fork
 app-containers/waydroid 1.4.2-r4: Container-based approach to boot a full Android system
-app-emulation/winegui 2.6.5: A user-friendly WINE manager
+app-emulation/winegui 2.6.5 2.7.0: A user-friendly WINE manager
 app-misc/francis 9999: Track your time
 app-misc/json-tui 1.3.0_p20240526: A JSON terminal UI made in C++
 app-misc/parona-scripts 9999: Scripts and hooks that I use on my machines
@@ -14,7 +14,7 @@ app-misc/spicetify-cli 2.38.7: Commandline tool to customize Spotify client.
 dev-build/cargo-make 0.37.23: Rust task runner and build tool
 dev-cpp/args 6.4.6: A simple header-only C++ argument parser library
 dev-cpp/hjson-cpp 2.4.1: Hjson for C++
-dev-cpp/tinygltf 2.9.3: Header only C++11 tiny glTF 2.0 library
+dev-cpp/tinygltf 2.9.3 2.9.4: Header only C++11 tiny glTF 2.0 library
 dev-cpp/trompeloeil 49: Header only C++14 mocking framework
 dev-db/mysql 8.0.40 8.4.3: Fast, multi-threaded, multi-user SQL database server
 dev-libs/libgbinder 1.1.41 1.1.42: GLib-style interface to binder
@@ -58,16 +58,16 @@ dev-python/pytest-examples 0.0.15: Pytest plugin for testing Python code example
 dev-python/spinners 0.0.24-r1: Spinners for terminals
 dev-python/sqlmodel 0.0.22: SQL databases in Python, designed for simplicity, compatibility, and robustness.
 dev-python/steam 1.6.1: Python package for interacting with Steam
-dev-python/vdf 3.5: A module for (de)serialization to and from VDF, Valve's key-value text format
+dev-python/vdf 3.5 4.0: A module for (de)serialization to and from VDF, Valve's key-value text format
 dev-tex/altacv 1.7.2 1.7.3_p20241216: Yet another alternative curriculum vitae/résumé class with LaTeX
 dev-util/umr 1.0.10: umr is a userspace debugging and diagnostic tool for AMD GPUs
-dev-vcs/gcli 2.5.0: Portable CLI tool for interacting with Git(Hub|Lab|Tea) from the command line.
+dev-vcs/gcli 2.5.0 2.6.0: Portable CLI tool for interacting with Git(Hub|Lab|Tea) from the command line.
 games-util/gamehub 0.16.3_p2: All your games in one place
 games-util/goverlay 1.2: Graphical UI to help manage Linux overlays.
 games-util/heroic-gogdl 9999: GOG Downloading module for Heroic Games Launcher
 games-util/mangohud 0.7.2-r2 9999: Overlay for monitoring FPS, temperatures, CPU/GPU load and more
 games-util/nexusmodsapp 0.7.0 0.7.1: Nexus Mods App, a mod installer, creator and manager for all your popular games
-games-util/protonup-qt 2.10.2-r1: Install and manage proton with Steam and Lutris
+games-util/protonup-qt 2.10.2-r1 2.11.1: Install and manage proton with Steam and Lutris
 games-util/r2modman 3.1.54 3.1.55: A simple and easy to use mod manager for several games using Thunderstore
 games-util/steamtinkerlaunch 9999: Tool for use with the Steam client for custom launch options
 gnome-extra/yad 14.1: Display GTK+ dialog boxes from command line or shell scripts

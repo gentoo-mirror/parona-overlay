@@ -1,0 +1,14 @@
+BDEPEND=virtual/pkgconfig
+DEFINED_PHASES=configure
+DEPEND=dev-libs/openssl:= net-misc/curl[openssl] libedit? ( dev-libs/libedit ) !libedit? ( sys-libs/readline:= ) lowdown? ( app-text/lowdown:= ) test? ( dev-libs/atf dev-util/kyua )
+DESCRIPTION=Portable CLI tool for interacting with Git(Hub|Lab|Tea) from the command line.
+EAPI=8
+HOMEPAGE=https://herrhotzenplotz.de/gcli/
+IUSE=+libedit lowdown test
+KEYWORDS=~amd64
+LICENSE=BSD-2 Unlicense
+RDEPEND=dev-libs/openssl:= net-misc/curl[openssl] libedit? ( dev-libs/libedit ) !libedit? ( sys-libs/readline:= ) lowdown? ( app-text/lowdown:= )
+RESTRICT=!test? ( test )
+SLOT=0
+SRC_URI=https://herrhotzenplotz.de/gcli/releases/gcli-2.6.0/gcli-2.6.0.tar.xz
+_md5_=6364af99fd6b9968125a086c308a065f
