@@ -29,6 +29,7 @@ gui-apps/yambar:shared - Build modules, particles and decorations as shared libr
 media-sound/spotify:local-playback - Allows playing local files with the Spotify client
 media-sound/spotify:pax-kernel - Triggers a paxmarking of the main Spotify binary
 sys-kernel/xanmod-kernel:initramfs - Build initramfs along with the kernel.
+virtual/linux-sources:firmware - Install linux kernel firmware
 www-client/icecat:clang - Use Clang compiler instead of GCC
 www-client/icecat:geckodriver - Enable WebDriver support
 www-client/icecat:hwaccel - Force-enable hardware-accelerated rendering (Mozilla bug 594876)

@@ -107,6 +107,7 @@ sys-kernel/xanmod-sources 6.6.68 6.6.69 6.12.7 6.12.8: Full XanMod sources inclu
 sys-power/corectrl 1.4.3: Profile based system control utility
 sys-process/nvtop 3.1.0: AMD and NVIDIA GPUs htop like monitoring tool
 virtual/dist-kernel 6.6.68 6.6.69 6.12.7 6.12.8: Virtual to depend on any Distribution Kernel
+virtual/linux-sources 3-r8: Virtual for Linux kernel sources
 www-apps/rdrview 0.1: Firefox Reader View as a command line tool
 www-apps/vikunja 0.24.4 0.24.5: The to-do app to organize your life.
 www-client/icecat 115.18.0: GNU IceCat Web Browser
