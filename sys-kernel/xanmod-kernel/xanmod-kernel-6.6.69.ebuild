@@ -8,8 +8,8 @@ KERNEL_IUSE_MODULES_SIGN=1
 inherit kernel-build
 
 MY_P=linux-${PV%.*}
-GENPATCHES_P=genpatches-${PV%.*}-$(( ${PV##*.} + 8 ))
-GENTOO_CONFIG_VER=g14
+GENPATCHES_P=genpatches-${PV%.*}-$(( ${PV##*.} + 9 ))
+GENTOO_CONFIG_VER=g15
 
 XANMOD_VERSION="1"
 

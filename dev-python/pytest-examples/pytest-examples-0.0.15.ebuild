@@ -26,6 +26,7 @@ RDEPEND="
 
 PATCHES=(
 	"${FILESDIR}/pytest-examples-0.0.14-revert-use-of-ruff-module.patch"
+	"${FILESDIR}/pytest-examples-0.0.15-pytest-8.3.4-test-fix.patch"
 )
 
 distutils_enable_tests pytest

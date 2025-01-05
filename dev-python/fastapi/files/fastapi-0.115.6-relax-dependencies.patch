@@ -1,0 +1,25 @@
+https://github.com/fastapi/fastapi/pull/13117
+
+From 0d376406fa6bc357b932bb0023859d9a7368c1a3 Mon Sep 17 00:00:00 2001
+From: Marcelo Trylesinski <marcelotryle@gmail.com>
+Date: Sun, 29 Dec 2024 10:28:48 +0100
+Subject: [PATCH] Bump starlette to 0.45.0
+
+---
+ pyproject.toml | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/pyproject.toml b/pyproject.toml
+index edfa81522f9c9..b198b32a736b4 100644
+--- a/pyproject.toml
++++ b/pyproject.toml
+@@ -41,7 +41,7 @@ classifiers = [
+     "Topic :: Internet :: WWW/HTTP",
+ ]
+ dependencies = [
+-    "starlette>=0.40.0,<0.42.0",
++    "starlette>=0.40.0,<0.46.0",
+     "pydantic>=1.7.4,!=1.8,!=1.8.1,!=2.0.0,!=2.0.1,!=2.1.0,<3.0.0",
+     "typing-extensions>=4.8.0",
+ ]
+
