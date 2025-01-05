@@ -28,7 +28,6 @@ gui-apps/yambar:mpd - Enable support for the Music Player Daemon
 gui-apps/yambar:shared - Build modules, particles and decorations as shared libraries
 media-sound/spotify:local-playback - Allows playing local files with the Spotify client
 media-sound/spotify:pax-kernel - Triggers a paxmarking of the main Spotify binary
-sys-kernel/xanmod-kernel:generic-uki - Build and install a generic initramfs and Unified Kernel Image, this is intended for building binpkgs with a pre-generated UKI included (EXPERIMENTAL).
 sys-kernel/xanmod-kernel:initramfs - Build initramfs along with the kernel.
 www-client/icecat:clang - Use Clang compiler instead of GCC
 www-client/icecat:geckodriver - Enable WebDriver support

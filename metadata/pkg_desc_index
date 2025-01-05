@@ -10,6 +10,7 @@ app-misc/json-tui 1.3.0_p20240526: A JSON terminal UI made in C++
 app-misc/parona-scripts 9999: Scripts and hooks that I use on my machines
 app-misc/readpe 0.84-r1: The PE file analysis toolkit
 app-misc/rivalcfg 4.14.0: CLI tool and Python library to configure SteelSeries gaming mice
+app-misc/spicetify-cli 2.38.7: Commandline tool to customize Spotify client.
 dev-build/cargo-make 0.37.23: Rust task runner and build tool
 dev-cpp/args 6.4.6: A simple header-only C++ argument parser library
 dev-cpp/hjson-cpp 2.4.1: Hjson for C++
@@ -46,7 +47,7 @@ dev-perl/Test-Synopsis-Expectation 0.12: Test that SYNOPSIS code produces expect
 dev-perl/match-simple 0.012: simplified clone of smartmatch operator
 dev-python/asyncpg 0.30.0: A fast PostgreSQL Database Client Library for Python/asyncio.
 dev-python/databases 0.9.0: Async database support for Python.
-dev-python/fastapi 0.115.5 0.115.6: FastAPI framework, high performance, easy to learn, ready for production
+dev-python/fastapi 0.115.6-r1: FastAPI framework, high performance, easy to learn, ready for production
 dev-python/gbinder 1.1.2-r1: Python bindings for libgbinder
 dev-python/inputs 0.5: Cross-platform Python support for keyboards, mice and gamepads.
 dev-python/log-symbols 0.0.14-r1: Colored symbols for various log levels for Python
@@ -101,11 +102,11 @@ sys-apps/coolercontrold 1.4.4 1.4.5: Monitor and control your cooling and other 
 sys-apps/gsmartcontrol 9999: Hard Disk Drive and SSD Health Inspection Tool
 sys-apps/rinit 9999: Next-gen init and service-manager written in Rust
 sys-boot/uefitool 68_alpha: UEFI firmware image viewer and editor
-sys-kernel/xanmod-kernel 6.6.68 6.12.7: Linux kernel built with XanMod and Gentoo patches
-sys-kernel/xanmod-sources 6.6.68 6.12.7: Full XanMod sources including the Gentoo patchset
+sys-kernel/xanmod-kernel 6.6.68 6.6.69 6.12.7 6.12.8: Linux kernel built with XanMod and Gentoo patches
+sys-kernel/xanmod-sources 6.6.68 6.6.69 6.12.7 6.12.8: Full XanMod sources including the Gentoo patchset
 sys-power/corectrl 1.4.3: Profile based system control utility
 sys-process/nvtop 3.1.0: AMD and NVIDIA GPUs htop like monitoring tool
-virtual/dist-kernel 6.6.68 6.12.7: Virtual to depend on any Distribution Kernel
+virtual/dist-kernel 6.6.68 6.6.69 6.12.7 6.12.8: Virtual to depend on any Distribution Kernel
 www-apps/rdrview 0.1: Firefox Reader View as a command line tool
 www-apps/vikunja 0.24.4 0.24.5: The to-do app to organize your life.
 www-client/icecat 115.18.0: GNU IceCat Web Browser
