@@ -4,7 +4,7 @@
 EAPI=8
 
 PYTHON_COMPAT=( python3_{12..13} )
-inherit meson python-single-r1
+inherit meson-multilib python-single-r1
 
 DESCRIPTION="Overlay for monitoring FPS, temperatures, CPU/GPU load and more"
 HOMEPAGE="https://github.com/flightlessmango/MangoHud"
@@ -127,24 +127,24 @@ src_configure() {
 	local emesonargs=(
 		$(meson_feature X with_x11)
 		$(meson_feature dbus with_dbus)
-		$(meson_use mangoapp)
-		$(meson_feature plots mangoplot)
+		$(meson_native_use_bool mangoapp)
+		$(meson_native_use_feature plots mangoplot)
 		$(meson_feature test tests)
 		$(meson_feature wayland with_wayland)
 		-Dappend_libdir_mangohud=true
 		-Ddynamic_string_tokens=true
 		-Dglibcxx_asserts=false
 		-Dinclude_doc=true
-		-Dmangohudctl=true
+		$(meson_native_true mangohudctl)
 		-Duse_system_spdlog=enabled
 		-Dwith_xnvctrl=disabled
 	)
 
-	meson_src_configure
+	meson-multilib_src_configure
 }
 
 src_install() {
-	meson_src_install
+	meson-multilib_src_install
 
 	if use plots; then
 		python_optimize "${D}"
