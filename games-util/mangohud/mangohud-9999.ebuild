@@ -138,6 +138,7 @@ src_configure() {
 		$(meson_native_true mangohudctl)
 		-Duse_system_spdlog=enabled
 		-Dwith_xnvctrl=disabled
+		--force-fallback-for=imgui,implot
 	)
 
 	meson-multilib_src_configure
