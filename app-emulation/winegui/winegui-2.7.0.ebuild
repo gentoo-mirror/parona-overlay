@@ -39,6 +39,13 @@ src_unpack() {
 	unpack WineGUI-Source-v${PV}.tar.gz
 }
 
+src_prepare() {
+	cmake_src_prepare
+
+	# -Werror is excessive
+	sed -i -e '/set(CMAKE_CXX_FLAGS/ s/-Werror//' CMakeLists.txt || die
+}
+
 src_configure() {
 	local mycmakeargs=(
 		-DDOXYGEN=$(usex doc)
