@@ -92,7 +92,7 @@ media-fonts/juliamono 0.051: JuliaMono - a monospaced font for scientific and te
 media-libs/phonon-mpv 0.1.0: Phonon Backend using MPV Player(libmpv)
 media-sound/spotify 1.2.50 1.2.52: Spotify is a social music platform
 media-video/mpv-mpris 1.1: MPRIS plugin for mpv
-net-im/discord 0.0.77 0.0.78: All-in-one voice and text chat for gamers
+net-im/discord 0.0.78 0.0.79: All-in-one voice and text chat for gamers
 net-im/discord-ptb 0.0.121 0.0.124: All-in-one voice and text chat for gamers
 net-misc/wlvncc 9999: A Wayland Native VNC Client
 sec-keys/openpgp-keys-mysql 20231023: OpenPGP keys used to sign MySQL releases
