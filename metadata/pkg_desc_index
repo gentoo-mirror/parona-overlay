@@ -110,5 +110,5 @@ virtual/dist-kernel 6.6.68 6.6.69 6.12.7 6.12.8: Virtual to depend on any Distri
 virtual/linux-sources 3-r8: Virtual for Linux kernel sources
 www-apps/rdrview 0.1: Firefox Reader View as a command line tool
 www-apps/vikunja 0.24.4 0.24.5: The to-do app to organize your life.
-www-client/icecat 115.18.0: GNU IceCat Web Browser
+www-client/icecat 115.18.0 115.19.0: GNU IceCat Web Browser
 www-plugins/firefoxpwa 2.13.1 2.13.2: A tool to install, manage and use Progressive Web Apps (PWAs) in Mozilla Firefox
