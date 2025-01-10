@@ -1,18 +1,30 @@
-# Copyright 1999-2024 Gentoo Authors
+# Copyright 1999-2025 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=8
 
-inherit check-reqs cmake edo flag-o-matic linux-info multiprocessing prefix verify-sig
+inherit check-reqs cmake edo flag-o-matic linux-info multiprocessing toolchain-funcs prefix verify-sig
 
-# Patch version
-PATCH_SET=( https://github.com/parona-source/mysql-server/releases/download/mysql-8.4.3-patches-01/mysql-8.4.3-patches-01.tar.xz )
+# $ git format-patch mysql-${PV}...mysql-${PV}-patches -o mysql-patches
+# $ tar caf mysql-${PV}-patches-01.tar.xz mysql-patches
+PATCH_SET=(
+	# https://github.com/parona-source/mysql-server/releases/tag/mysql-8.4.3-patches-01
+	https://github.com/parona-source/mysql-server/releases/download/mysql-8.4.3-patches-01/mysql-8.4.3-patches-01.tar.xz
+)
 
 DESCRIPTION="Fast, multi-threaded, multi-user SQL database server"
 HOMEPAGE="https://www.mysql.com/"
+# Latest source distributions are available at https://dev.mysql.com/downloads/mysql/
+# before they are moved to https://downloads.mysql.com/archives/community/
 SRC_URI="
-	https://cdn.mysql.com/Downloads/MySQL-$(ver_cut 1-2)/mysql-${PV}.tar.gz
-	verify-sig? ( https://cdn.mysql.com/Downloads/MySQL-$(ver_cut 1-2)/mysql-${PV}.tar.gz.asc )
+	https://dev.mysql.com/get/Downloads/MySQL-$(ver_cut 1-2)/mysql-${PV}.tar.gz
+	https://cdn.mysql.com/archives/mysql-$(ver_cut 1-2)/mysql-${PV}.tar.gz
+	verify-sig? (
+		https://dev.mysql.com/downloads/gpg/?file=mysql-${PV}.tar.gz&p=23
+			-> mysql-${PV}.tar.gz.asc
+		https://downloads.mysql.com/archives/gpg/?file=mysql-${PV}.tar.gz&p=23
+			-> mysql-${PV}.tar.gz.asc
+	)
 	${PATCH_SET[@]}
 "
 # Shorten the path because the socket path length must be shorter than 107 chars
@@ -23,14 +35,13 @@ VERIFY_SIG_OPENPGP_KEY_PATH="/usr/share/openpgp-keys/mysql.asc"
 
 LICENSE="GPL-2"
 # https://dev.mysql.com/blog-archive/introducing-mysql-innovation-and-long-term-support-lts-versions/
-# LTS
 SLOT="$(ver_cut 1-2)"
 # 64-bit only since 8.2.0
 # https://github.com/mysql/mysql-server/commit/07bf1bdb620daf62c02ead0d5439d65c7c34aa00
 # -arm -hppa -mips -ppc -x86 -x86-linux
 # -ppc for bug #761715
-#KEYWORDS="~amd64 -arm ~arm64 -hppa ~ia64 -mips -ppc ~ppc64 ~riscv ~s390 ~sparc -x86 ~amd64-linux -x86-linux ~x64-macos ~x64-solaris"
-IUSE="cjk cracklib debug jemalloc numa +perl profiling router selinux +server tcmalloc test test-install"
+#KEYWORDS="~amd64 -arm -hppa -mips -ppc ~riscv ~s390 ~sparc -x86 ~amd64-linux -x86-linux ~x64-macos ~x64-solaris"
+IUSE="cjk cracklib debug doc jemalloc numa +perl profiling router selinux +server tcmalloc test test-install"
 RESTRICT="!test? ( test )"
 
 REQUIRED_USE="
@@ -42,44 +53,36 @@ REQUIRED_USE="
 	router? ( server )
 	tcmalloc? ( server )
 	test? ( server )
+	test-install? ( server )
 "
 
 # Be warned, *DEPEND are version-dependent
 # These are used for both runtime and compiletime
 COMMON_DEPEND="
-	>=app-arch/lz4-1.9.4:=
 	>=app-arch/zstd-1.2.0:=
 	>=dev-libs/openssl-1.0.0:=
-	sys-apps/tcp-wrappers:=
 	sys-libs/ncurses:=
 	>=sys-libs/zlib-1.2.13:=
 	server? (
+		>=app-arch/lz4-1.9.4:=
 		dev-libs/icu:=
-		dev-libs/libevent:=[ssl,threads(+)]
 		net-libs/libtirpc:=
-		cjk? ( app-text/mecab:= )
+		sys-apps/tcp-wrappers
+		cjk? ( app-text/mecab )
 		jemalloc? ( dev-libs/jemalloc:= )
 		kernel_linux? (
-			dev-libs/libaio:=
-			sys-process/procps:=
+			dev-libs/libaio
+			sys-process/procps
 		)
 		numa? ( sys-process/numactl )
 		tcmalloc? ( dev-util/google-perftools:= )
 	)
 "
-# https://bugs.gentoo.org/623962
-# tests set TZ for tests leading to failures on musl if sys-libs/timezone-data isnt installed
 DEPEND="
 	${COMMON_DEPEND}
-	app-alternatives/yacc
+	>=app-arch/lz4-1.9.4:=
+	virtual/libudev
 	server? ( net-libs/rpcsvc-proto )
-	test? (
-		acct-group/mysql acct-user/mysql
-		app-arch/zip
-		dev-perl/Expect
-		dev-perl/JSON
-		sys-libs/timezone-data
-	)
 "
 RDEPEND="
 	${COMMON_DEPEND}
@@ -92,11 +95,13 @@ RDEPEND="
 	!dev-db/mysql:8.0
 	selinux? ( sec-policy/selinux-mysql )
 	!prefix? (
-		acct-group/mysql acct-user/mysql
+		acct-group/mysql
+		acct-user/mysql
 		dev-db/mysql-init-scripts
 	)
 	test-install? (
 		app-arch/zip
+		dev-lang/perl
 		dev-perl/Expect
 		dev-perl/JSON
 		sys-libs/timezone-data
@@ -105,10 +110,35 @@ RDEPEND="
 # For other stuff to bring us in
 # dev-perl/DBD-mysql is needed by some scripts installed by MySQL
 PDEPEND="perl? ( >=dev-perl/DBD-mysql-2.9004 )"
-BDEPEND="verify-sig? ( ~sec-keys/openpgp-keys-mysql-20231023 )"
+
+# https://bugs.gentoo.org/623962
+# tests set TZ for tests leading to failures on musl if sys-libs/timezone-data isnt installed
+BDEPEND="
+	app-alternatives/yacc
+	virtual/pkgconfig
+	doc? (
+		>=app-text/doxygen-1.9.2[dot]
+		media-gfx/plantuml
+		virtual/jre
+	)
+	test? (
+		acct-group/mysql
+		acct-user/mysql
+		app-arch/zip
+		dev-lang/perl
+		dev-perl/Expect
+		dev-perl/JSON
+		sys-libs/timezone-data
+	)
+	verify-sig? ( ~sec-keys/openpgp-keys-mysql-20231023 )
+"
 
 PATCHES=(
 	"${WORKDIR}"/mysql-patches
+	# Needed due to bundled abseil-cpp-20230802, this fix is included in abseil-cpp-20240722
+	"${FILESDIR}"/mysql-8.0.37-fix-bundled-abseil.patch
+	# Needed due to bundled abseil-cpp-20230802, this fix is in no release as of 2025-01-09
+	"${FILESDIR}"/mysql-8.0.40-fix-bundled-abseil-gcc15.patch
 )
 
 mysql_init_vars() {
@@ -137,11 +167,6 @@ pkg_pretend() {
 		if ! has userpriv ${FEATURES} ; then
 			die "Testing with FEATURES=-userpriv is no longer supported by upstream. Tests MUST be run as non-root."
 		fi
-
-		local aio_max_nr=$(sysctl -n fs.aio-max-nr 2>/dev/null)
-		if [[ -z "${aio_max_nr}" || ${aio_max_nr} -lt 250000 ]] ; then
-			die "FEATURES=test requires fs.aio-max-nr=250000 at minimum!"
-		fi
 	fi
 
 	if use kernel_linux && use numa ; then
@@ -149,12 +174,27 @@ pkg_pretend() {
 
 		local CONFIG_CHECK="~NUMA"
 
-		local WARNING_NUMA="This package expects NUMA support in kernel which this system does not have at the moment;"
-		WARNING_NUMA+=" Either expect runtime errors, enable NUMA support in kernel or rebuild the package without NUMA support"
+		local WARNING_NUMA="\
+This package expects NUMA support in kernel which this system does not have at the moment; \
+Either expect runtime errors, enable NUMA support in kernel or rebuild the package without NUMA support"
 
 		check_extra_config
 	fi
 	check-reqs_pkg_pretend
+}
+
+pkg_setup() {
+	CHECKREQS_DISK_BUILD="3G"
+	if has test ${FEATURES} ; then
+		# <parona@protonmail.com> i've seen it take 17GB on musl with FEATURES="test" USE="perl server"
+		CHECKREQS_DISK_BUILD="18G"
+
+		local aio_max_nr=$(sysctl -n fs.aio-max-nr 2>/dev/null)
+		if [[ -z "${aio_max_nr}" || ${aio_max_nr} -lt 250000 ]] ; then
+			die "FEATURES=test requires fs.aio-max-nr=250000 at minimum!"
+		fi
+	fi
+	check-reqs_pkg_setup
 }
 
 src_unpack() {
@@ -178,12 +218,6 @@ src_prepare() {
 		echo > "${S}/support-files/SELinux/CMakeLists.txt" || die
 	fi
 
-	# Remove man pages for client-lib tools we don't install
-	rm \
-		man/my_print_defaults.1 \
-		man/perror.1 \
-		|| die
-
 	cmake_src_prepare
 }
 
@@ -191,13 +225,19 @@ src_configure() {
 	# Bug #114895, bug #110149
 	filter-flags "-O" "-O[01]"
 
-	if has sandbox ${FEATURES} ; then
-		# bug #823656
-		append-cppflags -DGTEST_NO_DEATH_TEST=1
-	fi
+	# Debug build type used extensively to add preprocessor definitions
+	use debug && CMAKE_BUILD_TYPE="Debug"
+
+	use doc && HTML_DOCS=( "${BUILD_DIR}/doxygen/html" )
 
 	local mycmakeargs=(
-		-Wno-dev # less irrelevant noise
+		-Wno-dev # less noise
+
+		# Building everything as shared breaks upstream assumptions.
+		# For example bundled abseil is excpected to be static and is therefore not installed.
+		# Breaking the assumption leading the mysql to being built against bundled abseil,
+		# but then dynamically linked against system abseil once installed.
+		-DBUILD_SHARED_LIBS=OFF
 
 		-DCOMPILATION_COMMENT="Gentoo Linux ${PF}"
 
@@ -207,6 +247,7 @@ src_configure() {
 		-DINSTALL_INCLUDEDIR=include/mysql
 		-DINSTALL_INFODIR=share/info
 		-DINSTALL_LIBDIR=$(get_libdir)
+		-DINSTALL_PRIV_LIBDIR=$(get_libdir)/mysql/private
 		-DINSTALL_MANDIR=share/man
 		-DINSTALL_MYSQLDATADIR="${EPREFIX}/var/lib/mysql"
 		-DINSTALL_MYSQLSHAREDIR=share/mysql
@@ -219,58 +260,87 @@ src_configure() {
 		-DROUTER_INSTALL_LOGROTATEDIR="${EPREFIX}/etc/logrotate.d"
 		-DSYSCONFDIR="${EPREFIX}/etc/mysql"
 
-		# Code now requires C++20 due to https://github.com/mysql/mysql-server/commit/de64173e41697df51d41728beb5e4e43e4d51850
+		# Requires C++20
+		# https://github.com/mysql/mysql-server/commit/de64173e41697df51d41728beb5e4e43e4d51850
 		-DCMAKE_CXX_STANDARD=20
 
 		-DCMAKE_POSITION_INDEPENDENT_CODE=ON
 		-DMYSQL_MAINTAINER_MODE=OFF # Enables -Werror
 		-DWITH_DEFAULT_COMPILER_OPTIONS=OFF # Don't mangle flags
 
+		-DWITH_DEBUG=$(usex debug ON OFF)
+		# debug hack wrt #497532
+		-DCMAKE_C_FLAGS_RELWITHDEBINFO="$(usev !debug '-DNDEBUG' )"
+		-DCMAKE_CXX_FLAGS_RELWITHDEBINFO="$(usev !debug '-DNDEBUG' )"
+
+		# Causes issues on musl bug #922808
+		-DWITH_BUILD_ID=OFF
+
 		-DENABLED_LOCAL_INFILE=ON # Should LOAD DATA LOCAL be enabled by default?
 
+		# These are installed via dev-db/mysql-connector-c
 		-DWITHOUT_CLIENTLIBS=YES
 
-		-DWITH_ROUTER=$(usex router ON OFF)
+		-DENABLED_PROFILING=$(usex profiling)
+		-DWITHOUT_SERVER=$(usex server OFF ON)
 		-DWITH_LIBWRAP=ON
+		-DWITH_ROUTER=$(usex router ON OFF)
 
+		# Installs support files that would conflict with dev-db/mysql-init-scripts
+		-DWITH_SYSTEMD=0
+
+		# Webauthn plugins not available in community build
+		# https://dev.mysql.com/doc/refman/8.4/en/webauthn-pluggable-authentication.html
+		# Which is why FIDO, KERBEROS and LDAP are disabled.
+
+		# Valid options differ.
+		# With some none is disabled, while with others empty is disabled.
 		-DWITH_CURL=system
 		-DWITH_EDITLINE=bundled # Using bundled editline to get CTRL+C working
-		-DWITH_ICU=system
+		-DWITH_FIDO=none
+		-DWITH_ICU=$(usex server system none)
+		-DWITH_JEMALLOC=$(usex jemalloc)
+		-WITH_KERBEROS=none
+		-WITH_LDAP=none
 		-DWITH_LZ4=system
+		-DWITH_NUMA=$(usex numa ON OFF)
+		-DWITH_PROTOBUF=$(usex server bundled none) # Cannot handle protobuf >23 bug #912797
 		# Our dev-libs/rapidjson doesn't carry necessary fixes for std::regex
 		# see extra/RAPIDJSON-README
 		-DWITH_RAPIDJSON=bundled
+		-DWITH_SASL=system
 		-DWITH_SSL=system
 		-DWITH_ZLIB=system
 		-DWITH_ZSTD=system
 
 		-DWITH_UNIT_TESTS=$(usex test ON OFF)
-		-DINSTALL_MYSQLTESTDIR=$(usev test-install 'share/mysql/mysql-test')
+		# This is the expected location for upstream RPM's and the script will search for location relative to it.
+		# Other locations will not work.
+		-DINSTALL_MYSQLTESTDIR=$(usex test-install 'share/mysql-test' 0)
 	)
 
-	if use debug; then
-		CMAKE_BUILD_TYPE="Debug"
-		# Debug build type used extensively to add preprocessor definitions
+	if use server ; then
 		mycmakeargs+=(
-			-DWITH_DEBUG=ON
-		)
-	else
-		# debug hack wrt #497532
-		mycmakeargs+=(
-			-DCMAKE_C_FLAGS_RELWITHDEBINFO="$(usev !debug '-DNDEBUG' )"
-			-DCMAKE_CXX_FLAGS_RELWITHDEBINFO="$(usev !debug '-DNDEBUG' )"
-			-DWITH_DEBUG=OFF
+			-DWITH_EXTRA_CHARSETS=all
+
+			-DWITH_MECAB=$(usex cjk system)
+
+			# Storage engines
+			-DWITH_ARCHIVE_STORAGE_ENGINE=ON
+			-DWITH_BLACKHOLE_STORAGE_ENGINE=ON
+			-DWITH_CSV_STORAGE_ENGINE=ON
+			-DWITH_EXAMPLE_STORAGE_ENGINE=OFF
+			-DWITH_FEDERATED_STORAGE_ENGINE=ON
+			-DWITH_HEAP_STORAGE_ENGINE=ON
+			-DWITH_INNOBASE_STORAGE_ENGINE=ON
+			-DWITH_MYISAMMRG_STORAGE_ENGINE=ON
+			-DWITH_MYISAM_STORAGE_ENGINE=ON
 		)
 	fi
 
-	if is-flagq -fno-lto ; then
-		einfo "LTO disabled via {C,CXX,F,FC}FLAGS"
-		mycmakeargs+=( -DWITH_LTO=OFF )
-	elif is-flagq -flto ; then
-		einfo "LTO forced via {C,CXX,F,FC}FLAGS"
+	if tc-is-lto ; then
 		mycmakeargs+=( -DWITH_LTO=ON )
 	else
-		# Disable automagic
 		mycmakeargs+=( -DWITH_LTO=OFF )
 	fi
 
@@ -291,37 +361,33 @@ src_configure() {
 		)
 	fi
 
-	if use server ; then
-		mycmakeargs+=(
-			-DENABLED_PROFILING=$(usex profiling)
-			-DWITH_EXTRA_CHARSETS=all
-
-			-DWITH_JEMALLOC=$(usex jemalloc)
-			-DWITH_MECAB=$(usex cjk system OFF)
-			-DWITH_NUMA=$(usex numa ON OFF)
-
-			-DWITH_LIBEVENT=system
-			-DWITH_PROTOBUF=bundled # Cannot handle protobuf >23 bug #912797
-
-			# Storage engines
-			-DWITH_ARCHIVE_STORAGE_ENGINE=ON
-			-DWITH_BLACKHOLE_STORAGE_ENGINE=ON
-			-DWITH_CSV_STORAGE_ENGINE=ON
-			-DWITH_EXAMPLE_STORAGE_ENGINE=OFF
-			-DWITH_FEDERATED_STORAGE_ENGINE=ON
-			-DWITH_HEAP_STORAGE_ENGINE=ON
-			-DWITH_INNOBASE_STORAGE_ENGINE=ON
-			-DWITH_MYISAMMRG_STORAGE_ENGINE=ON
-			-DWITH_MYISAM_STORAGE_ENGINE=ON
-		)
-	else
-		mycmakeargs+=(
-			-DWITHOUT_SERVER=ON
-			-DWITH_SYSTEMD=OFF
-		)
-	fi
-
 	cmake_src_configure
+}
+
+src_compile() {
+	cmake_src_compile
+
+	if use doc; then
+		ebegin "Updating Doxygen config"
+		doxygen -u "${BUILD_DIR}"/Doxyfile
+		eend $? || die "Updating Doxygen config failed"
+
+		ebegin "Generating HTML documentation with Doxygen"
+
+		#https://www.doxygen.nl/manual/config.html#cfg_num_proc_threads
+		local -x NUM_PROC_THREADS=$(makeopts_jobs)
+		local -x DOT_NUM_THREADS=$(makeopts_jobs)
+
+		local -x PLANTUML_JAR_PATH="${BROOT}/${EPREFIX}/usr/share/plantuml/lib/plantuml.jar"
+
+		# Doxygen runs the jar file directly meaning the java-config wrapper gets ignored.
+		# This wil cause sandbox violation as user.home is set to /var/lib/portage/home.
+		local -x _JAVA_OPTIONS="-Duser.home=${HOME}"
+
+		# Do not use the doxygen cmake target, its a horrible cmake hack.
+		doxygen "${BUILD_DIR}"/Doxyfile
+		eend $? || die "Generating HTML documentation with Doxygen failed"
+	fi
 }
 
 # Official test instructions:
@@ -369,7 +435,7 @@ src_test() {
 	esac
 
 	# Documentation for mysql-test-run (MTR_* variables and so on)
-	# https://dev.mysql.com/doc/dev/mysql-server/8.4.0/PAGE_MYSQL_CLIENT_TEST.html
+	# https://dev.mysql.com/doc/dev/mysql-server/latest/PAGE_MYSQL_TEST_RUN_PL.html
 
 	# Ensure that parallel runs don't die
 	local -x MTR_BUILD_THREAD="$((${RANDOM} % 100))"
@@ -380,10 +446,11 @@ src_test() {
 	# Disable unit tests, run them separately with eclass defaults
 	local -x MTR_UNIT_TESTS=0
 
-	# Increase test suite timeout
+	# Increase test timeouts
 	# bug #923649
 	# https://github.com/gentoo/gentoo/pull/35002#issuecomment-1926101030
 	local -x MTR_SUITE_TIMEOUT=$(( 60 * 40 )) # minutes
+	local -x MTR_TESTCASE_TIMEOUT=60 # minutes
 
 	# Include config for tests, this is for scenarios where mysql wasn't installed previously or if the
 	# configuration was from an older version.
@@ -391,7 +458,7 @@ src_test() {
 		-e "s/@GENTOO_PORTAGE_EPREFIX@/${EPREFIX}/" \
 		-e "s/@DATADIR@/${MY_DATADIR}/" \
 		"${FILESDIR}"/my.cnf-8.4.distro-server > "${T}"/my.cnf || die
-	local -X PATH_CONFIG_FILE="${T}/my.cnf"
+	local -x PATH_CONFIG_FILE="${T}/my.cnf"
 
 	# Create directories because mysqladmin might run out of order
 	mkdir -p "${T}"/var-tests{,/log} || die
@@ -403,7 +470,6 @@ src_test() {
 
 	local -a disabled_tests=(
 		"auth_sec.atomic_rename_user;103512;Depends on user running test"
-		"auth_sec.keyring_file_data_qa;0;Won't work with user privileges"
 		"auth_sec.openssl_without_fips;94718;Known test failure"
 
 		"gis.geometry_class_attri_prop;5452;Known rounding error with latest AMD processors (PS)"
@@ -443,6 +509,8 @@ src_test() {
 		"rpl_gtid.rpl_multi_source_mtr_includes;97844;Unstable test"
 		"main.partition_datatype;0;Unstable test"
 		"rpl.rpl_replication_observers_example_plugin_ongoing_transaction;0;Unstable test"
+		"main.ps;0;Unstable test"
+		"innodb.dblwr_encrypt_rowcomp;0;Unstable test"
 
 		"sys_vars.myisam_data_pointer_size_func;87935;Test will fail on slow hardware"
 
@@ -453,6 +521,8 @@ src_test() {
 		"innodb.sdi;0;Skip this test when MySQL has been built with other storage engines than InnoDB"
 
 		"rpl.rpl_json;0;Known failure - no upstream bug yet"
+
+		"sys_vars.build_id_basic;0;build_id disabled in build"
 	)
 
 	local -a CMAKE_SKIP_TESTS=(
@@ -483,6 +553,13 @@ src_test() {
 		"pfs"
 	)
 
+	if ! use profiling; then
+		disabled_tests+=(
+			"main.mysql_client_test;0;Requires profiling support"
+			"main.mysqld--help-notwin;0;Result output expects profiling support"
+		)
+	fi
+
 	if use debug; then
 		disabled_tests+=(
 			"innodb.dblwr_unencrypt;0;Known test failure -- no upstream bug yet"
@@ -490,7 +567,8 @@ src_test() {
 			"innodb.log_writer_extra_margin;0;Known test failure -- no upstream bug yet"
 		)
 		CMAKE_SKIP_TESTS+=(
-			# binary_log::transaction::compression::Payload_event_buffer_istream::~Payload_event_buffer_istream(): Assertion `!m_outstanding_error' failed.
+			# binary_log::transaction::compression::Payload_event_buffer_istream::~Payload_event_buffer_istream():
+			# Assertion `!m_outstanding_error' failed.
 			"payload_event_buffer_istream"
 		)
 	fi
@@ -514,7 +592,10 @@ src_test() {
 		--force --force-restart \
 		--vardir="${T}/var-tests" --tmpdir="${T}/tmp-tests" \
 		--skip-test=tokudb --skip-test-list="${T}/disabled.def" \
-		--retry-failure=0 --max-test-fail=0
+		--max-test-fail=0 \
+		--retry=3 --retry-failure=2 \
+		--report-unstable-tests \
+		--report-features
 	retstatus_tests=$?
 
 	popd &>/dev/null || die
@@ -523,17 +604,29 @@ src_test() {
 	pkill -9 -f "${S}/ndb" 2>/dev/null
 	pkill -9 -f "${S}/sql" 2>/dev/null
 
-	local failures=""
-	[[ ${retstatus_tests} -eq 0 ]] || failures="${failures} tests"
+	# bug #823656
+	nonfatal cmake_src_test --test-command "--gtest_death_test_style=threadsafe"
+	retstatus_unittests=$?
 
-	cmake_src_test
-
-	[[ -z "${failures}" ]] || die "Test failures: ${failures}"
-	einfo "Tests successfully completed"
+	if [[ ${retstatus_tests} -eq 0 ]] && [[ ${retstatus_unittests} -eq 0 ]]; then
+		einfo "Tests successfully completed."
+	else
+		eerror "Tests failed. When you file a bug, please attach the follwing items:"
+		if [[ ${retstatus_tests} -ne 0 ]]; then
+			eerror "The file that is created with this command:"
+			eerror "\t'find ${T}/var-tests -name '*.log' | tar -caf mysql-test-logs.tar.xz --files-from -'"
+		fi
+		if [[ ${retstatus_unittests} -ne 0 ]]; then
+			eerror "The following file:"
+			eerror "\t${BUILD_DIR}/Testing/Temporary/LastTest.log"
+		fi
+		die "Tests failed."
+	fi
 }
 
 src_install() {
 	cmake_src_install
+	einstalldocs
 
 	# Make sure the vars are correctly initialized
 	mysql_init_vars
@@ -547,13 +640,6 @@ src_install() {
 	# INSTALL_LAYOUT=STANDALONE causes cmake to create a /usr/data dir
 	if [[ -d "${ED}/usr/data" ]] ; then
 		rm -rf "${ED}/usr/data" || die
-	fi
-
-	# Unless they explicitly specific USE=test, then do not install the
-	# testsuite. It DOES have a use to be installed, esp. when you want to do a
-	# validation of your database configuration after tuning it.
-	if ! use test ; then
-		rm -rf "${ED}/${MY_SHAREDSTATEDIR#${EPREFIX}}/mysql-test"
 	fi
 
 	# Configuration stuff
@@ -583,7 +669,7 @@ src_install() {
 	newins "${TMPDIR}/my.cnf.ok" 50-distro-server.cnf
 
 	# Remove mytop if perl is not selected
-	if [[ -e "${ED}/usr/bin/mytop" ]] && ! use perl; then
+	if [[ -e "${ED}/usr/bin/mytop" ]] && ! use perl ; then
 		rm -f "${ED}/usr/bin/mytop" || die
 	fi
 
@@ -595,9 +681,6 @@ src_install() {
 			"${ED}/usr/var" \
 			|| die
 	fi
-
-	# Kill old libmysqclient_r symlinks if they exist. Time to fix what depends on them.
-	#find "${D}" -name 'libmysqlclient_r.*' -type l -delete || die
 }
 
 pkg_postinst() {
@@ -666,7 +749,7 @@ pkg_config() {
 		local n_X
 		let n_X=${#template}-${#template_wo_X}
 		if [[ ${n_X} -lt 3 ]] ; then
-			echo "${FUNCNAME[0]}: too few X's in template ‘${template}’" >&2
+			echo "${FUNCNAME[0]}: too few X's in template '${template}'" >&2
 			return
 		fi
 
@@ -684,8 +767,7 @@ pkg_config() {
 				fi
 			done < <(echo -n "${template}")
 
-			if [[ ! -f "${tmpfile}" ]]
-			then
+			if [[ ! -f "${tmpfile}" ]] ; then
 				echo "${tmpfile}"
 				return
 			fi
@@ -939,14 +1021,16 @@ pkg_config() {
 	if [[ -f "${config_file}" ]] ; then
 		config_files+=( "${config_file}" )
 	else
-		ewarn "Client configuration '${config_file}' not found; Skipping configuration of default authentication plugin for client ..."
+		ewarn "Client configuration '${config_file}' not found."
+		ewarn "Skipping configuration of default authentication plugin for client ..."
 	fi
 
 	config_file="${EROOT}/etc/mysql/mysql.d/50-distro-server.cnf"
 	if [[ -f "${config_file}" ]] ; then
 		config_files+=( "${config_file}" )
 	else
-		ewarn "Server configuration '${config_file}' not found; Skipping configuration of default authentication plugin for mysqld ..."
+		ewarn "Server configuration '${config_file}' not found."
+		ewarn "Skipping configuration of default authentication plugin for mysqld ..."
 	fi
 
 	if [[ ${#config_files[@]} -gt 0 ]] ; then
@@ -1020,7 +1104,8 @@ pkg_config() {
 			MYSQL_ROOT_PASSWORD="$(_getoptval "${tmp_mysqld_password_source}" password)"
 			if [[ -n "${MYSQL_ROOT_PASSWORD}" ]] ; then
 				if [[ ${MYSQL_ROOT_PASSWORD} == *$'\n'* ]] ; then
-					ewarn "Ignoring password from '${tmp_mysqld_password_source}' section due to newline character (do you have multiple password options set?)!"
+					ewarn "Ignoring password from '${tmp_mysqld_password_source}' section due to newline character!"
+					ewarn "(Do you have multiple password options set?)"
 					MYSQL_ROOT_PASSWORD=
 					continue
 				fi
