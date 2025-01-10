@@ -8,7 +8,6 @@ app-misc/parona-scripts:perl - Install perl scripts
 dev-build/cargo-make:openssl - Enable TLS support with dev-libs/openssl
 dev-build/cargo-make:rustls - Enable TLS support with rustls
 dev-db/mysql:cjk - Add CJK support for InnoDB fulltext search using app-text/mecab
-dev-db/mysql:latin1 - Use LATIN1 encoding instead of UTF8
 dev-db/mysql:numa - Enable NUMA support using sys-process/numactl (NUMA kernel support is also required)
 dev-db/mysql:profiling - Add support for statement profiling (requires USE=community).
 dev-db/mysql:router - Build the MySQL router program
