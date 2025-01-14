@@ -1,8 +1,8 @@
 DEFINED_PHASES=install
 DESCRIPTION=OpenPGP keys used to sign MySQL releases
 EAPI=8
-HOMEPAGE=https://dev.mysql.com/doc/refman/8.2/en/checking-gpg-signature.html
+HOMEPAGE=https://dev.mysql.com/doc/refman/8.4/en/checking-gpg-signature.html
 LICENSE=public-domain
 SLOT=0
 SRC_URI=https://repo.mysql.com/RPM-GPG-KEY-mysql-2023 -> openpgp-keys-mysql-20231023.asc
-_md5_=583ebd47dd273ec085fa3094ad1e0fcf
+_md5_=da678fc218ccda811d3cfc09fbdeccd1
