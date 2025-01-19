@@ -432,12 +432,12 @@ SLOT="0"
 KEYWORDS="~amd64"
 
 RDEPEND="
+	app-arch/bzip2
 	app-arch/xz-utils
 	app-arch/zstd:=
 	dev-libs/openssl:=
 "
 DEPEND="
-	app-arch/bzip2
 	${RDEPEND}
 "
 BDEPEND="
@@ -456,12 +456,23 @@ src_prepare() {
 		-e '/^\[tasks.install-linux\]/,/^\[/ { /dependencies = \["build"\]/d }' \
 		-e "s|target/release|$(cargo_target_dir)|" \
 		Makefile.toml || die
+
+	# https://wiki.gentoo.org/wiki/Project:Rust/sys_crates
+	mkdir "${T}/pkg-config" || die
+	export PKG_CONFIG_PATH=${T}/pkg-config${PKG_CONFIG_PATH+:${PKG_CONFIG_PATH}}
+	cat >> "${T}/pkg-config/bzip2.pc" <<-EOF || die
+		Name: bzip2
+		Version: 9999
+		Description:
+		Libs: -lbz2
+	EOF
+
 }
 
 src_configure() {
 	makers set-version ${PV} || die
 
-	# no easy way to unvendor blake3 and bzip2
+	# no easy way to unvendor blake3
 
 	export PKG_CONFIG_ALLOW_CROSS=1
 	export ZSTD_SYS_USE_PKG_CONFIG=1
