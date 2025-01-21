@@ -1,4 +1,4 @@
-# Copyright 2023-2024 Gentoo Authors
+# Copyright 2023-2025 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=8
@@ -12,38 +12,38 @@ avalonia.angle.windows.natives@2.1.22045.20230930
 avalonia.avaloniaedit@11.1.0
 avalonia.buildservices@0.0.28
 avalonia.buildservices@0.0.29
-avalonia.controls.colorpicker@11.2.1
-avalonia.controls.datagrid@11.2.1
-avalonia.controls.treedatagrid@11.0.10
-avalonia.desktop@11.2.1
-avalonia.diagnostics@11.2.1
-avalonia.freedesktop@11.2.1
-avalonia.headless@11.2.1
+avalonia.controls.colorpicker@11.2.2
+avalonia.controls.datagrid@11.2.2
+avalonia.controls.treedatagrid@11.1.0
+avalonia.desktop@11.2.2
+avalonia.diagnostics@11.2.2
+avalonia.freedesktop@11.2.2
+avalonia.headless@11.2.2
 avalonia.labs.panels@11.2.0
-avalonia.native@11.2.1
-avalonia.reactiveui@11.2.1
+avalonia.native@11.2.2
+avalonia.reactiveui@11.2.2
 avalonia.remote.protocol@11.0.0
-avalonia.remote.protocol@11.2.1
+avalonia.remote.protocol@11.2.2
 avalonia.skia@11.0.0
 avalonia.skia@11.2.0
-avalonia.skia@11.2.1
-avalonia.svg.skia@11.2.0
-avalonia.themes.fluent@11.2.1
-avalonia.themes.simple@11.2.1
-avalonia.win32@11.2.1
-avalonia.x11@11.2.1
+avalonia.skia@11.2.2
+avalonia.svg.skia@11.2.0.2
+avalonia.themes.fluent@11.2.2
+avalonia.themes.simple@11.2.2
+avalonia.win32@11.2.2
+avalonia.x11@11.2.2
 avalonia@11.0.0
 avalonia@11.1.3
 avalonia@11.2.0
-avalonia@11.2.1
+avalonia@11.2.2
 avaloniaedit.textmate@11.1.0
-bannerlord.launchermanager.localization@1.0.138
-bannerlord.launchermanager.models@1.0.138
-bannerlord.launchermanager@1.0.138
+bannerlord.launchermanager.localization@1.0.140
+bannerlord.launchermanager.models@1.0.140
+bannerlord.launchermanager@1.0.140
 bannerlord.modulemanager.models@5.0.221
-bannerlord.modulemanager.models@6.0.242
+bannerlord.modulemanager.models@6.0.246
 bannerlord.modulemanager@5.0.225
-bannerlord.modulemanager@6.0.242
+bannerlord.modulemanager@6.0.246
 benchmarkdotnet.annotations@0.14.0
 benchmarkdotnet@0.14.0
 bitfaster.caching@2.5.2
@@ -76,17 +76,17 @@ fomodinstaller.interface@1.2.0
 fomodinstaller.scripting.xmlscript@1.0.0
 fomodinstaller.scripting@1.0.0
 fomodinstaller.utils@1.0.0
-gamefinder.common@4.3.3
-gamefinder.launcher.heroic@4.3.3
-gamefinder.registryutils@4.3.3
-gamefinder.storehandlers.eadesktop@4.3.3
-gamefinder.storehandlers.egs@4.3.3
-gamefinder.storehandlers.gog@4.3.3
-gamefinder.storehandlers.origin@4.3.3
-gamefinder.storehandlers.steam@4.3.3
-gamefinder.storehandlers.xbox@4.3.3
-gamefinder.wine@4.3.3
-gamefinder@4.3.3
+gamefinder.common@4.4.0
+gamefinder.launcher.heroic@4.4.0
+gamefinder.registryutils@4.4.0
+gamefinder.storehandlers.eadesktop@4.4.0
+gamefinder.storehandlers.egs@4.4.0
+gamefinder.storehandlers.gog@4.4.0
+gamefinder.storehandlers.origin@4.4.0
+gamefinder.storehandlers.steam@4.4.0
+gamefinder.storehandlers.xbox@4.4.0
+gamefinder.wine@4.4.0
+gamefinder@4.4.0
 gee.external.capstone@2.3.0
 githubactionstestlogger@2.4.1
 google.protobuf@3.22.5
@@ -94,14 +94,19 @@ grpc.core.api@2.52.0
 grpc.net.client@2.52.0
 grpc.net.common@2.52.0
 harfbuzzsharp.nativeassets.linux@7.3.0.2
+harfbuzzsharp.nativeassets.linux@7.3.0.3
 harfbuzzsharp.nativeassets.macos@7.3.0.2
+harfbuzzsharp.nativeassets.macos@7.3.0.3
+harfbuzzsharp.nativeassets.webassembly@7.3.0.3
 harfbuzzsharp.nativeassets.webassembly@7.3.0.3-preview.2.2
 harfbuzzsharp.nativeassets.win32@7.3.0.2
+harfbuzzsharp.nativeassets.win32@7.3.0.3
 harfbuzzsharp@7.3.0.2
-hotchocolate.language.syntaxtree@14.2.0-p.7
-hotchocolate.transport.abstractions@14.2.0-p.7
-hotchocolate.transport.http@14.2.0-p.7
-hotchocolate.utilities@14.2.0-p.7
+harfbuzzsharp@7.3.0.3
+hotchocolate.language.syntaxtree@14.3.0
+hotchocolate.transport.abstractions@14.3.0
+hotchocolate.transport.http@14.3.0
+hotchocolate.utilities@14.3.0
 htmlagilitypack@1.11.70
 humanizer.core.af@2.14.1
 humanizer.core.ar@2.14.1
@@ -200,7 +205,7 @@ microsoft.codeanalysis.testing.verifiers.xunit@1.1.2
 microsoft.codeanalysis.workspaces.common@1.0.1
 microsoft.codeanalysis.workspaces.common@3.8.0
 microsoft.codeanalysis.workspaces.common@4.8.0
-microsoft.codecoverage@17.11.1
+microsoft.codecoverage@17.12.0
 microsoft.composition@1.0.27
 microsoft.csharp@4.7.0
 microsoft.diagnostics.netcore.client@0.2.251802
@@ -281,9 +286,10 @@ microsoft.extensions.primitives@9.0.0
 microsoft.extensions.resilience@9.0.0
 microsoft.extensions.telemetry.abstractions@9.0.0
 microsoft.extensions.telemetry@9.0.0
+microsoft.extensions.timeprovider.testing@9.0.0
 microsoft.io.recyclablememorystream@3.0.0
 microsoft.net.http.headers@9.0.0
-microsoft.net.test.sdk@17.11.1
+microsoft.net.test.sdk@17.12.0
 microsoft.netcore.platforms@1.1.0
 microsoft.netcore.platforms@2.0.0
 microsoft.netcore.platforms@2.1.2
@@ -292,8 +298,8 @@ microsoft.netcore.targets@1.1.0
 microsoft.sourcelink.common@8.0.0
 microsoft.sourcelink.github@8.0.0
 microsoft.testplatform.objectmodel@17.10.0
-microsoft.testplatform.objectmodel@17.11.1
-microsoft.testplatform.testhost@17.11.1
+microsoft.testplatform.objectmodel@17.12.0
+microsoft.testplatform.testhost@17.12.0
 microsoft.visualstudio.composition.netfxattributes@16.1.8
 microsoft.visualstudio.composition@16.1.8
 microsoft.visualstudio.threading.analyzers@17.10.48
@@ -314,6 +320,7 @@ newtonsoft.json@12.0.1
 newtonsoft.json@13.0.1
 newtonsoft.json@13.0.3
 nexusmods.archives.nx@0.6.1
+nexusmods.archives.nx@0.6.3
 nexusmods.hashing.xxhash3.paths@3.0.3
 nexusmods.hashing.xxhash3@3.0.3
 nexusmods.mnemonicdb.abstractions@0.9.97
@@ -355,7 +362,10 @@ polly.ratelimiting@8.4.2
 polly@8.5.0
 projektanker.icons.avalonia.materialdesign@9.4.1
 projektanker.icons.avalonia@9.4.1
+protobuf-net.core@3.2.45
+protobuf-net@3.2.45
 qoisharp@1.0.0
+qrcoder@1.6.0
 r3@1.0.0
 r3@1.2.9
 r3extensions.avalonia@1.2.9
@@ -410,16 +420,21 @@ runtime.unix.system.runtime.extensions@4.3.0
 sha3.net@2.0.0
 sharpziplib@1.4.2
 sharpzstd.interop@1.5.6
-shimskiasharp@2.0.0.2
+shimskiasharp@2.0.0.4
 simpleinfoname@3.0.1
 skiasharp.harfbuzz@2.88.6
 skiasharp.harfbuzz@2.88.8
 skiasharp.nativeassets.linux@2.88.8
+skiasharp.nativeassets.linux@2.88.9
 skiasharp.nativeassets.macos@2.88.8
+skiasharp.nativeassets.macos@2.88.9
 skiasharp.nativeassets.webassembly@2.88.8
+skiasharp.nativeassets.webassembly@2.88.9
 skiasharp.nativeassets.win32@2.88.8
+skiasharp.nativeassets.win32@2.88.9
 skiasharp@2.88.6
 skiasharp@2.88.8
+skiasharp@2.88.9
 spectre.console.cli@0.49.1
 spectre.console.testing@0.49.1
 spectre.console@0.49.1
@@ -427,14 +442,15 @@ splat.microsoft.extensions.logging@15.2.22
 splat@14.8.12
 splat@15.1.1
 splat@15.2.22
-strawberryshake.core@14.2.0-p.7
-strawberryshake.resources@14.2.0-p.7
-strawberryshake.server@14.2.0-p.7
-strawberryshake.transport.http@14.2.0-p.7
-strawberryshake.transport.websockets@14.2.0-p.7
-svg.custom@2.0.0.2
-svg.model@2.0.0.2
-svg.skia@2.0.0.2
+steamkit2@3.0.0
+strawberryshake.core@14.3.0
+strawberryshake.resources@14.3.0
+strawberryshake.server@14.3.0
+strawberryshake.transport.http@14.3.0
+strawberryshake.transport.websockets@14.3.0
+svg.custom@2.0.0.4
+svg.model@2.0.0.4
+svg.skia@2.0.0.4
 system.appcontext@4.3.0
 system.buffers@4.3.0
 system.buffers@4.5.1
@@ -637,22 +653,25 @@ xunit.runner.visualstudio@2.8.2
 xunit.skippablefact@1.4.13
 xunit@2.9.2
 zstdsharp.port@0.8.2
+zstring@2.6.0
 "
 
-SMAPI_COMMIT="ae4c42648356b6ee5c769397e3a2048b22bfd80b"
-TESTDB_LFS_COMMIT="9a590db37705d191f53665ed312c7485edc375d7"
-
 inherit desktop dotnet-pkg virtualx xdg
-
-MY_PN="NexusMods.App"
-MY_PV="${PV/_/-}" # nuget compatible version
-MY_P="${MY_PN}-${MY_PV}"
 
 DESCRIPTION="Nexus Mods App, a mod installer, creator and manager for all your popular games"
 HOMEPAGE="
 	https://www.nexusmods.com/
 	https://github.com/Nexus-Mods/NexusMods.App/
 "
+
+MY_PN="NexusMods.App"
+MY_PV="${PV/_/-}" # nuget compatible version
+MY_P="${MY_PN}-${MY_PV}"
+
+SMAPI_COMMIT="ae4c42648356b6ee5c769397e3a2048b22bfd80b"
+TESTDB_LFS_COMMIT="9a590db37705d191f53665ed312c7485edc375d7"
+DOCS_THEME_COMMIT="fe4e8b1b26d2c2917b404b0b091bfa31f135e337"
+
 SRC_URI="
 	https://github.com/Nexus-Mods/NexusMods.App/archive/refs/tags/v${MY_PV}.tar.gz
 		-> ${MY_P}.tar.gz
@@ -679,13 +698,13 @@ COMMON_DEPEND="
 RDEPEND="
 	${COMMON_DEPEND}
 	app-arch/7zip
+	dev-util/desktop-file-utils
 	media-libs/fontconfig
+	x11-misc/xdg-utils
 "
 DEPEND="${COMMON_DEPEND}"
 BDEPEND="
-	test? (
-		app-arch/unzip
-	)
+	test? ( app-arch/unzip )
 "
 
 DOTNET_PKG_PROJECTS=( "${S}/src/NexusMods.App/NexusMods.App.csproj" )
@@ -700,7 +719,7 @@ DOTNET_PKG_TEST_EXTRA_ARGS=(
 )
 
 PATCHES=(
-	"${FILESDIR}/nexusmodsapp-0.7.0-update-fully-to-dotnet9.patch"
+	"${FILESDIR}/nexusmodsapp-0.7.2-update-fully-to-dotnet9.patch"
 )
 
 src_unpack() {
@@ -721,11 +740,6 @@ src_prepare() {
 	fi
 
 	sed -i -e 's/${INSTALL_EXEC}/NexusMods.App/' src/NexusMods.App/com.nexusmods.app.desktop || die
-
-	# Requires networking
-	sed -i \
-		-e '/Test_LoadAndCache_\(RemoteImage\|ImageStoredFile\)/i    [Trait("RequiresNetworking", "True")]' \
-		tests/NexusMods.UI.Tests/ImageCacheTests.cs || die
 
 	if ! use debug; then
 		# xunit doesnt support conditional unit tests like this
@@ -753,6 +767,8 @@ src_install() {
 
 	newicon Nexus-Icon.png com.nexusmods.app.png
 	domenu src/NexusMods.App/com.nexusmods.app.desktop
+
+	einstalldocs
 }
 
 pkg_postinst() {
