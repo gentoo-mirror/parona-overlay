@@ -1,0 +1,21 @@
+diff --git a/tests-ng/tests_launcher.py b/tests-ng/tests_launcher.py
+index c208794..0afda69 100755
+--- a/tests-ng/tests_launcher.py
++++ b/tests-ng/tests_launcher.py
+@@ -107,11 +107,10 @@ def run_tests(max_jobs=None, stop_on_first_err=True, with_spinner=True):
+             if not ret:
+                 failed += 1
+                 print()
+-                if stop_on_first_err:
+-                    if log_out:
+-                        print(log_out)
+-                    if log_err:
+-                        print(log_err)
++                if log_out:
++                    print(log_out)
++                if log_err:
++                    print(log_err)
+                 print(f'test \"{name}\" failed ({ret}): {reason}')
+                 if stop_on_first_err:
+                     ex.shutdown(wait=False)
+
