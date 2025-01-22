@@ -1,6 +1,6 @@
 acct-group/vikunja 1: System group: vikunja
 acct-user/vikunja 1: Dedicated user for vikunja
-app-admin/dotdrop 1.14.2: Save your dotfiles once, deploy them everywhere
+app-admin/dotdrop 1.14.2 1.15.0: Save your dotfiles once, deploy them everywhere
 app-arch/gztool 1.8.0: GZIP files indexer, compressor and data retriever.
 app-containers/anbox-modules 20240526-r1: Anbox kernel modules (ashmem and binder) fork
 app-containers/waydroid 1.4.2-r4: Container-based approach to boot a full Android system
@@ -14,7 +14,7 @@ app-misc/spicetify-cli 2.38.7: Commandline tool to customize Spotify client.
 dev-build/cargo-make 0.37.23 0.37.24: Rust task runner and build tool
 dev-cpp/args 6.4.6: A simple header-only C++ argument parser library
 dev-cpp/hjson-cpp 2.4.1 2.5: Hjson for C++
-dev-cpp/tinygltf 2.9.3 2.9.4: Header only C++11 tiny glTF 2.0 library
+dev-cpp/tinygltf 2.9.3 2.9.4 2.9.5: Header only C++11 tiny glTF 2.0 library
 dev-cpp/trompeloeil 49: Header only C++14 mocking framework
 dev-db/mysql 8.4.3: Fast, multi-threaded, multi-user SQL database server
 dev-libs/libgbinder 1.1.41 1.1.42: GLib-style interface to binder
@@ -47,6 +47,7 @@ dev-perl/Test-Synopsis-Expectation 0.12: Test that SYNOPSIS code produces expect
 dev-perl/match-simple 0.012: simplified clone of smartmatch operator
 dev-python/asyncpg 0.30.0: A fast PostgreSQL Database Client Library for Python/asyncio.
 dev-python/databases 0.9.0: Async database support for Python.
+dev-python/docopt-ng 0.9.0: Humane command line arguments parser.
 dev-python/fastapi 0.115.6-r1: FastAPI framework, high performance, easy to learn, ready for production
 dev-python/gbinder 1.1.2-r1: Python bindings for libgbinder
 dev-python/inputs 0.5: Cross-platform Python support for keyboards, mice and gamepads.
