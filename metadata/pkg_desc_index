@@ -29,12 +29,13 @@ dev-perl/ColorThemes-Standard 0.003: A standard collection of generic color them
 dev-perl/Config-Model 2.155: A framework to validate, migrate and edit configuration files
 dev-perl/Config-Model-Tester 4.007: Test framework for Config::Model
 dev-perl/Data-Format-Pretty-JSON 0.12: Pretty-print data structure as JSON
-dev-perl/GitLab-API-v4 0.27: A complete GitLab API v4 client.
+dev-perl/GitLab-API-v4 0.27-r1: A complete GitLab API v4 client.
 dev-perl/Graphics-ColorNamesLite-WWW 1.14.000: WWW color names and equivalent RGB values (lite version)
 dev-perl/HTTP-Tiny-Multipart 0.08: Add post_multipart to HTTP::Tiny
 dev-perl/IO-Prompter 0.005001: Prompt for input, read it, clean it, return it.
 dev-perl/JSON-Color 0.134: Encode to colored JSON
 dev-perl/Log-Any-Adapter-Screen 0.141: Send logs to screen, with colors and some other features
+dev-perl/Log-Any-Adapter-TAP 0.003003: Logger suitable for use with TAP test files
 dev-perl/Module-Load-Util 0.012: Some utility routines related to module loading
 dev-perl/MouseX-StrictConstructor 0.02: Make your object constructors blow up on unknown attributes
 dev-perl/Regexp-Pattern-Perl 0.007: Regexp patterns related to Perl modules
@@ -42,7 +43,7 @@ dev-perl/String-LineNumber 0.01: Give line number to each line of string
 dev-perl/Sub-Infix 0.004: create a fake infix operator
 dev-perl/Term-ANSIColor 5.01: Color screen output using ANSI escape sequences
 dev-perl/Test-Log-Log4perl 0.32: Test log4perl
-dev-perl/Test-RandomResult 0.001: Test that results of a running code look random
+dev-perl/Test-RandomResult 0.001-r1: Test that results of a running code look random
 dev-perl/Test-Synopsis-Expectation 0.12: Test that SYNOPSIS code produces expected results
 dev-perl/match-simple 0.012: simplified clone of smartmatch operator
 dev-python/asyncpg 0.30.0: A fast PostgreSQL Database Client Library for Python/asyncio.
