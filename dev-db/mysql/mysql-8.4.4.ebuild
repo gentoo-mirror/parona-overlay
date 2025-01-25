@@ -117,6 +117,7 @@ BDEPEND="
 	app-alternatives/yacc
 	virtual/pkgconfig
 	doc? (
+		app-office/dia
 		>=app-text/doxygen-1.9.2[dot]
 		media-gfx/plantuml
 		virtual/jre
@@ -231,28 +232,20 @@ src_configure() {
 	use doc && HTML_DOCS=( "${BUILD_DIR}/doxygen/html" )
 
 	local mycmakeargs=(
-		-Wno-dev # less noise
-
-		# Building everything as shared breaks upstream assumptions.
-		# For example bundled abseil is excpected to be static and is therefore not installed.
-		# Breaking the assumption leading the mysql to being built against bundled abseil,
-		# but then dynamically linked against system abseil once installed.
-		-DBUILD_SHARED_LIBS=OFF
-
 		-DCOMPILATION_COMMENT="Gentoo Linux ${PF}"
 
-		-DINSTALL_BINDIR=bin
-		-DINSTALL_DOCDIR=share/doc/${PF}
-		-DINSTALL_DOCREADMEDIR=share/doc/${PF}
-		-DINSTALL_INCLUDEDIR=include/mysql
-		-DINSTALL_INFODIR=share/info
-		-DINSTALL_LIBDIR=$(get_libdir)
-		-DINSTALL_PRIV_LIBDIR=$(get_libdir)/mysql/private
-		-DINSTALL_MANDIR=share/man
+		-DINSTALL_BINDIR="bin"
+		-DINSTALL_DOCDIR="share/doc/${PF}"
+		-DINSTALL_DOCREADMEDIR="share/doc/${PF}"
+		-DINSTALL_INCLUDEDIR="include/mysql"
+		-DINSTALL_INFODIR="share/info"
+		-DINSTALL_LIBDIR="$(get_libdir)"
+		-DINSTALL_PRIV_LIBDIR="$(get_libdir)/mysql/private"
+		-DINSTALL_MANDIR="share/man"
 		-DINSTALL_MYSQLDATADIR="${EPREFIX}/var/lib/mysql"
-		-DINSTALL_MYSQLSHAREDIR=share/mysql
-		-DINSTALL_PLUGINDIR=$(get_libdir)/mysql/plugin
-		-DINSTALL_SBINDIR=sbin
+		-DINSTALL_MYSQLSHAREDIR="share/mysql"
+		-DINSTALL_PLUGINDIR="$(get_libdir)/mysql/plugin"
+		-DINSTALL_SBINDIR="sbin"
 		-DINSTALL_SUPPORTFILESDIR="${EPREFIX}/usr/share/mysql"
 		-DMYSQL_DATADIR="${EPREFIX}/var/lib/mysql"
 		-DMYSQL_UNIX_ADDR="${EPREFIX}/var/run/mysqld/mysqld.sock"
@@ -260,34 +253,10 @@ src_configure() {
 		-DROUTER_INSTALL_LOGROTATEDIR="${EPREFIX}/etc/logrotate.d"
 		-DSYSCONFDIR="${EPREFIX}/etc/mysql"
 
-		# Requires C++20
-		# https://github.com/mysql/mysql-server/commit/de64173e41697df51d41728beb5e4e43e4d51850
-		-DCMAKE_CXX_STANDARD=20
-
-		-DCMAKE_POSITION_INDEPENDENT_CODE=ON
-		-DMYSQL_MAINTAINER_MODE=OFF # Enables -Werror
-		-DWITH_DEFAULT_COMPILER_OPTIONS=OFF # Don't mangle flags
-
-		-DWITH_DEBUG=$(usex debug ON OFF)
-		# debug hack wrt #497532
-		-DCMAKE_C_FLAGS_RELWITHDEBINFO="$(usev !debug '-DNDEBUG' )"
-		-DCMAKE_CXX_FLAGS_RELWITHDEBINFO="$(usev !debug '-DNDEBUG' )"
-
-		# Causes issues on musl bug #922808
-		-DWITH_BUILD_ID=OFF
-
-		-DENABLED_LOCAL_INFILE=ON # Should LOAD DATA LOCAL be enabled by default?
-
-		# These are installed via dev-db/mysql-connector-c
-		-DWITHOUT_CLIENTLIBS=YES
-
 		-DENABLED_PROFILING=$(usex profiling)
-		-DWITHOUT_SERVER=$(usex server OFF ON)
+		-DWITHOUT_SERVER=$(usex !server)
 		-DWITH_LIBWRAP=ON
-		-DWITH_ROUTER=$(usex router ON OFF)
-
-		# Installs support files that would conflict with dev-db/mysql-init-scripts
-		-DWITH_SYSTEMD=0
+		-DWITH_ROUTER=$(usex router)
 
 		# Webauthn plugins not available in community build
 		# https://dev.mysql.com/doc/refman/8.4/en/webauthn-pluggable-authentication.html
@@ -303,7 +272,7 @@ src_configure() {
 		-WITH_KERBEROS=none
 		-WITH_LDAP=none
 		-DWITH_LZ4=system
-		-DWITH_NUMA=$(usex numa ON OFF)
+		-DWITH_NUMA=$(usex numa)
 		-DWITH_PROTOBUF=$(usex server bundled none) # Cannot handle protobuf >23 bug #912797
 		# Our dev-libs/rapidjson doesn't carry necessary fixes for std::regex
 		# see extra/RAPIDJSON-README
@@ -313,7 +282,39 @@ src_configure() {
 		-DWITH_ZLIB=system
 		-DWITH_ZSTD=system
 
-		-DWITH_UNIT_TESTS=$(usex test ON OFF)
+		# Installs support files that would conflict with dev-db/mysql-init-scripts
+		-DWITH_SYSTEMD=0
+
+		# These are installed via dev-db/mysql-connector-c
+		-DWITHOUT_CLIENTLIBS=ON
+
+		# Building everything as shared breaks upstream assumptions.
+		# For example bundled abseil is excpected to be static and is therefore not installed.
+		# Breaking the assumption leading the mysql to being built against bundled abseil,
+		# but then dynamically linked against system abseil once installed.
+		-DBUILD_SHARED_LIBS=OFF
+
+		-DENABLED_LOCAL_INFILE=ON # Should LOAD DATA LOCAL be enabled by default?
+
+		-Wno-dev # less noise
+
+		# Requires C++20
+		# https://github.com/mysql/mysql-server/commit/de64173e41697df51d41728beb5e4e43e4d51850
+		-DCMAKE_CXX_STANDARD=20
+
+		-DCMAKE_POSITION_INDEPENDENT_CODE=ON
+		-DMYSQL_MAINTAINER_MODE=OFF # Enables -Werror
+		-DWITH_DEFAULT_COMPILER_OPTIONS=OFF # Don't mangle flags
+
+		# Causes issues on musl bug #922808
+		-DWITH_BUILD_ID=OFF
+
+		-DWITH_DEBUG=$(usex debug)
+		# debug hack wrt #497532
+		-DCMAKE_C_FLAGS_RELWITHDEBINFO="$(usev !debug '-DNDEBUG' )"
+		-DCMAKE_CXX_FLAGS_RELWITHDEBINFO="$(usev !debug '-DNDEBUG' )"
+
+		-DWITH_UNIT_TESTS=$(usex test)
 		# This is the expected location for upstream RPM's and the script will search for location relative to it.
 		# Other locations will not work.
 		-DINSTALL_MYSQLTESTDIR=$(usex test-install 'share/mysql-test' 0)
@@ -470,7 +471,6 @@ src_test() {
 
 	local -a disabled_tests=(
 		"auth_sec.atomic_rename_user;103512;Depends on user running test"
-		"auth_sec.openssl_without_fips;94718;Known test failure"
 
 		"gis.geometry_class_attri_prop;5452;Known rounding error with latest AMD processors (PS)"
 		"gis.geometry_property_function_issimple;5452;Known rounding error with latest AMD processors (PS)"
@@ -483,8 +483,6 @@ src_test() {
 		"gis.spatial_utility_function_distance_sphere;5452;Known rounding error with latest AMD processors (PS)"
 		"gis.spatial_utility_function_simplify;5452;Known rounding error with latest AMD processors (PS)"
 		"gis.st_symdifference;5452;Known rounding error with latest AMD processors (PS)"
-
-		"innodb.alter_kill;0;Known test failure -- no upstream bug yet"
 
 		"main.derived_limit;0;Known rounding error with latest AMD processors -- no upstream bug yet"
 		"main.explain_tree;0;Known rounding error with latest AMD processors -- no upstream bug yet"
@@ -503,7 +501,6 @@ src_test() {
 		"main.window_std_var;0;Known rounding error with latest AMD processors -- no upstream bug yet"
 		"main.window_std_var_optimized;0;Known rounding error with latest AMD processors -- no upstream bug yet"
 		"main.with_recursive;0;Known rounding error with latest AMD processors -- no upstream bug yet"
-		"perfschema.statement_digest_query_sample;0;Test will fail on slow hardware"
 
 		"rpl.rpl_innodb_info_tbl_slave_tmp_tbl_mismatch;0;Unstable test"
 		"rpl_gtid.rpl_multi_source_mtr_includes;97844;Unstable test"
@@ -511,18 +508,20 @@ src_test() {
 		"rpl.rpl_replication_observers_example_plugin_ongoing_transaction;0;Unstable test"
 		"main.ps;0;Unstable test"
 		"innodb.dblwr_encrypt_rowcomp;0;Unstable test"
+		"main.slow_log;0;Unstable test"
 
+		"perfschema.statement_digest_query_sample;0;Test will fail on slow hardware"
 		"sys_vars.myisam_data_pointer_size_func;87935;Test will fail on slow hardware"
-
-		"x.connection;0;Known failure - no upstream bug yet"
-		"main.slow_log;0;Known failure - no upstream bug yet"
 
 		# mysql-test/suite/innodb/t/sdi.test
 		"innodb.sdi;0;Skip this test when MySQL has been built with other storage engines than InnoDB"
 
-		"rpl.rpl_json;0;Known failure - no upstream bug yet"
-
 		"sys_vars.build_id_basic;0;build_id disabled in build"
+
+		"innodb.alter_kill;0;Known test failure -- no upstream bug yet"
+		"main.all_persisted_variables;0;Known failure - no upstream bug yet"
+		"perfschema.idx_compare_mutex_instances;0;Known failure - no upstream bug yet"
+		"rpl.rpl_json;0;Known failure - no upstream bug yet"
 	)
 
 	local -a CMAKE_SKIP_TESTS=(
@@ -546,11 +545,6 @@ src_test() {
 		"routertest_integration_routing_sharing"
 		"routertest_integration_routing_sharing_constrained_pools"
 		"routertest_integration_routing_sharing_restart"
-
-		# TODO: ???
-		"pfs_host-oom"
-		"pfs_user-oom"
-		"pfs"
 	)
 
 	if ! use profiling; then
@@ -562,14 +556,10 @@ src_test() {
 
 	if use debug; then
 		disabled_tests+=(
-			"innodb.dblwr_unencrypt;0;Known test failure -- no upstream bug yet"
-			# Test case timeout after 900 seconds
-			"innodb.log_writer_extra_margin;0;Known test failure -- no upstream bug yet"
+			"innodb.dblwr_unencrypt;0;Unstable test"
 		)
 		CMAKE_SKIP_TESTS+=(
-			# binary_log::transaction::compression::Payload_event_buffer_istream::~Payload_event_buffer_istream():
-			# Assertion `!m_outstanding_error' failed.
-			"payload_event_buffer_istream"
+			"testSecureSocket-t"
 		)
 	fi
 
