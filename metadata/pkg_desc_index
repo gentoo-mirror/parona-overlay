@@ -5,7 +5,6 @@ app-arch/gztool 1.8.0: GZIP files indexer, compressor and data retriever.
 app-containers/anbox-modules 20240526-r1: Anbox kernel modules (ashmem and binder) fork
 app-containers/waydroid 1.4.2-r4: Container-based approach to boot a full Android system
 app-emulation/winegui 2.6.5 2.7.0: A user-friendly WINE manager
-app-misc/francis 9999: Track your time
 app-misc/json-tui 1.3.0_p20240526: A JSON terminal UI made in C++
 app-misc/parona-scripts 9999: Scripts and hooks that I use on my machines
 app-misc/readpe 0.84-r1: The PE file analysis toolkit
