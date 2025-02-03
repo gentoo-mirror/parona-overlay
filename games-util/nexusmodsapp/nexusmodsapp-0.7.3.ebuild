@@ -1,4 +1,4 @@
-# Copyright 2023-2024 Gentoo Authors
+# Copyright 2023-2025 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=8
@@ -37,13 +37,13 @@ avalonia@11.1.3
 avalonia@11.2.0
 avalonia@11.2.2
 avaloniaedit.textmate@11.1.0
-bannerlord.launchermanager.localization@1.0.138
-bannerlord.launchermanager.models@1.0.138
-bannerlord.launchermanager@1.0.138
+bannerlord.launchermanager.localization@1.0.140
+bannerlord.launchermanager.models@1.0.140
+bannerlord.launchermanager@1.0.140
 bannerlord.modulemanager.models@5.0.221
-bannerlord.modulemanager.models@6.0.242
+bannerlord.modulemanager.models@6.0.246
 bannerlord.modulemanager@5.0.225
-bannerlord.modulemanager@6.0.242
+bannerlord.modulemanager@6.0.246
 benchmarkdotnet.annotations@0.14.0
 benchmarkdotnet@0.14.0
 bitfaster.caching@2.5.2
@@ -76,17 +76,17 @@ fomodinstaller.interface@1.2.0
 fomodinstaller.scripting.xmlscript@1.0.0
 fomodinstaller.scripting@1.0.0
 fomodinstaller.utils@1.0.0
-gamefinder.common@4.3.3
-gamefinder.launcher.heroic@4.3.3
-gamefinder.registryutils@4.3.3
-gamefinder.storehandlers.eadesktop@4.3.3
-gamefinder.storehandlers.egs@4.3.3
-gamefinder.storehandlers.gog@4.3.3
-gamefinder.storehandlers.origin@4.3.3
-gamefinder.storehandlers.steam@4.3.3
-gamefinder.storehandlers.xbox@4.3.3
-gamefinder.wine@4.3.3
-gamefinder@4.3.3
+gamefinder.common@4.4.0
+gamefinder.launcher.heroic@4.4.0
+gamefinder.registryutils@4.4.0
+gamefinder.storehandlers.eadesktop@4.4.0
+gamefinder.storehandlers.egs@4.4.0
+gamefinder.storehandlers.gog@4.4.0
+gamefinder.storehandlers.origin@4.4.0
+gamefinder.storehandlers.steam@4.4.0
+gamefinder.storehandlers.xbox@4.4.0
+gamefinder.wine@4.4.0
+gamefinder@4.4.0
 gee.external.capstone@2.3.0
 githubactionstestlogger@2.4.1
 google.protobuf@3.22.5
@@ -161,10 +161,13 @@ humanizer.core@2.2.0
 humanizer@2.14.1
 iced@1.17.0
 ini-parser-netstandard@2.5.2
+jamarino.intervaltree@1.2.2
 jetbrains.annotations@2024.3.0
+jitbit.fastcache@1.1.0
 k4os.compression.lz4@1.3.7-beta
 k4os.compression.lz4@1.3.8
 linqgen@0.3.1
+linuxdesktoputils.xdgdesktopportal@1.0.0
 livechartscore.skiasharpview.avalonia@2.0.0-rc2
 livechartscore.skiasharpview@2.0.0-rc2
 livechartscore@2.0.0-rc2
@@ -183,6 +186,7 @@ microsoft.bcl.asyncinterfaces@1.1.0
 microsoft.bcl.asyncinterfaces@1.1.1
 microsoft.bcl.asyncinterfaces@6.0.0
 microsoft.bcl.asyncinterfaces@7.0.0
+microsoft.bcl.asyncinterfaces@8.0.0
 microsoft.build.tasks.git@8.0.0
 microsoft.codeanalysis.analyzer.testing@1.1.2
 microsoft.codeanalysis.analyzers@3.3.3
@@ -205,7 +209,7 @@ microsoft.codeanalysis.testing.verifiers.xunit@1.1.2
 microsoft.codeanalysis.workspaces.common@1.0.1
 microsoft.codeanalysis.workspaces.common@3.8.0
 microsoft.codeanalysis.workspaces.common@4.8.0
-microsoft.codecoverage@17.11.1
+microsoft.codecoverage@17.12.0
 microsoft.composition@1.0.27
 microsoft.csharp@4.7.0
 microsoft.diagnostics.netcore.client@0.2.251802
@@ -289,7 +293,7 @@ microsoft.extensions.telemetry@9.0.0
 microsoft.extensions.timeprovider.testing@9.0.0
 microsoft.io.recyclablememorystream@3.0.0
 microsoft.net.http.headers@9.0.0
-microsoft.net.test.sdk@17.11.1
+microsoft.net.test.sdk@17.12.0
 microsoft.netcore.platforms@1.1.0
 microsoft.netcore.platforms@2.0.0
 microsoft.netcore.platforms@2.1.2
@@ -298,8 +302,8 @@ microsoft.netcore.targets@1.1.0
 microsoft.sourcelink.common@8.0.0
 microsoft.sourcelink.github@8.0.0
 microsoft.testplatform.objectmodel@17.10.0
-microsoft.testplatform.objectmodel@17.11.1
-microsoft.testplatform.testhost@17.11.1
+microsoft.testplatform.objectmodel@17.12.0
+microsoft.testplatform.testhost@17.12.0
 microsoft.visualstudio.composition.netfxattributes@16.1.8
 microsoft.visualstudio.composition@16.1.8
 microsoft.visualstudio.threading.analyzers@17.10.48
@@ -323,14 +327,15 @@ nexusmods.archives.nx@0.6.1
 nexusmods.archives.nx@0.6.3
 nexusmods.hashing.xxhash3.paths@3.0.3
 nexusmods.hashing.xxhash3@3.0.3
-nexusmods.mnemonicdb.abstractions@0.9.97
-nexusmods.mnemonicdb.sourcegenerator@0.9.97
-nexusmods.mnemonicdb@0.9.97
+nexusmods.mnemonicdb.abstractions@0.9.98
+nexusmods.mnemonicdb.sourcegenerator@0.9.98
+nexusmods.mnemonicdb@0.9.98
 nexusmods.paths.extensions.nx@0.15.0
 nexusmods.paths.testinghelpers@0.15.0
 nexusmods.paths@0.10.0
 nexusmods.paths@0.15.0
 nlog.extensions.logging@5.3.14
+nlog@5.2.8
 nlog@5.3.4
 noggog.csharpext@2.67.3
 nsubstitute.analyzers.csharp@1.0.17
@@ -362,7 +367,10 @@ polly.ratelimiting@8.4.2
 polly@8.5.0
 projektanker.icons.avalonia.materialdesign@9.4.1
 projektanker.icons.avalonia@9.4.1
+protobuf-net.core@3.2.45
+protobuf-net@3.2.45
 qoisharp@1.0.0
+qrcoder@1.6.0
 r3@1.0.0
 r3@1.2.9
 r3extensions.avalonia@1.2.9
@@ -432,6 +440,7 @@ skiasharp.nativeassets.win32@2.88.9
 skiasharp@2.88.6
 skiasharp@2.88.8
 skiasharp@2.88.9
+smartformat@3.5.1
 spectre.console.cli@0.49.1
 spectre.console.testing@0.49.1
 spectre.console@0.49.1
@@ -439,6 +448,7 @@ splat.microsoft.extensions.logging@15.2.22
 splat@14.8.12
 splat@15.1.1
 splat@15.2.22
+steamkit2@3.0.0
 strawberryshake.core@14.3.0
 strawberryshake.resources@14.3.0
 strawberryshake.server@14.3.0
@@ -615,6 +625,7 @@ textmatesharp.grammars@1.0.59
 textmatesharp.grammars@1.0.64
 textmatesharp@1.0.59
 textmatesharp@1.0.64
+tmds.dbus.protocol@0.18.0
 tmds.dbus.protocol@0.20.0
 transparentvalueobjects@1.0.2
 validation@2.3.7
@@ -715,7 +726,7 @@ DOTNET_PKG_TEST_EXTRA_ARGS=(
 )
 
 PATCHES=(
-	"${FILESDIR}/nexusmodsapp-0.7.1-update-fully-to-dotnet9.patch"
+	"${FILESDIR}/nexusmodsapp-0.7.2-update-fully-to-dotnet9.patch"
 )
 
 src_unpack() {
@@ -736,11 +747,6 @@ src_prepare() {
 	fi
 
 	sed -i -e 's/${INSTALL_EXEC}/NexusMods.App/' src/NexusMods.App/com.nexusmods.app.desktop || die
-
-	# Requires networking
-	sed -i \
-		-e '/Test_LoadAndCache_\(RemoteImage\|ImageStoredFile\)/i    [Trait("RequiresNetworking", "True")]' \
-		tests/NexusMods.UI.Tests/ImageCacheTests.cs || die
 
 	if ! use debug; then
 		# xunit doesnt support conditional unit tests like this
@@ -783,4 +789,13 @@ pkg_postinst() {
 	elog "To do so run:"
 	elog "$ NexusMods.App uninstall-app"
 	elog "See https://nexus-mods.github.io/NexusMods.App/users/Uninstall/ for further instructions"
+
+	if [[ -n ${REPLACING_VERSIONS} ]] ; then
+		for ver in "${REPLACING_VERSIONS[@]}" ; do
+			if ver_test "${ver}" -eq 0.7.1; then
+				elog "Important: If you are updating from 0.7.1, you will need to remove and re-add any collections to your library."
+				break
+			fi
+		done
+	fi
 }
