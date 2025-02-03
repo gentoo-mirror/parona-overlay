@@ -1,0 +1,60 @@
+#!/usr/bin/env bash
+set -e
+
+version="${1}"
+srcdir="${HOME}/sources/spicetify-cli"
+projectid="32909921"
+
+if [[ -z ${version} ]]; then
+    echo "No version specified"
+    exit 1
+fi
+
+if ! git --version >/dev/null ; then
+    echo "dev-vcs/git missing"
+    exit 1
+fi
+if ! go version >/dev/null ; then
+    echo "dev-lang/go missing"
+    exit 1
+fi
+if ! xz --version >/dev/null ; then
+    echo "app-arch/xz-utils missing"
+    exit 1
+fi
+if ! tar --version >/dev/null ; then
+    echo "app-arch/tar missing"
+    exit 1
+fi
+if ! gitlab_upload_package -h >/dev/null ; then
+    echo "app-misc/parona-scripts missing"
+    exit 1
+fi
+
+if ! [[ -d ${srcdir} ]]; then
+    echo "${srcdir} missing"
+    exit 1
+fi
+pushd "${srcdir}"
+if ! git status >/dev/null ; then
+    echo "${srcdir} is not a git directory"
+    exit 1
+fi
+popd
+
+gitlab_upload_package -v
+
+outdir="$(mktemp -d)"
+echo "Output directory: ${outdir}"
+
+pushd "${srcdir}"
+git fetch
+git checkout "v${version}"
+GOMODCACHE="${srcdir}"/go-mod go mod download -modcacherw
+XZ_OPT='-T0 -9' tar -acf "${outdir}/spicetify-cli-${version}-deps.tar.xz" go-mod
+
+gitlab_upload_package "${projectid}" spicetify-cli "${version}" "${outdir}/spicetify-cli-${version}-deps.tar.xz"
+
+rm -rf "${outdir}"
+git clean -fdx
+git checkout "$(git symbolic-ref refs/remotes/origin/HEAD | sed 's@^refs/remotes/origin/@@')"
