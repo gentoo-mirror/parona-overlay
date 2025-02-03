@@ -22,7 +22,7 @@ SLOT="0"
 KEYWORDS="~amd64"
 
 RDEPEND="
-	>=dev-python/pyside6-6.3.0[dbus,designer,gui,uitools(+),widgets,${PYTHON_USEDEP}]
+	>=dev-python/pyside-6.3.0:6[dbus,designer,gui,uitools(+),widgets,${PYTHON_USEDEP}]
 	>=dev-python/requests-2.27.0[${PYTHON_USEDEP}]
 	>=dev-python/vdf-3.5[${PYTHON_USEDEP}]
 	dev-python/inputs[${PYTHON_USEDEP}]
