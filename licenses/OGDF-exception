@@ -1,0 +1,40 @@
+***********************************************************
+*         OGDF - The Open Graph Drawing Framework         *
+*                                                         *
+*                        LICENSE                          *
+***********************************************************
+
+This program is free software; you can redistribute it and/or
+modify it under the terms of the GNU General Public License
+Version 2 or 3 as published by the Free Software Foundation
+and appearing in the files LICENSE_GPL_v2.txt and
+LICENSE_GPL_v3.txt included in the packaging of this file.
+
+In addition, as a special exception, you have permission to link
+this software with
+
+  - Tulip (https://tulip.labri.fr/site/)
+
+  - the libraries of the COIN-OR Osi project (see
+    https://github.com/coin-or/Osi);
+
+  - all libraries required by Osi;
+
+  - and all LP-solver libraries directly supported by the
+    COIN-OR Osi project,
+
+and distribute executables, as long as you follow the requirements
+of the GNU General Public License in regard to all of the software
+in the executable aside from these third-party libraries.
+
+Moreover, we grant a special exception to the OGDF QML
+(https://github.com/schulzch/qml-ogdf) plugin by Christoph Schulz
+(licensed under the GNU Lesser General Public License) for linking
+OGDF and distributing the plugin under LGPL v2 or v3.
+We also grant a special link exception for the binary distribution
+(academic use only!) of the StayNerd software tool for
+Steiner tree computations by Ivana Ljubic, Matteo Fischetti, et al.
+
+
+
+See also: http://www.ogdf.net/license
