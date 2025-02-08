@@ -1,0 +1,14 @@
+BDEPEND=app-arch/unzip app-alternatives/ninja >=dev-build/cmake-3.20.5
+DEFINED_PHASES=compile configure install prepare test unpack
+DESCRIPTION=Open Graph algorithms and Data structure Framework.
+EAPI=8
+HOMEPAGE=https://ogdf.uos.de/ https://github.com/ogdf/ogdf/
+INHERIT=cmake unpacker
+IUSE=test
+KEYWORDS=~amd64
+LICENSE=|| ( GPL-2 GPL-3 ) OGDF-exception Boost-1.0 BSD-2 EPL-1.0 LGPL-2+ MIT
+RESTRICT=!test? ( test )
+SLOT=0
+SRC_URI=https://ogdf.uos.de/wp-content/uploads/2023/09/ogdf.v2023.09.zip
+_eclasses_=toolchain-funcs	14648d8795f7779e11e1bc7cf08b7536	multilib	b2a329026f2e404e9e371097dda47f96	flag-o-matic	357f1a896fbedcd06e5ce55419c49eb9	multiprocessing	1e32df7deee68372153dca65f4a7c21f	ninja-utils	2df4e452cea39a9ec8fb543ce059f8d6	xdg-utils	42869b3c8d86a70ef3cf75165a395e09	cmake	10a50dfaf728b802fcfd37f8d0da9056	unpacker	fb4b84181244b3b9990fa0bf40232dd2
+_md5_=65b498f7e269881ddedefad88d5373c2

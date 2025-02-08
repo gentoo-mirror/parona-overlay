@@ -12,7 +12,10 @@ app-misc/rivalcfg 4.14.0: CLI tool and Python library to configure SteelSeries g
 app-misc/spicetify-cli 2.38.7 2.38.9 2.39.0: Commandline tool to customize Spotify client.
 dev-build/cargo-make 0.37.23 0.37.24: Rust task runner and build tool
 dev-cpp/args 6.4.6: A simple header-only C++ argument parser library
+dev-cpp/cpr 1.11.1: C++ Requests: Curl for People, a spiritual port of Python Requests.
 dev-cpp/hjson-cpp 2.4.1 2.5: Hjson for C++
+dev-cpp/libloot 0.24.5 0.25.1: A C++ library for accessing LOOT's metadata and sorting functionality.
+dev-cpp/ogdf 2023.09: Open Graph algorithms and Data structure Framework.
 dev-cpp/tinygltf 2.9.3 2.9.4 2.9.5: Header only C++11 tiny glTF 2.0 library
 dev-cpp/trompeloeil 49: Header only C++14 mocking framework
 dev-db/mysql 8.4.4: Fast, multi-threaded, multi-user SQL database server
@@ -31,7 +34,7 @@ dev-perl/Data-Format-Pretty-JSON 0.12: Pretty-print data structure as JSON
 dev-perl/GitLab-API-v4 0.27-r1: A complete GitLab API v4 client.
 dev-perl/Graphics-ColorNamesLite-WWW 1.14.000: WWW color names and equivalent RGB values (lite version)
 dev-perl/HTTP-Tiny-Multipart 0.08: Add post_multipart to HTTP::Tiny
-dev-perl/IO-Prompter 0.005001: Prompt for input, read it, clean it, return it.
+dev-perl/IO-Prompter 0.005001 0.005002: Prompt for input, read it, clean it, return it.
 dev-perl/JSON-Color 0.134: Encode to colored JSON
 dev-perl/Log-Any-Adapter-Screen 0.141: Send logs to screen, with colors and some other features
 dev-perl/Log-Any-Adapter-TAP 0.003003: Logger suitable for use with TAP test files
@@ -66,6 +69,8 @@ dev-vcs/gcli 2.5.0 2.6.0 2.6.1: Portable CLI tool for interacting with Git(Hub|L
 games-util/gamehub 0.16.3_p2: All your games in one place
 games-util/goverlay 1.2: Graphical UI to help manage Linux overlays.
 games-util/heroic-gogdl 9999: GOG Downloading module for Heroic Games Launcher
+games-util/limo 1.1: A simple Qt based mod manager
+games-util/loot 0.24.1: A modding utility for Starfield and some Elder Scrolls and Fallout games.
 games-util/mangohud 0.7.2-r2 9999: Overlay for monitoring FPS, temperatures, CPU/GPU load and more
 games-util/nexusmodsapp 0.7.2 0.7.3: Nexus Mods App, a mod installer, creator and manager for all your popular games
 games-util/protonup-qt 2.11.1: Install and manage proton with Steam and Lutris
