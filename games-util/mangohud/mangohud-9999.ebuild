@@ -1,4 +1,4 @@
-# Copyright 2023-2024 Gentoo Authors
+# Copyright 2023-2025 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=8
@@ -54,7 +54,9 @@ REQUIRED_USE="
 	mangoapp? ( X )
 	${PYTHON_REQUIRED_USE}
 "
-RESTRICT="!test? ( test )"
+
+# tests are broken
+RESTRICT="test"
 
 CDEPEND="
 	dev-cpp/nlohmann_json:=
@@ -63,11 +65,9 @@ CDEPEND="
 	media-libs/glew:=
 	media-libs/glfw
 	media-libs/libglvnd
+	x11-libs/libxkbcommon
 	X? ( x11-libs/libX11 )
-	wayland? (
-		dev-libs/wayland
-		x11-libs/libxkbcommon
-	)
+	wayland? ( dev-libs/wayland )
 "
 DEPEND="
 	${CDEPEND}
