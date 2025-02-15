@@ -9,7 +9,7 @@ app-misc/json-tui 1.3.0_p20240526: A JSON terminal UI made in C++
 app-misc/parona-scripts 9999: Scripts and hooks that I use on my machines
 app-misc/readpe 0.84-r1: The PE file analysis toolkit
 app-misc/rivalcfg 4.14.0: CLI tool and Python library to configure SteelSeries gaming mice
-app-misc/spicetify-cli 2.38.7 2.38.9 2.39.0 2.39.2: Commandline tool to customize Spotify client.
+app-misc/spicetify-cli 2.39.0 2.39.2 2.39.3: Commandline tool to customize Spotify client.
 dev-build/cargo-make 0.37.23 0.37.24: Rust task runner and build tool
 dev-cpp/args 6.4.6: A simple header-only C++ argument parser library
 dev-cpp/cpr 1.11.1: C++ Requests: Curl for People, a spiritual port of Python Requests.
@@ -96,10 +96,10 @@ kde-misc/plasma-gamemode 9999: Plasma widget to show processes running in gamemo
 media-fonts/intel-one-mono 1.4.0: Intel's monospaced font family with clarity and legibility in mind.
 media-fonts/juliamono 0.051 0.059: JuliaMono - a monospaced font for scientific and technical computing
 media-libs/phonon-mpv 0.1.0: Phonon Backend using MPV Player(libmpv)
-media-sound/spotify 1.2.52 1.2.53: Spotify is a social music platform
+media-sound/spotify 1.2.53 1.2.56: Spotify is a social music platform
 media-video/mpv-mpris 1.1: MPRIS plugin for mpv
-net-im/discord 0.0.81 0.0.82 0.0.84: All-in-one voice and text chat for gamers
-net-im/discord-ptb 0.0.127 0.0.128 0.0.129: All-in-one voice and text chat for gamers
+net-im/discord 0.0.84 0.0.85: All-in-one voice and text chat for gamers
+net-im/discord-ptb 0.0.129 0.0.131: All-in-one voice and text chat for gamers
 net-misc/wlvncc 9999: A Wayland Native VNC Client
 sec-keys/openpgp-keys-mysql 20231023: OpenPGP keys used to sign MySQL releases
 sys-apps/coolercontrol 1.4.4 1.4.5: Monitor and control your cooling and other devices
@@ -117,4 +117,4 @@ virtual/linux-sources 3-r8: Virtual for Linux kernel sources
 www-apps/rdrview 0.1 0.1.3: Firefox Reader View as a command line tool
 www-apps/vikunja 0.24.4 0.24.5: The to-do app to organize your life.
 www-client/icecat 115.18.0 115.19.0: GNU IceCat Web Browser
-www-plugins/firefoxpwa 2.13.3-r1 2.14.0: A tool to install, manage and use Progressive Web Apps (PWAs) in Mozilla Firefox
+www-plugins/firefoxpwa 2.14.0 2.14.1: A tool to install, manage and use Progressive Web Apps (PWAs) in Mozilla Firefox
