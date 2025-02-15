@@ -1,4 +1,4 @@
-# Copyright 1999-2024 Gentoo Authors
+# Copyright 1999-2025 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=8
@@ -8,7 +8,7 @@ inherit go-module
 MY_PN="cli"
 
 WHITELIST_VERSIONS=(
-	"<> 1.2.14 1.2.53"
+	"<> 1.2.14 1.2.57"
 )
 
 whitelist_versions() {
@@ -52,7 +52,7 @@ DESCRIPTION="Commandline tool to customize Spotify client."
 HOMEPAGE="https://spicetify.app/"
 SRC_URI="
 	https://github.com/spicetify/cli/archive/v${PV}.tar.gz -> ${P}.tar.gz
-	https://gitlab.com/api/v4/projects/37881342/packages/generic/${PN}/${PV}/${P}-deps.tar.xz
+	https://gitlab.com/api/v4/projects/32909921/packages/generic/${PN}/${PV}/${P}-deps.tar.xz
 "
 S="${WORKDIR}/${MY_PN}-${PV}"
 
