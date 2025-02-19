@@ -79,7 +79,7 @@ games-util/steamtinkerlaunch 9999: Tool for use with the Steam client for custom
 gnome-extra/yad 14.1: Display GTK+ dialog boxes from command line or shell scripts
 gui-apps/fuzzel 1.11.1 9999: Application launcher for wlroots based Wayland compositors.
 gui-apps/qtgreet 2.0.2-r1 9999: Qt based greeter for greetd
-gui-apps/waycheck 1.2.0 1.5.0: Simple GUI that displays the protocols implemented by a Wayland compositor.
+gui-apps/waycheck 1.5.0 1.6.0: Simple GUI that displays the protocols implemented by a Wayland compositor.
 gui-apps/wbg 1.2.0: Super simple wallpaper application for Wayland compositors
 gui-apps/yambar 1.11.0 9999: Modular status panel for X11 and Wayland, inspired by polybar
 gui-libs/dfl-applications 0.2.0: This library provides a thin wrapper around QApplication and the rest.
