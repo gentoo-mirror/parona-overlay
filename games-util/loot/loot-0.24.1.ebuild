@@ -38,7 +38,6 @@ RDEPEND="
 	dev-cpp/ogdf
 	dev-cpp/tbb:=
 	dev-cpp/tomlplusplus
-	dev-cpp/valvefilevdf
 	dev-libs/boost:=
 	>=dev-libs/icu-71.1:=
 	dev-libs/libfmt:=
