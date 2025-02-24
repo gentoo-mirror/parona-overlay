@@ -1,0 +1,13 @@
+diff --git a/src/core/reversedeployer.cpp b/src/core/reversedeployer.cpp
+index dc7723b..9ee76f9 100644
+--- a/src/core/reversedeployer.cpp
++++ b/src/core/reversedeployer.cpp
+@@ -6,6 +6,7 @@
+ #include <format>
+ #include <fstream>
+ #include <iostream>
++#include <numeric>
+ #include <ranges>
+ 
+ namespace sfs = std::filesystem;
+
