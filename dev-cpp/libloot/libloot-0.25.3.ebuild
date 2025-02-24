@@ -3,7 +3,7 @@
 
 EAPI=8
 
-# generate with pycargoebuild <all cargo package dirs...>
+# manual process to get all three rust packages
 CRATES="
 	adler2@2.0.0
 	aho-corasick@1.1.3
@@ -37,11 +37,12 @@ CRATES="
 	dataview@1.0.1
 	derive_pod@0.1.2
 	digest@0.10.7
-	dirs-sys@0.4.1
-	dirs@5.0.1
+	dirs-sys@0.5.0
+	dirs@6.0.0
 	dlv-list@0.5.2
 	either@1.11.0
 	encoding_rs@0.8.34
+	encoding_rs@0.8.35
 	errno@0.3.8
 	errno@0.3.9
 	esplugin@6.1.1
@@ -49,6 +50,7 @@ CRATES="
 	flate2@1.0.34
 	generic-array@0.14.7
 	getrandom@0.2.14
+	getrandom@0.3.1
 	half@2.4.1
 	hashbrown@0.14.5
 	hermit-abi@0.3.9
@@ -58,7 +60,7 @@ CRATES="
 	js-sys@0.3.69
 	keyvalues-parser@0.2.0
 	libc@0.2.159
-	libc@0.2.161
+	libc@0.2.169
 	libredox@0.1.3
 	linux-raw-sys@0.4.14
 	log@0.4.21
@@ -67,6 +69,7 @@ CRATES="
 	miniz_oxide@0.8.0
 	no-std-compat@0.4.1
 	nom@7.1.3
+	nom@8.0.0
 	num-traits@0.2.18
 	once_cell@1.19.0
 	oorandom@11.1.3
@@ -82,18 +85,21 @@ CRATES="
 	plotters-svg@0.3.5
 	plotters@0.3.5
 	proc-macro2@1.0.81
+	proc-macro2@1.0.93
 	quote@1.0.36
 	rayon-core@1.12.1
 	rayon@1.10.0
-	redox_users@0.4.5
+	redox_users@0.5.0
 	regex-automata@0.4.6
 	regex-automata@0.4.8
 	regex-syntax@0.8.3
 	regex-syntax@0.8.5
 	regex@1.10.4
-	regex@1.11.0
+	regex@1.11.1
 	rust-ini@0.21.1
 	rustix@0.38.37
+	rustix@0.38.39
+	rustix@0.38.40
 	ryu@1.0.17
 	same-file@1.0.6
 	serde@1.0.199
@@ -103,20 +109,26 @@ CRATES="
 	serde_json@1.0.116
 	sha2@0.10.8
 	syn@2.0.60
+	syn@2.0.96
 	tempfile@3.13.0
+	tempfile@3.16.0
+	tempfile@3.17.1
 	thiserror-impl@1.0.59
+	thiserror-impl@2.0.11
 	thiserror@1.0.59
+	thiserror@2.0.11
 	tiny-keccak@2.0.2
 	tinytemplate@1.2.1
 	trim-in-place@0.1.7
 	typenum@1.17.0
 	ucd-trie@0.1.6
 	unicase@2.7.0
-	unicase@2.8.0
+	unicase@2.8.1
 	unicode-ident@1.0.12
 	version_check@0.9.4
 	walkdir@2.5.0
 	wasi@0.11.0+wasi-snapshot-preview1
+	wasi@0.13.3+wasi-0.2.2
 	wasm-bindgen-backend@0.2.92
 	wasm-bindgen-macro-support@0.2.92
 	wasm-bindgen-macro@0.2.92
@@ -127,32 +139,33 @@ CRATES="
 	winapi-util@0.1.8
 	winapi-x86_64-pc-windows-gnu@0.4.0
 	winapi@0.3.9
-	windows-core@0.58.0
-	windows-implement@0.58.0
-	windows-interface@0.58.0
-	windows-result@0.2.0
-	windows-strings@0.1.0
-	windows-sys@0.48.0
+	windows-core@0.59.0
+	windows-implement@0.59.0
+	windows-interface@0.59.0
+	windows-result@0.3.0
+	windows-strings@0.3.0
 	windows-sys@0.52.0
 	windows-sys@0.59.0
-	windows-targets@0.48.5
 	windows-targets@0.52.6
-	windows@0.58.0
-	windows_aarch64_gnullvm@0.48.5
+	windows-targets@0.53.0
+	windows@0.59.0
 	windows_aarch64_gnullvm@0.52.6
-	windows_aarch64_msvc@0.48.5
+	windows_aarch64_gnullvm@0.53.0
 	windows_aarch64_msvc@0.52.6
-	windows_i686_gnu@0.48.5
+	windows_aarch64_msvc@0.53.0
 	windows_i686_gnu@0.52.6
+	windows_i686_gnu@0.53.0
 	windows_i686_gnullvm@0.52.6
-	windows_i686_msvc@0.48.5
+	windows_i686_gnullvm@0.53.0
 	windows_i686_msvc@0.52.6
-	windows_x86_64_gnu@0.48.5
+	windows_i686_msvc@0.53.0
 	windows_x86_64_gnu@0.52.6
-	windows_x86_64_gnullvm@0.48.5
+	windows_x86_64_gnu@0.53.0
 	windows_x86_64_gnullvm@0.52.6
-	windows_x86_64_msvc@0.48.5
+	windows_x86_64_gnullvm@0.53.0
 	windows_x86_64_msvc@0.52.6
+	windows_x86_64_msvc@0.53.0
+	wit-bindgen-rt@0.33.0
 "
 
 inherit cargo cmake rust-toolchain
@@ -165,8 +178,8 @@ HOMEPAGE="
 
 declare -A VENDORED_PACKAGE=(
 	[esplugin]="https://github.com/Ortham/esplugin/archive/refs/tags/6.1.1.tar.gz"
-	[libloadorder]="https://github.com/Ortham/libloadorder/archive/refs/tags/18.1.3.tar.gz"
-	[loot-condition-interpeter]="https://github.com/loot/loot-condition-interpreter/archive/refs/tags/4.0.2.tar.gz"
+	[libloadorder]="https://github.com/Ortham/libloadorder/archive/refs/tags/18.2.2.tar.gz"
+	[loot-condition-interpeter]="https://github.com/loot/loot-condition-interpreter/archive/refs/tags/5.2.0.tar.gz"
 )
 TESTING_PLUGINS_VER="1.6.2"
 YAML_CPP_VER="0.8.0+merge-key-support.2"
@@ -194,9 +207,12 @@ vendor_uris
 LICENSE="GPL-3"
 # testing-plugins, yaml-cpp
 LICENSE+=" MIT"
-# Dependent crate licenses
-LICENSE+=" GPL-3 MIT"
+# esplugin
 LICENSE+=" Apache-2.0 BSD CC0-1.0 GPL-3 MIT MPL-2.0 Unicode-DFS-2016"
+# loot-condition-interpeter
+LICENSE+=" Apache-2.0 BSD CC0-1.0 GPL-3 MIT MPL-2.0 Unicode-DFS-2016"
+# libloadorder
+LICENSE+=" Apache-2.0 BSD GPL-3 MIT Unicode-DFS-2016"
 
 SLOT="0/$(ver_cut 1-2)"
 KEYWORDS="~amd64"
@@ -226,9 +242,6 @@ CMAKE_SKIP_TESTS=(
 	"CompareFilenames.shouldBeCaseInsensitiveAndLocaleInvariant"
 	# Requires Greek locale
 	"NormalizeFilename.shouldCaseFoldStringsAndBeLocaleInvariant"
-	# eh, looks to be a case path assumptions being wrong in ctest
-	"Filesystem.equivalentShouldNotRequireThatBothPathsExist"
-	"Filesystem.equivalentShouldBeCaseSensitive"
 )
 
 src_prepare() {
