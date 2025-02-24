@@ -11,7 +11,7 @@ HOMEPAGE="
 	https://github.com/loot/loot/
 "
 
-VALVEFILEVDF_VER="1.0.1"
+VALVEFILEVDF_VER="1.1.0"
 TESTING_PLUGINS_VER="1.6.2"
 
 SRC_URI="
@@ -39,7 +39,7 @@ RDEPEND="
 	dev-cpp/tbb:=
 	dev-cpp/tomlplusplus
 	dev-libs/boost:=
-	>=dev-libs/icu-71.1:=
+	dev-libs/icu:=
 	dev-libs/libfmt:=
 	dev-libs/spdlog:=
 	dev-qt/qtbase:6[concurrent,network,widgets]
