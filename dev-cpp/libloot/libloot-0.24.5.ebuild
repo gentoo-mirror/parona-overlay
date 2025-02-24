@@ -234,12 +234,15 @@ CMAKE_SKIP_TESTS=(
 src_prepare() {
 	cmake_src_prepare
 
-	# hookup cargo debug
-	sed -i \
-		-e "s|--release|$(usex debug '' --release)|" \
-		-e "s|/release|/$(usex debug debug release)|g" \
-		-e 's/set(RUST_TARGET_ARGS \(.*\))/set(RUST_TARGET_ARGS \1 ${RUST_TARGET_ARGS})/' \
-		CMakeLists.txt || die
+	if use debug; then
+		# hookup cargo debug
+		sed -i -e "s|--release||" -e "s|/release|/debug|g" CMakeLists.txt || die
+	fi
+	sed -i -e 's/set(RUST_TARGET_ARGS \(.*\))/set(RUST_TARGET_ARGS \1 ${RUST_TARGET_ARGS})/' CMakeLists.txt || die
+
+	pushd "${WORKDIR}/yaml-cpp-${YAML_CPP_VER/+/-}" >/dev/null || die
+	eapply "${FILESDIR}/yaml-cpp-gcc15-cstdint.patch"
+	popd >/dev/null || die
 }
 
 src_configure() {
