@@ -70,7 +70,7 @@ games-util/gamehub 0.16.3_p2: All your games in one place
 games-util/goverlay 1.2: Graphical UI to help manage Linux overlays.
 games-util/heroic-gogdl 9999: GOG Downloading module for Heroic Games Launcher
 games-util/limo 1.1: A simple Qt based mod manager
-games-util/loot 0.24.1: A modding utility for Starfield and some Elder Scrolls and Fallout games.
+games-util/loot 0.24.1 0.25.0: A modding utility for Starfield and some Elder Scrolls and Fallout games.
 games-util/mangohud 0.7.2-r2 0.8.0 9999: Overlay for monitoring FPS, temperatures, CPU/GPU load and more
 games-util/nexusmodsapp 0.7.2 0.7.3: Nexus Mods App, a mod installer, creator and manager for all your popular games
 games-util/protonup-qt 2.11.1: Install and manage proton with Steam and Lutris
@@ -96,7 +96,7 @@ media-fonts/juliamono 0.051 0.059: JuliaMono - a monospaced font for scientific 
 media-libs/phonon-mpv 0.1.0: Phonon Backend using MPV Player(libmpv)
 media-sound/spotify 1.2.53 1.2.56: Spotify is a social music platform
 media-video/mpv-mpris 1.1: MPRIS plugin for mpv
-net-im/discord 0.0.85 0.0.86: All-in-one voice and text chat for gamers
+net-im/discord 0.0.85 0.0.86 0.0.87: All-in-one voice and text chat for gamers
 net-im/discord-ptb 0.0.131 0.0.132: All-in-one voice and text chat for gamers
 net-misc/wlvncc 9999: A Wayland Native VNC Client
 sec-keys/openpgp-keys-mysql 20231023: OpenPGP keys used to sign MySQL releases
