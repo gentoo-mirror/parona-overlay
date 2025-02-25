@@ -48,7 +48,7 @@ BDEPEND="
 
 PATCHES=(
 	"${FILESDIR}"/limo-1.1-hookup-tests.ebuild
-	"${FILESDIR}"/limo-1.1-gcc-15-numeric.patch
+	"${FILESDIR}"/limo-1.1-gcc15-numeric.patch
 )
 
 src_configure() {
