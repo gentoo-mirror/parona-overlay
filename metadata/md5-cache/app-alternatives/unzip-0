@@ -1,0 +1,12 @@
+DEFINED_PHASES=install
+DESCRIPTION=Unzip symlink
+EAPI=8
+HOMEPAGE=https://wiki.gentoo.org/wiki/Project:Base/Alternatives
+INHERIT=app-alternatives
+IUSE=+info-zip libarchive
+LICENSE=CC0-1.0
+RDEPEND=!<app-arch/unzip-6.0_p27-r2 info-zip? ( >=app-arch/unzip-6.0_p27-r2 ) libarchive? ( >=app-arch/libarchive-3.7.3 )
+REQUIRED_USE=^^ ( info-zip libarchive )
+SLOT=0
+_eclasses_=app-alternatives	a02ee0b741e1dde4e28b2b83d2fc28a7
+_md5_=67902d96812c3ce16030dff3655595f2
