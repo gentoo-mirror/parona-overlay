@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "https://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+	<use>
+		<flag name="info-zip">
+			Symlink to Info-ZIP unzip (<pkg>app-arch/unzip</pkg>)
+		</flag>
+		<flag name="libarchive">
+			Symlink to bsdunzip from <pkg>app-arch/libarchive</pkg>
+		</flag>
+	</use>
+</pkgmetadata>
