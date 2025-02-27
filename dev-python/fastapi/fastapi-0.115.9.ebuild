@@ -22,7 +22,7 @@ KEYWORDS="~amd64"
 RDEPEND="
 	<dev-python/pydantic-3.0.0[${PYTHON_USEDEP}]
 	>=dev-python/pydantic-1.7.4[${PYTHON_USEDEP}]
-	<dev-python/starlette-0.46.0[${PYTHON_USEDEP}]
+	<dev-python/starlette-0.47.0[${PYTHON_USEDEP}]
 	>=dev-python/starlette-0.40.0[${PYTHON_USEDEP}]
 	>=dev-python/typing-extensions-4.8.0[${PYTHON_USEDEP}]
 "
@@ -52,6 +52,7 @@ BDEPEND="
 
 PATCHES=(
 	"${FILESDIR}"/fastaapi-0.115.6-httpx-0.28-test-fix.patch
+	"${FILESDIR}"/fastapi-0.115.9-relax-dependencies.patch
 )
 
 distutils_enable_tests pytest
