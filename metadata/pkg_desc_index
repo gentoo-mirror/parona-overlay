@@ -53,7 +53,7 @@ dev-perl/match-simple 0.012: simplified clone of smartmatch operator
 dev-python/asyncpg 0.30.0: A fast PostgreSQL Database Client Library for Python/asyncio.
 dev-python/databases 0.9.0: Async database support for Python.
 dev-python/docopt-ng 0.9.0: Humane command line arguments parser.
-dev-python/fastapi 0.115.8 0.115.9: FastAPI framework, high performance, easy to learn, ready for production
+dev-python/fastapi 0.115.8 0.115.9 0.115.10: FastAPI framework, high performance, easy to learn, ready for production
 dev-python/gbinder 1.1.2-r1: Python bindings for libgbinder
 dev-python/inputs 0.5: Cross-platform Python support for keyboards, mice and gamepads.
 dev-python/log-symbols 0.0.14-r1: Colored symbols for various log levels for Python
@@ -62,7 +62,7 @@ dev-python/pycryptodomex 3.21.0: A self-contained cryptographic library for Pyth
 dev-python/pydantic-settings 2.7.0 2.7.1: Settings management using pydantic
 dev-python/pytest-examples 0.0.15: Pytest plugin for testing Python code examples in docstrings and markdown files.
 dev-python/spinners 0.0.24-r1: Spinners for terminals
-dev-python/sqlmodel 0.0.22: SQL databases in Python, designed for simplicity, compatibility, and robustness.
+dev-python/sqlmodel 0.0.22 0.0.23: SQL databases in Python, designed for simplicity, compatibility, and robustness.
 dev-python/steam 1.6.1: Python package for interacting with Steam
 dev-python/vdf 3.5 4.0: A module for (de)serialization to and from VDF, Valve's key-value text format
 dev-tex/altacv 1.7.2 1.7.3_p20241216: Yet another alternative curriculum vitae/résumé class with LaTeX
