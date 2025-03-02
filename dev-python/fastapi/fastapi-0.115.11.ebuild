@@ -22,7 +22,7 @@ KEYWORDS="~amd64"
 RDEPEND="
 	<dev-python/pydantic-3.0.0[${PYTHON_USEDEP}]
 	>=dev-python/pydantic-1.7.4[${PYTHON_USEDEP}]
-	<dev-python/starlette-0.46.0[${PYTHON_USEDEP}]
+	<dev-python/starlette-0.47.0[${PYTHON_USEDEP}]
 	>=dev-python/starlette-0.40.0[${PYTHON_USEDEP}]
 	>=dev-python/typing-extensions-4.8.0[${PYTHON_USEDEP}]
 "
@@ -75,6 +75,13 @@ EPYTEST_DESELECT=(
 	"tests/test_multipart_installation.py::test_no_multipart_installed_form_file"
 	"tests/test_multipart_installation.py::test_old_multipart_installed"
 )
+
+python_prepare_all() {
+	# Dont install fastapi executable as fastapi-cli is supposed to handle it
+	sed -i -e '/\[project.scripts\]/,/^$/d' pyproject.toml || die
+
+	distutils-r1_python_prepare_all
+}
 
 pkg_postinst() {
 	optfeature "commandline interface" dev-python/fastapi-cli
