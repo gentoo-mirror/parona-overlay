@@ -17,6 +17,7 @@ RESTRICT="!test? ( test )"
 RDEPEND="
 	dev-libs/openssl:=
 	net-misc/curl[openssl]
+	x11-misc/xdg-utils
 	libedit? (
 		dev-libs/libedit
 	)

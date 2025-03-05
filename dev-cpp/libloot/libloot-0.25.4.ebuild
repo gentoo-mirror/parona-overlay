@@ -111,8 +111,8 @@ CRATES="
 	syn@2.0.60
 	syn@2.0.96
 	tempfile@3.13.0
-	tempfile@3.14.0
 	tempfile@3.16.0
+	tempfile@3.17.1
 	thiserror-impl@1.0.59
 	thiserror-impl@2.0.11
 	thiserror@1.0.59
@@ -178,8 +178,8 @@ HOMEPAGE="
 
 declare -A VENDORED_PACKAGE=(
 	[esplugin]="https://github.com/Ortham/esplugin/archive/refs/tags/6.1.1.tar.gz"
-	[libloadorder]="https://github.com/Ortham/libloadorder/archive/refs/tags/18.2.1.tar.gz"
-	[loot-condition-interpeter]="https://github.com/loot/loot-condition-interpreter/archive/refs/tags/5.0.0.tar.gz"
+	[libloadorder]="https://github.com/Ortham/libloadorder/archive/refs/tags/18.2.2.tar.gz"
+	[loot-condition-interpeter]="https://github.com/loot/loot-condition-interpreter/archive/refs/tags/5.2.0.tar.gz"
 )
 TESTING_PLUGINS_VER="1.6.2"
 YAML_CPP_VER="0.8.0+merge-key-support.2"
@@ -208,11 +208,11 @@ LICENSE="GPL-3"
 # testing-plugins, yaml-cpp
 LICENSE+=" MIT"
 # esplugin
-LICENSE+=" Apache-2.0 BSD MIT Unicode-DFS-2016"
-# loot-condition-interpeter
-LICENSE+=" Apache-2.0 BSD GPL-3 MIT Unicode-DFS-2016"
-# libloadorder
 LICENSE+=" Apache-2.0 BSD CC0-1.0 GPL-3 MIT MPL-2.0 Unicode-DFS-2016"
+# loot-condition-interpeter
+LICENSE+=" Apache-2.0 BSD CC0-1.0 GPL-3 MIT MPL-2.0 Unicode-DFS-2016"
+# libloadorder
+LICENSE+=" Apache-2.0 BSD GPL-3 MIT Unicode-DFS-2016"
 
 SLOT="0/$(ver_cut 1-2)"
 KEYWORDS="~amd64"
@@ -247,12 +247,15 @@ CMAKE_SKIP_TESTS=(
 src_prepare() {
 	cmake_src_prepare
 
-	# hookup cargo debug
-	sed -i \
-		-e "s|--release|$(usex debug '' --release)|" \
-		-e "s|/release|/$(usex debug debug release)|g" \
-		-e 's/set(RUST_TARGET_ARGS \(.*\))/set(RUST_TARGET_ARGS \1 ${RUST_TARGET_ARGS})/' \
-		CMakeLists.txt || die
+	if use debug; then
+		# hookup cargo debug
+		sed -i -e "s|--release||" -e "s|/release|/debug|g" CMakeLists.txt || die
+	fi
+	sed -i -e 's/set(RUST_TARGET_ARGS \(.*\))/set(RUST_TARGET_ARGS \1 ${RUST_TARGET_ARGS})/' CMakeLists.txt || die
+
+	pushd "${WORKDIR}/yaml-cpp-${YAML_CPP_VER/+/-}" >/dev/null || die
+	eapply "${FILESDIR}/yaml-cpp-gcc15-cstdint.patch"
+	popd >/dev/null || die
 }
 
 src_configure() {
