@@ -1,4 +1,4 @@
-# Copyright 1999-2024 Gentoo Authors
+# Copyright 1999-2025 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
 # Ebuild is based on the Firefox ebuilds in the main repo
@@ -476,10 +476,23 @@ pkg_pretend() {
 
 pkg_setup() {
 	if [[ ${MERGE_TYPE} != binary ]] ; then
+
+		if tc-is-lto; then
+			use_lto=yes
+			# LTO is handled via configure
+			filter-lto
+		fi
+
 		if use pgo ; then
 			if ! has userpriv ${FEATURES} ; then
 				eerror "Building ${PN} with USE=pgo and FEATURES=-userpriv is not supported!"
 			fi
+		fi
+
+		if [[ ${use_lto} = yes ]]; then
+			# -Werror=lto-type-mismatch -Werror=odr are going to fail with GCC,
+			# bmo#1516758, bgo#942288
+			filter-flags -Werror=lto-type-mismatch -Werror=odr
 		fi
 
 		# Ensure we have enough disk space to compile
@@ -582,6 +595,8 @@ src_prepare() {
 	sed -i -e 's/firefox/icecat/' "${WORKDIR}"/firefox-patches/0033-bmo-1882209-update-crates-for-rust-1.78-stripped-patch-from-bugs.freebsd.org-bug278834.patch || die
 
 	eapply "${WORKDIR}/firefox-patches"
+
+	eapply "${FILESDIR}"/icecat-115.21.0-swgl-gcc15.patch
 
 	# Allow user to apply any additional patches without modifing ebuild
 	eapply_user
@@ -856,9 +871,6 @@ src_configure() {
 			fi
 		fi
 	fi
-
-	# LTO flag was handled via configure
-	filter-lto
 
 	mozconfig_use_enable debug
 	if use debug ; then
