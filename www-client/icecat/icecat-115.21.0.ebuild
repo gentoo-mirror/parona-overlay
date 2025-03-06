@@ -736,7 +736,6 @@ src_configure() {
 		--allow-addon-sideload \
 		--disable-cargo-incremental \
 		--disable-crashreporter \
-		--disable-eme \
 		--disable-gpsd \
 		--disable-install-strip \
 		--disable-parental-controls \
@@ -770,6 +769,11 @@ src_configure() {
 		--x-libraries="${ESYSROOT}/usr/$(get_libdir)"
 
 	mozconfig_add_options_ac '' --update-channel=esr
+
+	# --disable-eme is only supported on x86 and x86-64
+	if use amd64 || use x86 ; then
+		mozconfig_add_options_ac '' --disable-eme
+	fi
 
 	if ! use x86 && [[ ${CHOST} != armv*h* ]] ; then
 		mozconfig_add_options_ac '' --enable-rust-simd
