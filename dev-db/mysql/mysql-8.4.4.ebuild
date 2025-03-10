@@ -229,7 +229,7 @@ src_configure() {
 	# Debug build type used extensively to add preprocessor definitions
 	use debug && CMAKE_BUILD_TYPE="Debug"
 
-	use doc && HTML_DOCS=( "${BUILD_DIR}/doxygen/html" )
+	use doc && HTML_DOCS=( "${BUILD_DIR}/doxygen/html/." )
 
 	local mycmakeargs=(
 		-DCOMPILATION_COMMENT="Gentoo Linux ${PF}"
@@ -249,14 +249,17 @@ src_configure() {
 		-DINSTALL_SUPPORTFILESDIR="${EPREFIX}/usr/share/mysql"
 		-DMYSQL_DATADIR="${EPREFIX}/var/lib/mysql"
 		-DMYSQL_UNIX_ADDR="${EPREFIX}/var/run/mysqld/mysqld.sock"
-		-DROUTER_INSTALL_DOCDIR="share/doc/${PF}"
-		-DROUTER_INSTALL_LOGROTATEDIR="${EPREFIX}/etc/logrotate.d"
 		-DSYSCONFDIR="${EPREFIX}/etc/mysql"
 
 		-DENABLED_PROFILING=$(usex profiling)
 		-DWITHOUT_SERVER=$(usex !server)
 		-DWITH_LIBWRAP=ON
+
 		-DWITH_ROUTER=$(usex router)
+		-DROUTER_INSTALL_PLUGINDIR="$(get_libdir)/mysqlrouter"
+		-DROUTER_INSTALL_LIBDIR="$(get_libdir)/mysqlrouter/private"
+		-DROUTER_INSTALL_DOCDIR="share/doc/${PF}"
+		-DROUTER_INSTALL_LOGROTATEDIR="${EPREFIX}/etc/logrotate.d"
 
 		# Webauthn plugins not available in community build
 		# https://dev.mysql.com/doc/refman/8.4/en/webauthn-pluggable-authentication.html
@@ -441,7 +444,18 @@ src_test() {
 	# Ensure that parallel runs don't die
 	local -x MTR_BUILD_THREAD="$((${RANDOM} % 100))"
 
-	local -x MTR_PARALLEL=${MTR_PARALLEL:-$(makeopts_jobs)}
+	# Use a tmpfs opportunistically, otherwise set MTR_PARALLEL to 1.
+	# MySQL tests are I/O heavy. They benefit greatly from a tmpfs,
+	# parallel tests without a tmpfs are flaky due to timeouts.
+	if mountpoint -q /dev/shm ; then
+		local VARDIR="/dev/shm/mysql-var-${MTR_BUILD_THREAD}"
+		local -x MTR_PARALLEL=${MTR_PARALLEL:-$(makeopts_jobs)}
+	else
+		ewarn "/dev/shm not mounted, setting default MTR_PARALLEL to 1. Tests will take a long time"
+		local VARDIR="${T}/vardir"
+		# Set it to one while allowing users to override it.
+		local -x MTR_PARALLEL=${MTR_PARALLEL:-1}
+	fi
 	einfo "MTR_PARALLEL is set to '${MTR_PARALLEL}'"
 
 	# Disable unit tests, run them separately with eclass defaults
@@ -521,7 +535,6 @@ src_test() {
 		"innodb.alter_kill;0;Known test failure -- no upstream bug yet"
 		"main.all_persisted_variables;0;Known failure - no upstream bug yet"
 		"perfschema.idx_compare_mutex_instances;0;Known failure - no upstream bug yet"
-		"rpl.rpl_json;0;Known failure - no upstream bug yet"
 	)
 
 	local -a CMAKE_SKIP_TESTS=(
@@ -580,13 +593,26 @@ src_test() {
 	# Anything touching gtid_executed is negatively affected if you have unlucky ordering
 	nonfatal edo perl mysql-test-run.pl \
 		--force --force-restart \
-		--vardir="${T}/var-tests" --tmpdir="${T}/tmp-tests" \
+		--vardir="${VARDIR}" --tmpdir="${T}/tmp-tests" \
 		--skip-test=tokudb --skip-test-list="${T}/disabled.def" \
 		--max-test-fail=0 \
 		--retry=3 --retry-failure=2 \
 		--report-unstable-tests \
 		--report-features
 	retstatus_tests=$?
+
+	if [[ "${VARDIR}" != "${T}/var-tests" ]]; then
+		# Move vardir to tempdir.
+		mv "${VARDIR}" "${T}/var-tests"
+		# Clean up mysql temporary directory
+		rm -rf "${VARDIR}" 2>/dev/null
+	fi
+
+	if [[ "${retstatus_tests}" -ne 0 ]]; then
+		eerror "Tests failed. When you file a bug, please attach the following items:"
+		eerror "The file that is created with this command:"
+		eerror "\t'find ${T}/var-tests -name '*.log' | tar -caf mysql-test-logs.tar.xz --files-from -'"
+	fi
 
 	popd &>/dev/null || die
 
@@ -595,23 +621,10 @@ src_test() {
 	pkill -9 -f "${S}/sql" 2>/dev/null
 
 	# bug #823656
-	nonfatal cmake_src_test --test-command "--gtest_death_test_style=threadsafe"
-	retstatus_unittests=$?
+	cmake_src_test --test-command "--gtest_death_test_style=threadsafe"
 
-	if [[ ${retstatus_tests} -eq 0 ]] && [[ ${retstatus_unittests} -eq 0 ]]; then
-		einfo "Tests successfully completed."
-	else
-		eerror "Tests failed. When you file a bug, please attach the follwing items:"
-		if [[ ${retstatus_tests} -ne 0 ]]; then
-			eerror "The file that is created with this command:"
-			eerror "\t'find ${T}/var-tests -name '*.log' | tar -caf mysql-test-logs.tar.xz --files-from -'"
-		fi
-		if [[ ${retstatus_unittests} -ne 0 ]]; then
-			eerror "The following file:"
-			eerror "\t${BUILD_DIR}/Testing/Temporary/LastTest.log"
-		fi
-		die "Tests failed."
-	fi
+	[[ "${retstatus_tests}" -ne 0 ]] && die "Test failures: mysql-test-run.pl"
+	einfo "Tests successfully completed"
 }
 
 src_install() {
