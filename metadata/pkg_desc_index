@@ -105,9 +105,9 @@ net-im/discord 0.0.86 0.0.87: All-in-one voice and text chat for gamers
 net-im/discord-ptb 0.0.132 0.0.133: All-in-one voice and text chat for gamers
 net-misc/wlvncc 9999: A Wayland Native VNC Client
 sec-keys/openpgp-keys-mysql 20231023: OpenPGP keys used to sign MySQL releases
-sys-apps/coolercontrol 1.4.4 1.4.5: Monitor and control your cooling and other devices
-sys-apps/coolercontrol-liqctld 1.4.4 1.4.5: Monitor and control your cooling and other devices (liqctld)
-sys-apps/coolercontrold 1.4.4 1.4.5: Monitor and control your cooling and other devices (daemon)
+sys-apps/coolercontrol 1.4.5: Monitor and control your cooling and other devices
+sys-apps/coolercontrol-liqctld 1.4.5: Monitor and control your cooling and other devices (liqctld)
+sys-apps/coolercontrold 1.4.5: Monitor and control your cooling and other devices (daemon)
 sys-apps/gsmartcontrol 9999: Hard Disk Drive and SSD Health Inspection Tool
 sys-boot/uefitool 68_alpha 69_alpha: UEFI firmware image viewer and editor
 sys-kernel/xanmod-kernel 6.12.16 6.12.17 6.12.18 6.13.4 6.13.5 6.13.6: Linux kernel built with XanMod and Gentoo patches
