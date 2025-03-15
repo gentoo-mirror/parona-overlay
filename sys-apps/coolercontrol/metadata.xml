@@ -6,6 +6,7 @@
 		<name>Alfred Wingate</name>
 	</maintainer>
 	<upstream>
+		<doc>https://docs.coolercontrol.org/</doc>
 		<remote-id type="gitlab">coolercontrol/coolercontrol</remote-id>
 	</upstream>
 </pkgmetadata>
