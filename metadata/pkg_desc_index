@@ -16,7 +16,7 @@ dev-build/cargo-make 0.37.23 0.37.24: Rust task runner and build tool
 dev-cpp/args 6.4.6: A simple header-only C++ argument parser library
 dev-cpp/cpr 1.11.1 1.11.2: C++ Requests: Curl for People, a spiritual port of Python Requests.
 dev-cpp/hjson-cpp 2.4.1 2.5: Hjson for C++
-dev-cpp/libloot 0.24.5 0.25.3 0.25.4: A C++ library for accessing LOOT's metadata and sorting functionality.
+dev-cpp/libloot 0.24.5 0.25.3 0.25.4 0.25.5: A C++ library for accessing LOOT's metadata and sorting functionality.
 dev-cpp/ogdf 2023.09: Open Graph algorithms and Data structure Framework.
 dev-cpp/tinygltf 2.9.3 2.9.4 2.9.5: Header only C++11 tiny glTF 2.0 library
 dev-cpp/trompeloeil 49: Header only C++14 mocking framework
@@ -105,9 +105,9 @@ net-im/discord 0.0.87 0.0.88: All-in-one voice and text chat for gamers
 net-im/discord-ptb 0.0.132 0.0.133: All-in-one voice and text chat for gamers
 net-misc/wlvncc 9999: A Wayland Native VNC Client
 sec-keys/openpgp-keys-mysql 20231023: OpenPGP keys used to sign MySQL releases
-sys-apps/coolercontrol 1.4.5: Monitor and control your cooling and other devices
-sys-apps/coolercontrol-liqctld 1.4.5: Monitor and control your cooling and other devices (liqctld)
-sys-apps/coolercontrold 1.4.5: Monitor and control your cooling and other devices (daemon)
+sys-apps/coolercontrol 1.4.5 2.0.0: Monitor and control your cooling and other devices
+sys-apps/coolercontrol-liqctld 1.4.5 2.0.0: Monitor and control your cooling and other devices (liqctld)
+sys-apps/coolercontrold 1.4.5 2.0.0: Monitor and control your cooling and other devices (daemon)
 sys-apps/gsmartcontrol 9999: Hard Disk Drive and SSD Health Inspection Tool
 sys-boot/uefitool 69_alpha 70_alpha: UEFI firmware image viewer and editor
 sys-kernel/xanmod-kernel 6.12.17 6.12.18 6.12.19 6.13.5 6.13.6 6.13.7: Linux kernel built with XanMod and Gentoo patches
