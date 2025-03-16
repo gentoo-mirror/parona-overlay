@@ -59,7 +59,7 @@ dev-python/gbinder 1.1.2-r1: Python bindings for libgbinder
 dev-python/inputs 0.5: Cross-platform Python support for keyboards, mice and gamepads.
 dev-python/log-symbols 0.0.14-r1: Colored symbols for various log levels for Python
 dev-python/pyclip 0.7.0: Cross-platform Clipboard module for Python with binary support.
-dev-python/pycryptodomex 3.21.0: A self-contained cryptographic library for Python
+dev-python/pycryptodomex 3.21.0 3.22.0: A self-contained cryptographic library for Python
 dev-python/pydantic-settings 2.7.0 2.7.1: Settings management using pydantic
 dev-python/pytest-examples 0.0.15: Pytest plugin for testing Python code examples in docstrings and markdown files.
 dev-python/rich-toolkit 0.13.2: Rich toolkit for building command-line applications
