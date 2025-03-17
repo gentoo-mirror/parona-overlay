@@ -67,7 +67,6 @@ dev-python/spinners 0.0.24-r1: Spinners for terminals
 dev-python/sqlmodel 0.0.23 0.0.24: SQL databases in Python, designed for simplicity, compatibility, and robustness.
 dev-python/steam 1.6.1: Python package for interacting with Steam
 dev-python/typer 0.15.2: Typer, build great CLIs. Easy to code. Based on Python type hints.
-dev-python/vdf 3.5 4.0: A module for (de)serialization to and from VDF, Valve's key-value text format
 dev-tex/altacv 1.7.2 1.7.3_p20241216: Yet another alternative curriculum vitae/résumé class with LaTeX
 dev-util/umr 1.0.10: umr is a userspace debugging and diagnostic tool for AMD GPUs
 dev-vcs/gcli 2.6.1 2.7.0: Portable CLI tool for interacting with Git(Hub|Lab|Tea) from the command line.
@@ -77,7 +76,7 @@ games-util/heroic-gogdl 9999: GOG Downloading module for Heroic Games Launcher
 games-util/limo 1.1: A simple Qt based mod manager
 games-util/loot 0.24.1 0.25.0 0.25.2: A modding utility for Starfield and some Elder Scrolls and Fallout games.
 games-util/mangohud 0.8.0 0.8.1 9999: Overlay for monitoring FPS, temperatures, CPU/GPU load and more
-games-util/nexusmodsapp 0.7.3 0.8.0: Nexus Mods App, a mod installer, creator and manager for all your popular games
+games-util/nexusmodsapp 0.8.0 0.8.2: Nexus Mods App, a mod installer, creator and manager for all your popular games
 games-util/protonup-qt 2.11.1: Install and manage proton with Steam and Lutris
 games-util/r2modman 3.1.56 3.1.57: A simple and easy to use mod manager for several games using Thunderstore
 games-util/steamtinkerlaunch 9999: Tool for use with the Steam client for custom launch options
@@ -98,7 +97,7 @@ kde-apps/toad 9999: Organize your tasks
 kde-misc/plasma-gamemode 9999: Plasma widget to show processes running in gamemode
 media-fonts/intel-one-mono 1.4.0: Intel's monospaced font family with clarity and legibility in mind.
 media-fonts/juliamono 0.051 0.059: JuliaMono - a monospaced font for scientific and technical computing
-media-libs/phonon-mpv 0.1.0: Phonon Backend using MPV Player(libmpv)
+media-libs/phonon-mpv 0.1.0-r1: Phonon Backend using MPV Player(libmpv)
 media-sound/spotify 1.2.53 1.2.56: Spotify is a social music platform
 media-video/mpv-mpris 1.1: MPRIS plugin for mpv
 net-im/discord 0.0.87 0.0.88: All-in-one voice and text chat for gamers
