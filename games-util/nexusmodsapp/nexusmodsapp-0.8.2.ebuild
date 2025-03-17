@@ -11,31 +11,31 @@ autofixture@4.18.1
 avalonia.angle.windows.natives@2.1.22045.20230930
 avalonia.avaloniaedit@11.1.0
 avalonia.buildservices@0.0.28
-avalonia.buildservices@0.0.29
-avalonia.controls.colorpicker@11.2.2
-avalonia.controls.datagrid@11.2.2
-avalonia.controls.treedatagrid@11.1.0
-avalonia.desktop@11.2.2
-avalonia.diagnostics@11.2.2
-avalonia.freedesktop@11.2.2
-avalonia.headless@11.2.2
+avalonia.buildservices@0.0.31
+avalonia.controls.colorpicker@11.2.4
+avalonia.controls.datagrid@11.2.4
+avalonia.controls.treedatagrid@11.1.1
+avalonia.desktop@11.2.4
+avalonia.diagnostics@11.2.4
+avalonia.freedesktop@11.2.4
+avalonia.headless@11.2.4
 avalonia.labs.panels@11.2.0
-avalonia.native@11.2.2
-avalonia.reactiveui@11.2.2
+avalonia.native@11.2.4
+avalonia.reactiveui@11.2.4
 avalonia.remote.protocol@11.0.0
-avalonia.remote.protocol@11.2.2
+avalonia.remote.protocol@11.2.4
 avalonia.skia@11.0.0
 avalonia.skia@11.2.0
-avalonia.skia@11.2.2
+avalonia.skia@11.2.4
 avalonia.svg.skia@11.2.0.2
-avalonia.themes.fluent@11.2.2
-avalonia.themes.simple@11.2.2
-avalonia.win32@11.2.2
-avalonia.x11@11.2.2
+avalonia.themes.fluent@11.2.4
+avalonia.themes.simple@11.2.4
+avalonia.win32@11.2.4
+avalonia.x11@11.2.4
 avalonia@11.0.0
 avalonia@11.1.3
 avalonia@11.2.0
-avalonia@11.2.2
+avalonia@11.2.4
 avaloniaedit.textmate@11.1.0
 bannerlord.launchermanager.localization@1.0.140
 bannerlord.launchermanager.models@1.0.140
@@ -60,6 +60,7 @@ dynamicdata@8.3.27
 dynamicdata@8.4.1
 dynamicdata@9.0.1
 dynamicdata@9.0.4
+dynamicdata@9.1.2
 emptyfiles@8.5.0
 excss@4.2.3
 fare@2.1.1
@@ -68,7 +69,7 @@ fetchbannerlordversion@1.0.6.46
 fluentassertions.analyzers@0.34.1
 fluentassertions.oneof@0.0.5
 fluentassertions@5.0.0
-fluentassertions@6.12.2
+fluentassertions@7.1.0
 fluentresults@3.15.2
 fody@6.8.0
 fomodinstaller.interface@1.0.0
@@ -76,23 +77,24 @@ fomodinstaller.interface@1.2.0
 fomodinstaller.scripting.xmlscript@1.0.0
 fomodinstaller.scripting@1.0.0
 fomodinstaller.utils@1.0.0
-gamefinder.common@4.4.0
-gamefinder.launcher.heroic@4.4.0
-gamefinder.registryutils@4.4.0
-gamefinder.storehandlers.eadesktop@4.4.0
-gamefinder.storehandlers.egs@4.4.0
-gamefinder.storehandlers.gog@4.4.0
-gamefinder.storehandlers.origin@4.4.0
-gamefinder.storehandlers.steam@4.4.0
-gamefinder.storehandlers.xbox@4.4.0
-gamefinder.wine@4.4.0
-gamefinder@4.4.0
+gamefinder.common@4.5.0
+gamefinder.launcher.heroic@4.5.0
+gamefinder.registryutils@4.5.0
+gamefinder.storehandlers.eadesktop@4.5.0
+gamefinder.storehandlers.egs@4.5.0
+gamefinder.storehandlers.gog@4.5.0
+gamefinder.storehandlers.origin@4.5.0
+gamefinder.storehandlers.steam@4.5.0
+gamefinder.storehandlers.xbox@4.5.0
+gamefinder.wine@4.5.0
+gamefinder@4.5.0
 gee.external.capstone@2.3.0
 githubactionstestlogger@2.4.1
 google.protobuf@3.22.5
 grpc.core.api@2.52.0
 grpc.net.client@2.52.0
 grpc.net.common@2.52.0
+halgari.jamarino.intervaltree@1.0.0-alpha
 harfbuzzsharp.nativeassets.linux@7.3.0.2
 harfbuzzsharp.nativeassets.linux@7.3.0.3
 harfbuzzsharp.nativeassets.macos@7.3.0.2
@@ -107,7 +109,7 @@ hotchocolate.language.syntaxtree@14.3.0
 hotchocolate.transport.abstractions@14.3.0
 hotchocolate.transport.http@14.3.0
 hotchocolate.utilities@14.3.0
-htmlagilitypack@1.11.70
+htmlagilitypack@1.11.71
 humanizer.core.af@2.14.1
 humanizer.core.ar@2.14.1
 humanizer.core.az@2.14.1
@@ -161,7 +163,6 @@ humanizer.core@2.2.0
 humanizer@2.14.1
 iced@1.17.0
 ini-parser-netstandard@2.5.2
-jamarino.intervaltree@1.2.2
 jetbrains.annotations@2024.3.0
 jitbit.fastcache@1.1.0
 k4os.compression.lz4@1.3.7-beta
@@ -173,6 +174,7 @@ livechartscore.skiasharpview@2.0.0-rc2
 livechartscore@2.0.0-rc2
 magick.net-q16-anycpu@14.0.0
 magick.net.core@14.0.0
+markdig@0.38.0
 markdown.avalonia.tight@11.0.3-a1
 martincostello.logging.xunit@0.3.0
 memorypack.core@1.21.3
@@ -313,6 +315,7 @@ microsoft.visualstudio.validation@17.8.8
 microsoft.win32.primitives@4.3.0
 microsoft.win32.registry@4.4.0
 microsoft.win32.registry@5.0.0
+microsoft.win32.systemevents@6.0.0
 nerdbank.fullduplexstream@1.1.12
 nerdbank.streams@2.11.79
 netescapades.enumgenerators@1.0.0-beta07
@@ -327,9 +330,9 @@ nexusmods.archives.nx@0.6.1
 nexusmods.archives.nx@0.6.3
 nexusmods.hashing.xxhash3.paths@3.0.3
 nexusmods.hashing.xxhash3@3.0.3
-nexusmods.mnemonicdb.abstractions@0.9.98
-nexusmods.mnemonicdb.sourcegenerator@0.9.98
-nexusmods.mnemonicdb@0.9.98
+nexusmods.mnemonicdb.abstractions@0.9.114
+nexusmods.mnemonicdb.sourcegenerator@0.9.114
+nexusmods.mnemonicdb@0.9.114
 nexusmods.paths.extensions.nx@0.15.0
 nexusmods.paths.testinghelpers@0.15.0
 nexusmods.paths@0.10.0
@@ -346,6 +349,7 @@ nuget.frameworks@6.3.4
 nuget.packaging@6.3.4
 nuget.protocol@6.3.4
 nuget.resolver@6.3.4
+nuget.versioning@6.12.1
 nuget.versioning@6.3.4
 observablecollections.r3@3.3.2
 observablecollections@3.3.2
@@ -489,7 +493,7 @@ system.composition.typedparts@1.0.31
 system.composition.typedparts@7.0.0
 system.composition@1.0.31
 system.composition@7.0.0
-system.configuration.configurationmanager@4.4.0
+system.configuration.configurationmanager@6.0.0
 system.console@4.3.0
 system.diagnostics.debug@4.0.11
 system.diagnostics.debug@4.3.0
@@ -502,6 +506,7 @@ system.diagnostics.eventlog@9.0.0
 system.diagnostics.tools@4.3.0
 system.diagnostics.tracing@4.1.0
 system.diagnostics.tracing@4.3.0
+system.drawing.common@6.0.0
 system.dynamic.runtime@4.0.11
 system.formats.asn1@5.0.0
 system.globalization.calendars@4.3.0
@@ -576,8 +581,8 @@ system.runtime.numerics@4.3.0
 system.runtime@4.1.0
 system.runtime@4.3.0
 system.security.accesscontrol@4.4.0
-system.security.accesscontrol@4.5.0
 system.security.accesscontrol@5.0.0
+system.security.accesscontrol@6.0.0
 system.security.claims@4.3.0
 system.security.cryptography.algorithms@4.3.0
 system.security.cryptography.cng@4.3.0
@@ -588,11 +593,12 @@ system.security.cryptography.openssl@4.3.0
 system.security.cryptography.pkcs@5.0.0
 system.security.cryptography.primitives@4.3.0
 system.security.cryptography.protecteddata@4.4.0
+system.security.cryptography.protecteddata@6.0.0
 system.security.cryptography.x509certificates@4.3.0
 system.security.permissions@4.5.0
+system.security.permissions@6.0.0
 system.security.principal.windows@4.3.0
 system.security.principal.windows@4.4.0
-system.security.principal.windows@4.5.0
 system.security.principal.windows@5.0.0
 system.security.principal@4.3.0
 system.text.encoding.codepages@4.5.1
@@ -617,6 +623,7 @@ system.threading.threadpool@4.3.0
 system.threading.timer@4.3.0
 system.threading@4.0.11
 system.threading@4.3.0
+system.windows.extensions@6.0.0
 system.xml.readerwriter@4.3.0
 system.xml.xdocument@4.3.0
 testableio.system.io.abstractions.wrappers@21.0.29
@@ -659,6 +666,7 @@ xunit.extensibility.execution@2.9.2
 xunit.runner.visualstudio@2.8.2
 xunit.skippablefact@1.4.13
 xunit@2.9.2
+yamldotnet@16.3.0
 zstdsharp.port@0.8.2
 zstring@2.6.0
 "
@@ -675,9 +683,27 @@ MY_PN="NexusMods.App"
 MY_PV="${PV/_/-}" # nuget compatible version
 MY_P="${MY_PN}-${MY_PV}"
 
-SMAPI_COMMIT="ae4c42648356b6ee5c769397e3a2048b22bfd80b"
-TESTDB_LFS_COMMIT="9a590db37705d191f53665ed312c7485edc375d7"
-DOCS_THEME_COMMIT="fe4e8b1b26d2c2917b404b0b091bfa31f135e337"
+# https://github.com/Nexus-Mods/NexusMods.App/tree/main/extern
+SMAPI_COMMIT="fd73446090cd71f4948f34ba8c428e45aa0a3ebf"
+
+# https://github.com/Nexus-Mods/NexusMods.App/blob/v0.8.0/tests/NexusMods.DataModel.SchemaVersions.Tests/Resources/Databases/Descriptions.md
+# Update whenever files change to avoid duplicate distfiles
+declare -A TESTDB_FILES=(
+	[SDV.4_11_2024.rocksdb.zip]="9a590db37705d191f53665ed312c7485edc375d7"
+	[SDV.2_5_2025.rocksdb.zip]="bd377d4f6f63845da872bb242178c2df48fd3246"
+	[Issue-2608.rocksdb.zip]="56fe8c85b2b55bcb6b019003483add90187da6b3"
+	[Migration-5.rocksdb.zip]="3440e65dddf29b592e37eb1d8378519c3924db82"
+	[Migration-6.rocksdb.zip]="53726a55668e70771a1b5023f80d674a693afcc1"
+)
+
+TESTDB_URIS=""
+add_testdb_uris() {
+	for dbfile in ${!TESTDB_FILES[@]}; do
+		local dbcommit="${TESTDB_FILES[${dbfile}]}"
+		TESTDB_URIS+=" https://github.com/Nexus-Mods/NexusMods.App/raw/${dbcommit}/tests/NexusMods.DataModel.SchemaVersions.Tests/Resources/Databases/${dbfile} -> ${PN}-${dbcommit}-${dbfile}"
+	done
+}
+add_testdb_uris
 
 SRC_URI="
 	https://github.com/Nexus-Mods/NexusMods.App/archive/refs/tags/v${MY_PV}.tar.gz
@@ -685,10 +711,7 @@ SRC_URI="
 	https://github.com/Pathoschild/SMAPI/archive/${SMAPI_COMMIT}.tar.gz
 		-> SMAPI-${SMAPI_COMMIT}.tar.gz
 	${NUGET_URIS}
-	test? (
-		https://github.com/Nexus-Mods/NexusMods.App/raw/${TESTDB_LFS_COMMIT}/tests/NexusMods.DataModel.SchemaVersions.Tests/Resources/Databases/SDV.4_11_2024.rocksdb.zip
-			-> ${PN}-${TESTDB_LFS_COMMIT}-SDV.4_11_2024.rocksdb.zip
-	)
+	test? ( ${TESTDB_URIS} )
 "
 S="${WORKDIR}/${MY_P}"
 
@@ -741,12 +764,32 @@ src_prepare() {
 
 	if use test; then
 		# lfs files not included in github generated archives
-		cp -T \
-			"${DISTDIR}/${PN}-${TESTDB_LFS_COMMIT}-SDV.4_11_2024.rocksdb.zip" \
-			"${S}/tests/NexusMods.DataModel.SchemaVersions.Tests/Resources/Databases/SDV.4_11_2024.rocksdb.zip" || die
+		for dbfile in ${!TESTDB_FILES[@]}; do
+			local dbcommit="${TESTDB_FILES[${dbfile}]}"
+			cp -T \
+				"${DISTDIR}/${PN}-${dbcommit}-${dbfile}" \
+					"${S}/tests/NexusMods.DataModel.SchemaVersions.Tests/Resources/Databases/${dbfile}" || die
+		done
 	fi
 
 	sed -i -e 's/${INSTALL_EXEC}/NexusMods.App/' src/NexusMods.App/com.nexusmods.app.desktop || die
+
+	# network sandbox
+	sed -i \
+		-e '/Test_TryGetLastSupportedSMAPIVersion/i    [Trait("RequiresNetworking", "True")]' \
+		tests/Games/NexusMods.Games.StardewValley.Tests/SMAPIGameVersionDiagnosticEmitterTests.cs || die
+	sed -i \
+		-e '/TestDatabase/i    [Trait("RequiresNetworking", "True")]' \
+		tests/NexusMods.DataModel.SchemaVersions.Tests/LegacyDatabaseSupportTests.cs || die
+	sed -i \
+		-e '/TestsFor_0001_ConvertTimestamps/i    [Trait("RequiresNetworking", "True")]' \
+		tests/NexusMods.DataModel.SchemaVersions.Tests/MigrationSpecificTests/TestsFor_0001_ConvertTimestamps.cs || die
+	sed -i \
+		-e '/TestsFor_0003_FixDuplicates/i    [Trait("RequiresNetworking", "True")]' \
+		tests/NexusMods.DataModel.SchemaVersions.Tests/MigrationSpecificTests/TestsFor_0003_FixDuplicates.cs || die
+	sed -i \
+		-e '/TestsFor_0004_RemoveGameFiles/i    [Trait("RequiresNetworking", "True")]' \
+		tests/NexusMods.DataModel.SchemaVersions.Tests/MigrationSpecificTests/TestsFor_0004_RemoveGameFiles.cs || die
 
 	if ! use debug; then
 		# xunit doesnt support conditional unit tests like this
@@ -763,6 +806,8 @@ src_prepare() {
 }
 
 src_test() {
+	xdg_environment_reset
+
 	# https://github.com/Nexus-Mods/NexusMods.App/issues/1224#issuecomment-2060696994
 	local -x USER="portage"
 	virtx dotnet-pkg_src_test
