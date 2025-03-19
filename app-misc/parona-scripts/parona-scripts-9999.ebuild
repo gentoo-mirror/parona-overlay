@@ -1,4 +1,4 @@
-# Copyright 2024 Gentoo Authors
+# Copyright 2024-2025 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=8
@@ -12,7 +12,7 @@ EGIT_REPO_URI="https://gitlab.com/Parona/parona-scripts.git"
 LICENSE="GPL-3"
 SLOT="0"
 
-IUSE="efibootmgr perl"
+IUSE="efibootmgr perl portage-hooks"
 
 RESTRICT="test" # no tests
 
@@ -39,6 +39,10 @@ RDEPEND="
 		dev-perl/DateTime-Format-ISO8601
 		dev-perl/Number-Bytes-Human
 	)
+	portage-hooks? (
+		app-portage/eix
+		sys-apps/pkgcore
+	)
 "
 
 src_install() {
@@ -50,5 +54,9 @@ src_install() {
 
 	if use perl; then
 		emake DESTDIR="${D}" perl
+	fi
+
+	if use portage-hooks; then
+		emake DESTDIR="${D}" portage_hooks
 	fi
 }

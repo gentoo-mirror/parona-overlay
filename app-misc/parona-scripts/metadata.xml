@@ -11,5 +11,6 @@
 	<use>
 		<flag name="efibootmgr">Install installkernel hook for efibootmgr</flag>
 		<flag name="perl">Install perl scripts</flag>
+		<flag name="portage-hooks">Install portage hooks</flag>
 	</use>
 </pkgmetadata>
