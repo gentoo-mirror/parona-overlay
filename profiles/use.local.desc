@@ -8,6 +8,7 @@ app-arch/unzip:natspec - Use dev-libs/libnatspec to correctly decode non-ascii f
 app-containers/waydroid:nftables - Add support for net-firewall/nftables
 app-misc/parona-scripts:efibootmgr - Install installkernel hook for efibootmgr
 app-misc/parona-scripts:perl - Install perl scripts
+app-misc/parona-scripts:portage-hooks - Install portage hooks
 dev-build/cargo-make:openssl - Enable TLS support with dev-libs/openssl
 dev-build/cargo-make:rustls - Enable TLS support with rustls
 dev-db/mysql:cjk - Add CJK support for InnoDB fulltext search using app-text/mecab
