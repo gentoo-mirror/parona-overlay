@@ -25,7 +25,7 @@ dev-libs/libgbinder 1.1.41 1.1.42: GLib-style interface to binder
 dev-libs/libglibutil 1.0.79: Library of glib utilities
 dev-libs/vala-language-server 0.48.7 9999: Code Intelligence for Vala & Genie
 dev-perl/Color-ANSI-Util 0.165: Routines for dealing with ANSI colors
-dev-perl/Color-RGB-Util 0.607: Utilities related to RGB colors
+dev-perl/Color-RGB-Util 0.607 0.609: Utilities related to RGB colors
 dev-perl/ColorThemeBase-Static 0.009: Base class for color theme modules with static list of items
 dev-perl/ColorThemeRole-ANSI 0.001: Roles for using ColorTheme::* with ANSI codes
 dev-perl/ColorThemeUtil-ANSI 0.002: Utility routines related to color themes and ANSI code
@@ -101,7 +101,7 @@ media-libs/phonon-mpv 0.1.0-r1: Phonon Backend using MPV Player(libmpv)
 media-sound/spotify 1.2.53 1.2.56: Spotify is a social music platform
 media-video/mpv-mpris 1.1: MPRIS plugin for mpv
 net-im/discord 0.0.87 0.0.88: All-in-one voice and text chat for gamers
-net-im/discord-ptb 0.0.132 0.0.133: All-in-one voice and text chat for gamers
+net-im/discord-ptb 0.0.133 0.0.134: All-in-one voice and text chat for gamers
 net-misc/wlvncc 9999: A Wayland Native VNC Client
 sec-keys/openpgp-keys-mysql 20231023: OpenPGP keys used to sign MySQL releases
 sys-apps/coolercontrol 1.4.5 2.0.0: Monitor and control your cooling and other devices
