@@ -56,17 +56,29 @@ metadata:
   stage: deploy
   rules:
     - if: $CI_COMMIT_BRANCH == $CI_DEFAULT_BRANCH
+    - if: $CI_COMMIT_BRANCH != $CI_DEFAULT_BRANCH
+      variables:
+        METADATA_BRANCH: "metadata_test"
+      when: manual
   dependencies:
     - pkgcheck_ci
   variables:
     GIT_STRATEGY: fetch
     GIT_CHECKOUT: "false"
   before_script:
-    - git fetch origin "${METADATA_BRANCH:-metadata}"
+    - |-
+      if git ls-remote --exit-code origin "${METADATA_BRANCH:-metadata}"; then
+        git fetch origin "${METADATA_BRANCH:-metadata}"
+      fi
     - git config --global user.email "${GITLAB_TOKEN_NAME}@noreply.gitlab.com"
     - git config --global user.name "${GITLAB_TOKEN_NAME}"
   script:
-    - git checkout -B "${METADATA_BRANCH:-metadata}" origin/"${METADATA_BRANCH:-metadata}"
+    - |-
+      if git ls-remote --exit-code origin "${METADATA_BRANCH:-metadata}"; then
+        git checkout -B "${METADATA_BRANCH:-metadata}" origin/"${METADATA_BRANCH:-metadata}"
+      else
+        git checkout -b "${METADATA_BRANCH:-metadata}"
+      fi
     - git merge "${CI_COMMIT_SHA}"
     - git add -f metadata/md5-cache metadata/pkg_desc_index profiles/use.local.desc
     - |-
