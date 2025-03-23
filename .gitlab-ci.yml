@@ -1,15 +1,29 @@
 image:  ghcr.io/pkgcore/pkgcheck:latest
 
+
+# Requirements:
+# * A project access token with read_repository and write_repository scopes
+# * GITLAB_TOKEN (the token itself)
+# * GITLAB_TOKEN_NAME (the name of the user commiting, GitLab creates fake users with the name @project_<project_id>_bot_<random_hash>)
+
+# Optional variables:
+# * METADATA_BRANCH otherwise "metadata"
+
+stages:
+  - check
+  - deploy
+
 .pkgcheck: &pkgcheck
+  stage: check
   cache:
-    key: pkgcheck
+    key: md5-cache
     paths:
-      - .cache/pkgcheck
+      - metadata/md5-cache
   script:
     - pmaint sync gentoo
-    - pmaint regen --dir "$CI_PROJECT_DIR/.cache/pkgcheck/repos" .
+    - pmaint regen $PMAINT_ARGS .
     - git config --global --add safe.directory '*'
-    - pkgcheck --color y ci --cache-dir .cache/pkgcheck --failures ~/failures.json --exit GentooCI $PKGCHECK_ARGS
+    - pkgcheck --color y ci --failures ~/failures.json --exit GentooCI $PKGCHECK_ARGS
     - pkgcheck replay --color y ~/failures.json
 
 pkgcheck_ci:
@@ -21,6 +35,15 @@ pkgcheck_ci:
       allow_failure: true
     - if: $CI_COMMIT_BRANCH != $CI_DEFAULT_BRANCH
       when: manual
+  artifacts:
+    name: metadata
+    paths:
+      - metadata/md5-cache
+      - metadata/pkg_desc_index
+      - profiles/use.local.desc
+  variables:
+    # For reuse in the metadata deploy job
+    PMAINT_ARGS: "--use-local-desc --pkg-desc-index"
 
 pkgcheck_merge:
   <<: *pkgcheck
@@ -28,3 +51,28 @@ pkgcheck_merge:
     - if: $CI_PIPELINE_SOURCE == 'merge_request_event'
   variables:
     PKGCHECK_ARGS: "--commits $CI_MERGE_REQUEST_DIFF_BASE_SHA..$CI_COMMIT_SHA"
+
+metadata:
+  stage: deploy
+  rules:
+    - if: $CI_COMMIT_BRANCH == $CI_DEFAULT_BRANCH
+  dependencies:
+    - pkgcheck_ci
+  variables:
+    GIT_STRATEGY: fetch
+    GIT_CHECKOUT: "false"
+  before_script:
+    - git fetch origin "${METADATA_BRANCH:-metadata}"
+    - git config --global user.email "${GITLAB_TOKEN_NAME}@noreply.gitlab.com"
+    - git config --global user.name "${GITLAB_TOKEN_NAME}"
+  script:
+    - git checkout -B "${METADATA_BRANCH:-metadata}" origin/"${METADATA_BRANCH:-metadata}"
+    - git merge "${CI_COMMIT_SHA}"
+    - git add -f metadata/md5-cache metadata/pkg_desc_index profiles/use.local.desc
+    - |-
+      CHANGES=$(git status --porcelain | wc -l)
+      if [[ ${CHANGES} -gt 0 ]]; then
+        git status
+        git commit -m "$(date "+%F %R %Z")"
+      fi
+    - git push "https://${GITLAB_TOKEN_NAME}:${GITLAB_TOKEN}@${CI_SERVER_HOST}/${CI_PROJECT_PATH}.git" "${METADATA_BRANCH:-metadata}" -o ci.skip
