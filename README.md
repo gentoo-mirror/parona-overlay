@@ -19,5 +19,3 @@ Also includes ebuilds that I intend to push to ::gentoo (or not), unkeyworded of
 * games-util/nexusmodsapp
 	- https://gitlab.com/Parona/parona-overlay/-/issues/2
 	- "This is alpha software, meaning it's still very early in development and may have bugs or issues that could break your mod setup. We've done our best to patch up any major problems, but there will always be a few "gotchas" we haven't accounted for." - https://nexus-mods.github.io/NexusMods.App/users/ 
-* games-util/limo and games-util/loot
-	- I need to get around to installing a game and testing modding with these...

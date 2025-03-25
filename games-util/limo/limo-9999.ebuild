@@ -51,11 +51,6 @@ BDEPEND="
 	virtual/pkgconfig
 "
 
-PATCHES=(
-	"${FILESDIR}"/limo-1.1-hookup-tests.ebuild
-	"${FILESDIR}"/limo-1.1-gcc15-numeric.patch
-)
-
 src_configure() {
 	local mycmakeargs=(
 		-DIS_FLATPAK=OFF
