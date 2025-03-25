@@ -1,17 +1,16 @@
-BDEPEND=virtual/pkgconfig app-alternatives/ninja >=dev-build/cmake-3.20.5
-DEFINED_PHASES=compile configure install postinst postrm preinst prepare test
+BDEPEND=virtual/pkgconfig app-alternatives/ninja >=dev-build/cmake-3.20.5 >=dev-vcs/git-1.8.2.1[curl]
+DEFINED_PHASES=compile configure install postinst postrm preinst prepare test unpack
 DEPEND=app-arch/libarchive:= app-arch/lz4:= app-arch/unrar:= app-arch/zstd:= dev-cpp/cpr dev-cpp/libloot:0/0.24 dev-libs/jsoncpp:= dev-libs/openssl:= dev-libs/pugixml dev-qt/qtcore:5 dev-qt/qtgui:5 dev-qt/qtnetwork:5 dev-qt/qtsvg:5 dev-qt/qtwidgets:5 sys-libs/zlib test? ( dev-cpp/catch )
 DESCRIPTION=A simple Qt based mod manager
 EAPI=8
 HOMEPAGE=https://github.com/limo-app/limo/
 IDEPEND=dev-util/desktop-file-utils x11-misc/shared-mime-info
-INHERIT=cmake xdg
+INHERIT=cmake xdg git-r3
 IUSE=test
-KEYWORDS=~amd64
 LICENSE=GPL-3
+PROPERTIES=live
 RDEPEND=app-arch/libarchive:= app-arch/lz4:= app-arch/unrar:= app-arch/zstd:= dev-cpp/cpr dev-cpp/libloot:0/0.24 dev-libs/jsoncpp:= dev-libs/openssl:= dev-libs/pugixml dev-qt/qtcore:5 dev-qt/qtgui:5 dev-qt/qtnetwork:5 dev-qt/qtsvg:5 dev-qt/qtwidgets:5 sys-libs/zlib
 RESTRICT=!test? ( test )
 SLOT=0
-SRC_URI=https://github.com/limo-app/limo/archive/refs/tags/v1.1.tar.gz -> limo-1.1.tar.gz
-_eclasses_=toolchain-funcs	6afdb6107430c1832ca7e16aacbf8fa1	multilib	b2a329026f2e404e9e371097dda47f96	flag-o-matic	357f1a896fbedcd06e5ce55419c49eb9	multiprocessing	1e32df7deee68372153dca65f4a7c21f	ninja-utils	2df4e452cea39a9ec8fb543ce059f8d6	xdg-utils	42869b3c8d86a70ef3cf75165a395e09	cmake	10a50dfaf728b802fcfd37f8d0da9056	xdg	3ef49a87c52c8b77c476351195dfe575
-_md5_=9a03366c3335b0d72ac9073e6330839c
+_eclasses_=toolchain-funcs	6afdb6107430c1832ca7e16aacbf8fa1	multilib	b2a329026f2e404e9e371097dda47f96	flag-o-matic	357f1a896fbedcd06e5ce55419c49eb9	multiprocessing	1e32df7deee68372153dca65f4a7c21f	ninja-utils	2df4e452cea39a9ec8fb543ce059f8d6	xdg-utils	42869b3c8d86a70ef3cf75165a395e09	cmake	10a50dfaf728b802fcfd37f8d0da9056	xdg	3ef49a87c52c8b77c476351195dfe575	git-r3	875eb471682d3e1f18da124be97dcc81
+_md5_=dd2e12c617e4f536dd69eabfe283d7d8
