@@ -7,8 +7,8 @@ inherit desktop pax-utils unpacker xdg
 
 DESCRIPTION="Spotify is a social music platform"
 HOMEPAGE="https://www.spotify.com/download/linux/"
-SRC_BASE="http://repository.spotify.com/pool/non-free/s/spotify-client/"
-BUILD_ID_AMD64="440.g7b2f582a"
+SRC_BASE="https://repository.spotify.com/pool/non-free/s/spotify-client/"
+BUILD_ID_AMD64="514.g834e17d4"
 SRC_URI="${SRC_BASE}${PN}-client_${PV}.${BUILD_ID_AMD64}_amd64.deb"
 S="${WORKDIR}/"
 
