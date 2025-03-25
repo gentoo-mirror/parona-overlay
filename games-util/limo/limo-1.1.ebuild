@@ -7,14 +7,19 @@ inherit cmake xdg
 
 DESCRIPTION="A simple Qt based mod manager"
 HOMEPAGE="https://github.com/limo-app/limo/"
-SRC_URI="
-	https://github.com/limo-app/limo/archive/refs/tags/v${PV}.tar.gz
-		-> ${P}.tar.gz
-"
+if [[ ${PV} == 9999 ]]; then
+	inherit git-r3
+	EGIT_REPO_URI="https://github.com/limo-app/limo/"
+else
+	SRC_URI="
+		https://github.com/limo-app/limo/archive/refs/tags/v${PV}.tar.gz
+			-> ${P}.tar.gz
+	"
+	KEYWORDS="~amd64"
+fi
 
 LICENSE="GPL-3"
 SLOT="0"
-# no keywords on purpose
 
 IUSE="test"
 RESTRICT="!test? ( test )"
@@ -25,7 +30,7 @@ RDEPEND="
 	app-arch/unrar:=
 	app-arch/zstd:=
 	dev-cpp/cpr
-	<dev-cpp/libloot-0.25.0:=
+	dev-cpp/libloot:0/0.24
 	dev-libs/jsoncpp:=
 	dev-libs/openssl:=
 	dev-libs/pugixml
