@@ -3,7 +3,8 @@
 
 EAPI=8
 
-inherit cmake desktop xdg
+PYTHON_COMPAT=( python3_{12..13} )
+inherit cmake desktop python-any-r1 xdg
 
 DESCRIPTION="A modding utility for Starfield and some Elder Scrolls and Fallout games."
 HOMEPAGE="
@@ -27,7 +28,7 @@ SRC_URI="
 
 LICENSE="GPL-3"
 SLOT="0"
-# keywords not included because im unhappy
+KEYWORDS="~amd64"
 
 IUSE="test"
 RESTRICT="!test? ( test )"
@@ -53,12 +54,40 @@ DEPEND="
 	)
 "
 BDEPEND="
+	${PYTHON_DEPS}
+	$(python_gen_any_dep '
+		dev-python/sphinx[${PYTHON_USEDEP}]
+		dev-python/sphinx-rtd-theme[${PYTHON_USEDEP}]
+	')
 	sys-devel/gettext
 	virtual/pkgconfig
 "
 
+python_check_deps() {
+	python_has_version "dev-python/sphinx[${PYTHON_USEDEP}]" &&
+		python_has_version "dev-python/sphinx-rtd-theme[${PYTHON_USEDEP}]"
+}
+
 src_prepare() {
 	cmake_src_prepare
+
+	# Use Gentoo expected path
+	sed -i \
+		-e "s|lootDocsPath_ = appPath.parent_path() / \"share\" / \"doc\" / \"loot\";|lootDocsPath_ = appPath.parent_path() / \"share\" / \"doc\" / \"${PF}\" / \"html\" ;|" \
+		src/gui/state/loot_paths.cpp || die
+	# Change tests to work with this value
+	sed -i \
+		-e "s|EXPECT_EQ(std::filesystem::u8path(\"prefix\") / \"share\" / \"doc\" / \"loot\",|EXPECT_EQ(std::filesystem::u8path(\"prefix\") / \"share\" / \"doc\" / \"${PF}\" / \"html\",|" \
+		src/tests/gui/state/loot_paths_test.h || die
+
+	# Disable update checking by default. Otherwise you have to manually give it a commit.
+	sed -i \
+		-e 's/bool enableLootUpdateCheck_{true};/bool enableLootUpdateCheck_{false};/' \
+		src/gui/state/loot_settings.h || die
+	# Change tests to reflect this changed default
+	sed -i \
+		-e 's/EXPECT_TRUE(settings_.isLootUpdateCheckEnabled());/EXPECT_FALSE(settings_.isLootUpdateCheckEnabled());/' \
+		src/tests/gui/state/loot_settings_test.h || die
 
 	# minizip-ng package config is broken
 	# https://github.com/zlib-ng/minizip-ng/issues/722
@@ -68,7 +97,6 @@ src_prepare() {
 src_configure() {
 	local mycmakeargs=(
 		-DLOOT_BUILD_TESTS=$(usex test)
-		-DGIT_COMMIT_STRING="(Gentoo)" # hijack
 		-DCMAKE_DISABLE_FIND_PACKAGE_Git=ON
 		-DFETCHCONTENT_TRY_FIND_PACKAGE_MODE=ALWAYS
 		-DBoost_USE_STATIC_LIBS=OFF
@@ -89,6 +117,8 @@ src_compile() {
 		[[ -e ${locale}/LC_MESSAGES/loot.po ]] || continue
 		msgfmt ${locale}/LC_MESSAGES/loot.po -o ${locale}/LC_MESSAGES/loot.mo ||  die
 	done
+
+	sphinx-build -b html "${S}/docs" "${BUILD_DIR}/docs/html" || die
 }
 
 src_install() {
@@ -109,5 +139,6 @@ src_install() {
 		doins ${locale}/LC_MESSAGES/loot.mo
 	done
 
+	local HTML_DOCS=( "${BUILD_DIR}"/docs/html/. )
 	einstalldocs
 }
