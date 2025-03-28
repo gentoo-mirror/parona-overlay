@@ -62,7 +62,7 @@ dev-python/pyclip 0.7.0: Cross-platform Clipboard module for Python with binary 
 dev-python/pycryptodomex 3.21.0 3.22.0: A self-contained cryptographic library for Python
 dev-python/pydantic-settings 2.7.0 2.7.1: Settings management using pydantic
 dev-python/pytest-examples 0.0.15 0.0.17: Pytest plugin for testing Python code examples in docstrings and markdown files.
-dev-python/rich-toolkit 0.13.2: Rich toolkit for building command-line applications
+dev-python/rich-toolkit 0.13.2 0.14.0: Rich toolkit for building command-line applications
 dev-python/spinners 0.0.24-r1: Spinners for terminals
 dev-python/sqlmodel 0.0.23 0.0.24: SQL databases in Python, designed for simplicity, compatibility, and robustness.
 dev-python/steam 1.6.1: Python package for interacting with Steam
@@ -90,7 +90,7 @@ gui-libs/dfl-applications 0.2.0: This library provides a thin wrapper around QAp
 gui-libs/dfl-ipc 0.2.0: Two very simple classes for IPC. Used by DFL::Application.
 gui-libs/dfl-login1 0.2.0: DFL Login1 class implements a part of the systemd logind dbus protocol.
 gui-libs/dfl-utils 0.2.0: This library provides single-instance Application classes for various utilities.
-gui-libs/ftxui 5.0.0 6.0.0: C++ Functional Terminal User Interface
+gui-libs/ftxui 5.0.0 6.0.1: C++ Functional Terminal User Interface
 gui-libs/wayqt 0.2.0 9999: A Qt-based wrapper for various wayland protocols.
 gui-wm/cage 0.2.0: A Wayland kiosk
 kde-apps/toad 9999: Organize your tasks
