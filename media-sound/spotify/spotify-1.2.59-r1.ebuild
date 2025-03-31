@@ -99,8 +99,9 @@ src_install() {
 	  else
 	    echo "Neither gnome-integration-spotify nor spotify-tray are installed."
 	    echo "Launching spotify without systray integration."
+	    # --no-zygote bug #944923
 	    exec "${SPOTIFY_HOME}/spotify" \\
-	      --enable-features=UseOzonePlatfrom --ozone-platform-hint=auto --enable-wayland-ime "\$@"
+	      --enable-features=UseOzonePlatfrom --ozone-platform-hint=auto --enable-wayland-ime --no-zygote "\$@"
 	  fi
 	fi
 	EOF
