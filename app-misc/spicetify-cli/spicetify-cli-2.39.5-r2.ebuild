@@ -23,7 +23,7 @@ whitelist_versions() {
 
 		case ${version_spec} in
 			"<>")
-				deps[$index]="( <=media-sound/spotify-${version2} >=media-sound/spotify-${version1} )"
+				deps[$index]="( <media-sound/spotify-$(ver_cut 1-2 ${version2}).$(( $(ver_cut 3 ${version2}) + 1 )) >=media-sound/spotify-${version1} )"
 				SPOTIFY_VERSIONS+="${version1} -> ${version2}"
 				;;
 			"~")
