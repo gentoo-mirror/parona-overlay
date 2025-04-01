@@ -1,0 +1,50 @@
+#!/usr/bin/env bash
+set -e
+
+version="${1}"
+srcdir="${HOME}/sources/gnuzilla"
+projectid="32909921"
+
+if [[ -z ${version} ]]; then
+    echo "No version given"
+    exit 1
+fi
+
+if ! git --version >/dev/null ; then
+    echo "dev-vcs/git missing"
+    exit 1
+fi
+if ! gitlab_upload_package -h >/dev/null ; then
+    echo "app-misc/parona-scripts missing"
+    exit 1
+fi
+
+if ! [[ -d ${srcdir} ]]; then
+    echo "${srcdir} missing"
+    exit 1
+fi
+pushd "${srcdir}" >/dev/null
+if ! git status >/dev/null ; then
+    echo "${srcdir} is not a git directory"
+    exit 1
+fi
+popd >/dev/null
+
+gitlab_upload_package -v
+
+pushd "${srcdir}"
+git fetch
+git restore makeicecat
+git checkout "v${version}"
+# Use zstd for better compression size and decompression speed
+sed -i -e '/OUTPUT_SOURCEBALL=/ { s/bz2/zst/ }' -e 's/tar cfj/tar cfa/' makeicecat
+export ZSTD_CLEVEL="19"
+export ZSTD_NBTHREADS="$(nproc)"
+./makeicecat
+
+gitlab_upload_package "${projectid}" icecat "${version}" output/icecat-*.tar.zst
+
+git restore makeicecat
+
+git clean -fdx
+git checkout "$(git symbolic-ref refs/remotes/origin/HEAD | sed 's@^refs/remotes/origin/@@')"

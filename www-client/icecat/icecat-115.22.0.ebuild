@@ -1,4 +1,4 @@
-# Copyright 1999-2024 Gentoo Authors
+# Copyright 1999-2025 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
 # Ebuild is based on the Firefox ebuilds in the main repo
@@ -18,8 +18,8 @@ WANT_AUTOCONF="2.1"
 
 VIRTUALX_REQUIRED="manual"
 
-inherit autotools check-reqs desktop flag-o-matic gnome2-utils linux-info llvm-r1 multiprocessing \
-	optfeature pax-utils python-any-r1 readme.gentoo-r1 rust toolchain-funcs virtualx xdg
+inherit autotools check-reqs desktop ffmpeg-compat flag-o-matic gnome2-utils linux-info llvm-r1 multiprocessing \
+	optfeature pax-utils python-any-r1 readme.gentoo-r1 rust toolchain-funcs unpacker virtualx xdg
 
 DESCRIPTION="GNU IceCat Web Browser"
 HOMEPAGE="https://www.gnu.org/software/gnuzilla/"
@@ -29,7 +29,7 @@ PATCH_URIS=(
 )
 
 SRC_URI="
-	https://gitlab.com/api/v4/projects/32909921/packages/generic/${PN}/${PV}/${P}-1gnu1.tar.bz2
+	https://gitlab.com/api/v4/projects/32909921/packages/generic/${PN}/${PV}/${P}-2gnu1.tar.zst
 	${PATCH_URIS[@]}
 "
 S="${WORKDIR}/${PN}-${PV%_*}"
@@ -54,6 +54,7 @@ REQUIRED_USE="|| ( X wayland )
 FF_ONLY_DEPEND="screencast? ( media-video/pipewire:= )
 	selinux? ( sec-policy/selinux-mozilla )"
 BDEPEND="${PYTHON_DEPS}
+	$(unpacker_src_uri_depends)
 	$(llvm_gen_dep '
 		llvm-core/clang:${LLVM_SLOT}
 		llvm-core/llvm:${LLVM_SLOT}
@@ -95,7 +96,7 @@ COMMON_DEPEND="${FF_ONLY_DEPEND}
 	media-libs/fontconfig
 	media-libs/freetype
 	media-libs/mesa
-	media-video/ffmpeg
+	media-video/ffmpeg-compat:6=
 	sys-libs/zlib
 	virtual/freedesktop-icon-theme
 	x11-libs/cairo
@@ -476,10 +477,23 @@ pkg_pretend() {
 
 pkg_setup() {
 	if [[ ${MERGE_TYPE} != binary ]] ; then
+
+		if tc-is-lto; then
+			use_lto=yes
+			# LTO is handled via configure
+			filter-lto
+		fi
+
 		if use pgo ; then
 			if ! has userpriv ${FEATURES} ; then
 				eerror "Building ${PN} with USE=pgo and FEATURES=-userpriv is not supported!"
 			fi
+		fi
+
+		if [[ ${use_lto} = yes ]]; then
+			# -Werror=lto-type-mismatch -Werror=odr are going to fail with GCC,
+			# bmo#1516758, bgo#942288
+			filter-flags -Werror=lto-type-mismatch -Werror=odr
 		fi
 
 		# Ensure we have enough disk space to compile
@@ -582,6 +596,8 @@ src_prepare() {
 	sed -i -e 's/firefox/icecat/' "${WORKDIR}"/firefox-patches/0033-bmo-1882209-update-crates-for-rust-1.78-stripped-patch-from-bugs.freebsd.org-bug278834.patch || die
 
 	eapply "${WORKDIR}/firefox-patches"
+
+	eapply "${FILESDIR}"/icecat-115.21.0-swgl-gcc15.patch
 
 	# Allow user to apply any additional patches without modifing ebuild
 	eapply_user
@@ -721,7 +737,6 @@ src_configure() {
 		--allow-addon-sideload \
 		--disable-cargo-incremental \
 		--disable-crashreporter \
-		--disable-eme \
 		--disable-gpsd \
 		--disable-install-strip \
 		--disable-parental-controls \
@@ -755,6 +770,11 @@ src_configure() {
 		--x-libraries="${ESYSROOT}/usr/$(get_libdir)"
 
 	mozconfig_add_options_ac '' --update-channel=esr
+
+	# --disable-eme is only supported on x86 and x86-64
+	if use amd64 || use x86 ; then
+		mozconfig_add_options_ac '' --disable-eme
+	fi
 
 	if ! use x86 && [[ ${CHOST} != armv*h* ]] ; then
 		mozconfig_add_options_ac '' --enable-rust-simd
@@ -856,9 +876,6 @@ src_configure() {
 			fi
 		fi
 	fi
-
-	# LTO flag was handled via configure
-	filter-lto
 
 	mozconfig_use_enable debug
 	if use debug ; then
@@ -1193,6 +1210,12 @@ src_install() {
 	sed -i \
 		-e "s:@PREFIX@:${EPREFIX}/usr:" \
 		-e "s:@DEFAULT_WAYLAND@:${use_wayland}:" \
+		"${ED}/usr/bin/${PN}" \
+		|| die
+
+	# 115 too old for ffmpeg-7. https://bugzilla.mozilla.org/show_bug.cgi?id=1889978
+	sed -i \
+		-e "/^# Run the browser/iexport LD_LIBRARY_PATH=\"$(ffmpeg_compat_get_prefix 6)/$(get_libdir)\"" \
 		"${ED}/usr/bin/${PN}" \
 		|| die
 
