@@ -89,3 +89,22 @@ metadata:
         git commit -m "$(date "+%F %R %Z")"
       fi
     - git push "https://${GITLAB_TOKEN_NAME}:${GITLAB_TOKEN}@${CI_SERVER_HOST}/${CI_PROJECT_PATH}.git" "${METADATA_BRANCH:-metadata}" -o ci.skip
+
+mirror:
+  stage: deploy
+  rules:
+    - if: $CI_COMMIT_BRANCH == $CI_DEFAULT_BRANCH
+    - if: $CI_COMMIT_BRANCH == 'metadata'
+  before_script:
+    - eval $(ssh-agent -s)
+    - chmod 400 "$PRIVATE_SSH_KEY"
+    - ssh-add "$PRIVATE_SSH_KEY"
+    - mkdir -p ~/.ssh
+    - chmod 700 ~/.ssh
+    - cp "$SSH_KNOWN_HOSTS" ~/.ssh/known_hosts
+    - chmod 644 ~/.ssh/known_hosts
+    - git config --global user.email "${GITLAB_TOKEN_NAME}@noreply.gitlab.com"
+    - git config --global user.name "${GITLAB_TOKEN_NAME}"
+  script:
+    - git push git@github.com:parona-source/parona-overlay.git $CI_COMMIT_BRANCH
+
