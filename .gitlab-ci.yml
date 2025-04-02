@@ -98,7 +98,7 @@ mirror:
   before_script:
     - eval $(ssh-agent -s)
     - chmod 400 "$PRIVATE_SSH_KEY"
-    - shh-add "$PRIVATE_SSH_KEY"
+    - ssh-add "$PRIVATE_SSH_KEY"
     - mkdir -p ~/.ssh
     - chmod 700 ~/.ssh
     - cp "$SSH_KNOWN_HOSTS" ~/.ssh/known_hosts
