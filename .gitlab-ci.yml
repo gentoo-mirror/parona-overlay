@@ -92,7 +92,7 @@ metadata:
 
 mirror:
   stage: deploy
-  when: never
+  when: manual
   #rules:
   #  - if: $CI_COMMIT_BRANCH == $CI_DEFAULT_BRANCH
   #  - if: $CI_COMMIT_BRANCH == 'metadata'
