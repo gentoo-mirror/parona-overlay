@@ -92,9 +92,10 @@ metadata:
 
 mirror:
   stage: deploy
-  rules:
-    - if: $CI_COMMIT_BRANCH == $CI_DEFAULT_BRANCH
-    - if: $CI_COMMIT_BRANCH == 'metadata'
+  when: never
+  #rules:
+  #  - if: $CI_COMMIT_BRANCH == $CI_DEFAULT_BRANCH
+  #  - if: $CI_COMMIT_BRANCH == 'metadata'
   before_script:
     - eval $(ssh-agent -s)
     - chmod 400 "$PRIVATE_SSH_KEY"
