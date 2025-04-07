@@ -105,10 +105,10 @@ harfbuzzsharp.nativeassets.win32@7.3.0.2
 harfbuzzsharp.nativeassets.win32@7.3.0.3
 harfbuzzsharp@7.3.0.2
 harfbuzzsharp@7.3.0.3
-hotchocolate.language.syntaxtree@14.3.0
-hotchocolate.transport.abstractions@14.3.0
-hotchocolate.transport.http@14.3.0
-hotchocolate.utilities@14.3.0
+hotchocolate.language.syntaxtree@15.0.3
+hotchocolate.transport.abstractions@15.0.3
+hotchocolate.transport.http@15.0.3
+hotchocolate.utilities@15.0.3
 htmlagilitypack@1.11.71
 humanizer.core.af@2.14.1
 humanizer.core.ar@2.14.1
@@ -327,7 +327,7 @@ newtonsoft.json@12.0.1
 newtonsoft.json@13.0.1
 newtonsoft.json@13.0.3
 nexusmods.archives.nx@0.6.1
-nexusmods.archives.nx@0.6.3
+nexusmods.archives.nx@0.6.4
 nexusmods.hashing.xxhash3.paths@3.0.3
 nexusmods.hashing.xxhash3@3.0.3
 nexusmods.mnemonicdb.abstractions@0.9.114
@@ -453,11 +453,11 @@ splat@14.8.12
 splat@15.1.1
 splat@15.2.22
 steamkit2@3.0.0
-strawberryshake.core@14.3.0
-strawberryshake.resources@14.3.0
-strawberryshake.server@14.3.0
-strawberryshake.transport.http@14.3.0
-strawberryshake.transport.websockets@14.3.0
+strawberryshake.core@15.0.3
+strawberryshake.resources@15.0.3
+strawberryshake.server@15.0.3
+strawberryshake.transport.http@15.0.3
+strawberryshake.transport.websockets@15.0.3
 svg.custom@2.0.0.4
 svg.model@2.0.0.4
 svg.skia@2.0.0.4
@@ -746,10 +746,6 @@ DOTNET_PKG_BUILD_EXTRA_ARGS=(
 DOTNET_PKG_TEST_EXTRA_ARGS=(
 	--blame-hang-timeout 2m
 	--filter "RequiresNetworking!=True&FlakeyTest!=True"
-)
-
-PATCHES=(
-	"${FILESDIR}/nexusmodsapp-0.7.2-update-fully-to-dotnet9.patch"
 )
 
 src_unpack() {
