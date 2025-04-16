@@ -30,7 +30,7 @@ RDEPEND="
 	app-arch/unrar:=
 	app-arch/zstd:=
 	dev-cpp/cpr
-	dev-cpp/libloot:0/0.24
+	dev-cpp/libloot:0/0.25
 	dev-libs/jsoncpp:=
 	dev-libs/openssl:=
 	dev-libs/pugixml
