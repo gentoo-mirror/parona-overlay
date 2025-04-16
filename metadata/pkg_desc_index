@@ -20,7 +20,7 @@ dev-cpp/libloot 0.24.5 0.25.5: A C++ library for accessing LOOT's metadata and s
 dev-cpp/ogdf 2023.09: Open Graph algorithms and Data structure Framework.
 dev-cpp/tinygltf 2.9.5: Header only C++11 tiny glTF 2.0 library
 dev-cpp/trompeloeil 49: Header only C++14 mocking framework
-dev-db/mysql 8.4.4: Fast, multi-threaded, multi-user SQL database server
+dev-db/mysql 8.4.5: Fast, multi-threaded, multi-user SQL database server
 dev-libs/libgbinder 1.1.42: GLib-style interface to binder
 dev-libs/libglibutil 1.0.79: Library of glib utilities
 dev-libs/vala-language-server 0.48.7 9999: Code Intelligence for Vala & Genie
@@ -73,8 +73,8 @@ dev-vcs/gcli 2.7.0: Portable CLI tool for interacting with Git(Hub|Lab|Tea) from
 games-util/gamehub 0.16.3_p2: All your games in one place
 games-util/goverlay 1.3_p3: Graphical UI to help manage Linux overlays.
 games-util/heroic-gogdl 9999: GOG Downloading module for Heroic Games Launcher
-games-util/limo 1.1 9999: A simple Qt based mod manager
-games-util/loot 0.24.1 0.25.0 0.25.2: A modding utility for Starfield and some Elder Scrolls and Fallout games.
+games-util/limo 1.1 1.2 9999: A simple Qt based mod manager
+games-util/loot 0.24.1 0.25.2: A modding utility for Starfield and some Elder Scrolls and Fallout games.
 games-util/mangohud 0.8.1 9999: Overlay for monitoring FPS, temperatures, CPU/GPU load and more
 games-util/nexusmodsapp 0.8.3 0.9.2: Nexus Mods App, a mod installer, creator and manager for all your popular games
 games-util/protonup-qt 2.11.1 2.12.0 2.12.1: Install and manage proton with Steam and Lutris
@@ -98,10 +98,10 @@ kde-misc/plasma-gamemode 9999: Plasma widget to show processes running in gamemo
 media-fonts/intel-one-mono 1.4.0: Intel's monospaced font family with clarity and legibility in mind.
 media-fonts/juliamono 0.059: JuliaMono - a monospaced font for scientific and technical computing
 media-libs/phonon-mpv 0.1.0-r1: Phonon Backend using MPV Player(libmpv)
-media-sound/spotify 1.2.56 1.2.59-r1: Spotify is a social music platform
+media-sound/spotify 1.2.59-r1 1.2.60: Spotify is a social music platform
 media-video/mpv-mpris 1.1: MPRIS plugin for mpv
-net-im/discord 0.0.88 0.0.89: All-in-one voice and text chat for gamers
-net-im/discord-ptb 0.0.135 0.0.136: All-in-one voice and text chat for gamers
+net-im/discord 0.0.89 0.0.91: All-in-one voice and text chat for gamers
+net-im/discord-ptb 0.0.136 0.0.137: All-in-one voice and text chat for gamers
 net-misc/wlvncc 9999: A Wayland Native VNC Client
 sec-keys/openpgp-keys-mysql 20231023: OpenPGP keys used to sign MySQL releases
 sys-apps/coolercontrol 2.0.1 2.1.0: Monitor and control your cooling and other devices
