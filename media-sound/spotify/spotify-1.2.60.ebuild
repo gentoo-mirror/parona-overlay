@@ -7,8 +7,8 @@ inherit desktop pax-utils unpacker xdg
 
 DESCRIPTION="Spotify is a social music platform"
 HOMEPAGE="https://www.spotify.com/download/linux/"
-SRC_BASE="http://repository.spotify.com/pool/non-free/s/spotify-client/"
-BUILD_ID_AMD64="502.ga68d2d4f"
+SRC_BASE="https://repository.spotify.com/pool/non-free/s/spotify-client/"
+BUILD_ID_AMD64="564.gcc6305cb"
 SRC_URI="${SRC_BASE}${PN}-client_${PV}.${BUILD_ID_AMD64}_amd64.deb"
 S="${WORKDIR}/"
 
@@ -99,8 +99,9 @@ src_install() {
 	  else
 	    echo "Neither gnome-integration-spotify nor spotify-tray are installed."
 	    echo "Launching spotify without systray integration."
+	    # --no-zygote bug #944923
 	    exec "${SPOTIFY_HOME}/spotify" \\
-	      --enable-features=UseOzonePlatfrom --ozone-platform-hint=auto --enable-wayland-ime "\$@"
+	      --enable-features=UseOzonePlatfrom --ozone-platform-hint=auto --enable-wayland-ime --no-zygote "\$@"
 	  fi
 	fi
 	EOF

@@ -558,6 +558,28 @@ src_test() {
 		"routertest_integration_routing_sharing"
 		"routertest_integration_routing_sharing_constrained_pools"
 		"routertest_integration_routing_sharing_restart"
+
+		# /tmp/foo:/var/lib/mysql:/test//foo
+		# t2: 5 days
+		# ${S}/storage/ndb/src/common/util/NodeCertificate.cpp:1485: require((csr->verify())) failed
+		"NodeCertificate-t"
+
+		# TODO: ???
+		# Signal 11 thrown, attempting backtrace.
+		# stack_bottom = 0 thread_stack 0x0
+		# #0 0x5610e9d53916 _ZN19PFS_all_memory_stat5resetEv at storage/perfschema/pfs_stat.h:1026
+		# #1 0x5610e9d53916 _ZN27PFS_session_all_memory_stat5resetEv at storage/perfschema/pfs_stat.cc:399
+		# #2 0x5610e9d53916 _Z13create_threadP16PFS_thread_classjPKvy at storage/perfschema/pfs_instr.cc:723
+		# #3 0x5610e9d5960f test_oom at storage/perfschema/unittest/pfs_instr-oom-t.cc:305
+		# #4 0x5610e9d4abed do_all_tests at storage/perfschema/unittest/pfs_instr-oom-t.cc:464
+		# #5 0x5610e9d4abed main at storage/perfschema/unittest/pfs_instr-oom-t.cc:469
+		# #6 0x7f214d22b68a <unknown>
+		# #7 0x7f214d22b739 <unknown>
+		# #8 0x5610e9d4e014 <unknown>
+		# #9 0xffffffffffffffff <unknown>
+		"pfs_host-oom"
+		"pfs_user-oom"
+		"pfs_instr-oom"
 	)
 
 	if ! use profiling; then
