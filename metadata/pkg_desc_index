@@ -101,7 +101,7 @@ media-libs/phonon-mpv 0.1.0-r1: Phonon Backend using MPV Player(libmpv)
 media-sound/spotify 1.2.59-r1 1.2.60: Spotify is a social music platform
 media-video/mpv-mpris 1.1: MPRIS plugin for mpv
 net-im/discord 0.0.89 0.0.91: All-in-one voice and text chat for gamers
-net-im/discord-ptb 0.0.136 0.0.137: All-in-one voice and text chat for gamers
+net-im/discord-ptb 0.0.137 0.0.138: All-in-one voice and text chat for gamers
 net-misc/wlvncc 9999: A Wayland Native VNC Client
 sec-keys/openpgp-keys-mysql 20231023: OpenPGP keys used to sign MySQL releases
 sys-apps/coolercontrol 2.0.1 2.1.0: Monitor and control your cooling and other devices
