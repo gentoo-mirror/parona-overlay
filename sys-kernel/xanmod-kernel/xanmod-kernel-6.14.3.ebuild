@@ -9,7 +9,7 @@ inherit kernel-build
 
 MY_P=linux-${PV%.*}
 GENPATCHES_P=genpatches-${PV%.*}-$(( ${PV##*.} + 1 ))
-GENTOO_CONFIG_VER=g15
+GENTOO_CONFIG_VER=g16
 
 XANMOD_VERSION="1"
 
