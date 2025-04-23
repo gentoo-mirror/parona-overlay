@@ -1,4 +1,4 @@
-# Copyright 2024 Gentoo Authors
+# Copyright 2024-2025 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=8
@@ -7,12 +7,10 @@ inherit cmake
 
 DESCRIPTION="A JSON terminal UI made in C++"
 HOMEPAGE="https://github.com/ArthurSonzogni/json-tui"
-COMMIT="ec2f88a2a7c9f0bd041a5dee91bd3bcb6ee9ee81"
 SRC_URI="
-	https://github.com/ArthurSonzogni/json-tui/archive/${COMMIT}.tar.gz
-		-> ${PN}-${COMMIT}.tar.gz
+	https://github.com/ArthurSonzogni/json-tui/archive/refs/tags/v${PV}.tar.gz
+		-> ${P}.tar.gz
 "
-S="${WORKDIR}/${PN}-${COMMIT}"
 
 LICENSE="MIT"
 SLOT="0"
@@ -20,12 +18,12 @@ KEYWORDS="~amd64"
 
 IUSE="test"
 #RESTRICT="!test? ( test )"
-RESTRICT="test" # todo
+RESTRICT="test" # broken tests
 
 COMMON_DEPEND="
 	dev-cpp/args
 	dev-cpp/nlohmann_json
-	gui-libs/ftxui:=
+	>=gui-libs/ftxui-6:=
 "
 DEPEND="
 	${COMMON_DEPEND}
