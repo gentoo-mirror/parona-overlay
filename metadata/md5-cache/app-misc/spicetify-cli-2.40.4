@@ -1,0 +1,14 @@
+BDEPEND=>=dev-lang/go-1.20:= app-arch/unzip
+DEFINED_PHASES=compile install postinst unpack
+DESCRIPTION=Commandline tool to customize Spotify client.
+EAPI=8
+HOMEPAGE=https://spicetify.app/
+INHERIT=go-module
+KEYWORDS=~amd64
+LICENSE=Apache-2.0 BSD LGPL-2.1 MIT
+RDEPEND=|| ( ( <media-sound/spotify-1.2.63 >=media-sound/spotify-1.2.14 ) )
+RESTRICT=test strip
+SLOT=0
+SRC_URI=https://github.com/spicetify/cli/archive/v2.40.4.tar.gz -> spicetify-cli-2.40.4.tar.gz https://gitlab.com/api/v4/projects/32909921/packages/generic/spicetify-cli/2.40.4/spicetify-cli-2.40.4-deps.tar.xz
+_eclasses_=multiprocessing	1e32df7deee68372153dca65f4a7c21f	toolchain-funcs	f9d71a6efe9d083aec750dd13968e169	flag-o-matic	e8de74bac929ba17427e740e95707d00	go-env	0e2babf96e7d0b045fc07ad199eb2399	go-module	191a27261275fc3bff7dd7482361b5d6
+_md5_=07162cd43934bd40859950b0b036994b
