@@ -11,7 +11,7 @@ app-misc/json-tui 1.4.0 1.4.1: A JSON terminal UI made in C++
 app-misc/parona-scripts 9999: Scripts and hooks that I use on my machines
 app-misc/readpe 0.84-r1: The PE file analysis toolkit
 app-misc/rivalcfg 4.14.0: CLI tool and Python library to configure SteelSeries gaming mice
-app-misc/spicetify-cli 2.39.7 2.40.0 2.40.1 2.40.4: Commandline tool to customize Spotify client.
+app-misc/spicetify-cli 2.40.4 2.40.5: Commandline tool to customize Spotify client.
 app-text/klevernotes 9999: A note-taking and management application using markdown.
 dev-build/cargo-make 0.37.24: Rust task runner and build tool
 dev-cpp/args 6.4.6 6.4.7: A simple header-only C++ argument parser library
