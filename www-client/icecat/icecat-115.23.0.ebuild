@@ -18,8 +18,8 @@ WANT_AUTOCONF="2.1"
 
 VIRTUALX_REQUIRED="manual"
 
-inherit autotools check-reqs desktop flag-o-matic gnome2-utils linux-info llvm-r1 multiprocessing \
-	optfeature pax-utils python-any-r1 readme.gentoo-r1 rust toolchain-funcs virtualx xdg
+inherit autotools check-reqs desktop ffmpeg-compat flag-o-matic gnome2-utils linux-info llvm-r1 multiprocessing \
+	optfeature pax-utils python-any-r1 readme.gentoo-r1 rust toolchain-funcs unpacker virtualx xdg
 
 DESCRIPTION="GNU IceCat Web Browser"
 HOMEPAGE="https://www.gnu.org/software/gnuzilla/"
@@ -28,8 +28,9 @@ PATCH_URIS=(
 	https://dev.gentoo.org/~juippis/mozilla/patchsets/${FIREFOX_PATCHSET}
 )
 
+ICECAT_REV="gnu1"
 SRC_URI="
-	https://gitlab.com/api/v4/projects/32909921/packages/generic/${PN}/${PV}/${P}-1gnu1.tar.bz2
+	https://gitlab.com/api/v4/projects/32909921/packages/generic/${PN}/${PV}-${ICECAT_REV}/${P}-1${ICECAT_REV}.tar.zst
 	${PATCH_URIS[@]}
 "
 S="${WORKDIR}/${PN}-${PV%_*}"
@@ -54,6 +55,7 @@ REQUIRED_USE="|| ( X wayland )
 FF_ONLY_DEPEND="screencast? ( media-video/pipewire:= )
 	selinux? ( sec-policy/selinux-mozilla )"
 BDEPEND="${PYTHON_DEPS}
+	$(unpacker_src_uri_depends)
 	$(llvm_gen_dep '
 		llvm-core/clang:${LLVM_SLOT}
 		llvm-core/llvm:${LLVM_SLOT}
@@ -95,7 +97,7 @@ COMMON_DEPEND="${FF_ONLY_DEPEND}
 	media-libs/fontconfig
 	media-libs/freetype
 	media-libs/mesa
-	media-video/ffmpeg
+	media-video/ffmpeg-compat:6=
 	sys-libs/zlib
 	virtual/freedesktop-icon-theme
 	x11-libs/cairo
@@ -1209,6 +1211,12 @@ src_install() {
 	sed -i \
 		-e "s:@PREFIX@:${EPREFIX}/usr:" \
 		-e "s:@DEFAULT_WAYLAND@:${use_wayland}:" \
+		"${ED}/usr/bin/${PN}" \
+		|| die
+
+	# 115 too old for ffmpeg-7. https://bugzilla.mozilla.org/show_bug.cgi?id=1889978
+	sed -i \
+		-e "/^# Run the browser/iexport LD_LIBRARY_PATH=\"$(ffmpeg_compat_get_prefix 6)/$(get_libdir)\"" \
 		"${ED}/usr/bin/${PN}" \
 		|| die
 
