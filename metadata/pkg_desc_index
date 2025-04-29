@@ -63,7 +63,7 @@ dev-python/pyclip 0.7.0: Cross-platform Clipboard module for Python with binary 
 dev-python/pycryptodomex 3.21.0 3.22.0: A self-contained cryptographic library for Python
 dev-python/pydantic-settings 2.7.1: Settings management using pydantic
 dev-python/pytest-examples 0.0.15 0.0.17: Pytest plugin for testing Python code examples in docstrings and markdown files.
-dev-python/rich-toolkit 0.14.1 0.14.3: Rich toolkit for building command-line applications
+dev-python/rich-toolkit 0.14.3 0.14.4: Rich toolkit for building command-line applications
 dev-python/spinners 0.0.24-r1: Spinners for terminals
 dev-python/sqlmodel 0.0.24: SQL databases in Python, designed for simplicity, compatibility, and robustness.
 dev-python/steam 1.6.1: Python package for interacting with Steam
