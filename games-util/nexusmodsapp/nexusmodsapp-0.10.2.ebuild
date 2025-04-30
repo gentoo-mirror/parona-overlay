@@ -9,34 +9,34 @@ argon@0.24.2
 autofixture.xunit2@4.18.1
 autofixture@4.18.1
 avalonia.angle.windows.natives@2.1.22045.20230930
-avalonia.avaloniaedit@11.1.0
+avalonia.avaloniaedit@11.2.0
 avalonia.buildservices@0.0.28
 avalonia.buildservices@0.0.31
-avalonia.controls.colorpicker@11.2.4
-avalonia.controls.datagrid@11.2.4
+avalonia.controls.colorpicker@11.2.6
+avalonia.controls.datagrid@11.2.6
 avalonia.controls.treedatagrid@11.1.1
-avalonia.desktop@11.2.4
-avalonia.diagnostics@11.2.4
-avalonia.freedesktop@11.2.4
-avalonia.headless@11.2.4
+avalonia.desktop@11.2.6
+avalonia.diagnostics@11.2.6
+avalonia.freedesktop@11.2.6
+avalonia.headless@11.2.6
 avalonia.labs.panels@11.2.0
-avalonia.native@11.2.4
-avalonia.reactiveui@11.2.4
+avalonia.native@11.2.6
+avalonia.reactiveui@11.2.6
 avalonia.remote.protocol@11.0.0
-avalonia.remote.protocol@11.2.4
+avalonia.remote.protocol@11.2.6
 avalonia.skia@11.0.0
 avalonia.skia@11.2.0
-avalonia.skia@11.2.4
+avalonia.skia@11.2.6
 avalonia.svg.skia@11.2.0.2
-avalonia.themes.fluent@11.2.4
-avalonia.themes.simple@11.2.4
-avalonia.win32@11.2.4
-avalonia.x11@11.2.4
+avalonia.themes.fluent@11.2.6
+avalonia.themes.simple@11.2.6
+avalonia.win32@11.2.6
+avalonia.x11@11.2.6
 avalonia@11.0.0
-avalonia@11.1.3
 avalonia@11.2.0
-avalonia@11.2.4
-avaloniaedit.textmate@11.1.0
+avalonia@11.2.3
+avalonia@11.2.6
+avaloniaedit.textmate@11.2.0
 bannerlord.launchermanager.localization@1.0.140
 bannerlord.launchermanager.models@1.0.140
 bannerlord.launchermanager@1.0.140
@@ -77,17 +77,17 @@ fomodinstaller.interface@1.2.0
 fomodinstaller.scripting.xmlscript@1.0.0
 fomodinstaller.scripting@1.0.0
 fomodinstaller.utils@1.0.0
-gamefinder.common@4.5.0
-gamefinder.launcher.heroic@4.5.0
-gamefinder.registryutils@4.5.0
-gamefinder.storehandlers.eadesktop@4.5.0
-gamefinder.storehandlers.egs@4.5.0
-gamefinder.storehandlers.gog@4.5.0
-gamefinder.storehandlers.origin@4.5.0
-gamefinder.storehandlers.steam@4.5.0
-gamefinder.storehandlers.xbox@4.5.0
-gamefinder.wine@4.5.0
-gamefinder@4.5.0
+gamefinder.common@4.6.1
+gamefinder.launcher.heroic@4.6.1
+gamefinder.registryutils@4.6.1
+gamefinder.storehandlers.eadesktop@4.6.1
+gamefinder.storehandlers.egs@4.6.1
+gamefinder.storehandlers.gog@4.6.1
+gamefinder.storehandlers.origin@4.6.1
+gamefinder.storehandlers.steam@4.6.1
+gamefinder.storehandlers.xbox@4.6.1
+gamefinder.wine@4.6.1
+gamefinder@4.6.1
 gee.external.capstone@2.3.0
 githubactionstestlogger@2.4.1
 google.protobuf@3.22.5
@@ -105,10 +105,10 @@ harfbuzzsharp.nativeassets.win32@7.3.0.2
 harfbuzzsharp.nativeassets.win32@7.3.0.3
 harfbuzzsharp@7.3.0.2
 harfbuzzsharp@7.3.0.3
-hotchocolate.language.syntaxtree@14.3.0
-hotchocolate.transport.abstractions@14.3.0
-hotchocolate.transport.http@14.3.0
-hotchocolate.utilities@14.3.0
+hotchocolate.language.syntaxtree@15.0.3
+hotchocolate.transport.abstractions@15.0.3
+hotchocolate.transport.http@15.0.3
+hotchocolate.utilities@15.0.3
 htmlagilitypack@1.11.71
 humanizer.core.af@2.14.1
 humanizer.core.ar@2.14.1
@@ -168,7 +168,7 @@ jitbit.fastcache@1.1.0
 k4os.compression.lz4@1.3.7-beta
 k4os.compression.lz4@1.3.8
 linqgen@0.3.1
-linuxdesktoputils.xdgdesktopportal@1.0.0
+linuxdesktoputils.xdgdesktopportal@1.0.2
 livechartscore.skiasharpview.avalonia@2.0.0-rc2
 livechartscore.skiasharpview@2.0.0-rc2
 livechartscore@2.0.0-rc2
@@ -238,7 +238,6 @@ microsoft.extensions.configuration@8.0.0
 microsoft.extensions.configuration@9.0.0
 microsoft.extensions.dependencyinjection.abstractions@2.0.0
 microsoft.extensions.dependencyinjection.abstractions@8.0.0
-microsoft.extensions.dependencyinjection.abstractions@8.0.1
 microsoft.extensions.dependencyinjection.abstractions@8.0.2
 microsoft.extensions.dependencyinjection.abstractions@9.0.0
 microsoft.extensions.dependencyinjection.autoactivation@9.0.0
@@ -327,16 +326,16 @@ newtonsoft.json@12.0.1
 newtonsoft.json@13.0.1
 newtonsoft.json@13.0.3
 nexusmods.archives.nx@0.6.1
-nexusmods.archives.nx@0.6.3
+nexusmods.archives.nx@0.6.4
 nexusmods.hashing.xxhash3.paths@3.0.3
 nexusmods.hashing.xxhash3@3.0.3
-nexusmods.mnemonicdb.abstractions@0.9.114
-nexusmods.mnemonicdb.sourcegenerator@0.9.114
-nexusmods.mnemonicdb@0.9.114
-nexusmods.paths.extensions.nx@0.15.0
-nexusmods.paths.testinghelpers@0.15.0
-nexusmods.paths@0.10.0
+nexusmods.mnemonicdb.abstractions@0.9.122
+nexusmods.mnemonicdb.sourcegenerator@0.9.122
+nexusmods.mnemonicdb@0.9.122
+nexusmods.paths.extensions.nx@0.18.0
+nexusmods.paths.testinghelpers@0.18.0
 nexusmods.paths@0.15.0
+nexusmods.paths@0.18.0
 nlog.extensions.logging@5.3.14
 nlog@5.2.8
 nlog@5.3.4
@@ -351,8 +350,8 @@ nuget.protocol@6.3.4
 nuget.resolver@6.3.4
 nuget.versioning@6.12.1
 nuget.versioning@6.3.4
-observablecollections.r3@3.3.2
-observablecollections@3.3.2
+observablecollections.r3@3.3.3
+observablecollections@3.3.3
 oneof.extended@2.1.125
 oneof@2.1.125
 oneof@3.0.271
@@ -369,20 +368,20 @@ polly.core@8.5.0
 polly.extensions@8.4.2
 polly.ratelimiting@8.4.2
 polly@8.5.0
-projektanker.icons.avalonia.materialdesign@9.4.1
-projektanker.icons.avalonia@9.4.1
+projektanker.icons.avalonia.materialdesign@9.6.1
+projektanker.icons.avalonia@9.6.1
 protobuf-net.core@3.2.45
 protobuf-net@3.2.45
 qoisharp@1.0.0
 qrcoder@1.6.0
 r3@1.0.0
 r3@1.2.9
-r3extensions.avalonia@1.2.9
+r3@1.3.0
+r3extensions.avalonia@1.3.0
 reactiveui.fody@19.5.41
 reactiveui@19.5.41
 reactiveui@20.1.1
 reactiveui@20.1.63
-reloaded.memory@9.4.1
 reloaded.memory@9.4.2
 rocksdb@9.4.0.50294
 runtime.any.system.collections@4.3.0
@@ -453,11 +452,11 @@ splat@14.8.12
 splat@15.1.1
 splat@15.2.22
 steamkit2@3.0.0
-strawberryshake.core@14.3.0
-strawberryshake.resources@14.3.0
-strawberryshake.server@14.3.0
-strawberryshake.transport.http@14.3.0
-strawberryshake.transport.websockets@14.3.0
+strawberryshake.core@15.0.3
+strawberryshake.resources@15.0.3
+strawberryshake.server@15.0.3
+strawberryshake.transport.http@15.0.3
+strawberryshake.transport.websockets@15.0.3
 svg.custom@2.0.0.4
 svg.model@2.0.0.4
 svg.skia@2.0.0.4
@@ -609,7 +608,6 @@ system.text.encoding@4.0.11
 system.text.encoding@4.3.0
 system.text.encodings.web@8.0.0
 system.text.json@8.0.0
-system.text.json@8.0.4
 system.text.json@8.0.5
 system.text.regularexpressions@4.3.0
 system.threading.channels@7.0.0
@@ -628,16 +626,14 @@ system.xml.readerwriter@4.3.0
 system.xml.xdocument@4.3.0
 testableio.system.io.abstractions.wrappers@21.0.29
 testableio.system.io.abstractions@21.0.29
-textmatesharp.grammars@1.0.59
-textmatesharp.grammars@1.0.64
-textmatesharp@1.0.59
-textmatesharp@1.0.64
-tmds.dbus.protocol@0.18.0
+textmatesharp.grammars@1.0.65
+textmatesharp@1.0.65
 tmds.dbus.protocol@0.20.0
+tmds.dbus.protocol@0.21.2
 transparentvalueobjects@1.0.2
 validation@2.3.7
 validation@2.4.18
-valvekeyvalue@0.10.0.360
+valvekeyvalue@0.13.1.398
 verify.imagemagick@3.6.0
 verify.sourcegenerators@2.5.0
 verify.xunit@28.2.1
@@ -667,6 +663,7 @@ xunit.runner.visualstudio@2.8.2
 xunit.skippablefact@1.4.13
 xunit@2.9.2
 yamldotnet@16.3.0
+zlinq@0.9.6
 zstdsharp.port@0.8.2
 zstring@2.6.0
 "
@@ -686,32 +683,12 @@ MY_P="${MY_PN}-${MY_PV}"
 # https://github.com/Nexus-Mods/NexusMods.App/tree/main/extern
 SMAPI_COMMIT="fd73446090cd71f4948f34ba8c428e45aa0a3ebf"
 
-# https://github.com/Nexus-Mods/NexusMods.App/blob/v0.8.0/tests/NexusMods.DataModel.SchemaVersions.Tests/Resources/Databases/Descriptions.md
-# Update whenever files change to avoid duplicate distfiles
-declare -A TESTDB_FILES=(
-	[SDV.4_11_2024.rocksdb.zip]="9a590db37705d191f53665ed312c7485edc375d7"
-	[SDV.2_5_2025.rocksdb.zip]="bd377d4f6f63845da872bb242178c2df48fd3246"
-	[Issue-2608.rocksdb.zip]="56fe8c85b2b55bcb6b019003483add90187da6b3"
-	[Migration-5.rocksdb.zip]="3440e65dddf29b592e37eb1d8378519c3924db82"
-	[Migration-6.rocksdb.zip]="53726a55668e70771a1b5023f80d674a693afcc1"
-)
-
-TESTDB_URIS=""
-add_testdb_uris() {
-	for dbfile in ${!TESTDB_FILES[@]}; do
-		local dbcommit="${TESTDB_FILES[${dbfile}]}"
-		TESTDB_URIS+=" https://github.com/Nexus-Mods/NexusMods.App/raw/${dbcommit}/tests/NexusMods.DataModel.SchemaVersions.Tests/Resources/Databases/${dbfile} -> ${PN}-${dbcommit}-${dbfile}"
-	done
-}
-add_testdb_uris
-
 SRC_URI="
 	https://github.com/Nexus-Mods/NexusMods.App/archive/refs/tags/v${MY_PV}.tar.gz
 		-> ${MY_P}.tar.gz
 	https://github.com/Pathoschild/SMAPI/archive/${SMAPI_COMMIT}.tar.gz
 		-> SMAPI-${SMAPI_COMMIT}.tar.gz
 	${NUGET_URIS}
-	test? ( ${TESTDB_URIS} )
 "
 S="${WORKDIR}/${MY_P}"
 
@@ -748,10 +725,6 @@ DOTNET_PKG_TEST_EXTRA_ARGS=(
 	--filter "RequiresNetworking!=True&FlakeyTest!=True"
 )
 
-PATCHES=(
-	"${FILESDIR}/nexusmodsapp-0.7.2-update-fully-to-dotnet9.patch"
-)
-
 src_unpack() {
 	nuget_link-system-nugets
 	nuget_link-nuget-archives
@@ -761,16 +734,6 @@ src_unpack() {
 
 src_prepare() {
 	mv -T "${WORKDIR}/SMAPI-${SMAPI_COMMIT}" "${S}/extern/SMAPI" || die
-
-	if use test; then
-		# lfs files not included in github generated archives
-		for dbfile in ${!TESTDB_FILES[@]}; do
-			local dbcommit="${TESTDB_FILES[${dbfile}]}"
-			cp -T \
-				"${DISTDIR}/${PN}-${dbcommit}-${dbfile}" \
-					"${S}/tests/NexusMods.DataModel.SchemaVersions.Tests/Resources/Databases/${dbfile}" || die
-		done
-	fi
 
 	sed -i -e 's/${INSTALL_EXEC}/NexusMods.App/' src/NexusMods.App/com.nexusmods.app.desktop || die
 
