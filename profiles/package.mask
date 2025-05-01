@@ -1,3 +1,9 @@
 # Copyright 1999-2025 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
+# Alfred Wingate <parona@protonmail.com> (2025-05-01)
+# Haven't used these in a while as my setup changed.
+# Guru has these packages.
+gui-apps/fuzzel
+gui-apps/wbg
+gui-apps/yambar
