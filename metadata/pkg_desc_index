@@ -6,6 +6,7 @@ app-arch/gztool 1.8.0: GZIP files indexer, compressor and data retriever.
 app-arch/unzip 6.0_p27-r2: unzipper for pkzip-compressed files
 app-containers/anbox-modules 20240526-r1: Anbox kernel modules (ashmem and binder) fork
 app-containers/waydroid 1.4.2-r4: Container-based approach to boot a full Android system
+app-emacs/mood-line 3.1.1: Minimal mode line configuration for Emacs, inspired by doom-modeline
 app-emacs/org-auto-tangle 0.6.0: a simple emacs package to allow org file tangling upon save
 app-emulation/winegui 2.8.1: A user-friendly WINE manager
 app-misc/json-tui 1.4.0 1.4.1: A JSON terminal UI made in C++
