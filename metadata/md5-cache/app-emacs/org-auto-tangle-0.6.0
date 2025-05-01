@@ -1,0 +1,13 @@
+BDEPEND=>=app-emacs/async-1.9.3 >=app-editors/emacs-25.3:*
+DEFINED_PHASES=compile configure info install postinst postrm prepare setup test unpack
+DESCRIPTION=a simple emacs package to allow org file tangling upon save
+EAPI=8
+HOMEPAGE=https://github.com/yilkalargaw/org-auto-tangle
+INHERIT=elisp
+KEYWORDS=~amd64
+LICENSE=BSD-2
+RDEPEND=>=app-emacs/async-1.9.3 >=app-editors/emacs-25.3:*
+SLOT=0
+SRC_URI=https://github.com/yilkalargaw/org-auto-tangle/archive/refs/tags/0.6.0.tar.gz -> org-auto-tangle-0.6.0.tar.gz
+_eclasses_=elisp-common	fe05085d051330f15cf7201109b5cd23	elisp	8dfc7a00348fe9c91895014adc78a4a5
+_md5_=87476f4b0e3a5ce26cf9729bbe36c506

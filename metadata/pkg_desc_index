@@ -6,6 +6,7 @@ app-arch/gztool 1.8.0: GZIP files indexer, compressor and data retriever.
 app-arch/unzip 6.0_p27-r2: unzipper for pkzip-compressed files
 app-containers/anbox-modules 20240526-r1: Anbox kernel modules (ashmem and binder) fork
 app-containers/waydroid 1.4.2-r4: Container-based approach to boot a full Android system
+app-emacs/org-auto-tangle 0.6.0: a simple emacs package to allow org file tangling upon save
 app-emulation/winegui 2.8.1: A user-friendly WINE manager
 app-misc/json-tui 1.4.0 1.4.1: A JSON terminal UI made in C++
 app-misc/parona-scripts 9999: Scripts and hooks that I use on my machines
@@ -91,13 +92,13 @@ gui-libs/dfl-applications 0.2.0: This library provides a thin wrapper around QAp
 gui-libs/dfl-ipc 0.2.0: Two very simple classes for IPC. Used by DFL::Application.
 gui-libs/dfl-login1 0.2.0: DFL Login1 class implements a part of the systemd logind dbus protocol.
 gui-libs/dfl-utils 0.2.0: This library provides single-instance Application classes for various utilities.
-gui-libs/ftxui 5.0.0 6.1.0 6.1.1: C++ Functional Terminal User Interface
+gui-libs/ftxui 5.0.0 6.1.0 6.1.1 6.1.8: C++ Functional Terminal User Interface
 gui-libs/wayqt 0.2.0 9999: A Qt-based wrapper for various wayland protocols.
 gui-wm/cage 0.2.0: A Wayland kiosk
 kde-apps/toad 9999: Organize your tasks
 kde-misc/plasma-gamemode 9999: Plasma widget to show processes running in gamemode
 media-fonts/intel-one-mono 1.4.0: Intel's monospaced font family with clarity and legibility in mind.
-media-fonts/juliamono 0.059: JuliaMono - a monospaced font for scientific and technical computing
+media-fonts/juliamono 0.059 0.060: JuliaMono - a monospaced font for scientific and technical computing
 media-libs/phonon-mpv 0.1.0-r1: Phonon Backend using MPV Player(libmpv)
 media-sound/spotify 1.2.59-r1 1.2.60: Spotify is a social music platform
 media-video/mpv-mpris 1.1: MPRIS plugin for mpv
