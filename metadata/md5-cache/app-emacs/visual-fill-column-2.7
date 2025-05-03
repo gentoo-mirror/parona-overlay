@@ -1,0 +1,15 @@
+BDEPEND=test? ( app-emacs/ert-runner ) >=app-editors/emacs-25.3:*
+DEFINED_PHASES=compile configure info install postinst postrm prepare setup test unpack
+DESCRIPTION=Emacs mode for wrapping visual-line-mode buffers at fill-column.
+EAPI=8
+HOMEPAGE=https://codeberg.org/joostkremers/visual-fill-column
+INHERIT=elisp
+IUSE=test
+KEYWORDS=~amd64
+LICENSE=GPL-3
+RDEPEND=>=app-editors/emacs-25.3:*
+RESTRICT=!test? ( test )
+SLOT=0
+SRC_URI=https://codeberg.org/joostkremers/visual-fill-column/archive/2.7.tar.gz -> visual-fill-column-2.7.tar.gz
+_eclasses_=elisp-common	fe05085d051330f15cf7201109b5cd23	elisp	8dfc7a00348fe9c91895014adc78a4a5
+_md5_=b8746be0f8fbd31702412954afcb9185

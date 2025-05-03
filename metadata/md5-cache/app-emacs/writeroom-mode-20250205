@@ -1,0 +1,15 @@
+BDEPEND=test? ( app-emacs/ert-runner ) >=app-editors/emacs-25.3:*
+DEFINED_PHASES=compile configure info install postinst postrm prepare setup test unpack
+DESCRIPTION=Writeroom-mode: distraction-free writing for Emacs.
+EAPI=8
+HOMEPAGE=https://github.com/joostkremers/writeroom-mode
+INHERIT=elisp
+IUSE=test
+KEYWORDS=~amd64
+LICENSE=BSD
+RDEPEND=app-emacs/visual-fill-column >=app-editors/emacs-25.3:*
+RESTRICT=!test? ( test )
+SLOT=0
+SRC_URI=https://github.com/joostkremers/writeroom-mode/archive/cca2b4b3cfcfea1919e1870519d79ed1a69aa5e2.tar.gz -> writeroom-mode-cca2b4b3cfcfea1919e1870519d79ed1a69aa5e2.tar.gz
+_eclasses_=elisp-common	fe05085d051330f15cf7201109b5cd23	elisp	8dfc7a00348fe9c91895014adc78a4a5
+_md5_=8bf0da1bca43a6f7f040b60bd0eadcab
