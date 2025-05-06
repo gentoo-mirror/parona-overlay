@@ -1,4 +1,4 @@
-# Copyright 2024 Gentoo Authors
+# Copyright 2024-2025 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=8
@@ -20,13 +20,12 @@ KEYWORDS="~amd64"
 
 RDEPEND="
 	dev-python/black[${PYTHON_USEDEP}]
-	dev-python/pytest[${PYTHON_USEDEP}]
+	>=dev-python/pytest-8.3.4[${PYTHON_USEDEP}]
 	dev-util/ruff
 "
 
 PATCHES=(
 	"${FILESDIR}/pytest-examples-0.0.14-revert-use-of-ruff-module.patch"
-	"${FILESDIR}/pytest-examples-0.0.15-pytest-8.3.4-test-fix.patch"
 )
 
 distutils_enable_tests pytest
