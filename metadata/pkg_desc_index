@@ -95,7 +95,7 @@ gui-libs/dfl-applications 0.2.0: This library provides a thin wrapper around QAp
 gui-libs/dfl-ipc 0.2.0: Two very simple classes for IPC. Used by DFL::Application.
 gui-libs/dfl-login1 0.2.0: DFL Login1 class implements a part of the systemd logind dbus protocol.
 gui-libs/dfl-utils 0.2.0: This library provides single-instance Application classes for various utilities.
-gui-libs/ftxui 5.0.0 6.1.0 6.1.1 6.1.8: C++ Functional Terminal User Interface
+gui-libs/ftxui 5.0.0 6.1.8 6.1.9: C++ Functional Terminal User Interface
 gui-libs/wayqt 0.2.0 9999: A Qt-based wrapper for various wayland protocols.
 gui-wm/cage 0.2.0: A Wayland kiosk
 kde-apps/toad 9999: Organize your tasks
@@ -114,10 +114,10 @@ sys-apps/coolercontrol-liqctld 2.0.1 2.1.0: Monitor and control your cooling and
 sys-apps/coolercontrold 2.0.1 2.1.0: Monitor and control your cooling and other devices (daemon)
 sys-apps/gsmartcontrol 9999: Hard Disk Drive and SSD Health Inspection Tool
 sys-boot/uefitool 70_alpha 71_alpha: UEFI firmware image viewer and editor
-sys-kernel/xanmod-kernel 6.12.25 6.12.26 6.14.4 6.14.5: Linux kernel built with XanMod and Gentoo patches
-sys-kernel/xanmod-sources 6.12.25 6.12.26 6.14.4 6.14.5: Full XanMod sources including the Gentoo patchset
+sys-kernel/xanmod-kernel 6.12.25 6.12.26 6.12.28 6.14.4 6.14.5 6.14.6: Linux kernel built with XanMod and Gentoo patches
+sys-kernel/xanmod-sources 6.12.25 6.12.26 6.12.28 6.14.4 6.14.5 6.14.6: Full XanMod sources including the Gentoo patchset
 sys-power/corectrl 1.4.3 1.5.0 1.5.1: Profile based system control utility
-virtual/dist-kernel 6.12.25 6.12.26 6.14.4 6.14.5: Virtual to depend on any Distribution Kernel
+virtual/dist-kernel 6.12.25 6.12.26 6.12.28 6.14.4 6.14.5 6.14.6: Virtual to depend on any Distribution Kernel
 virtual/linux-sources 3-r8: Virtual for Linux kernel sources
 www-apps/rdrview 0.1.3: Firefox Reader View as a command line tool
 www-apps/vikunja 0.24.5: The to-do app to organize your life.
