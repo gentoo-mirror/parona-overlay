@@ -1,0 +1,16 @@
+BDEPEND=test? ( app-text/htmltidy www-client/links )
+DEFINED_PHASES=compile configure install prepare test
+DEPEND=dev-libs/libxml2:= net-misc/curl sys-libs/libseccomp www-client/lynx
+DESCRIPTION=Firefox Reader View as a command line tool
+EAPI=8
+HOMEPAGE=https://github.com/eafer/rdrview
+INHERIT=flag-o-matic toolchain-funcs
+IUSE=test
+KEYWORDS=~amd64
+LICENSE=Apache-2.0
+RDEPEND=dev-libs/libxml2:= net-misc/curl sys-libs/libseccomp www-client/lynx
+RESTRICT=test
+SLOT=0
+SRC_URI=https://github.com/eafer/rdrview/archive/refs/tags/v0.1.4.tar.gz -> rdrview-0.1.4.tar.gz
+_eclasses_=toolchain-funcs	f9d71a6efe9d083aec750dd13968e169	flag-o-matic	b892042b2667b8ac69ec8a2571dc290a
+_md5_=59c8b3b301019e2311f89cc0a5e85bdc
