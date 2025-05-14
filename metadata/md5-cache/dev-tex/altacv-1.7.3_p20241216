@@ -11,5 +11,5 @@ RDEPEND=dev-tex/biber dev-texlive/texlive-latex dev-texlive/texlive-fontsextra v
 RESTRICT=test
 SLOT=0
 SRC_URI=https://github.com/liantze/AltaCV/archive/cd1e96aa63b49c0c7fb03724e0673d260c99ab41.tar.gz -> altacv-cd1e96aa63b49c0c7fb03724e0673d260c99ab41.tar.gz
-_eclasses_=edo	367e103a74bf77e6a8da7894d999fa3c	latex-package	f6529cd874a632d3343b4d264a70a0bc
+_eclasses_=edo	a5e294016aa84979fcb2459749eb80b2	latex-package	f6529cd874a632d3343b4d264a70a0bc
 _md5_=c7163343ce9790b30495e3592ce40b16
