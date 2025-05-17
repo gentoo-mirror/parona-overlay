@@ -11,12 +11,6 @@ app-misc/parona-scripts:perl - Install perl scripts
 app-misc/parona-scripts:portage-hooks - Install portage hooks
 dev-build/cargo-make:openssl - Enable TLS support with dev-libs/openssl
 dev-build/cargo-make:rustls - Enable TLS support with rustls
-dev-db/mysql:cjk - Add CJK support for InnoDB fulltext search using app-text/mecab
-dev-db/mysql:numa - Enable NUMA support using sys-process/numactl (NUMA kernel support is also required)
-dev-db/mysql:profiling - Add support for statement profiling (requires USE=community).
-dev-db/mysql:router - Build the MySQL router program
-dev-db/mysql:server - Build the server program
-dev-db/mysql:test - Install upstream testsuites for end use.
 dev-libs/vala-language-server:gnome - Build GNOME Builder plugin
 dev-vcs/gcli:lowdown - Use lowdown to render markdown.
 games-util/gamehub:overlayfs - Build support for OverlayFS

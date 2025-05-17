@@ -25,7 +25,6 @@ dev-cpp/libloot 0.25.5 0.26.0 0.26.1 0.26.2: A C++ library for accessing LOOT's 
 dev-cpp/ogdf 2023.09: Open Graph algorithms and Data structure Framework.
 dev-cpp/tinygltf 2.9.5: Header only C++11 tiny glTF 2.0 library
 dev-cpp/trompeloeil 49: Header only C++14 mocking framework
-dev-db/mysql 8.4.5: Fast, multi-threaded, multi-user SQL database server
 dev-libs/libgbinder 1.1.42: GLib-style interface to binder
 dev-libs/libglibutil 1.0.79 1.0.80: Library of glib utilities
 dev-libs/vala-language-server 0.48.7 9999: Code Intelligence for Vala & Genie
@@ -69,7 +68,7 @@ dev-python/pytest-examples 0.0.17 0.0.18: Pytest plugin for testing Python code 
 dev-python/rich-toolkit 0.14.4 0.14.5 0.14.6: Rich toolkit for building command-line applications
 dev-python/sqlmodel 0.0.24: SQL databases in Python, designed for simplicity, compatibility, and robustness.
 dev-python/steam 1.6.1: Python package for interacting with Steam
-dev-python/typer 0.15.2 0.15.3: Typer, build great CLIs. Easy to code. Based on Python type hints.
+dev-python/typer 0.15.3 0.15.4: Typer, build great CLIs. Easy to code. Based on Python type hints.
 dev-tex/altacv 1.7.3_p20241216: Yet another alternative curriculum vitae/résumé class with LaTeX
 dev-util/umr 1.0.10: umr is a userspace debugging and diagnostic tool for AMD GPUs
 dev-vcs/gcli 2.7.0: Portable CLI tool for interacting with Git(Hub|Lab|Tea) from the command line.
@@ -104,7 +103,7 @@ media-libs/phonon-mpv 0.1.0-r1: Phonon Backend using MPV Player(libmpv)
 media-sound/spotify 1.2.59-r1 1.2.60: Spotify is a social music platform
 media-video/mpv-mpris 1.1: MPRIS plugin for mpv
 net-im/discord 0.0.93 0.0.94: All-in-one voice and text chat for gamers
-net-im/discord-ptb 0.0.140 0.0.141: All-in-one voice and text chat for gamers
+net-im/discord-ptb 0.0.141 0.0.143: All-in-one voice and text chat for gamers
 net-misc/wlvncc 9999: A Wayland Native VNC Client
 sec-keys/openpgp-keys-mysql 20231023: OpenPGP keys used to sign MySQL releases
 sys-apps/coolercontrol 2.0.1 2.1.0: Monitor and control your cooling and other devices
