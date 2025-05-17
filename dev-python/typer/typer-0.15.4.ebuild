@@ -5,7 +5,7 @@ EAPI=8
 
 DISTUTILS_USE_PEP517=pdm-backend
 EPYTEST_XDIST=1
-PYTHON_COMPAT=( python3_{12..13} )
+PYTHON_COMPAT=( python3_{12..14} )
 
 inherit distutils-r1 pypi
 
@@ -20,6 +20,7 @@ SLOT="0"
 KEYWORDS="~amd64"
 
 RDEPEND="
+	<dev-python/click-8.2[${PYTHON_USEDEP}]
 	>=dev-python/click-8.0.0[${PYTHON_USEDEP}]
 	>=dev-python/typing-extensions-3.7.4.3[${PYTHON_USEDEP}]
 "
