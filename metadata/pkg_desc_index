@@ -15,7 +15,7 @@ app-misc/json-tui 1.4.0 1.4.1: A JSON terminal UI made in C++
 app-misc/parona-scripts 9999: Scripts and hooks that I use on my machines
 app-misc/readpe 0.84-r1: The PE file analysis toolkit
 app-misc/rivalcfg 4.14.0: CLI tool and Python library to configure SteelSeries gaming mice
-app-misc/spicetify-cli 2.40.6 2.40.7: Commandline tool to customize Spotify client.
+app-misc/spicetify-cli 2.40.7 2.40.8: Commandline tool to customize Spotify client.
 app-text/klevernotes 9999: A note-taking and management application using markdown.
 dev-build/cargo-make 0.37.24: Rust task runner and build tool
 dev-cpp/args 6.4.6 6.4.7: A simple header-only C++ argument parser library
@@ -62,7 +62,7 @@ dev-python/fastapi-cli 0.0.7: Run and manage FastAPI apps from the command line 
 dev-python/gbinder 1.1.2-r1: Python bindings for libgbinder
 dev-python/inputs 0.5: Cross-platform Python support for keyboards, mice and gamepads.
 dev-python/pyclip 0.7.0: Cross-platform Clipboard module for Python with binary support.
-dev-python/pycryptodomex 3.22.0: A self-contained cryptographic library for Python
+dev-python/pycryptodomex 3.22.0 3.23.0: A self-contained cryptographic library for Python
 dev-python/pydantic-settings 2.7.1: Settings management using pydantic
 dev-python/pytest-examples 0.0.17 0.0.18: Pytest plugin for testing Python code examples in docstrings and markdown files.
 dev-python/rich-toolkit 0.14.4 0.14.5 0.14.6: Rich toolkit for building command-line applications
@@ -80,7 +80,7 @@ games-util/loot 0.25.2 0.26.0: A modding utility for Starfield and some Elder Sc
 games-util/mangohud 0.8.1 9999: Overlay for monitoring FPS, temperatures, CPU/GPU load and more
 games-util/nexusmodsapp 0.9.2 0.10.2: Nexus Mods App, a mod installer, creator and manager for all your popular games
 games-util/protonup-qt 2.11.1 2.12.0 2.12.1: Install and manage proton with Steam and Lutris
-games-util/r2modman 3.1.57 3.1.58: A simple and easy to use mod manager for several games using Thunderstore
+games-util/r2modman 3.1.58 3.2.0: A simple and easy to use mod manager for several games using Thunderstore
 games-util/steamtinkerlaunch 9999: Tool for use with the Steam client for custom launch options
 gnome-extra/yad 14.1: Display GTK+ dialog boxes from command line or shell scripts
 gui-apps/fuzzel 1.11.1 9999: Application launcher for wlroots based Wayland compositors.
