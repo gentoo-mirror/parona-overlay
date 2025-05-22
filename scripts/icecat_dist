@@ -35,6 +35,7 @@ gitlab_upload_package -v
 pushd "${srcdir}"
 git fetch
 git restore makeicecat
+git clean -fdx
 git checkout "v${version}"
 # Use zstd for better compression size and decompression speed
 sed -i -e '/OUTPUT_SOURCEBALL=/ { s/bz2/zst/ }' -e 's/tar cfj/tar cfa/' makeicecat
@@ -46,5 +47,4 @@ gitlab_upload_package "${projectid}" icecat "${version}" output/icecat-*.tar.zst
 
 git restore makeicecat
 
-git clean -fdx
 git checkout "$(git symbolic-ref refs/remotes/origin/HEAD | sed 's@^refs/remotes/origin/@@')"

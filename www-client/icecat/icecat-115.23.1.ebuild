@@ -10,7 +10,7 @@ FIREFOX_PATCHSET="firefox-115esr-patches-13.tar.xz"
 
 LLVM_COMPAT=(17 18)
 
-PYTHON_COMPAT=( python3_{10..11} )
+PYTHON_COMPAT=( python3_11 )
 PYTHON_REQ_USE="ncurses,sqlite,ssl"
 RUST_NEEDS_LLVM=1
 
@@ -28,8 +28,9 @@ PATCH_URIS=(
 	https://dev.gentoo.org/~juippis/mozilla/patchsets/${FIREFOX_PATCHSET}
 )
 
+ICECAT_REV="gnu1"
 SRC_URI="
-	https://gitlab.com/api/v4/projects/32909921/packages/generic/${PN}/${PV}/${P}-2gnu1.tar.zst
+	https://gitlab.com/api/v4/projects/32909921/packages/generic/${PN}/${PV}-${ICECAT_REV}/${P}-1${ICECAT_REV}.tar.zst
 	${PATCH_URIS[@]}
 "
 S="${WORKDIR}/${PN}-${PV%_*}"
