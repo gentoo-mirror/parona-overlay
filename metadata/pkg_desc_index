@@ -71,7 +71,7 @@ dev-python/steam 1.6.1: Python package for interacting with Steam
 dev-python/typer 0.15.3 0.15.4: Typer, build great CLIs. Easy to code. Based on Python type hints.
 dev-tex/altacv 1.7.3_p20241216: Yet another alternative curriculum vitae/résumé class with LaTeX
 dev-util/umr 1.0.10: umr is a userspace debugging and diagnostic tool for AMD GPUs
-dev-vcs/gcli 2.7.0: Portable CLI tool for interacting with Git(Hub|Lab|Tea) from the command line.
+dev-vcs/gcli 2.7.0 2.8.0: Portable CLI tool for interacting with Git(Hub|Lab|Tea) from the command line.
 games-util/gamehub 0.16.3_p2: All your games in one place
 games-util/goverlay 1.3_p3: Graphical UI to help manage Linux overlays.
 games-util/heroic-gogdl 9999: GOG Downloading module for Heroic Games Launcher
