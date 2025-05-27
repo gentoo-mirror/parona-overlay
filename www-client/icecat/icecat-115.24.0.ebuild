@@ -10,7 +10,7 @@ FIREFOX_PATCHSET="firefox-115esr-patches-13.tar.xz"
 
 LLVM_COMPAT=(17 18)
 
-PYTHON_COMPAT=( python3_{10..11} )
+PYTHON_COMPAT=( python3_11 )
 PYTHON_REQ_USE="ncurses,sqlite,ssl"
 RUST_NEEDS_LLVM=1
 
