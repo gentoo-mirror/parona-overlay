@@ -5,7 +5,7 @@ EAPI=8
 
 DISTUTILS_USE_PEP517=pdm-backend
 EPYTEST_XDIST=1
-PYTHON_COMPAT=( python3_{12..13} )
+PYTHON_COMPAT=( python3_{12..14} )
 
 inherit distutils-r1 pypi
 
@@ -47,8 +47,8 @@ python_prepare_all() {
 }
 
 python_test() {
-	# Tests affected by terminal width
-	local -x COLUMNS=80
+	# See scripts/tests.sh
+	local -x TERMINAL_WIDTH=3000 _TYPER_FORCE_DISABLE_TERMINAL=1  _TYPER_RUN_INSTALL_COMPLETION_TESTS=1
 
 	epytest
 }
