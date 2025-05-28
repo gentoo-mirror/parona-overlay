@@ -105,7 +105,6 @@ media-video/mpv-mpris 1.1: MPRIS plugin for mpv
 net-im/discord 0.0.94 0.0.95: All-in-one voice and text chat for gamers
 net-im/discord-ptb 0.0.143 0.0.144: All-in-one voice and text chat for gamers
 net-misc/wlvncc 9999: A Wayland Native VNC Client
-sec-keys/openpgp-keys-mysql 20231023: OpenPGP keys used to sign MySQL releases
 sys-apps/coolercontrol 2.0.1 2.1.0: Monitor and control your cooling and other devices
 sys-apps/coolercontrol-liqctld 2.0.1 2.1.0: Monitor and control your cooling and other devices (liqctld)
 sys-apps/coolercontrold 2.0.1 2.1.0: Monitor and control your cooling and other devices (daemon)
