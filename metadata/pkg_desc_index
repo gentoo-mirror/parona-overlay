@@ -105,9 +105,9 @@ media-video/mpv-mpris 1.1: MPRIS plugin for mpv
 net-im/discord 0.0.94 0.0.95: All-in-one voice and text chat for gamers
 net-im/discord-ptb 0.0.143 0.0.144: All-in-one voice and text chat for gamers
 net-misc/wlvncc 9999: A Wayland Native VNC Client
-sys-apps/coolercontrol 2.0.1 2.1.0: Monitor and control your cooling and other devices
-sys-apps/coolercontrol-liqctld 2.0.1 2.1.0: Monitor and control your cooling and other devices (liqctld)
-sys-apps/coolercontrold 2.0.1 2.1.0: Monitor and control your cooling and other devices (daemon)
+sys-apps/coolercontrol 2.1.0 2.2.0: Monitor and control your cooling and other devices
+sys-apps/coolercontrol-liqctld 2.1.0 2.2.0: Monitor and control your cooling and other devices (liqctld)
+sys-apps/coolercontrold 2.1.0 2.2.0: Monitor and control your cooling and other devices (daemon)
 sys-apps/gsmartcontrol 9999: Hard Disk Drive and SSD Health Inspection Tool
 sys-boot/uefitool 70_alpha 71_alpha: UEFI firmware image viewer and editor
 sys-kernel/xanmod-kernel 6.12.28 6.12.29 6.12.30 6.12.31 6.14.6 6.14.7 6.14.8 6.14.9: Linux kernel built with XanMod and Gentoo patches
