@@ -31,8 +31,10 @@ src_install() {
 	einstalldocs
 
 	domenu ../packaging/metadata/org.coolercontrol.CoolerControl.desktop
-	doicon ../packaging/metadata/org.coolercontrol.CoolerControl.png
-	doicon ../packaging/metadata/org.coolercontrol.CoolerControl.svg
+	doicon -s 256 ../packaging/metadata/org.coolercontrol.CoolerControl.png
+	doicon -s scalable ../packaging/metadata/org.coolercontrol.CoolerControl.svg
+	insinto /usr/share/icons/hicolor/symbolic/apps
+	doins  ../packaging/metadata/org.coolercontrol.CoolerControl-symbolic.svg
 	insinto /usr/share/metainfo
 	doins ../packaging/metadata/org.coolercontrol.CoolerControl.metainfo.xml
 }

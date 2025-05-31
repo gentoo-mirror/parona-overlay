@@ -7,8 +7,8 @@ CRATES="
 "
 
 declare -A GIT_CRATES=(
-	[nvml-wrapper-sys]='https://github.com/codifryed/nvml-wrapper;c8dd9b97a872f6252a48c61dfc6e1c0b61eab39b;nvml-wrapper-%commit%/nvml-wrapper-sys'
-	[nvml-wrapper]='https://github.com/codifryed/nvml-wrapper;c8dd9b97a872f6252a48c61dfc6e1c0b61eab39b;nvml-wrapper-%commit%/nvml-wrapper'
+	[nvml-wrapper-sys]='https://github.com/codifryed/nvml-wrapper;572095f631da93be8d243c73820e581676969897;nvml-wrapper-%commit%/nvml-wrapper-sys'
+	[nvml-wrapper]='https://github.com/codifryed/nvml-wrapper;572095f631da93be8d243c73820e581676969897;nvml-wrapper-%commit%/nvml-wrapper'
 	[tower_governor]='https://github.com/codifryed/tower-governor;fd799d86418e58179468953c80ad7094a81a9e37;tower-governor-%commit%'
 )
 
@@ -46,7 +46,7 @@ DEPEND="${RDEPEND}"
 QA_FLAGS_IGNORED=".*"
 
 PATCHES=(
-	"${FILESDIR}"/coolercontrold-2.0.0-optional-libdrm_amdgpu.patch
+	"${FILESDIR}"/coolercontrold-2.1.0-optional-libdrm_amdgpu.patch
 )
 
 src_prepare() {
