@@ -1,6 +1,13 @@
 # Copyright 1999-2025 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
+# Alfred Wingate <parona@protonmail.com> (2025-06-04)
+# Mask until main tree starts packaging dist-kernels as well.
+# This is to avoid unexpected Xanmod kernel upgrades to those
+# that haven't opted to it.
+>=sys-kernel/xanmod-kernel-6.15.0
+>=virtual/dist-kernel-6.15.0
+
 # Alfred Wingate <parona@protonmail.com> (2025-05-17)
 # My Steelseries mouse broke and I replaced it with a Logitech.
 # So I'm not using this anymore and cannot legitimately test it.
