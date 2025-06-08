@@ -21,7 +21,7 @@ dev-build/cargo-make 0.37.24: Rust task runner and build tool
 dev-cpp/args 6.4.6 6.4.7: A simple header-only C++ argument parser library
 dev-cpp/cpr 1.11.2: C++ Requests: Curl for People, a spiritual port of Python Requests.
 dev-cpp/hjson-cpp 2.5 2.6: Hjson for C++
-dev-cpp/libloot 0.25.5 0.26.2 0.26.3: A C++ library for accessing LOOT's metadata and sorting functionality.
+dev-cpp/libloot 0.25.5 0.26.2 0.26.3 0.27.0: A C++ library for accessing LOOT's metadata and sorting functionality.
 dev-cpp/ogdf 2023.09: Open Graph algorithms and Data structure Framework.
 dev-cpp/tinygltf 2.9.5 2.9.6: Header only C++11 tiny glTF 2.0 library
 dev-cpp/trompeloeil 49: Header only C++14 mocking framework
@@ -102,8 +102,8 @@ media-fonts/juliamono 0.059 0.060: JuliaMono - a monospaced font for scientific 
 media-libs/phonon-mpv 0.1.0-r1: Phonon Backend using MPV Player(libmpv)
 media-sound/spotify 1.2.59-r1 1.2.60: Spotify is a social music platform
 media-video/mpv-mpris 1.1: MPRIS plugin for mpv
-net-im/discord 0.0.94 0.0.95: All-in-one voice and text chat for gamers
-net-im/discord-ptb 0.0.143 0.0.144: All-in-one voice and text chat for gamers
+net-im/discord 0.0.95 0.0.96: All-in-one voice and text chat for gamers
+net-im/discord-ptb 0.0.144 0.0.147: All-in-one voice and text chat for gamers
 net-misc/wlvncc 9999: A Wayland Native VNC Client
 sys-apps/coolercontrol 2.1.0 2.2.0: Monitor and control your cooling and other devices
 sys-apps/coolercontrol-liqctld 2.1.0 2.2.0: Monitor and control your cooling and other devices (liqctld)
