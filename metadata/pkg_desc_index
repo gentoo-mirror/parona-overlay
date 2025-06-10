@@ -15,7 +15,7 @@ app-misc/json-tui 1.4.0 1.4.1: A JSON terminal UI made in C++
 app-misc/parona-scripts 9999: Scripts and hooks that I use on my machines
 app-misc/readpe 0.84-r1: The PE file analysis toolkit
 app-misc/rivalcfg 4.14.0: CLI tool and Python library to configure SteelSeries gaming mice
-app-misc/spicetify-cli 2.40.9 2.40.10: Commandline tool to customize Spotify client.
+app-misc/spicetify-cli 2.40.10 2.40.11: Commandline tool to customize Spotify client.
 app-text/klevernotes 9999: A note-taking and management application using markdown.
 dev-build/cargo-make 0.37.24: Rust task runner and build tool
 dev-cpp/args 6.4.6 6.4.7: A simple header-only C++ argument parser library
@@ -102,7 +102,7 @@ media-fonts/juliamono 0.059 0.060: JuliaMono - a monospaced font for scientific 
 media-libs/phonon-mpv 0.1.0-r1: Phonon Backend using MPV Player(libmpv)
 media-sound/spotify 1.2.59-r1 1.2.60: Spotify is a social music platform
 media-video/mpv-mpris 1.1: MPRIS plugin for mpv
-net-im/discord 0.0.95 0.0.96: All-in-one voice and text chat for gamers
+net-im/discord 0.0.96 0.0.97: All-in-one voice and text chat for gamers
 net-im/discord-ptb 0.0.144 0.0.147: All-in-one voice and text chat for gamers
 net-misc/wlvncc 9999: A Wayland Native VNC Client
 sys-apps/coolercontrol 2.1.0 2.2.0: Monitor and control your cooling and other devices
