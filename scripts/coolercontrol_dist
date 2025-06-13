@@ -49,7 +49,7 @@ outdir="$(mktemp -d)"
 echo "Output directory: ${outdir}"
 
 pushd "${srcdir}"
-git fetch
+git fetch --tags
 git checkout "${version}"
 pushd coolercontrol-ui
 make dist
