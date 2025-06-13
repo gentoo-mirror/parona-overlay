@@ -1,6 +1,6 @@
 BDEPEND=>=dev-util/intltool-0.40.0 sys-devel/gettext
 DEFINED_PHASES=configure postinst postrm preinst
-DEPEND=dev-libs/glib:2 >=x11-libs/gtk+-3.22.0:3 x11-libs/cairo x11-libs/gdk-pixbuf:2 x11-libs/pango sourceview? ( x11-libs/gtksourceview:3.0= ) spell? ( app-text/gspell:= ) webkit? ( net-libs/webkit-gtk:4= )
+DEPEND=dev-libs/glib:2 >=x11-libs/gtk+-3.22.0:3 x11-libs/cairo x11-libs/gdk-pixbuf:2 x11-libs/pango sourceview? ( x11-libs/gtksourceview:3.0= ) spell? ( app-text/gspell:= ) webkit? ( net-libs/webkit-gtk:4.1 )
 DESCRIPTION=Display GTK+ dialog boxes from command line or shell scripts
 EAPI=8
 HOMEPAGE=https://github.com/v1cont/yad
@@ -9,8 +9,8 @@ INHERIT=gnome2-utils xdg
 IUSE=sourceview spell tools webkit
 KEYWORDS=~amd64
 LICENSE=GPL-3
-RDEPEND=dev-libs/glib:2 >=x11-libs/gtk+-3.22.0:3 x11-libs/cairo x11-libs/gdk-pixbuf:2 x11-libs/pango sourceview? ( x11-libs/gtksourceview:3.0= ) spell? ( app-text/gspell:= ) webkit? ( net-libs/webkit-gtk:4= )
+RDEPEND=dev-libs/glib:2 >=x11-libs/gtk+-3.22.0:3 x11-libs/cairo x11-libs/gdk-pixbuf:2 x11-libs/pango sourceview? ( x11-libs/gtksourceview:3.0= ) spell? ( app-text/gspell:= ) webkit? ( net-libs/webkit-gtk:4.1 )
 SLOT=0
 SRC_URI=https://github.com/v1cont/yad/releases/download/v14.1/yad-14.1.tar.xz
 _eclasses_=toolchain-funcs	f9d71a6efe9d083aec750dd13968e169	xdg-utils	42869b3c8d86a70ef3cf75165a395e09	gnome2-utils	a8cf148ec7f5ae0b1f1d33ae5f7f9e88	xdg	3ef49a87c52c8b77c476351195dfe575
-_md5_=7eb61320ee093a6ab6f7dad5963cbfd7
+_md5_=35ffaccd210758c19cd4eeaced2b284f
