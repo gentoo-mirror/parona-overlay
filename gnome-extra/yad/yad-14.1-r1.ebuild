@@ -23,7 +23,7 @@ RDEPEND="
 	x11-libs/pango
 	sourceview? ( x11-libs/gtksourceview:3.0= )
 	spell? ( app-text/gspell:= )
-	webkit? ( net-libs/webkit-gtk:4= )
+	webkit? ( net-libs/webkit-gtk:4.1 )
 "
 DEPEND="${RDEPEND}"
 BDEPEND="
