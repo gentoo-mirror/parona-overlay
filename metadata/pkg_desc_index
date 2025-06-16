@@ -57,7 +57,7 @@ dev-perl/match-simple 0.012: simplified clone of smartmatch operator
 dev-python/asyncpg 0.30.0: A fast PostgreSQL Database Client Library for Python/asyncio.
 dev-python/databases 0.9.0: Async database support for Python.
 dev-python/docopt-ng 0.9.0: Humane command line arguments parser.
-dev-python/fastapi 0.115.11: FastAPI framework, high performance, easy to learn, ready for production
+dev-python/fastapi 0.115.11 0.115.12 9999: FastAPI framework, high performance, easy to learn, ready for production
 dev-python/fastapi-cli 0.0.7: Run and manage FastAPI apps from the command line with FastAPI CLI
 dev-python/gbinder 1.1.2-r1: Python bindings for libgbinder
 dev-python/inputs 0.5: Cross-platform Python support for keyboards, mice and gamepads.
