@@ -34,6 +34,7 @@ RDEPEND="
 	dev-libs/jsoncpp:=
 	dev-libs/openssl:=
 	dev-libs/pugixml
+	dev-qt/qtconcurrent:5
 	dev-qt/qtcore:5
 	dev-qt/qtgui:5
 	dev-qt/qtnetwork:5
