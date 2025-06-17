@@ -76,7 +76,7 @@ dev-vcs/gcli 2.7.0 2.8.0: Portable CLI tool for interacting with Git(Hub|Lab|Tea
 games-util/gamehub 0.16.3_p2: All your games in one place
 games-util/goverlay 1.3_p3: Graphical UI to help manage Linux overlays.
 games-util/heroic-gogdl 9999: GOG Downloading module for Heroic Games Launcher
-games-util/limo 1.2 9999: A simple Qt based mod manager
+games-util/limo 1.2 1.2.2 9999: A simple Qt based mod manager
 games-util/loot 0.25.2 0.26.0 0.26.1: A modding utility for Starfield and some Elder Scrolls and Fallout games.
 games-util/mangohud 0.8.1 9999: Overlay for monitoring FPS, temperatures, CPU/GPU load and more
 games-util/nexusmodsapp 0.11.3 0.12.3: Nexus Mods App, a mod installer, creator and manager for all your popular games

@@ -1,16 +1,17 @@
-BDEPEND=virtual/pkgconfig app-alternatives/ninja >=dev-build/cmake-3.20.5 >=dev-vcs/git-1.8.2.1[curl]
-DEFINED_PHASES=compile configure install postinst postrm preinst prepare test unpack
+BDEPEND=virtual/pkgconfig app-alternatives/ninja >=dev-build/cmake-3.20.5
+DEFINED_PHASES=compile configure install postinst postrm preinst prepare test
 DEPEND=app-arch/libarchive:= app-arch/lz4:= app-arch/unrar:= app-arch/zstd:= dev-cpp/cpr dev-cpp/libloot:0/0.25 dev-libs/jsoncpp:= dev-libs/openssl:= dev-libs/pugixml dev-qt/qtconcurrent:5 dev-qt/qtcore:5 dev-qt/qtgui:5 dev-qt/qtnetwork:5 dev-qt/qtsvg:5 dev-qt/qtwidgets:5 sys-libs/zlib test? ( dev-cpp/catch )
 DESCRIPTION=A simple Qt based mod manager
 EAPI=8
 HOMEPAGE=https://github.com/limo-app/limo/
 IDEPEND=dev-util/desktop-file-utils x11-misc/shared-mime-info
-INHERIT=cmake xdg git-r3
+INHERIT=cmake xdg
 IUSE=test
+KEYWORDS=~amd64
 LICENSE=GPL-3
-PROPERTIES=live
 RDEPEND=app-arch/libarchive:= app-arch/lz4:= app-arch/unrar:= app-arch/zstd:= dev-cpp/cpr dev-cpp/libloot:0/0.25 dev-libs/jsoncpp:= dev-libs/openssl:= dev-libs/pugixml dev-qt/qtconcurrent:5 dev-qt/qtcore:5 dev-qt/qtgui:5 dev-qt/qtnetwork:5 dev-qt/qtsvg:5 dev-qt/qtwidgets:5 sys-libs/zlib
-RESTRICT=!test? ( test )
+RESTRICT=test
 SLOT=0
-_eclasses_=toolchain-funcs	f9d71a6efe9d083aec750dd13968e169	flag-o-matic	b892042b2667b8ac69ec8a2571dc290a	multiprocessing	1e32df7deee68372153dca65f4a7c21f	ninja-utils	2df4e452cea39a9ec8fb543ce059f8d6	xdg-utils	42869b3c8d86a70ef3cf75165a395e09	cmake	90d8ee8393c5c815637fd3cb87828c9b	xdg	3ef49a87c52c8b77c476351195dfe575	git-r3	875eb471682d3e1f18da124be97dcc81
-_md5_=ebee8cd7e149ded3f35f8ba4ce42d748
+SRC_URI=https://github.com/limo-app/limo/archive/refs/tags/v1.2.2.tar.gz -> limo-1.2.2.tar.gz
+_eclasses_=toolchain-funcs	f9d71a6efe9d083aec750dd13968e169	flag-o-matic	b892042b2667b8ac69ec8a2571dc290a	multiprocessing	1e32df7deee68372153dca65f4a7c21f	ninja-utils	2df4e452cea39a9ec8fb543ce059f8d6	xdg-utils	42869b3c8d86a70ef3cf75165a395e09	cmake	90d8ee8393c5c815637fd3cb87828c9b	xdg	3ef49a87c52c8b77c476351195dfe575
+_md5_=aebcff8898ec7c66ef5473786129569d
