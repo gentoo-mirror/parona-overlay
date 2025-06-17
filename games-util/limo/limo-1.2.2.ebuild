@@ -22,7 +22,8 @@ LICENSE="GPL-3"
 SLOT="0"
 
 IUSE="test"
-RESTRICT="!test? ( test )"
+RESTRICT="test" # tests not modified to conform with libloot-0.25 behavior
+#RESTRICT="!test? ( test )"
 
 RDEPEND="
 	app-arch/libarchive:=
@@ -51,6 +52,10 @@ DEPEND="
 BDEPEND="
 	virtual/pkgconfig
 "
+
+PATCHES=(
+	"${FILESDIR}"/limo-1.2.2-gcc15.patch
+)
 
 src_configure() {
 	local mycmakeargs=(

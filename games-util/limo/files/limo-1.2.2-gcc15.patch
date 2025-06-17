@@ -1,0 +1,19 @@
+From fce01ba3006c120d6c8d379b828516203e1a50e9 Mon Sep 17 00:00:00 2001
+From: Alfred Wingate <parona@protonmail.com>
+Date: Tue, 17 Jun 2025 16:34:10 +0300
+Subject: [PATCH] Another implicit header for gcc-15
+
+Signed-off-by: Alfred Wingate <parona@protonmail.com>
+--- a/src/core/progressnode.h
++++ b/src/core/progressnode.h
+@@ -5,6 +5,7 @@
+ 
+ #pragma once
+ 
++#include <cstdint>
+ #include <functional>
+ #include <memory>
+ #include <optional>
+-- 
+2.50.0
+
