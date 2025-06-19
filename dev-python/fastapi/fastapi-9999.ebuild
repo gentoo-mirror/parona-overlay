@@ -41,7 +41,7 @@ BDEPEND="
 		dev-python/dirty-equals[${PYTHON_USEDEP}]
 		dev-python/email-validator[${PYTHON_USEDEP}]
 		>=dev-python/flask-1.1.2[${PYTHON_USEDEP}]
-		dev-python/inline-snapshot[${PYTHON_USEDEP}]
+		>=dev-python/inline-snapshot-0.21.1[${PYTHON_USEDEP}]
 		>=dev-python/jinja2-3.1.5[${PYTHON_USEDEP}]
 		dev-python/orjson[${PYTHON_USEDEP}]
 		<dev-python/passlib-2.0.0[${PYTHON_USEDEP}]
