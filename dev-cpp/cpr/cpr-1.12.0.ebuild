@@ -28,8 +28,8 @@ KEYWORDS="~amd64"
 
 IUSE="test"
 
-PROPERTIES="test_network"
 RESTRICT="test"
+PROPERTIES="test_network"
 
 #TODO: other ssl backends
 RDEPEND="
