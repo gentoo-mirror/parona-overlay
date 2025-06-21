@@ -1,4 +1,4 @@
-# Copyright 2023-2024 Gentoo Authors
+# Copyright 2023-2025 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=8
@@ -6,19 +6,20 @@ EAPI=8
 DISTUTILS_USE_PEP517=setuptools
 PYTHON_COMPAT=( python3_{12..14} )
 
-inherit distutils-r1
+inherit distutils-r1 pypi
 
 DESCRIPTION="Python package for interacting with Steam"
 HOMEPAGE="
 	https://github.com/solsticegamestudios/steam
 "
 SRC_URI="
-	https://github.com/solsticegamestudios/steam/archive/refs/tags/v${PV}.tar.gz -> ${P}.gh.tar.gz
+	https://github.com/solsticegamestudios/steam/archive/refs/tags/v${PV/_/-}.tar.gz
+		-> ${P}.gh.tar.gz
 "
+S="${WORKDIR}/${PN}-${PV/_/-}"
 
 LICENSE="MIT"
 SLOT="0"
-KEYWORDS="~amd64"
 
 RESTRICT="!test? ( test )"
 
@@ -45,13 +46,6 @@ BDEPEND="
 EPYTEST_IGNORE=(
 	# Don't care about the client, it require gevent which is problematic
 	"tests/test_core_cm.py"
-	# new api, tests not updated to reflect
-	# https://github.com/solsticegamestudios/steam/commit/9004636d7cccd90ef914b86c1b11fa3f95605e96
-	"tests/test_webauth.py"
 )
 
 distutils_enable_tests pytest
-
-python_test() {
-	PROTOCOL_BUFFERS_PYTHON_IMPLEMENTATION=python epytest
-}
