@@ -29,7 +29,9 @@ sys-kernel/xanmod-kernel:initramfs - Build initramfs along with the kernel.
 virtual/linux-sources:firmware - Install linux kernel firmware
 www-client/icecat:clang - Use Clang compiler instead of GCC
 www-client/icecat:geckodriver - Enable WebDriver support
+www-client/icecat:gnome-shell - Integrate with gnome-base/gnome-shell search
 www-client/icecat:hwaccel - Force-enable hardware-accelerated rendering (Mozilla bug 594876)
+www-client/icecat:jumbo-build - Enable unified build - combines source files to speed up build process, but requires more memory
 www-client/icecat:libproxy - Enable libproxy support
 www-client/icecat:lto - Enable Link Time Optimization (LTO). Requires Gold linker when using GCC or LDD linker when using Clang
 www-client/icecat:openh264 - Use media-libs/openh264 for H.264 support instead of downloading binary blob from Mozilla at runtime
@@ -45,3 +47,4 @@ www-client/icecat:system-libvpx - Use the system-wide media-libs/libvpx instead 
 www-client/icecat:system-png - Use the system-wide media-libs/libpng instead of bundled (requires APNG patches)
 www-client/icecat:system-python-libs - Use system's python site instead of bundled python libraries
 www-client/icecat:system-webp - Use the system-wide media-libs/libwebp instead of bundled.
+www-client/icecat:wasm-sandbox - Sandbox certain third-party libraries through WebAssembly using RLBox
