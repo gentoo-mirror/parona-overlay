@@ -3,7 +3,7 @@
 
 EAPI=8
 
-inherit git-r3
+inherit git-r3 optfeature
 
 DESCRIPTION="Scripts and hooks that I use on my machines"
 HOMEPAGE="https://gitlab.com/Parona/parona-scripts"
@@ -58,5 +58,11 @@ src_install() {
 
 	if use portage-hooks; then
 		emake DESTDIR="${D}" portage_hooks
+	fi
+}
+
+pkg_postinst() {
+	if use portage-hooks; then
+		optfeature "faster repository metadata generation" sys-apps/pkgcraft-tools
 	fi
 }
