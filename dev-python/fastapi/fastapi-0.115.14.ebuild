@@ -29,7 +29,7 @@ SLOT="0"
 RDEPEND="
 	<dev-python/pydantic-3.0.0[${PYTHON_USEDEP}]
 	>=dev-python/pydantic-1.7.4[${PYTHON_USEDEP}]
-	<dev-python/starlette-0.47.0[${PYTHON_USEDEP}]
+	<dev-python/starlette-0.48.0[${PYTHON_USEDEP}]
 	>=dev-python/starlette-0.40.0[${PYTHON_USEDEP}]
 	>=dev-python/typing-extensions-4.8.0[${PYTHON_USEDEP}]
 "
@@ -41,7 +41,7 @@ BDEPEND="
 		dev-python/dirty-equals[${PYTHON_USEDEP}]
 		dev-python/email-validator[${PYTHON_USEDEP}]
 		>=dev-python/flask-1.1.2[${PYTHON_USEDEP}]
-		dev-python/inline-snapshot[${PYTHON_USEDEP}]
+		>=dev-python/inline-snapshot-0.21.1[${PYTHON_USEDEP}]
 		>=dev-python/jinja2-3.1.5[${PYTHON_USEDEP}]
 		dev-python/orjson[${PYTHON_USEDEP}]
 		<dev-python/passlib-2.0.0[${PYTHON_USEDEP}]
@@ -60,6 +60,7 @@ BDEPEND="
 
 PATCHES=(
 	"${FILESDIR}"/fastaapi-0.115.6-httpx-0.28-test-fix.patch
+	"${FILESDIR}"/fastapi-0.115.14-starlette-bump.patch
 )
 
 distutils_enable_tests pytest
