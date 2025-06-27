@@ -57,7 +57,7 @@ dev-perl/match-simple 0.012: simplified clone of smartmatch operator
 dev-python/asyncpg 0.30.0: A fast PostgreSQL Database Client Library for Python/asyncio.
 dev-python/databases 0.9.0: Async database support for Python.
 dev-python/docopt-ng 0.9.0: Humane command line arguments parser.
-dev-python/fastapi 0.115.11 0.115.12 0.115.13 9999: FastAPI framework, high performance, easy to learn, ready for production
+dev-python/fastapi 0.115.13 0.115.14 9999: FastAPI framework, high performance, easy to learn, ready for production
 dev-python/fastapi-cli 0.0.7: Run and manage FastAPI apps from the command line with FastAPI CLI
 dev-python/gbinder 1.1.2-r1: Python bindings for libgbinder
 dev-python/inputs 0.5: Cross-platform Python support for keyboards, mice and gamepads.
@@ -81,7 +81,7 @@ games-util/loot 0.25.2 0.26.0 0.26.1: A modding utility for Starfield and some E
 games-util/mangohud 0.8.1 9999: Overlay for monitoring FPS, temperatures, CPU/GPU load and more
 games-util/nexusmodsapp 0.11.3 0.12.3: Nexus Mods App, a mod installer, creator and manager for all your popular games
 games-util/protonup-qt 2.11.1 2.12.0 2.12.1: Install and manage proton with Steam and Lutris
-games-util/r2modman 3.1.58 3.2.0: A simple and easy to use mod manager for several games using Thunderstore
+games-util/r2modman 3.2.0 3.2.1: A simple and easy to use mod manager for several games using Thunderstore
 games-util/steamtinkerlaunch 9999: Tool for use with the Steam client for custom launch options
 gnome-extra/yad 14.1-r1: Display GTK+ dialog boxes from command line or shell scripts
 gui-apps/fuzzel 1.11.1 9999: Application launcher for wlroots based Wayland compositors.
