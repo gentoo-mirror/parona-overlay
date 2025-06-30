@@ -52,6 +52,8 @@ EPYTEST_DESELECT=(
 	# krbtgt/HOMENETWORK@KRBTEST.COM not found in Kerberos database
 	"tests/test_connect.py::TestGssAuthentication::test_auth_gssapi_bad_user"
 	"tests/test_connect.py::TestGssAuthentication::test_auth_gssapi_ok"
+	# https://github.com/MagicStack/asyncpg/issues/1236
+	"tests/test_connect.py::TestConnectParams::test_connect_params"
 )
 
 EPYTEST_IGNORE=(
