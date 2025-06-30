@@ -8,6 +8,5 @@ games-util/gamehub
 # Alfred Wingate <parona@protonmail.com> (2025-05-01)
 # Haven't used these in a while as my setup changed.
 # Guru has these packages.
-gui-apps/fuzzel
 gui-apps/wbg
 gui-apps/yambar
