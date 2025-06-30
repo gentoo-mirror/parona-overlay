@@ -1,4 +1,4 @@
-# Copyright 2024 Gentoo Authors
+# Copyright 2024-2025 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=8
@@ -27,6 +27,8 @@ BDEPEND="
 		dev-python/asyncpg[${PYTHON_USEDEP}]
 	)
 "
+
+EPYTEST_PLUGINS=()
 # TODO: asyncmy (asyncio incompatiblity)?
 # aiopg redundant due to psycopg3
 # aiomysql requires and old sqlalchemy https://github.com/aio-libs/aiomysql/issues/818
