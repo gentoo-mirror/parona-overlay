@@ -4,8 +4,3 @@
 # Alfred Wingate <parona@protonmail.com> (2025-06-13)
 # Archived upstream, Depends on removed webkit-gtk:4.0
 games-util/gamehub
-
-# Alfred Wingate <parona@protonmail.com> (2025-05-01)
-# Haven't used these in a while as my setup changed.
-# Guru has these packages.
-gui-apps/yambar
