@@ -28,4 +28,6 @@ PATCHES=(
 	"${FILESDIR}/pytest-examples-0.0.14-revert-use-of-ruff-module.patch"
 )
 
+EPYTEST_PLUGINS=()
+EPYTEST_PLUGIN_AUTOLOAD=1
 distutils_enable_tests pytest
