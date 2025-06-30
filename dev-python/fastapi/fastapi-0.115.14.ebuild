@@ -63,6 +63,7 @@ PATCHES=(
 	"${FILESDIR}"/fastapi-0.115.14-starlette-bump.patch
 )
 
+EPYTEST_PLUGINS=( anyio )
 distutils_enable_tests pytest
 
 EPYTEST_DESELECT=(
