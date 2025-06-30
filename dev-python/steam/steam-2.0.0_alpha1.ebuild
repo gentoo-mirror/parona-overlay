@@ -48,4 +48,5 @@ EPYTEST_IGNORE=(
 	"tests/test_core_cm.py"
 )
 
+EPYTEST_PLUGINS=()
 distutils_enable_tests pytest
