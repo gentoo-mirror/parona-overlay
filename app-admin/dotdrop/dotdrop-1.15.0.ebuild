@@ -45,6 +45,7 @@ distutils_enable_tests pytest
 
 PATCHES=(
 	"${FILESDIR}"/dotdrop-1.15.0-output-logs-on-error.patch
+	"${FILESDIR}"/dotdrop-1.15.0-toml-order.patch
 )
 
 src_prepare() {
