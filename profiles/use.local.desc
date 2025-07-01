@@ -19,10 +19,7 @@ games-util/mangohud:plots - Install mangoplot plotting script which generates a 
 gnome-extra/yad:sourceview - Enable syntax highlighting in text-info dialog with x11-libs/gtksourceview:3.0
 gnome-extra/yad:spell - Enable support spell checking in text fields
 gnome-extra/yad:tools - Install extra tools such as yad-tools, yad-icon-browser, yad-settings
-gui-apps/fuzzel:nanosvg - VG image support via bundled nanosvg instead of gnome-base/librsvg
 gui-apps/qtgreet:greetwl - Build the greetwl compositor to use it instead of requiring other compositors.
-gui-apps/yambar:mpd - Enable support for the Music Player Daemon
-gui-apps/yambar:shared - Build modules, particles and decorations as shared libraries
 media-sound/spotify:local-playback - Allows playing local files with the Spotify client
 media-sound/spotify:pax-kernel - Triggers a paxmarking of the main Spotify binary
 sys-kernel/xanmod-kernel:initramfs - Build initramfs along with the kernel.
