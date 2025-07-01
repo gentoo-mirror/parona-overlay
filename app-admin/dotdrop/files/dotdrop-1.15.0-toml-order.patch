@@ -1,0 +1,23 @@
+--- a/tests-ng/import-with-trans.sh
++++ b/tests-ng/import-with-trans.sh
+@@ -115,13 +115,13 @@ echo "checking trans_update is set in config"
+ echo "--------------"
+ cat "${cfg}"
+ echo "--------------"
+-cat "${cfg}" | grep -A 4 'f_abc:' | grep 'trans_update: base64'
+-cat "${cfg}" | grep -A 4 'd_def:' | grep 'trans_update: compress'
+-cat "${cfg}" | grep -A 4 'f_ghi:' | grep 'trans_update: encrypt'
++cat "${cfg}" | grep -A 6 'f_abc:' | grep 'trans_update: base64'
++cat "${cfg}" | grep -A 6 'd_def:' | grep 'trans_update: compress'
++cat "${cfg}" | grep -A 6 'f_ghi:' | grep 'trans_update: encrypt'
+ 
+-cat "${cfg}" | grep -A 4 'f_abc:' | grep 'trans_install: base64'
+-cat "${cfg}" | grep -A 4 'd_def:' | grep 'trans_install: decompress'
+-cat "${cfg}" | grep -A 4 'f_ghi:' | grep 'trans_install: decrypt'
++cat "${cfg}" | grep -A 6 'f_abc:' | grep 'trans_install: base64'
++cat "${cfg}" | grep -A 6 'd_def:' | grep 'trans_install: decompress'
++cat "${cfg}" | grep -A 6 'f_ghi:' | grep 'trans_install: decrypt'
+ 
+ # install these
+ echo "install and check"
+

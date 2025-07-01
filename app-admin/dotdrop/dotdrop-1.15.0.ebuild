@@ -39,10 +39,13 @@ BDEPEND="
 	app-editors/vim-core
 "
 
+EPYTEST_PLUGINS=()
+EPYTEST_XDIST=1
 distutils_enable_tests pytest
 
 PATCHES=(
 	"${FILESDIR}"/dotdrop-1.15.0-output-logs-on-error.patch
+	"${FILESDIR}"/dotdrop-1.15.0-toml-order.patch
 )
 
 src_prepare() {
@@ -70,7 +73,7 @@ src_install() {
 }
 
 python_test() {
-	epytest -n "$(makeopts_jobs)" --dist=worksteal
+	epytest
 
 	# trailing / WILL cause a test failure
 	local -x DOTDROP_WORKDIR="${T}/dotdrop_workdir" # hardcoded tmp dir outside sandbox otherwise

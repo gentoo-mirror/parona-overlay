@@ -28,4 +28,14 @@ PATCHES=(
 	"${FILESDIR}/pytest-examples-0.0.14-revert-use-of-ruff-module.patch"
 )
 
+EPYTEST_PLUGINS=()
+EPYTEST_PLUGIN_AUTOLOAD=1
 distutils_enable_tests pytest
+
+python_prepare_all() {
+	if has_version ">=dev-python/pytest-8.4.0"; then
+		eapply "${FILESDIR}/pytest-examples-0.0.18-pytest-8.4.patch"
+	fi
+
+	distutils-r1_python_prepare_all
+}
