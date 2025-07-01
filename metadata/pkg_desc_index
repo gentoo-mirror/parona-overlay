@@ -99,8 +99,8 @@ media-fonts/juliamono 0.059 0.060: JuliaMono - a monospaced font for scientific 
 media-libs/phonon-mpv 0.1.0-r1: Phonon Backend using MPV Player(libmpv)
 media-sound/spotify 1.2.60 1.2.63: Spotify is a social music platform
 media-video/mpv-mpris 1.1: MPRIS plugin for mpv
-net-im/discord 0.0.98 0.0.99: All-in-one voice and text chat for gamers
-net-im/discord-ptb 0.0.148 0.0.149: All-in-one voice and text chat for gamers
+net-im/discord 0.0.99 0.0.100: All-in-one voice and text chat for gamers
+net-im/discord-ptb 0.0.149 0.0.150: All-in-one voice and text chat for gamers
 net-misc/wlvncc 9999: A Wayland Native VNC Client
 sys-apps/coolercontrol 2.1.0 2.2.0 2.2.1: Monitor and control your cooling and other devices
 sys-apps/coolercontrol-liqctld 2.1.0 2.2.0 2.2.1: Monitor and control your cooling and other devices (liqctld)
