@@ -62,6 +62,7 @@ PATCHES=(
 	"${FILESDIR}"/fastaapi-0.115.6-httpx-0.28-test-fix.patch
 )
 
+EPYTEST_PLUGINS=( anyio )
 distutils_enable_tests pytest
 
 EPYTEST_DESELECT=(

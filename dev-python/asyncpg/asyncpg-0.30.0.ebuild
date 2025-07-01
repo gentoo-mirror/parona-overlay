@@ -1,4 +1,4 @@
-# Copyright 2024 Gentoo Authors
+# Copyright 2024-2025 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=8
@@ -41,6 +41,7 @@ BDEPEND="
 	)
 "
 
+EPYTEST_PLUGINS=()
 distutils_enable_tests pytest
 
 EPYTEST_DESELECT=(
@@ -51,6 +52,8 @@ EPYTEST_DESELECT=(
 	# krbtgt/HOMENETWORK@KRBTEST.COM not found in Kerberos database
 	"tests/test_connect.py::TestGssAuthentication::test_auth_gssapi_bad_user"
 	"tests/test_connect.py::TestGssAuthentication::test_auth_gssapi_ok"
+	# https://github.com/MagicStack/asyncpg/issues/1236
+	"tests/test_connect.py::TestConnectParams::test_connect_params"
 )
 
 EPYTEST_IGNORE=(

@@ -6,7 +6,7 @@ EAPI=8
 DISTUTILS_USE_PEP517=hatchling
 PYTHON_COMPAT=( python3_{12..13} )
 
-inherit distutils-r1 pypi
+inherit distutils-r1 optfeature pypi
 
 DESCRIPTION="Settings management using pydantic"
 HOMEPAGE="
@@ -21,9 +21,13 @@ KEYWORDS="~amd64"
 RDEPEND="
 	>=dev-python/pydantic-2.7.0[${PYTHON_USEDEP}]
 	>=dev-python/python-dotenv-0.21.0[${PYTHON_USEDEP}]
+	>=dev-python/typing-inspection-0.4.0[${PYTHON_USEDEP}]
 "
 BDEPEND="
 	test? (
+		>=dev-util/diff-cover-9.2.0[${PYTHON_USEDEP}]
+		dev-python/boto3[${PYTHON_USEDEP}]
+		dev-python/moto[${PYTHON_USEDEP}]
 		dev-python/pytest-examples[${PYTHON_USEDEP}]
 		dev-python/pytest-mock[${PYTHON_USEDEP}]
 	)
@@ -40,9 +44,6 @@ EPYTEST_DESELECT=(
 	"tests/test_settings.py::test_ignore_empty_with_dotenv_when_not_empty_uses_value"
 	# TODO: Failed: DID NOT RAISE <class 'UserWarning'>
 	"tests/test_settings.py::test_protected_namespace_defaults"
-	# typing-extensions regression
-	# https://github.com/pydantic/pydantic-settings/issues/591
-	"tests/test_source_cli.py::test_cli_metavar_format_type_alias_312"
 )
 
 EPYTEST_IGNORE=(
@@ -54,4 +55,8 @@ python_test() {
 	# parsing --help output is width dependent
 	local -x COLUMNS=80
 	epytest
+}
+
+pkg_postinst() {
+	optfeature "aws secret manager" dev-python/boto3
 }

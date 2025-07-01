@@ -4,15 +4,3 @@
 # Alfred Wingate <parona@protonmail.com> (2025-06-13)
 # Archived upstream, Depends on removed webkit-gtk:4.0
 games-util/gamehub
-
-# Alfred Wingate <parona@protonmail.com> (2025-05-17)
-# My Steelseries mouse broke and I replaced it with a Logitech.
-# So I'm not using this anymore and cannot legitimately test it.
-app-misc/rivalcfg
-
-# Alfred Wingate <parona@protonmail.com> (2025-05-01)
-# Haven't used these in a while as my setup changed.
-# Guru has these packages.
-gui-apps/fuzzel
-gui-apps/wbg
-gui-apps/yambar

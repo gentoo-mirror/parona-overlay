@@ -32,6 +32,7 @@ RDEPEND="
 	>=dev-python/zstandard-0.19.0[${PYTHON_USEDEP}]
 "
 
+EPYTEST_PLUGINS=()
 distutils_enable_tests pytest
 
 src_prepare() {
