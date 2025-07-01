@@ -56,7 +56,7 @@ pkg_postinst() {
 	# optfeature "boxtron support" games-engines/boxtron
 	optfeature "gamemode support" games-util/gamemode
 	optfeature "gamescople support" gui-wm/gamescope
-	optfeature "debugging" sys-devel/gdb
+	optfeature "debugging" dev-debug/gdb
 	optfeature "game icons and game desktop files" media-gfx/imagemagick
 	optfeature "getting updated versions of Vortex" app-misc/jq
 	optfeature "sending desktop notifications" x11-libs/libnotify
@@ -68,9 +68,9 @@ pkg_postinst() {
 	#replay-sorcery?
 	optfeature "backing up and restoring the steamuser folder of a Proton prefix" net-misc/rsync
 	optfeature "ScummVM support" games-engines/scummvm
-	optfeature "diagnostic and debugging information in game logs" dev-util/strace
+	optfeature "diagnostic and debugging information in game logs" dev-debug/strace
 	optfeature "checking if VR header is present" sys-apps/usbutils
-	optfeature "vkBasalt support" media-libs/vkBasalt
+	optfeature "vkBasalt support" media-gfx/vkBasalt
 	# vr-video-player
 	optfeature "wine support" virtual/wine
 	optfeature "winestricks support" app-emulation/winetricks
