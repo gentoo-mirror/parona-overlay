@@ -40,6 +40,9 @@ EPYTEST_DESELECT=(
 	"tests/test_settings.py::test_ignore_empty_with_dotenv_when_not_empty_uses_value"
 	# TODO: Failed: DID NOT RAISE <class 'UserWarning'>
 	"tests/test_settings.py::test_protected_namespace_defaults"
+	# typing-extensions regression
+	# https://github.com/pydantic/pydantic-settings/issues/591
+	"tests/test_source_cli.py::test_cli_metavar_format_type_alias_312"
 )
 
 EPYTEST_IGNORE=(
