@@ -5,7 +5,6 @@ EAPI=8
 
 DOTNET_PKG_COMPAT=9.0
 NUGETS="
-
 argon@0.24.2
 autofixture.xunit2@4.18.1
 autofixture@4.18.1
@@ -60,8 +59,9 @@ dynamicdata@8.3.27
 dynamicdata@8.4.1
 dynamicdata@9.0.1
 dynamicdata@9.0.4
-dynamicdata@9.2.2
+dynamicdata@9.3.2
 emptyfiles@8.5.0
+enumerableasyncprocessor@2.1.0
 excss@4.3.0
 fare@2.1.1
 fetchbannerlordversion.models@1.0.6.46
@@ -77,17 +77,17 @@ fomodinstaller.interface@1.2.0
 fomodinstaller.scripting.xmlscript@1.0.0
 fomodinstaller.scripting@1.0.0
 fomodinstaller.utils@1.0.0
-gamefinder.common@4.6.3
-gamefinder.launcher.heroic@4.6.3
-gamefinder.registryutils@4.6.3
-gamefinder.storehandlers.eadesktop@4.6.3
-gamefinder.storehandlers.egs@4.6.3
-gamefinder.storehandlers.gog@4.6.3
-gamefinder.storehandlers.origin@4.6.3
-gamefinder.storehandlers.steam@4.6.3
-gamefinder.storehandlers.xbox@4.6.3
-gamefinder.wine@4.6.3
-gamefinder@4.6.3
+gamefinder.common@4.7.3
+gamefinder.launcher.heroic@4.7.3
+gamefinder.registryutils@4.7.3
+gamefinder.storehandlers.eadesktop@4.7.3
+gamefinder.storehandlers.egs@4.7.3
+gamefinder.storehandlers.gog@4.7.3
+gamefinder.storehandlers.origin@4.7.3
+gamefinder.storehandlers.steam@4.7.3
+gamefinder.storehandlers.xbox@4.7.3
+gamefinder.wine@4.7.3
+gamefinder@4.7.3
 gee.external.capstone@2.3.0
 githubactionstestlogger@2.4.1
 google.protobuf@3.22.5
@@ -208,7 +208,7 @@ microsoft.codeanalysis.testing.verifiers.xunit@1.1.2
 microsoft.codeanalysis.workspaces.common@1.0.1
 microsoft.codeanalysis.workspaces.common@3.8.0
 microsoft.codeanalysis.workspaces.common@4.8.0
-microsoft.codecoverage@17.13.0
+microsoft.codecoverage@17.14.0
 microsoft.composition@1.0.27
 microsoft.diagnostics.netcore.client@0.2.251802
 microsoft.diagnostics.runtime@2.2.332302
@@ -308,16 +308,20 @@ microsoft.extensions.telemetry.abstractions@9.4.0
 microsoft.extensions.telemetry@9.4.0
 microsoft.extensions.timeprovider.testing@9.4.0
 microsoft.net.http.headers@9.0.4
-microsoft.net.test.sdk@17.13.0
+microsoft.net.test.sdk@17.14.0
 microsoft.netcore.platforms@1.1.0
 microsoft.netcore.platforms@2.0.0
 microsoft.netcore.platforms@5.0.0
 microsoft.netcore.targets@1.1.0
 microsoft.sourcelink.common@8.0.0
 microsoft.sourcelink.github@8.0.0
+microsoft.testing.extensions.trxreport.abstractions@1.7.1
+microsoft.testing.platform.msbuild@1.4.3
+microsoft.testing.platform@1.4.3
+microsoft.testing.platform@1.7.1
 microsoft.testplatform.objectmodel@17.10.0
-microsoft.testplatform.objectmodel@17.13.0
-microsoft.testplatform.testhost@17.13.0
+microsoft.testplatform.objectmodel@17.14.0
+microsoft.testplatform.testhost@17.14.0
 microsoft.visualstudio.composition.netfxattributes@16.1.8
 microsoft.visualstudio.composition@16.1.8
 microsoft.visualstudio.threading.analyzers@17.10.48
@@ -340,17 +344,17 @@ newtonsoft.json@13.0.1
 newtonsoft.json@13.0.3
 nexusmods.archives.nx@0.6.1
 nexusmods.archives.nx@0.6.4
-nexusmods.cascade.sourcegenerator@0.12.0
-nexusmods.cascade@0.12.0
-nexusmods.hashing.xxhash3.paths@3.0.3
-nexusmods.hashing.xxhash3@3.0.3
-nexusmods.mnemonicdb.abstractions@0.13.0
-nexusmods.mnemonicdb.sourcegenerator@0.13.0
-nexusmods.mnemonicdb@0.13.0
-nexusmods.paths.extensions.nx@0.18.0
-nexusmods.paths.testinghelpers@0.18.0
-nexusmods.paths@0.15.0
-nexusmods.paths@0.18.0
+nexusmods.cascade.sourcegenerator@0.16.0
+nexusmods.cascade@0.16.0
+nexusmods.hashing.xxhash3.paths@3.0.4
+nexusmods.hashing.xxhash3@3.0.4
+nexusmods.mnemonicdb.abstractions@0.17.0
+nexusmods.mnemonicdb.sourcegenerator@0.17.0
+nexusmods.mnemonicdb@0.17.0
+nexusmods.paths.extensions.nx@0.20.0
+nexusmods.paths.testinghelpers@0.20.0
+nexusmods.paths@0.19.1
+nexusmods.paths@0.20.0
 nlog.extensions.logging@5.3.14
 nlog@5.2.8
 nlog@5.3.4
@@ -484,7 +488,6 @@ system.codedom@8.0.0
 system.codedom@9.0.0
 system.collections.concurrent@4.0.12
 system.collections.concurrent@4.3.0
-system.collections.immutable@1.2.0
 system.collections.immutable@5.0.0
 system.collections.immutable@7.0.0
 system.collections.immutable@8.0.0
@@ -535,13 +538,11 @@ system.io.filesystem.primitives@4.3.0
 system.io.filesystem@4.3.0
 system.io.hashing@8.0.0
 system.io.hashing@9.0.0
-system.io.hashing@9.0.4
 system.io.pipelines@6.0.3
 system.io.pipelines@7.0.0
 system.io.pipelines@8.0.0
 system.io.pipelines@9.0.0
 system.io.pipelines@9.0.4
-system.io@4.1.0
 system.io@4.3.0
 system.linq.async@6.0.1
 system.linq.expressions@4.1.0
@@ -568,12 +569,12 @@ system.reflection.emit.ilgeneration@4.3.0
 system.reflection.emit.lightweight@4.3.0
 system.reflection.emit@4.0.1
 system.reflection.emit@4.3.0
-system.reflection.extensions@4.0.1
 system.reflection.extensions@4.3.0
 system.reflection.metadata@1.3.0
 system.reflection.metadata@1.6.0
 system.reflection.metadata@5.0.0
 system.reflection.metadata@7.0.0
+system.reflection.metadata@8.0.0
 system.reflection.primitives@4.0.1
 system.reflection.primitives@4.3.0
 system.reflection.typeextensions@4.1.0
@@ -589,7 +590,6 @@ system.runtime.extensions@4.1.0
 system.runtime.extensions@4.3.0
 system.runtime.handles@4.3.0
 system.runtime.interopservices.runtimeinformation@4.3.0
-system.runtime.interopservices@4.1.0
 system.runtime.interopservices@4.3.0
 system.runtime.numerics@4.3.0
 system.runtime@4.1.0
@@ -617,9 +617,7 @@ system.security.principal.windows@5.0.0
 system.security.principal@4.3.0
 system.text.encoding.codepages@4.5.1
 system.text.encoding.codepages@7.0.0
-system.text.encoding.extensions@4.0.11
 system.text.encoding.extensions@4.3.0
-system.text.encoding@4.0.11
 system.text.encoding@4.3.0
 system.text.encodings.web@8.0.0
 system.text.json@8.0.0
@@ -644,7 +642,12 @@ testableio.system.io.abstractions@21.0.29
 textmatesharp.grammars@1.0.65
 textmatesharp@1.0.65
 tmds.dbus.protocol@0.21.2
-transparentvalueobjects@1.0.2
+transparentvalueobjects.abstractions@1.1.0
+transparentvalueobjects@1.1.0
+tunit.assertions@0.25.0
+tunit.core@0.25.0
+tunit.engine@0.25.0
+tunit@0.25.0
 validation@2.3.7
 validation@2.4.18
 valvekeyvalue@0.13.1.398
@@ -777,6 +780,15 @@ src_prepare() {
 			}
 			' \
 			tests/Networking/NexusMods.Networking.ModUpdates.Tests/PerFeedCacheUpdaterTests.cs || die
+
+		# Assumes debug version
+		sed -i \
+			-e '
+			/\[Fact\]/,/public async Task Test()/ {
+				s/\[Fact\]/[Fact (Skip = "requires a debug build")]/
+			}
+			' \
+			tests/NexusMods.Telemetry.Tests/TrackingDataSenderTests.cs || die
 	fi
 
 	default
@@ -803,21 +815,14 @@ src_install() {
 pkg_postinst() {
 	xdg_pkg_postinst
 
-	elog "The Nexus Mods app is still in the very early stages of development. This means"
-	elog "that some of the core backend functionality of the app may still change"
-	elog "significantly between releases. When this changes all existing data becomes"
-	elog "incompatible with the new versions and users who wish to update will need to"
-	elog "start over."
-	elog "To do so run:"
-	elog "$ NexusMods.App uninstall-app"
-	elog "See https://nexus-mods.github.io/NexusMods.App/users/Uninstall/ for further instructions"
-
-	if [[ -n ${REPLACING_VERSIONS} ]] ; then
-		for ver in "${REPLACING_VERSIONS[@]}" ; do
-			if ver_test "${ver}" -eq 0.7.1; then
-				elog "Important: If you are updating from 0.7.1, you will need to remove and re-add any collections to your library."
-				break
-			fi
-		done
+	if [[ -z ${REPLACING_VERSIONS} ]] ; then
+		elog "The Nexus Mods app is still in the very early stages of development. This means"
+		elog "that some of the core backend functionality of the app may still change"
+		elog "significantly between releases. When this changes all existing data becomes"
+		elog "incompatible with the new versions and users who wish to update will need to"
+		elog "start over."
+		elog "To do so run:"
+		elog "$ NexusMods.App uninstall-app"
+		elog "See https://nexus-mods.github.io/NexusMods.App/users/Uninstall/ for further instructions"
 	fi
 }
