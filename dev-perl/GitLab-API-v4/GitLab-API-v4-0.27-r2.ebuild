@@ -28,7 +28,6 @@ RDEPEND="
 	>=dev-perl/URI-1.62
 	>=dev-perl/namespace-clean-0.27
 	>=dev-perl/strictures-2.0.3
-	>=virtual/perl-HTTP-Tiny-0.059
 "
 DEPEND="${RDEPEND}"
 BDEPEND="
