@@ -1,0 +1,16 @@
+BDEPEND=>=dev-perl/Module-Build-Tiny-0.035 test? ( >=dev-perl/Log-Any-Adapter-TAP-0.003003 >=virtual/perl-MIME-Base64-3.15 >=virtual/perl-Test2-Suite-0.0.94 ) >=dev-lang/perl-5.38.2-r3[perl_features_debug=,perl_features_ithreads=,perl_features_quadmath=] test? ( >=virtual/perl-Test-Simple-1 )
+DEFINED_PHASES=compile configure install prepare test
+DEPEND=>=dev-perl/Const-Fast-0.014 >=dev-perl/HTTP-Tiny-Multipart-0.05 >=dev-perl/IO-Prompter-0.004014 >=dev-perl/JSON-MaybeXS-1.003007 >=dev-perl/Log-Any-1.703 >=dev-perl/Log-Any-Adapter-Screen-0.13 >=dev-perl/Moo-2.003000 >=dev-perl/Path-Tiny-0.079 >=dev-perl/Try-Tiny-0.28 >=dev-perl/Type-Tiny-1.002001 >=dev-perl/URI-1.62 >=dev-perl/namespace-clean-0.27 >=dev-perl/strictures-2.0.3 >=dev-lang/perl-5.38.2-r3[perl_features_debug=,perl_features_ithreads=,perl_features_quadmath=]
+DESCRIPTION=A complete GitLab API v4 client.
+EAPI=8
+HOMEPAGE=https://metacpan.org/release/GitLab-API-v4
+INHERIT=perl-module
+IUSE=test perl_features_debug perl_features_ithreads perl_features_quadmath test
+KEYWORDS=~amd64
+LICENSE=|| ( Artistic GPL-1+ )
+RDEPEND=>=dev-perl/Const-Fast-0.014 >=dev-perl/HTTP-Tiny-Multipart-0.05 >=dev-perl/IO-Prompter-0.004014 >=dev-perl/JSON-MaybeXS-1.003007 >=dev-perl/Log-Any-1.703 >=dev-perl/Log-Any-Adapter-Screen-0.13 >=dev-perl/Moo-2.003000 >=dev-perl/Path-Tiny-0.079 >=dev-perl/Try-Tiny-0.28 >=dev-perl/Type-Tiny-1.002001 >=dev-perl/URI-1.62 >=dev-perl/namespace-clean-0.27 >=dev-perl/strictures-2.0.3 >=dev-lang/perl-5.38.2-r3[perl_features_debug=,perl_features_ithreads=,perl_features_quadmath=] dev-lang/perl:=
+RESTRICT=!test? ( test ) !test? ( test )
+SLOT=0
+SRC_URI=mirror://cpan/authors/id/B/BL/BLUEFEET/GitLab-API-v4-0.27.tar.gz
+_eclasses_=multiprocessing	1e32df7deee68372153dca65f4a7c21f	perl-functions	1863acf0982afafc67797e3ce7275b4c	readme.gentoo-r1	b045f3acf546393ab6b3170781875358	toolchain-funcs	a6df79c1e9bc84369dbf3d44206ac772	perl-module	41920449ca174fe9b9b303dfcbdb37a3
+_md5_=ff7c43257bb0db8fc1f2256543a96100
