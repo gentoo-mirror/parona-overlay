@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "https://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+	<longdescription>
+		Internet radio player that provides access to a station database with over 50,000 stations.
+	</longdescription>
+	<upstream>
+		<remote-id type="kde-invent">saurov/transistor</remote-id>
+	</upstream>
+</pkgmetadata>
