@@ -1,0 +1,15 @@
+BDEPEND=test? ( >=app-emacs/dash-2.18.0 >=app-emacs/s-1.11.0 >=app-emacs/f-0.20.0 >=app-emacs/elisp-refs-1.2 ) >=app-editors/emacs-25.3:*
+DEFINED_PHASES=compile configure info install postinst postrm prepare setup test unpack
+DESCRIPTION=A better Emacs *help* buffer
+EAPI=8
+HOMEPAGE=https://github.com/Wilfred/helpful https://melpa.org/#/helpful
+INHERIT=elisp
+IUSE=test
+KEYWORDS=~amd64
+LICENSE=GPL-3+
+RDEPEND=>=app-emacs/dash-2.18.0 >=app-emacs/s-1.11.0 >=app-emacs/f-0.20.0 >=app-emacs/elisp-refs-1.2 >=app-editors/emacs-25.3:*
+RESTRICT=!test? ( test )
+SLOT=0
+SRC_URI=https://github.com/Wilfred/helpful/archive/03756fa6ad4dcca5e0920622b1ee3f70abfc4e39.tar.gz -> helpful-03756fa6ad4dcca5e0920622b1ee3f70abfc4e39.tar.gz test? ( mirror://gnu/emacs/emacs-25.3.tar.gz )
+_eclasses_=elisp-common	fe05085d051330f15cf7201109b5cd23	elisp	8dfc7a00348fe9c91895014adc78a4a5
+_md5_=3ec542feef4b64e618bfb19751fa0edf
