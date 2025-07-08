@@ -1,0 +1,13 @@
+BDEPEND=>=app-editors/emacs-25.3:*
+DEFINED_PHASES=compile configure info install postinst postrm prepare setup test unpack
+DESCRIPTION=Switch between named 'perspectives' of the editor
+EAPI=8
+HOMEPAGE=https://github.com/nex3/perspective-el
+INHERIT=elisp
+KEYWORDS=~amd64
+LICENSE=MIT
+RDEPEND=>=app-editors/emacs-25.3:*
+SLOT=0
+SRC_URI=https://github.com/nex3/perspective-el/archive/refs/tags/2.20.tar.gz -> perspective-2.20.gh.tar.gz
+_eclasses_=elisp-common	fe05085d051330f15cf7201109b5cd23	elisp	8dfc7a00348fe9c91895014adc78a4a5
+_md5_=176ae64a136e2b029f371aea1b11914e
