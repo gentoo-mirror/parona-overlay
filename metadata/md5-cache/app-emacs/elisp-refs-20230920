@@ -1,15 +1,13 @@
-BDEPEND=test? ( >=app-emacs/dash-2.12.0 >=app-emacs/s-1.11.0 ) >=app-editors/emacs-25.3:*
+BDEPEND=>=app-emacs/dash-2.12.0 >=app-emacs/s-1.11.0 >=app-editors/emacs-25.3:*
 DEFINED_PHASES=compile configure info install postinst postrm prepare setup test unpack
 DESCRIPTION=Find callers of elisp functions or macros
 EAPI=8
 HOMEPAGE=https://github.com/Wilfred/elisp-refs https://melpa.org/#/elisp-refs
 INHERIT=elisp
-IUSE=test
 KEYWORDS=~amd64
 LICENSE=GPL-3+
 RDEPEND=>=app-emacs/dash-2.12.0 >=app-emacs/s-1.11.0 >=app-editors/emacs-25.3:*
-RESTRICT=!test? ( test )
 SLOT=0
 SRC_URI=https://github.com/Wilfred/elisp-refs/archive/541a064c3ce27867872cf708354a65d83baf2a6d.tar.gz -> elisp-refs-541a064c3ce27867872cf708354a65d83baf2a6d.tar.gz
 _eclasses_=elisp-common	fe05085d051330f15cf7201109b5cd23	elisp	8dfc7a00348fe9c91895014adc78a4a5
-_md5_=833a2be56286bb45e1ad668d84274580
+_md5_=6ce8f271cb25951757470a6bf390607b
