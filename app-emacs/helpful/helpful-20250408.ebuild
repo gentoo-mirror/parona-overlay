@@ -44,5 +44,7 @@ elisp-enable-tests ert "${S}" \
 
 src_prepare() {
 	default
-	use test && mv "${WORKDIR}"/emacs-25.3 "${S}"/emacs-25.3 || die
+	if use test; then
+		mv "${WORKDIR}"/emacs-25.3 "${S}"/emacs-25.3 || die
+	fi
 }
