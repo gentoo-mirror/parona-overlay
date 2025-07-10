@@ -12,4 +12,4 @@ RESTRICT=!test? ( test )
 SLOT=0
 SRC_URI=https://github.com/Wilfred/helpful/archive/03756fa6ad4dcca5e0920622b1ee3f70abfc4e39.tar.gz -> helpful-03756fa6ad4dcca5e0920622b1ee3f70abfc4e39.tar.gz test? ( mirror://gnu/emacs/emacs-25.3.tar.gz )
 _eclasses_=elisp-common	fe05085d051330f15cf7201109b5cd23	elisp	8dfc7a00348fe9c91895014adc78a4a5
-_md5_=3ec542feef4b64e618bfb19751fa0edf
+_md5_=5877b899e806d22edc8f3fbb88ee8f02
