@@ -22,14 +22,11 @@ LICENSE="GPL-3+"
 SLOT="0"
 KEYWORDS="~amd64"
 
-IUSE="test"
-RESTRICT="!test? ( test )"
-
 RDEPEND="
 	>=app-emacs/dash-2.12.0
 	>=app-emacs/s-1.11.0
 "
-BDEPEND="test? ( ${RDEPEND} )"
+BDEPEND="${RDEPEND}"
 
 elisp-enable-tests ert "${S}" \
 	--load=test/elisp-refs-unit-test.el \
