@@ -60,7 +60,6 @@ BDEPEND="
 
 PATCHES=(
 	"${FILESDIR}"/fastaapi-0.115.6-httpx-0.28-test-fix.patch
-	"${FILESDIR}"/fastapi-0.115.14-starlette-bump.patch
 )
 
 EPYTEST_PLUGINS=( anyio )
