@@ -62,7 +62,7 @@ dev-perl/match-simple 0.012: simplified clone of smartmatch operator
 dev-python/asyncpg 0.30.0: A fast PostgreSQL Database Client Library for Python/asyncio.
 dev-python/databases 0.9.0: Async database support for Python.
 dev-python/docopt-ng 0.9.0: Humane command line arguments parser.
-dev-python/fastapi 0.115.14 0.116.0 9999: FastAPI framework, high performance, easy to learn, ready for production
+dev-python/fastapi 0.116.0 0.116.1 9999: FastAPI framework, high performance, easy to learn, ready for production
 dev-python/fastapi-cli 0.0.7 0.0.8: Run and manage FastAPI apps from the command line with FastAPI CLI
 dev-python/gbinder 1.1.2-r1: Python bindings for libgbinder
 dev-python/inputs 0.5: Cross-platform Python support for keyboards, mice and gamepads.
@@ -106,8 +106,8 @@ media-libs/phonon-mpv 0.1.0-r1: Phonon Backend using MPV Player(libmpv)
 media-sound/spotify 1.2.60 1.2.63: Spotify is a social music platform
 media-sound/transistor 9999: Internet radio player
 media-video/mpv-mpris 1.1: MPRIS plugin for mpv
-net-im/discord 0.0.99 0.0.100: All-in-one voice and text chat for gamers
-net-im/discord-ptb 0.0.150 0.0.151: All-in-one voice and text chat for gamers
+net-im/discord 0.0.100 0.0.101: All-in-one voice and text chat for gamers
+net-im/discord-ptb 0.0.151 0.0.152: All-in-one voice and text chat for gamers
 net-misc/wlvncc 9999: A Wayland Native VNC Client
 sys-apps/coolercontrol 2.1.0 2.2.0 2.2.1: Monitor and control your cooling and other devices
 sys-apps/coolercontrol-liqctld 2.1.0 2.2.0 2.2.1: Monitor and control your cooling and other devices (liqctld)
