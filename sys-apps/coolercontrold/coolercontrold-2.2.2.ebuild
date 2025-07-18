@@ -12,6 +12,8 @@ declare -A GIT_CRATES=(
 	[tower_governor]='https://github.com/codifryed/tower-governor;fd799d86418e58179468953c80ad7094a81a9e37;tower-governor-%commit%'
 )
 
+RUST_MIN_VER=1.82
+
 inherit cargo optfeature systemd
 
 DESCRIPTION="Monitor and control your cooling and other devices (daemon)"
@@ -28,7 +30,7 @@ LICENSE="GPL-3+"
 # Dependent crate licenses
 LICENSE+="
 	AGPL-3+ Apache-2.0 Apache-2.0-with-LLVM-exceptions BSD-2 BSD GPL-3+
-	ISC MIT MPL-2.0 UoI-NCSA Unicode-3.0 ZLIB
+	ISC MIT UoI-NCSA Unicode-3.0 ZLIB
 "
 SLOT="0"
 KEYWORDS="~amd64"
