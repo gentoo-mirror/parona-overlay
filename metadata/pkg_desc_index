@@ -8,6 +8,7 @@ app-containers/anbox-modules 20240526-r1: Anbox kernel modules (ashmem and binde
 app-containers/waydroid 1.4.2-r4: Container-based approach to boot a full Android system
 app-emacs/elisp-refs 20230920: Find callers of elisp functions or macros
 app-emacs/helpful 20250408: A better Emacs *help* buffer
+app-emacs/incus-tramp 20240927: Emacs Tramp integration for Incus containers
 app-emacs/mood-line 3.1.1: Minimal mode line configuration for Emacs, inspired by doom-modeline
 app-emacs/org-auto-tangle 0.6.0: a simple emacs package to allow org file tangling upon save
 app-emacs/perspective 2.20: Switch between named 'perspectives' of the editor
@@ -70,6 +71,7 @@ dev-python/pyclip 0.7.0: Cross-platform Clipboard module for Python with binary 
 dev-python/pycryptodomex 3.22.0 3.23.0: A self-contained cryptographic library for Python
 dev-python/pydantic-settings 2.7.1 2.10.1: Settings management using pydantic
 dev-python/pytest-examples 0.0.18: Pytest plugin for testing Python code examples in docstrings and markdown files.
+dev-python/pytest-responses 0.5.1: py.test integration for responses
 dev-python/rich-toolkit 0.14.7 0.14.8: Rich toolkit for building command-line applications
 dev-python/sqlmodel 0.0.24: SQL databases in Python, designed for simplicity, compatibility, and robustness.
 dev-python/starlette 0.46.2: The little ASGI framework that shines
@@ -85,7 +87,7 @@ games-util/limo 1.2 1.2.2 9999: A simple Qt based mod manager
 games-util/loot 0.25.2 0.26.0 0.26.1: A modding utility for Starfield and some Elder Scrolls and Fallout games.
 games-util/mangohud 0.8.1 9999: Overlay for monitoring FPS, temperatures, CPU/GPU load and more
 games-util/nexusmodsapp 0.12.3 0.13.4: Nexus Mods App, a mod installer, creator and manager for all your popular games
-games-util/protonup-qt 2.12.1: Install and manage proton with Steam and Lutris
+games-util/protonup-qt 2.12.1 2.13.0: Install and manage proton with Steam and Lutris
 games-util/r2modman 3.2.0 3.2.1: A simple and easy to use mod manager for several games using Thunderstore
 games-util/steamtinkerlaunch 9999: Tool for use with the Steam client for custom launch options
 gnome-extra/yad 14.1-r1: Display GTK+ dialog boxes from command line or shell scripts
@@ -106,7 +108,7 @@ media-libs/phonon-mpv 0.1.0-r1: Phonon Backend using MPV Player(libmpv)
 media-sound/spotify 1.2.60 1.2.63: Spotify is a social music platform
 media-sound/transistor 9999: Internet radio player
 media-video/mpv-mpris 1.1: MPRIS plugin for mpv
-net-im/discord 0.0.100 0.0.101: All-in-one voice and text chat for gamers
+net-im/discord 0.0.101 0.0.102: All-in-one voice and text chat for gamers
 net-im/discord-ptb 0.0.151 0.0.152: All-in-one voice and text chat for gamers
 net-misc/wlvncc 9999: A Wayland Native VNC Client
 sys-apps/coolercontrol 2.1.0 2.2.0 2.2.1: Monitor and control your cooling and other devices

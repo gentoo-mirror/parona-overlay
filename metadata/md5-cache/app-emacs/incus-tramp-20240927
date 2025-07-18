@@ -1,0 +1,13 @@
+BDEPEND=>=app-editors/emacs-25.3:*
+DEFINED_PHASES=compile configure info install postinst postrm prepare setup test unpack
+DESCRIPTION=Emacs Tramp integration for Incus containers
+EAPI=8
+HOMEPAGE=https://gitlab.com/lckarssen/incus-tramp
+INHERIT=elisp
+KEYWORDS=~amd64
+LICENSE=GPL-3+
+RDEPEND=app-containers/incus >=app-editors/emacs-25.3:*
+SLOT=0
+SRC_URI=https://gitlab.com/lckarssen/incus-tramp/-/archive/ae47dbc402151fd1f5fcaad9d74f2d82396a2b56/incus-tramp-ae47dbc402151fd1f5fcaad9d74f2d82396a2b56.tar.bz2
+_eclasses_=elisp-common	fe05085d051330f15cf7201109b5cd23	elisp	8dfc7a00348fe9c91895014adc78a4a5
+_md5_=b6174966b4d16536c7b24d286084700d
