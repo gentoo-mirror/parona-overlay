@@ -10,7 +10,7 @@ KERNEL_IUSE_MODULES_SIGN=1
 inherit kernel-build
 
 MY_P=linux-${PV%.*}
-GENPATCHES_P=genpatches-${PV%.*}-$(( ${PV##*.} + 5 ))
+PATCHSET=linux-gentoo-patches-6.15.5
 GENTOO_CONFIG_VER=g16
 
 XANMOD_VERSION="1"
@@ -20,8 +20,7 @@ HOMEPAGE="https://www.kernel.org/ https://xanmod.org/"
 SRC_URI="
 	https://cdn.kernel.org/pub/linux/kernel/v$(ver_cut 1).x/${MY_P}.tar.xz
 	https://downloads.sourceforge.net/xanmod/patch-${PV}-xanmod${XANMOD_VERSION}.xz
-	https://dev.gentoo.org/~mpagano/dist/genpatches/${GENPATCHES_P}.base.tar.xz
-	https://dev.gentoo.org/~mpagano/dist/genpatches/${GENPATCHES_P}.extras.tar.xz
+	https://dev.gentoo.org/~mgorny/dist/linux/${PATCHSET}.tar.xz
 	https://github.com/mgorny/gentoo-kernel-config/archive/${GENTOO_CONFIG_VER}.tar.gz
 		-> gentoo-kernel-config-${GENTOO_CONFIG_VER}.tar.gz
 "
@@ -48,20 +47,25 @@ QA_FLAGS_IGNORED="
 "
 
 src_prepare() {
-	# Remove linux-stable patches (see 0000_README)
-	find "${WORKDIR}" -maxdepth 1 -name "1[0-4][0-9][0-9]*.patch" -exec rm {} + || die
-
-	local PATCHES=(
-		# meh, genpatches have no directory
-		"${WORKDIR}"/patch-${PV}-xanmod${XANMOD_VERSION}
-		"${WORKDIR}"/*.patch
-	)
 	default
+	eapply "${WORKDIR}"/patch-${PV}-xanmod${XANMOD_VERSION}
+
+	local patch
+	for patch in "${WORKDIR}/${PATCHSET}"/*.patch; do
+		eapply "${patch}"
+		# non-experimental patches always finish with Gentoo Kconfig
+		# when ! use experimental, stop applying after it
+		if [[ ${patch} == *Add-Gentoo-Linux-support-config-settings* ]] &&
+			true
+		then
+			break
+		fi
+	done
 
 	# prepare the default config
 	case ${ARCH} in
 		amd64)
-			cp "${S}/CONFIGS/xanmod/gcc/config_x86-64-v2" .config || die
+			cp "${S}/CONFIGS/x86_64/config" .config || die
 			;;
 		*)
 			die "Unsupported arch ${ARCH}"
@@ -76,7 +80,7 @@ src_prepare() {
 	local merge_configs=(
 		"${T}"/version.config
 		"${dist_conf_path}"/base.config
-		"${FILESDIR}"/x86-64-v1.config # keep v1 for simplicity, distribution kernels support user modification.
+		"${FILESDIR}"/x86-64-v1.config-r1 # keep v1 for simplicity, distribution kernels support user modification.
 	)
 	use debug || merge_configs+=(
 		"${dist_conf_path}"/no-debug.config
