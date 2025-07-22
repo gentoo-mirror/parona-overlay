@@ -47,10 +47,8 @@ QA_FLAGS_IGNORED="
 "
 
 src_prepare() {
-	default
-	eapply "${WORKDIR}"/patch-${PV}-xanmod${XANMOD_VERSION}
-
 	local patch
+	eapply "${WORKDIR}"/patch-${PV}-xanmod${XANMOD_VERSION}
 	for patch in "${WORKDIR}/${PATCHSET}"/*.patch; do
 		eapply "${patch}"
 		# non-experimental patches always finish with Gentoo Kconfig
@@ -61,6 +59,8 @@ src_prepare() {
 			break
 		fi
 	done
+
+	default
 
 	# prepare the default config
 	case ${ARCH} in
