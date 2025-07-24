@@ -1180,18 +1180,21 @@ src_install() {
 	rm "${WORKDIR}/${PN}.desktop-template" || die
 
 	if use gnome-shell ; then
+		# https://gitlab.com/Parona/parona-overlay/-/issues/8
+		# Rename mozilla.(firefox|icecat) -> gnu.icecat
+
 		# Install search provider for Gnome
 		insinto /usr/share/gnome-shell/search-providers/
-		doins browser/components/shell/search-provider-files/org.mozilla.firefox.search-provider.ini
+		newins browser/components/shell/search-provider-files/org.mozilla.icecat.search-provider.ini org.gnu.icecat.search-provider.ini
 
 		insinto /usr/share/dbus-1/services/
-		doins browser/components/shell/search-provider-files/org.mozilla.firefox.SearchProvider.service
+		newins browser/components/shell/search-provider-files/org.mozilla.icecat.SearchProvider.service org.gnu.icecat.SearchProvider.service
 
 		# Make the dbus service aware of a previous session, bgo#939196
 		sed -e \
-			"s/Exec=\/usr\/bin\/firefox/Exec=\/usr\/$(get_libdir)\/firefox\/firefox --dbus-service \/usr\/bin\/firefox/g" \
-			-i "${ED}/usr/share/dbus-1/services/org.mozilla.firefox.SearchProvider.service" ||
-				die "Failed to sed org.mozilla.firefox.SearchProvider.service dbus file"
+			"s/Exec=\/usr\/bin\/icecat/Exec=\/usr\/$(get_libdir)\/icecat\/icecat --dbus-service \/usr\/bin\/icecat/g" \
+			-i "${ED}/usr/share/dbus-1/services/org.gnu.icecat.SearchProvider.service" ||
+				die "Failed to sed org.gnu.icecat.SearchProvider.service dbus file"
 
 		# Update prefs to enable Gnome search provider
 		cat >>"${GENTOO_PREFS}" <<-EOF || die "failed to enable gnome-search-provider via prefs"
