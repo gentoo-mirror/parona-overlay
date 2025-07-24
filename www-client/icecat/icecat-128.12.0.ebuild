@@ -6,7 +6,7 @@
 EAPI=8
 
 # Using Gentoos firefox patches as system libraries and lto are quite nice
-FIREFOX_PATCHSET="firefox-128esr-patches-11.tar.xz"
+FIREFOX_PATCHSET="firefox-128esr-patches-12.tar.xz"
 
 LLVM_COMPAT=( 17 18 19 )
 
@@ -538,7 +538,6 @@ src_prepare() {
 		rm -v "${WORKDIR}"/firefox-patches/*-LTO-Only-enable-LTO-*.patch || die
 	fi
 
-
 	# Workaround for bgo#917599
 	if has_version ">=dev-libs/icu-74.1" && use system-icu ; then
 		eapply "${WORKDIR}"/firefox-patches/*-bmo-1862601-system-icu-74.patch
@@ -555,6 +554,9 @@ src_prepare() {
 	cp "${FILESDIR}"/0018-gcc-lto-gentoo.patch "${WORKDIR}"/firefox-patches/0018-gcc-lto-gentoo.patch || die
 
 	eapply "${WORKDIR}/firefox-patches"
+
+	# bgo#1954003
+	eapply "${FILESDIR}"/icecat-128.12.0-clang21.patch
 
 	# Allow user to apply any additional patches without modifing ebuild
 	eapply_user
