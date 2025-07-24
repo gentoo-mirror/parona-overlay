@@ -1,0 +1,123 @@
+https://bugzilla.mozilla.org/show_bug.cgi?id=1954003
+https://phabricator.services.mozilla.com/D241583
+https://github.com/mozilla-firefox/firefox/commit/6d368d85ef52ce67141f44f3fdbfd51ef23f14e6
+From 02f94f3cdc97fc3b2bc4654658230c2d896417ae Mon Sep 17 00:00:00 2001
+From: Mike Hommey <mh+mozilla@glandium.org>
+Date: Mon, 17 Mar 2025 23:31:43 +0000
+Subject: [PATCH] Bug 1954003 - Fix new implicit-int-conversion warnings from
+ clang 21. r=spidermonkey-reviewers,arai
+
+/builds/worker/workspace/obj-build/dist/include/js/Conversions.h:364:70: error: implicit conversion loses integer precision: 'int' to 'unsigned char' [-Werror,-Wimplicit-int-conversion]
+  364 |   return (bits & mozilla::FloatingPoint<double>::kSignBit) ? ~result + 1
+      |   ~~~~~~                                                     ~~~~~~~~^~~
+/builds/worker/workspace/obj-build/dist/include/js/Conversions.h:544:42: note: in instantiation of function template specialization 'JS::ToUnsignedInteger<unsigned char>' requested here
+  544 | inline int8_t ToUint8(double d) { return ToUnsignedInteger<uint8_t>(d); }
+      |                                          ^
+/builds/worker/workspace/obj-build/dist/include/js/Conversions.h:364:70: error: implicit conversion loses integer precision: 'int' to 'unsigned short' [-Werror,-Wimplicit-int-conversion]
+  364 |   return (bits & mozilla::FloatingPoint<double>::kSignBit) ? ~result + 1
+      |   ~~~~~~                                                     ~~~~~~~~^~~
+/builds/worker/workspace/obj-build/dist/include/js/Conversions.h:549:45: note: in instantiation of function template specialization 'JS::ToUnsignedInteger<unsigned short>' requested here
+  549 | inline uint16_t ToUint16(double d) { return ToUnsignedInteger<uint16_t>(d); }
+      |                                             ^
+
+Differential Revision: https://phabricator.services.mozilla.com/D241584
+--- a/js/public/Conversions.h
++++ b/js/public/Conversions.h
+@@ -361,8 +361,9 @@ inline UnsignedInteger ToUnsignedInteger(double d) {
+   }
+ 
+   // Compute the congruent value in the signed range.
+-  return (bits & mozilla::FloatingPoint<double>::kSignBit) ? ~result + 1
+-                                                           : result;
++  return (bits & mozilla::FloatingPoint<double>::kSignBit)
++             ? UnsignedInteger(~result) + 1
++             : result;
+ }
+ 
+ template <typename SignedInteger>
+
+https://phabricator.services.mozilla.com/D241582
+https://github.com/mozilla-firefox/firefox/commit/3053f782bbb35895d632855bb5007282d7ec45e2
+
+From 3053f782bbb35895d632855bb5007282d7ec45e2 Mon Sep 17 00:00:00 2001
+From: Mike Hommey <mh+mozilla@glandium.org>
+Date: Mon, 17 Mar 2025 23:31:42 +0000
+Subject: [PATCH] Bug 1954003 - Fix new implicit-int-conversion warnings from
+ clang 21. r=dom-core,mccr8
+
+/builds/worker/checkouts/gecko/dom/base/nsINode.h:2055:32: error: implicit conversion loses integer precision: 'int' to 'uint32_t' (aka 'unsigned int') [-Werror,-Wimplicit-int-conversion]
+ 2055 |     mBoolFlags = (mBoolFlags & ~(1 << name)) | (value << name);
+      |                              ~ ^~~~~~~~~~~~
+/builds/worker/checkouts/gecko/dom/base/nsINode.h:2067:19: error: implicit conversion loses integer precision: 'int' to 'uint32_t' (aka 'unsigned int') [-Werror,-Wimplicit-int-conversion]
+ 2067 |     mBoolFlags &= ~(1 << name);
+      |                ~~ ^~~~~~~~~~~~
+
+Differential Revision: https://phabricator.services.mozilla.com/D241582
+--- a/dom/base/nsINode.h
++++ b/dom/base/nsINode.h
+@@ -2065,25 +2065,25 @@ class nsINode : public mozilla::dom::EventTarget {
+   void SetBoolFlag(BooleanFlag name, bool value) {
+     static_assert(BooleanFlagCount <= 8 * sizeof(mBoolFlags),
+                   "Too many boolean flags");
+-    mBoolFlags = (mBoolFlags & ~(1 << name)) | (value << name);
++    mBoolFlags = (mBoolFlags & ~(1U << name)) | (value << name);
+   }
+ 
+   void SetBoolFlag(BooleanFlag name) {
+     static_assert(BooleanFlagCount <= 8 * sizeof(mBoolFlags),
+                   "Too many boolean flags");
+-    mBoolFlags |= (1 << name);
++    mBoolFlags |= (1U << name);
+   }
+ 
+   void ClearBoolFlag(BooleanFlag name) {
+     static_assert(BooleanFlagCount <= 8 * sizeof(mBoolFlags),
+                   "Too many boolean flags");
+-    mBoolFlags &= ~(1 << name);
++    mBoolFlags &= ~(1U << name);
+   }
+ 
+   bool GetBoolFlag(BooleanFlag name) const {
+     static_assert(BooleanFlagCount <= 8 * sizeof(mBoolFlags),
+                   "Too many boolean flags");
+-    return mBoolFlags & (1 << name);
++    return mBoolFlags & (1U << name);
+   }
+ 
+  public:
+
+https://phabricator.services.mozilla.com/D241584
+https://github.com/mozilla-firefox/firefox/commit/02f94f3cdc97fc3b2bc4654658230c2d896417ae
+
+From 6d368d85ef52ce67141f44f3fdbfd51ef23f14e6 Mon Sep 17 00:00:00 2001
+From: Mike Hommey <mh+mozilla@glandium.org>
+Date: Mon, 17 Mar 2025 23:31:43 +0000
+Subject: [PATCH] Bug 1954003 - Fix new implicit-int-conversion warnings from
+ clang 21. r=gfx-reviewers,lsalzman
+
+/builds/worker/checkouts/gecko/dom/canvas/CanvasRenderingContext2D.cpp:6284:9: error: implicit conversion loses integer precision: 'int32_t' (aka 'int') to 'uint32_t' (aka 'unsigned int') [-Werror,-Wimplicit-int-conversion]
+ 6284 |     w = -aSw;
+      |       ~ ^~~~
+/builds/worker/checkouts/gecko/dom/canvas/CanvasRenderingContext2D.cpp:6290:9: error: implicit conversion loses integer precision: 'int32_t' (aka 'int') to 'uint32_t' (aka 'unsigned int') [-Werror,-Wimplicit-int-conversion]
+ 6290 |     h = -aSh;
+      |       ~ ^~~~
+
+Differential Revision: https://phabricator.services.mozilla.com/D241583
+--- a/dom/canvas/CanvasRenderingContext2D.cpp
++++ b/dom/canvas/CanvasRenderingContext2D.cpp
+@@ -6281,13 +6281,13 @@ already_AddRefed<ImageData> CanvasRenderingContext2D::GetImageData(
+   // relevant direction.
+   uint32_t w, h;
+   if (aSw < 0) {
+-    w = -aSw;
++    w = uint32_t(-aSw);
+     aSx -= w;
+   } else {
+     w = aSw;
+   }
+   if (aSh < 0) {
+-    h = -aSh;
++    h = uint32_t(-aSh);
+     aSy -= h;
+   } else {
+     h = aSh;

@@ -6,7 +6,7 @@
 EAPI=8
 
 # Using Gentoos firefox patches as system libraries and lto are quite nice
-FIREFOX_PATCHSET="firefox-128esr-patches-11.tar.xz"
+FIREFOX_PATCHSET="firefox-128esr-patches-12.tar.xz"
 
 LLVM_COMPAT=( 17 18 19 )
 
@@ -538,7 +538,6 @@ src_prepare() {
 		rm -v "${WORKDIR}"/firefox-patches/*-LTO-Only-enable-LTO-*.patch || die
 	fi
 
-
 	# Workaround for bgo#917599
 	if has_version ">=dev-libs/icu-74.1" && use system-icu ; then
 		eapply "${WORKDIR}"/firefox-patches/*-bmo-1862601-system-icu-74.patch
@@ -555,6 +554,9 @@ src_prepare() {
 	cp "${FILESDIR}"/0018-gcc-lto-gentoo.patch "${WORKDIR}"/firefox-patches/0018-gcc-lto-gentoo.patch || die
 
 	eapply "${WORKDIR}/firefox-patches"
+
+	# bgo#1954003
+	eapply "${FILESDIR}"/icecat-128.12.0-clang21.patch
 
 	# Allow user to apply any additional patches without modifing ebuild
 	eapply_user
@@ -1180,18 +1182,21 @@ src_install() {
 	rm "${WORKDIR}/${PN}.desktop-template" || die
 
 	if use gnome-shell ; then
+		# https://gitlab.com/Parona/parona-overlay/-/issues/8
+		# Rename mozilla.(firefox|icecat) -> gnu.icecat
+
 		# Install search provider for Gnome
 		insinto /usr/share/gnome-shell/search-providers/
-		doins browser/components/shell/search-provider-files/org.mozilla.firefox.search-provider.ini
+		newins browser/components/shell/search-provider-files/org.mozilla.icecat.search-provider.ini org.gnu.icecat.search-provider.ini
 
 		insinto /usr/share/dbus-1/services/
-		doins browser/components/shell/search-provider-files/org.mozilla.firefox.SearchProvider.service
+		newins browser/components/shell/search-provider-files/org.mozilla.icecat.SearchProvider.service org.gnu.icecat.SearchProvider.service
 
 		# Make the dbus service aware of a previous session, bgo#939196
 		sed -e \
-			"s/Exec=\/usr\/bin\/firefox/Exec=\/usr\/$(get_libdir)\/firefox\/firefox --dbus-service \/usr\/bin\/firefox/g" \
-			-i "${ED}/usr/share/dbus-1/services/org.mozilla.firefox.SearchProvider.service" ||
-				die "Failed to sed org.mozilla.firefox.SearchProvider.service dbus file"
+			"s/Exec=\/usr\/bin\/icecat/Exec=\/usr\/$(get_libdir)\/icecat\/icecat --dbus-service \/usr\/bin\/icecat/g" \
+			-i "${ED}/usr/share/dbus-1/services/org.gnu.icecat.SearchProvider.service" ||
+				die "Failed to sed org.gnu.icecat.SearchProvider.service dbus file"
 
 		# Update prefs to enable Gnome search provider
 		cat >>"${GENTOO_PREFS}" <<-EOF || die "failed to enable gnome-search-provider via prefs"
