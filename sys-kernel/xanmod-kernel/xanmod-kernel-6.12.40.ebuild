@@ -10,7 +10,7 @@ KERNEL_IUSE_MODULES_SIGN=1
 inherit kernel-build
 
 MY_P=linux-${PV%.*}
-PATCHSET=linux-gentoo-patches-${PV}
+PATCHSET=linux-gentoo-patches-6.12.40
 GENTOO_CONFIG_VER=g16
 
 XANMOD_VERSION="1"
