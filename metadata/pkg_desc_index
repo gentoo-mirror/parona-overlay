@@ -110,6 +110,8 @@ media-video/mpv-mpris 1.1: MPRIS plugin for mpv
 net-im/discord 0.0.101 0.0.102: All-in-one voice and text chat for gamers
 net-im/discord-ptb 0.0.152 0.0.153: All-in-one voice and text chat for gamers
 net-misc/wlvncc 9999: A Wayland Native VNC Client
+sci-ml/ggml 0_p20250611 9999: Tensor library for machine learning
+sci-ml/whispercpp 1.7.6 9999: Port of OpenAI's Whisper model in C/C++
 sys-apps/coolercontrol 2.2.1 2.2.2: Monitor and control your cooling and other devices
 sys-apps/coolercontrol-liqctld 2.2.1 2.2.2: Monitor and control your cooling and other devices (liqctld)
 sys-apps/coolercontrold 2.2.1 2.2.2: Monitor and control your cooling and other devices (daemon)
