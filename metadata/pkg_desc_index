@@ -27,7 +27,7 @@ dev-build/cargo-make 0.37.24: Rust task runner and build tool
 dev-cpp/args 6.4.6 6.4.7: A simple header-only C++ argument parser library
 dev-cpp/cpr 1.11.2 1.12.0: C++ Requests: Curl for People, a spiritual port of Python Requests.
 dev-cpp/hjson-cpp 2.5 2.6: Hjson for C++
-dev-cpp/libloot 0.25.5 0.26.2 0.26.3 0.27.0: A C++ library for accessing LOOT's metadata and sorting functionality.
+dev-cpp/libloot 0.25.5 0.26.3 0.27.0 0.28.0: A library for accessing LOOT's metadata and sorting functionality (C++ wrapper)
 dev-cpp/ogdf 2023.09: Open Graph algorithms and Data structure Framework.
 dev-cpp/tinygltf 2.9.5 2.9.6: Header only C++11 tiny glTF 2.0 library
 dev-cpp/trompeloeil 49: Header only C++14 mocking framework
@@ -83,7 +83,7 @@ games-util/gamehub 0.16.3_p2: All your games in one place
 games-util/goverlay 1.3_p3: Graphical UI to help manage Linux overlays.
 games-util/heroic-gogdl 9999: GOG Downloading module for Heroic Games Launcher
 games-util/limo 1.2 1.2.2 9999: A simple Qt based mod manager
-games-util/loot 0.25.2 0.26.0 0.26.1: A modding utility for Starfield and some Elder Scrolls and Fallout games.
+games-util/loot 0.26.1: A modding utility for Starfield and some Elder Scrolls and Fallout games.
 games-util/mangohud 0.8.1 9999: Overlay for monitoring FPS, temperatures, CPU/GPU load and more
 games-util/nexusmodsapp 0.13.4 0.14.3: Nexus Mods App, a mod installer, creator and manager for all your popular games
 games-util/protonup-qt 2.12.1 2.13.0: Install and manage proton with Steam and Lutris
@@ -117,8 +117,8 @@ sys-apps/coolercontrol-liqctld 2.2.1 2.2.2: Monitor and control your cooling and
 sys-apps/coolercontrold 2.2.1 2.2.2: Monitor and control your cooling and other devices (daemon)
 sys-apps/gsmartcontrol 9999: Hard Disk Drive and SSD Health Inspection Tool
 sys-boot/uefitool 71_alpha 72_alpha: UEFI firmware image viewer and editor
-sys-kernel/xanmod-kernel 6.12.37 6.12.39 6.12.40 6.12.41 6.15.7 6.15.8 6.15.9: Linux kernel built with XanMod and Gentoo patches
-sys-kernel/xanmod-sources 6.12.31 6.12.32 6.12.33 6.12.34 6.12.35 6.12.36 6.12.37 6.12.39 6.12.40 6.12.41 6.15.1 6.15.2 6.15.3 6.15.4 6.15.5 6.15.6 6.15.7 6.15.8 6.15.9 6.16.0: Full XanMod sources including the Gentoo patchset
+sys-kernel/xanmod-kernel 6.12.37 6.12.39 6.12.40 6.12.41 6.15.7 6.15.8 6.15.9 6.15.9-r1: Linux kernel built with XanMod and Gentoo patches
+sys-kernel/xanmod-sources 6.12.31 6.12.32 6.12.33 6.12.34 6.12.35 6.12.36 6.12.37 6.12.39 6.12.40 6.12.41 6.15.1 6.15.2 6.15.3 6.15.4 6.15.5 6.15.6 6.15.7 6.15.8 6.15.9 6.15.9-r1 6.16.0: Full XanMod sources including the Gentoo patchset
 sys-power/corectrl 1.4.3 1.5.0 1.5.1: Profile based system control utility
 virtual/dist-kernel 6.12.37 6.12.39 6.12.40 6.12.41 6.15.7 6.15.8 6.15.9: Virtual to depend on any Distribution Kernel
 virtual/linux-sources 3-r8: Virtual for Linux kernel sources
