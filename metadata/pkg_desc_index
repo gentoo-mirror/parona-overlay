@@ -72,7 +72,7 @@ dev-python/pycryptodomex 3.22.0 3.23.0: A self-contained cryptographic library f
 dev-python/pydantic-settings 2.7.1 2.10.1: Settings management using pydantic
 dev-python/pytest-examples 0.0.18: Pytest plugin for testing Python code examples in docstrings and markdown files.
 dev-python/pytest-responses 0.5.1: py.test integration for responses
-dev-python/rich-toolkit 0.14.8 0.14.9: Rich toolkit for building command-line applications
+dev-python/rich-toolkit 0.14.9 0.15.0: Rich toolkit for building command-line applications
 dev-python/sqlmodel 0.0.24: SQL databases in Python, designed for simplicity, compatibility, and robustness.
 dev-python/steam 1.6.1 2.0.0_alpha1: Python package for interacting with Steam
 dev-python/typer 0.16.0: Typer, build great CLIs. Easy to code. Based on Python type hints.
