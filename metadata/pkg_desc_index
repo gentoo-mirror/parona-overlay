@@ -27,7 +27,7 @@ dev-build/cargo-make 0.37.24: Rust task runner and build tool
 dev-cpp/args 6.4.6 6.4.7: A simple header-only C++ argument parser library
 dev-cpp/cpr 1.11.2 1.12.0: C++ Requests: Curl for People, a spiritual port of Python Requests.
 dev-cpp/hjson-cpp 2.5 2.6: Hjson for C++
-dev-cpp/libloot 0.25.5 0.26.3 0.27.0 0.28.0: A library for accessing LOOT's metadata and sorting functionality (C++ wrapper)
+dev-cpp/libloot 0.25.5 0.26.3 0.27.0 0.28.0 0.28.1: A library for accessing LOOT's metadata and sorting functionality (C++ wrapper)
 dev-cpp/ogdf 2023.09: Open Graph algorithms and Data structure Framework.
 dev-cpp/tinygltf 2.9.5 2.9.6: Header only C++11 tiny glTF 2.0 library
 dev-cpp/trompeloeil 49: Header only C++14 mocking framework
