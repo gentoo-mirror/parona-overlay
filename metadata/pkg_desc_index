@@ -81,7 +81,7 @@ dev-util/umr 1.0.10: umr is a userspace debugging and diagnostic tool for AMD GP
 dev-vcs/gcli 2.7.0 2.8.0: Portable CLI tool for interacting with Git(Hub|Lab|Tea) from the command line.
 games-action/vintagestory 1.20.12 1.21.0_rc4: Uncompromising wilderness survival sandbox game (requires paid account)
 games-util/gamehub 0.16.3_p2: All your games in one place
-games-util/goverlay 1.3_p3: Graphical UI to help manage Linux overlays.
+games-util/goverlay 1.3_p3 1.4.1: Graphical UI to help manage Linux overlays.
 games-util/heroic-gogdl 9999: GOG Downloading module for Heroic Games Launcher
 games-util/limo 1.2 1.2.2 9999: A simple Qt based mod manager
 games-util/loot 0.26.1: A modding utility for Starfield and some Elder Scrolls and Fallout games.
