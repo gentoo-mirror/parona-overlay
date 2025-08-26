@@ -66,7 +66,7 @@ src_install() {
 
 	domenu Vintagestory.desktop Vintagestory_url_connect.desktop Vintagestory_url_mod.desktop
 
-	FONT_S="${S}/assets/game/fonts" FONT_SUFFIX="otf ttf" font_src_install
+	FONT_S="${S}/assets/game/fonts" FONT_SUFFIX="ttf" font_src_install
 
 	insinto /usr/lib/sysctl.d
 	newins - 60-vintagestory.conf <<-EOF
