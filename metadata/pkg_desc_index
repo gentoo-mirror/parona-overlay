@@ -79,7 +79,7 @@ dev-python/typer 0.16.0 0.16.1: Typer, build great CLIs. Easy to code. Based on 
 dev-tex/altacv 1.7.3_p20241216 1.7.4_p20250730: Yet another alternative curriculum vitae/résumé class with LaTeX
 dev-util/umr 1.0.10: umr is a userspace debugging and diagnostic tool for AMD GPUs
 dev-vcs/gcli 2.7.0 2.8.0: Portable CLI tool for interacting with Git(Hub|Lab|Tea) from the command line.
-games-action/vintagestory 1.20.12 1.21.0_rc4: Uncompromising wilderness survival sandbox game (requires paid account)
+games-action/vintagestory 1.20.12 1.21.0: Uncompromising wilderness survival sandbox game (requires paid account)
 games-util/gamehub 0.16.3_p2: All your games in one place
 games-util/goverlay 1.3_p3 1.4.1: Graphical UI to help manage Linux overlays.
 games-util/heroic-gogdl 9999: GOG Downloading module for Heroic Games Launcher
@@ -109,7 +109,7 @@ media-sound/spotify 1.2.60 1.2.63: Spotify is a social music platform
 media-sound/transistor 9999: Internet radio player
 media-video/mpv-mpris 1.1: MPRIS plugin for mpv
 net-im/discord 0.0.104 0.0.106: All-in-one voice and text chat for gamers
-net-im/discord-ptb 0.0.154 0.0.156: All-in-one voice and text chat for gamers
+net-im/discord-ptb 0.0.156 0.0.157: All-in-one voice and text chat for gamers
 net-misc/wlvncc 9999: A Wayland Native VNC Client
 sci-ml/ggml 0_p20250611 9999: Tensor library for machine learning
 sci-ml/whispercpp 1.7.6 9999: Port of OpenAI's Whisper model in C/C++
