@@ -77,17 +77,17 @@ fomodinstaller.interface@1.2.0
 fomodinstaller.scripting.xmlscript@1.0.0
 fomodinstaller.scripting@1.0.0
 fomodinstaller.utils@1.0.0
-gamefinder.common@4.7.3
-gamefinder.launcher.heroic@4.7.3
-gamefinder.registryutils@4.7.3
-gamefinder.storehandlers.eadesktop@4.7.3
-gamefinder.storehandlers.egs@4.7.3
-gamefinder.storehandlers.gog@4.7.3
-gamefinder.storehandlers.origin@4.7.3
-gamefinder.storehandlers.steam@4.7.3
-gamefinder.storehandlers.xbox@4.7.3
-gamefinder.wine@4.7.3
-gamefinder@4.7.3
+gamefinder.common@4.9.0
+gamefinder.launcher.heroic@4.9.0
+gamefinder.registryutils@4.9.0
+gamefinder.storehandlers.eadesktop@4.9.0
+gamefinder.storehandlers.egs@4.9.0
+gamefinder.storehandlers.gog@4.9.0
+gamefinder.storehandlers.origin@4.9.0
+gamefinder.storehandlers.steam@4.9.0
+gamefinder.storehandlers.xbox@4.9.0
+gamefinder.wine@4.9.0
+gamefinder@4.9.0
 gee.external.capstone@2.3.0
 githubactionstestlogger@2.4.1
 google.protobuf@3.22.5
@@ -187,7 +187,6 @@ microsoft.bcl.asyncinterfaces@1.1.0
 microsoft.bcl.asyncinterfaces@1.1.1
 microsoft.bcl.asyncinterfaces@6.0.0
 microsoft.bcl.asyncinterfaces@7.0.0
-microsoft.bcl.asyncinterfaces@8.0.0
 microsoft.build.tasks.git@8.0.0
 microsoft.codeanalysis.analyzer.testing@1.1.2
 microsoft.codeanalysis.analyzers@3.3.3
@@ -700,13 +699,23 @@ MY_P="${MY_PN}-${MY_PV}"
 # https://github.com/Nexus-Mods/NexusMods.App/tree/main/extern
 SMAPI_COMMIT="fd73446090cd71f4948f34ba8c428e45aa0a3ebf"
 
+# update whenever bumped
+GAME_HASHES_COMMIT="ved4b249e2c35952c"
+
 SRC_URI="
 	https://github.com/Nexus-Mods/NexusMods.App/archive/refs/tags/v${MY_PV}.tar.gz
 		-> ${MY_P}.tar.gz
 	https://github.com/Pathoschild/SMAPI/archive/${SMAPI_COMMIT}.tar.gz
 		-> SMAPI-${SMAPI_COMMIT}.tar.gz
-	${NUGET_URIS}
+	https://github.com/Nexus-Mods/game-hashes/releases/download/${GAME_HASHES_COMMIT}/game_hashes_db.zip
+		-> ${PN}-game_hashes_db-${GAME_HASHES_COMMIT}.zip
+	https://gitlab.com/api/v4/projects/32909921/packages/generic/${PN}/${PV}/games.json
+		-> ${P}-games.json
 "
+if [[ ${PKGBUMPING} != ${PVR} ]]; then
+	SRC_URI+=" ${NUGET_URIS}"
+fi
+
 S="${WORKDIR}/${MY_P}"
 
 LICENSE="GPL-3"
@@ -752,6 +761,14 @@ src_unpack() {
 src_prepare() {
 	mv -T "${WORKDIR}/SMAPI-${SMAPI_COMMIT}" "${S}/extern/SMAPI" || die
 
+	mkdir -p "${S}/src/NexusMods.Games.FileHashes/obj/" || die
+	cp "${DISTDIR}/${PN}-game_hashes_db-${GAME_HASHES_COMMIT}.zip" \
+		"${S}/src/NexusMods.Games.FileHashes/obj/games_hashes_db.zip" || die
+
+	mkdir -p "${S}/src/NexusMods.Networking.NexusWebApi/obj/" || die
+	cp "${DISTDIR}/${P}-games.json" \
+		"${S}/src/NexusMods.Networking.NexusWebApi/obj/games.json" || die
+
 	sed -i -e 's/${INSTALL_EXEC}/NexusMods.App/' src/NexusMods.App/com.nexusmods.app.desktop || die
 
 	# network sandbox
@@ -770,6 +787,10 @@ src_prepare() {
 	sed -i \
 		-e '/TestsFor_0004_RemoveGameFiles/i    [Trait("RequiresNetworking", "True")]' \
 		tests/NexusMods.DataModel.SchemaVersions.Tests/MigrationSpecificTests/TestsFor_0004_RemoveGameFiles.cs || die
+
+	# FIXME
+	# Expected LocalMappingCache.TryParseJsonFile(out _, out _) to be True, but found False.
+	#rm tests/Networking/NexusMods.Networking.NexusWebApi.Tests/LocalMappingCacheTests.cs || die
 
 	if ! use debug; then
 		# xunit doesnt support conditional unit tests like this

@@ -14,6 +14,8 @@ KEYWORDS="~amd64"
 IUSE="+libedit lowdown test"
 RESTRICT="!test? ( test )"
 
+# pdjson isnt system installable without patches
+
 RDEPEND="
 	dev-libs/openssl:=
 	net-misc/curl[openssl]
