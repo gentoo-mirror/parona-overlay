@@ -10,8 +10,8 @@ KERNEL_IUSE_MODULES_SIGN=1
 inherit kernel-build
 
 MY_P=linux-${PV%.*}
-PATCHSET=linux-gentoo-patches-6.15.9-r1
-GENTOO_CONFIG_VER=g16
+PATCHSET=linux-gentoo-patches-6.12.44
+GENTOO_CONFIG_VER=g17
 
 XANMOD_VERSION="1"
 
@@ -65,7 +65,7 @@ src_prepare() {
 	# prepare the default config
 	case ${ARCH} in
 		amd64)
-			cp "${S}/CONFIGS/x86_64/config" .config || die
+			cp "${S}/CONFIGS/xanmod/gcc/config_x86-64-v2" .config || die
 			;;
 		*)
 			die "Unsupported arch ${ARCH}"
@@ -80,7 +80,7 @@ src_prepare() {
 	local merge_configs=(
 		"${T}"/version.config
 		"${dist_conf_path}"/base.config
-		"${FILESDIR}"/x86-64-v1.config-r1 # keep v1 for simplicity, distribution kernels support user modification.
+		"${FILESDIR}"/x86-64-v1.config # keep v1 for simplicity, distribution kernels support user modification.
 	)
 	use debug || merge_configs+=(
 		"${dist_conf_path}"/no-debug.config
