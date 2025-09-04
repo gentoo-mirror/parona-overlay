@@ -47,7 +47,6 @@ benchmarkdotnet@0.14.0
 bitfaster.caching@2.5.2
 bsdiff@1.1.0
 castle.core@5.1.1
-clarp@0.2.0
 cliwrap@3.6.7
 colordocument.avalonia@11.0.3-a1
 colortextblock.avalonia@11.0.3-a1
@@ -55,6 +54,7 @@ commandlineparser@2.9.1
 coverlet.collector@6.0.2
 diffengine@15.5.3
 diffplex@1.7.2
+duckdb.nativebinaries@1.3.2
 dynamicdata@8.3.27
 dynamicdata@8.4.1
 dynamicdata@9.0.1
@@ -187,7 +187,6 @@ microsoft.bcl.asyncinterfaces@1.1.0
 microsoft.bcl.asyncinterfaces@1.1.1
 microsoft.bcl.asyncinterfaces@6.0.0
 microsoft.bcl.asyncinterfaces@7.0.0
-microsoft.bcl.asyncinterfaces@8.0.0
 microsoft.build.tasks.git@8.0.0
 microsoft.codeanalysis.analyzer.testing@1.1.2
 microsoft.codeanalysis.analyzers@3.3.3
@@ -196,6 +195,7 @@ microsoft.codeanalysis.common@1.0.1
 microsoft.codeanalysis.common@3.8.0
 microsoft.codeanalysis.common@4.1.0
 microsoft.codeanalysis.common@4.8.0
+microsoft.codeanalysis.common@4.9.2
 microsoft.codeanalysis.csharp.sourcegenerators.testing.xunit@1.1.2
 microsoft.codeanalysis.csharp.sourcegenerators.testing@1.1.2
 microsoft.codeanalysis.csharp.workspaces@3.8.0
@@ -203,6 +203,7 @@ microsoft.codeanalysis.csharp.workspaces@4.8.0
 microsoft.codeanalysis.csharp@3.8.0
 microsoft.codeanalysis.csharp@4.1.0
 microsoft.codeanalysis.csharp@4.8.0
+microsoft.codeanalysis.csharp@4.9.2
 microsoft.codeanalysis.sourcegenerators.testing@1.1.2
 microsoft.codeanalysis.testing.verifiers.xunit@1.1.2
 microsoft.codeanalysis.workspaces.common@1.0.1
@@ -214,103 +215,111 @@ microsoft.diagnostics.netcore.client@0.2.251802
 microsoft.diagnostics.runtime@2.2.332302
 microsoft.diagnostics.tracing.traceevent@3.1.8
 microsoft.dotnet.platformabstractions@3.1.6
-microsoft.extensions.ambientmetadata.application@9.4.0
-microsoft.extensions.compliance.abstractions@9.4.0
+microsoft.extensions.ambientmetadata.application@9.7.0
+microsoft.extensions.compliance.abstractions@9.7.0
 microsoft.extensions.configuration.abstractions@8.0.0
 microsoft.extensions.configuration.abstractions@9.0.0
-microsoft.extensions.configuration.abstractions@9.0.4
+microsoft.extensions.configuration.abstractions@9.0.7
 microsoft.extensions.configuration.binder@8.0.0
 microsoft.extensions.configuration.binder@9.0.0
-microsoft.extensions.configuration.binder@9.0.4
+microsoft.extensions.configuration.binder@9.0.7
 microsoft.extensions.configuration.commandline@8.0.0
-microsoft.extensions.configuration.commandline@9.0.4
+microsoft.extensions.configuration.commandline@9.0.7
 microsoft.extensions.configuration.environmentvariables@8.0.0
-microsoft.extensions.configuration.environmentvariables@9.0.4
+microsoft.extensions.configuration.environmentvariables@9.0.7
 microsoft.extensions.configuration.fileextensions@8.0.0
-microsoft.extensions.configuration.fileextensions@9.0.4
+microsoft.extensions.configuration.fileextensions@9.0.7
 microsoft.extensions.configuration.json@8.0.0
-microsoft.extensions.configuration.json@9.0.4
+microsoft.extensions.configuration.json@9.0.7
 microsoft.extensions.configuration.usersecrets@8.0.0
-microsoft.extensions.configuration.usersecrets@9.0.4
+microsoft.extensions.configuration.usersecrets@9.0.7
 microsoft.extensions.configuration@8.0.0
 microsoft.extensions.configuration@9.0.0
-microsoft.extensions.configuration@9.0.4
+microsoft.extensions.configuration@9.0.7
 microsoft.extensions.dependencyinjection.abstractions@2.0.0
 microsoft.extensions.dependencyinjection.abstractions@8.0.0
 microsoft.extensions.dependencyinjection.abstractions@8.0.2
 microsoft.extensions.dependencyinjection.abstractions@9.0.0
-microsoft.extensions.dependencyinjection.abstractions@9.0.4
-microsoft.extensions.dependencyinjection.autoactivation@9.4.0
+microsoft.extensions.dependencyinjection.abstractions@9.0.6
+microsoft.extensions.dependencyinjection.abstractions@9.0.7
+microsoft.extensions.dependencyinjection.autoactivation@9.7.0
 microsoft.extensions.dependencyinjection@8.0.0
 microsoft.extensions.dependencyinjection@9.0.0
-microsoft.extensions.dependencyinjection@9.0.4
+microsoft.extensions.dependencyinjection@9.0.6
+microsoft.extensions.dependencyinjection@9.0.7
 microsoft.extensions.diagnostics.abstractions@8.0.0
 microsoft.extensions.diagnostics.abstractions@9.0.0
-microsoft.extensions.diagnostics.abstractions@9.0.4
-microsoft.extensions.diagnostics.exceptionsummarization@9.4.0
+microsoft.extensions.diagnostics.abstractions@9.0.7
+microsoft.extensions.diagnostics.exceptionsummarization@9.7.0
 microsoft.extensions.diagnostics@8.0.0
 microsoft.extensions.diagnostics@9.0.0
-microsoft.extensions.diagnostics@9.0.4
+microsoft.extensions.diagnostics@9.0.7
 microsoft.extensions.fileproviders.abstractions@8.0.0
 microsoft.extensions.fileproviders.abstractions@9.0.0
-microsoft.extensions.fileproviders.abstractions@9.0.4
+microsoft.extensions.fileproviders.abstractions@9.0.7
 microsoft.extensions.fileproviders.physical@8.0.0
-microsoft.extensions.fileproviders.physical@9.0.4
+microsoft.extensions.fileproviders.physical@9.0.7
 microsoft.extensions.filesystemglobbing@8.0.0
-microsoft.extensions.filesystemglobbing@9.0.4
+microsoft.extensions.filesystemglobbing@9.0.7
 microsoft.extensions.hosting.abstractions@8.0.0
 microsoft.extensions.hosting.abstractions@9.0.0
-microsoft.extensions.hosting.abstractions@9.0.4
+microsoft.extensions.hosting.abstractions@9.0.7
 microsoft.extensions.hosting@8.0.0
-microsoft.extensions.hosting@9.0.4
-microsoft.extensions.http.diagnostics@9.4.0
-microsoft.extensions.http.resilience@9.4.0
+microsoft.extensions.hosting@9.0.7
+microsoft.extensions.http.diagnostics@9.7.0
+microsoft.extensions.http.resilience@9.7.0
 microsoft.extensions.http@9.0.0
-microsoft.extensions.http@9.0.4
+microsoft.extensions.http@9.0.7
 microsoft.extensions.logging.abstractions@2.0.0
 microsoft.extensions.logging.abstractions@3.0.3
 microsoft.extensions.logging.abstractions@6.0.1
 microsoft.extensions.logging.abstractions@8.0.0
 microsoft.extensions.logging.abstractions@9.0.0
 microsoft.extensions.logging.abstractions@9.0.4
+microsoft.extensions.logging.abstractions@9.0.6
+microsoft.extensions.logging.abstractions@9.0.7
 microsoft.extensions.logging.configuration@8.0.0
 microsoft.extensions.logging.configuration@9.0.0
-microsoft.extensions.logging.configuration@9.0.4
+microsoft.extensions.logging.configuration@9.0.7
 microsoft.extensions.logging.console@8.0.0
-microsoft.extensions.logging.console@9.0.4
+microsoft.extensions.logging.console@9.0.7
 microsoft.extensions.logging.debug@8.0.0
-microsoft.extensions.logging.debug@9.0.4
+microsoft.extensions.logging.debug@9.0.7
 microsoft.extensions.logging.eventlog@8.0.0
-microsoft.extensions.logging.eventlog@9.0.4
+microsoft.extensions.logging.eventlog@9.0.7
 microsoft.extensions.logging.eventsource@8.0.0
-microsoft.extensions.logging.eventsource@9.0.4
+microsoft.extensions.logging.eventsource@9.0.7
 microsoft.extensions.logging@2.0.0
 microsoft.extensions.logging@2.1.1
 microsoft.extensions.logging@8.0.0
 microsoft.extensions.logging@9.0.0
-microsoft.extensions.logging@9.0.4
+microsoft.extensions.logging@9.0.6
+microsoft.extensions.logging@9.0.7
 microsoft.extensions.objectpool@9.0.0
-microsoft.extensions.objectpool@9.0.3
-microsoft.extensions.objectpool@9.0.4
+microsoft.extensions.objectpool@9.0.7
 microsoft.extensions.options.configurationextensions@8.0.0
 microsoft.extensions.options.configurationextensions@9.0.0
-microsoft.extensions.options.configurationextensions@9.0.4
+microsoft.extensions.options.configurationextensions@9.0.7
 microsoft.extensions.options@2.0.0
 microsoft.extensions.options@8.0.0
 microsoft.extensions.options@9.0.0
-microsoft.extensions.options@9.0.4
+microsoft.extensions.options@9.0.6
+microsoft.extensions.options@9.0.7
 microsoft.extensions.primitives@2.0.0
 microsoft.extensions.primitives@8.0.0
 microsoft.extensions.primitives@9.0.0
 microsoft.extensions.primitives@9.0.4
-microsoft.extensions.resilience@9.4.0
-microsoft.extensions.telemetry.abstractions@9.4.0
-microsoft.extensions.telemetry@9.4.0
-microsoft.extensions.timeprovider.testing@9.4.0
+microsoft.extensions.primitives@9.0.6
+microsoft.extensions.primitives@9.0.7
+microsoft.extensions.resilience@9.7.0
+microsoft.extensions.telemetry.abstractions@9.7.0
+microsoft.extensions.telemetry@9.7.0
+microsoft.extensions.timeprovider.testing@9.7.0
 microsoft.net.http.headers@9.0.4
 microsoft.net.test.sdk@17.14.0
 microsoft.netcore.platforms@1.1.0
 microsoft.netcore.platforms@2.0.0
+microsoft.netcore.platforms@2.1.2
 microsoft.netcore.platforms@5.0.0
 microsoft.netcore.targets@1.1.0
 microsoft.sourcelink.common@8.0.0
@@ -344,17 +353,25 @@ newtonsoft.json@13.0.1
 newtonsoft.json@13.0.3
 nexusmods.archives.nx@0.6.1
 nexusmods.archives.nx@0.6.4
-nexusmods.cascade.sourcegenerator@0.16.0
-nexusmods.cascade@0.16.0
 nexusmods.hashing.xxhash3.paths@3.0.4
 nexusmods.hashing.xxhash3@3.0.4
-nexusmods.mnemonicdb.abstractions@0.17.0
-nexusmods.mnemonicdb.sourcegenerator@0.17.0
-nexusmods.mnemonicdb@0.17.0
+nexusmods.hyperduck@0.20.0
+nexusmods.mnemonicdb.abstractions@0.20.0
+nexusmods.mnemonicdb.sourcegenerator@0.20.0
+nexusmods.mnemonicdb@0.20.0
 nexusmods.paths.extensions.nx@0.20.0
 nexusmods.paths.testinghelpers@0.20.0
 nexusmods.paths@0.19.1
 nexusmods.paths@0.20.0
+nito.asyncex.context@5.1.2
+nito.asyncex.coordination@5.1.2
+nito.asyncex.interop.waithandles@5.1.2
+nito.asyncex.oop@5.1.2
+nito.asyncex.tasks@5.1.2
+nito.asyncex@5.1.2
+nito.cancellation@1.1.2
+nito.collections.deque@1.1.1
+nito.disposables@2.2.1
 nlog.extensions.logging@5.3.14
 nlog@5.2.8
 nlog@5.3.4
@@ -369,8 +386,8 @@ nuget.protocol@6.3.4
 nuget.resolver@6.3.4
 nuget.versioning@6.12.1
 nuget.versioning@6.3.4
-observablecollections.r3@3.3.3
-observablecollections@3.3.3
+observablecollections.r3@3.3.4
+observablecollections@3.3.4
 oneof.extended@2.1.125
 oneof@2.1.125
 oneof@3.0.271
@@ -466,10 +483,10 @@ smartformat@3.5.1
 spectre.console.cli@0.49.1
 spectre.console.testing@0.49.1
 spectre.console@0.49.1
-splat.microsoft.extensions.logging@15.2.22
+splat.microsoft.extensions.logging@15.4.1
 splat@14.8.12
 splat@15.1.1
-splat@15.2.22
+splat@15.4.1
 steamkit2@3.0.0
 strawberryshake.core@15.0.3
 strawberryshake.resources@15.0.3
@@ -482,15 +499,16 @@ svg.skia@3.0.2
 system.appcontext@4.3.0
 system.buffers@4.3.0
 system.buffers@4.5.1
-system.codedom@4.4.0
 system.codedom@5.0.0
 system.codedom@8.0.0
 system.codedom@9.0.0
 system.collections.concurrent@4.0.12
 system.collections.concurrent@4.3.0
+system.collections.immutable@1.7.1
 system.collections.immutable@5.0.0
 system.collections.immutable@7.0.0
 system.collections.immutable@8.0.0
+system.collections.immutable@9.0.6
 system.collections@4.0.11
 system.collections@4.3.0
 system.commandline@2.0.0-beta4.22272.1
@@ -520,7 +538,7 @@ system.diagnostics.diagnosticsource@8.0.0
 system.diagnostics.diagnosticsource@9.0.0
 system.diagnostics.eventlog@6.0.0
 system.diagnostics.eventlog@8.0.0
-system.diagnostics.eventlog@9.0.4
+system.diagnostics.eventlog@9.0.7
 system.diagnostics.tools@4.3.0
 system.diagnostics.tracing@4.1.0
 system.diagnostics.tracing@4.3.0
@@ -542,7 +560,7 @@ system.io.pipelines@6.0.3
 system.io.pipelines@7.0.0
 system.io.pipelines@8.0.0
 system.io.pipelines@9.0.0
-system.io.pipelines@9.0.4
+system.io.pipelines@9.0.7
 system.io@4.3.0
 system.linq.async@6.0.1
 system.linq.expressions@4.1.0
@@ -583,6 +601,8 @@ system.reflection@4.1.0
 system.reflection@4.3.0
 system.resources.resourcemanager@4.0.1
 system.resources.resourcemanager@4.3.0
+system.runtime.compilerservices.unsafe@4.4.0
+system.runtime.compilerservices.unsafe@4.5.2
 system.runtime.compilerservices.unsafe@4.5.3
 system.runtime.compilerservices.unsafe@5.0.0
 system.runtime.compilerservices.unsafe@6.0.0
@@ -700,11 +720,18 @@ MY_P="${MY_PN}-${MY_PV}"
 # https://github.com/Nexus-Mods/NexusMods.App/tree/main/extern
 SMAPI_COMMIT="fd73446090cd71f4948f34ba8c428e45aa0a3ebf"
 
+# update whenever bumped
+GAME_HASHES_COMMIT="ved4b249e2c35952c"
+
 SRC_URI="
 	https://github.com/Nexus-Mods/NexusMods.App/archive/refs/tags/v${MY_PV}.tar.gz
 		-> ${MY_P}.tar.gz
 	https://github.com/Pathoschild/SMAPI/archive/${SMAPI_COMMIT}.tar.gz
 		-> SMAPI-${SMAPI_COMMIT}.tar.gz
+	https://github.com/Nexus-Mods/game-hashes/releases/download/${GAME_HASHES_COMMIT}/game_hashes_db.zip
+		-> ${PN}-game_hashes_db-${GAME_HASHES_COMMIT}.zip
+	https://gitlab.com/api/v4/projects/32909921/packages/generic/${PN}/${PV}/games.json
+		-> ${P}-games.json
 "
 if [[ ${PKGBUMPING} != ${PVR} ]]; then
 	SRC_URI+=" ${NUGET_URIS}"
@@ -755,6 +782,14 @@ src_unpack() {
 src_prepare() {
 	mv -T "${WORKDIR}/SMAPI-${SMAPI_COMMIT}" "${S}/extern/SMAPI" || die
 
+	mkdir -p "${S}/src/NexusMods.Games.FileHashes/obj/" || die
+	cp "${DISTDIR}/${PN}-game_hashes_db-${GAME_HASHES_COMMIT}.zip" \
+		"${S}/src/NexusMods.Games.FileHashes/obj/games_hashes_db.zip" || die
+
+	mkdir -p "${S}/src/NexusMods.Networking.NexusWebApi/obj/" || die
+	cp "${DISTDIR}/${P}-games.json" \
+		"${S}/src/NexusMods.Networking.NexusWebApi/obj/games.json" || die
+
 	sed -i -e 's/${INSTALL_EXEC}/NexusMods.App/' src/NexusMods.App/com.nexusmods.app.desktop || die
 
 	# network sandbox
@@ -776,7 +811,7 @@ src_prepare() {
 
 	# FIXME
 	# Expected LocalMappingCache.TryParseJsonFile(out _, out _) to be True, but found False.
-	rm tests/Networking/NexusMods.Networking.NexusWebApi.Tests/LocalMappingCacheTests.cs || die
+	#rm tests/Networking/NexusMods.Networking.NexusWebApi.Tests/LocalMappingCacheTests.cs || die
 
 	if ! use debug; then
 		# xunit doesnt support conditional unit tests like this
