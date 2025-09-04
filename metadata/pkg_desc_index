@@ -86,7 +86,7 @@ games-util/heroic-gogdl 9999: GOG Downloading module for Heroic Games Launcher
 games-util/limo 1.2.2 9999: A simple Qt based mod manager
 games-util/loot 0.26.1: A modding utility for Starfield and some Elder Scrolls and Fallout games.
 games-util/mangohud 0.8.1 9999: Overlay for monitoring FPS, temperatures, CPU/GPU load and more
-games-util/nexusmodsapp 0.14.3 0.15.2: Nexus Mods App, a mod installer, creator and manager for all your popular games
+games-util/nexusmodsapp 0.15.2 0.16.4: Nexus Mods App, a mod installer, creator and manager for all your popular games
 games-util/protonup-qt 2.13.0: Install and manage proton with Steam and Lutris
 games-util/r2modman 3.2.2 3.2.3: A simple and easy to use mod manager for several games using Thunderstore
 games-util/steamtinkerlaunch 9999: Tool for use with the Steam client for custom launch options
