@@ -17,3 +17,8 @@ RDEPEND="
 	dev-perl/match-simple
 "
 DEPEND="${RDEPEND}"
+
+src_test() {
+	local -x COLUMNS=80 LINES=80
+	perl-module_src_test
+}
