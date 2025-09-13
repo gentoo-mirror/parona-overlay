@@ -1,0 +1,13 @@
+BDEPEND=X? ( >=x11-apps/mkfontscale-1.2.0 media-fonts/encodings )
+DEFINED_PHASES=install postinst postrm setup unpack
+DESCRIPTION=Almendra is a typeface design based on calligraphy
+EAPI=8
+HOMEPAGE=https://github.com/google/fonts
+INHERIT=font
+IUSE=X
+KEYWORDS=~amd64
+LICENSE=OFL-1.1
+SLOT=0
+SRC_URI=https://github.com/google/fonts/blob/cbfb186e46e3f44ae1e4f70490becbcc5386e0de/ofl/almendra/Almendra-Bold.ttf -> Almendra-Bold-cbfb186e46e3f44ae1e4f70490becbcc5386e0de.ttf https://github.com/google/fonts/blob/cbfb186e46e3f44ae1e4f70490becbcc5386e0de/ofl/almendra/Almendra-BoldItalic.ttf -> Almendra-BoldItalic-cbfb186e46e3f44ae1e4f70490becbcc5386e0de.ttf https://github.com/google/fonts/blob/cbfb186e46e3f44ae1e4f70490becbcc5386e0de/ofl/almendra/Almendra-Italic.ttf -> Almendra-Italic-cbfb186e46e3f44ae1e4f70490becbcc5386e0de.ttf https://github.com/google/fonts/blob/cbfb186e46e3f44ae1e4f70490becbcc5386e0de/ofl/almendra/Almendra-Regular.ttf -> Almendra-Regular-cbfb186e46e3f44ae1e4f70490becbcc5386e0de.ttf https://github.com/google/fonts/blob/cbfb186e46e3f44ae1e4f70490becbcc5386e0de/ofl/almendra/DESCRIPTION.en_us.html -> almendra-cbfb186e46e3f44ae1e4f70490becbcc5386e0de-DESCRIPTION.en_us.html https://github.com/google/fonts/blob/cbfb186e46e3f44ae1e4f70490becbcc5386e0de/ofl/almendra/FONTLOG.txt -> almendra-cbfb186e46e3f44ae1e4f70490becbcc5386e0de-FONTLOG.txt https://github.com/google/fonts/blob/cbfb186e46e3f44ae1e4f70490becbcc5386e0de/ofl/almendra/METADATA.pb -> almendra-cbfb186e46e3f44ae1e4f70490becbcc5386e0de-METADATA.pb
+_eclasses_=font	aa113a3df9cd0a9693a1c1ee7c34a6eb
+_md5_=2496bf0102e382fd7483a1f4dfcdedbd
