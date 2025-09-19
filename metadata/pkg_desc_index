@@ -63,8 +63,8 @@ dev-perl/match-simple 0.012: simplified clone of smartmatch operator
 dev-python/asyncpg 0.30.0: A fast PostgreSQL Database Client Library for Python/asyncio.
 dev-python/databases 0.9.0: Async database support for Python.
 dev-python/docopt-ng 0.9.0: Humane command line arguments parser.
-dev-python/fastapi 0.116.1 9999: FastAPI framework, high performance, easy to learn, ready for production
-dev-python/fastapi-cli 0.0.8 0.0.10 0.0.11: Run and manage FastAPI apps from the command line with FastAPI CLI
+dev-python/fastapi 0.116.1 0.116.2 9999: FastAPI framework, high performance, easy to learn, ready for production
+dev-python/fastapi-cli 0.0.11 0.0.12: Run and manage FastAPI apps from the command line with FastAPI CLI
 dev-python/gbinder 1.1.2-r1: Python bindings for libgbinder
 dev-python/inputs 0.5: Cross-platform Python support for keyboards, mice and gamepads.
 dev-python/pyclip 0.7.0: Cross-platform Clipboard module for Python with binary support.
@@ -73,9 +73,9 @@ dev-python/pydantic-settings 2.10.1: Settings management using pydantic
 dev-python/pytest-examples 0.0.18: Pytest plugin for testing Python code examples in docstrings and markdown files.
 dev-python/pytest-responses 0.5.1: py.test integration for responses
 dev-python/rich-toolkit 0.15.0 0.15.1: Rich toolkit for building command-line applications
-dev-python/sqlmodel 0.0.24: SQL databases in Python, designed for simplicity, compatibility, and robustness.
+dev-python/sqlmodel 0.0.24 0.0.25: SQL databases in Python, designed for simplicity, compatibility, and robustness.
 dev-python/steam 1.6.1 2.0.0_alpha1: Python package for interacting with Steam
-dev-python/typer 0.17.3 0.17.4: Typer, build great CLIs. Easy to code. Based on Python type hints.
+dev-python/typer 0.17.4 0.18.0: Typer, build great CLIs. Easy to code. Based on Python type hints.
 dev-tex/altacv 1.7.3_p20241216 1.7.4_p20250730: Yet another alternative curriculum vitae/résumé class with LaTeX
 dev-util/umr 1.0.10: umr is a userspace debugging and diagnostic tool for AMD GPUs
 dev-vcs/gcli 2.8.0 2.9.0: Portable CLI tool for interacting with Git(Hub|Lab|Tea) from the command line.
@@ -86,9 +86,9 @@ games-util/heroic-gogdl 9999: GOG Downloading module for Heroic Games Launcher
 games-util/limo 1.2.2 9999: A simple Qt based mod manager
 games-util/loot 0.26.1: A modding utility for Starfield and some Elder Scrolls and Fallout games.
 games-util/mangohud 0.8.1 9999: Overlay for monitoring FPS, temperatures, CPU/GPU load and more
-games-util/nexusmodsapp 0.15.2 0.16.4: Nexus Mods App, a mod installer, creator and manager for all your popular games
+games-util/nexusmodsapp 0.16.4 0.17.0: Nexus Mods App, a mod installer, creator and manager for all your popular games
 games-util/protonup-qt 2.13.0: Install and manage proton with Steam and Lutris
-games-util/r2modman 3.2.2 3.2.3: A simple and easy to use mod manager for several games using Thunderstore
+games-util/r2modman 3.2.3 3.2.6: A simple and easy to use mod manager for several games using Thunderstore
 games-util/steamtinkerlaunch 9999: Tool for use with the Steam client for custom launch options
 gnome-extra/yad 14.1-r1: Display GTK+ dialog boxes from command line or shell scripts
 gui-apps/qtgreet 2.0.2-r1 9999: Qt based greeter for greetd
@@ -111,8 +111,8 @@ media-libs/phonon-mpv 0.1.0-r1: Phonon Backend using MPV Player(libmpv)
 media-sound/spotify 1.2.63: Spotify is a social music platform
 media-sound/transistor 9999: Internet radio player
 media-video/mpv-mpris 1.1: MPRIS plugin for mpv
-net-im/discord 0.0.108 0.0.109: All-in-one voice and text chat for gamers
-net-im/discord-ptb 0.0.159 0.0.160: All-in-one voice and text chat for gamers
+net-im/discord 0.0.109 0.0.110: All-in-one voice and text chat for gamers
+net-im/discord-ptb 0.0.160 0.0.161: All-in-one voice and text chat for gamers
 net-misc/wlvncc 9999: A Wayland Native VNC Client
 sci-ml/ggml 0_p20250611 9999: Tensor library for machine learning
 sci-ml/whispercpp 1.7.6 9999: Port of OpenAI's Whisper model in C/C++
