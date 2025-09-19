@@ -21,7 +21,7 @@ app-emulation/winegui 2.8.1: A user-friendly WINE manager
 app-misc/json-tui 1.4.1: A JSON terminal UI made in C++
 app-misc/parona-scripts 9999: Scripts and hooks that I use on my machines
 app-misc/readpe 0.85 0.85.1: The PE file analysis toolkit
-app-misc/spicetify-cli 2.40.11 2.41.0: Commandline tool to customize Spotify client.
+app-misc/spicetify-cli 2.40.11 2.41.0 2.42.0: Commandline tool to customize Spotify client.
 app-text/klevernotes 9999: A note-taking and management application using markdown.
 dev-build/cargo-make 0.37.24: Rust task runner and build tool
 dev-cpp/args 6.4.7: A simple header-only C++ argument parser library
@@ -31,7 +31,7 @@ dev-cpp/libloot 0.25.5 0.26.3 0.28.1: A library for accessing LOOT's metadata an
 dev-cpp/ogdf 2023.09: Open Graph algorithms and Data structure Framework.
 dev-cpp/tinygltf 2.9.6: Header only C++11 tiny glTF 2.0 library
 dev-cpp/trompeloeil 49: Header only C++14 mocking framework
-dev-libs/libgbinder 1.1.42: GLib-style interface to binder
+dev-libs/libgbinder 1.1.42 1.1.43: GLib-style interface to binder
 dev-libs/libglibutil 1.0.80: Library of glib utilities
 dev-libs/vala-language-server 0.48.7 9999: Code Intelligence for Vala & Genie
 dev-perl/Color-ANSI-Util 0.165: Routines for dealing with ANSI colors
@@ -129,4 +129,4 @@ virtual/linux-sources 3-r8: Virtual for Linux kernel sources
 www-apps/rdrview 0.1.4: Firefox Reader View as a command line tool
 www-apps/vikunja 0.24.5: The to-do app to organize your life.
 www-client/icecat 128.13.0 128.14.0: GNU IceCat Web Browser
-www-plugins/firefoxpwa 2.15.0: A tool to install, manage and use Progressive Web Apps (PWAs) in Mozilla Firefox
+www-plugins/firefoxpwa 2.15.0 2.16.0: A tool to install, manage and use Progressive Web Apps (PWAs) in Mozilla Firefox
