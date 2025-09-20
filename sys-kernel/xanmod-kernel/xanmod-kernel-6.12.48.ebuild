@@ -10,7 +10,7 @@ KERNEL_IUSE_MODULES_SIGN=1
 inherit kernel-build
 
 MY_P=linux-${PV%.*}
-PATCHSET=linux-gentoo-patches-6.16.4
+PATCHSET=linux-gentoo-patches-6.12.48
 GENTOO_CONFIG_VER=g17
 
 XANMOD_VERSION="1"
@@ -29,7 +29,7 @@ S=${WORKDIR}/${MY_P}
 LICENSE="GPL-2"
 KEYWORDS="-* ~amd64"
 
-IUSE="debug"
+IUSE="debug modules-compress"
 
 RDEPEND="
 	!sys-kernel/xanmod-kernel-bin:${SLOT}
@@ -65,7 +65,7 @@ src_prepare() {
 	# prepare the default config
 	case ${ARCH} in
 		amd64)
-			cp "${S}/CONFIGS/x86_64/config" .config || die
+			cp "${S}/CONFIGS/xanmod/gcc/config_x86-64-v2" .config || die
 			;;
 		*)
 			die "Unsupported arch ${ARCH}"
@@ -80,13 +80,32 @@ src_prepare() {
 	local merge_configs=(
 		"${T}"/version.config
 		"${dist_conf_path}"/base.config
-		"${FILESDIR}"/x86-64-v1.config-r1 # keep v1 for simplicity, distribution kernels support user modification.
+		"${FILESDIR}"/x86-64-v1.config # keep v1 for simplicity, distribution kernels support user modification.
 	)
 	use debug || merge_configs+=(
 		"${dist_conf_path}"/no-debug.config
 	)
 
 	use secureboot && merge_configs+=( "${dist_conf_path}/secureboot.config" )
+
+	## Taken from the eclass because I have to avoid KERNEL_IUSE_GENERIC_UKI
+	# NB: we enable support for compressed modules even with
+	# USE=-modules-compress, in order to support both uncompressed and
+	# compressed modules in prebuilt kernels.
+	cat <<-EOF > "${WORKDIR}/module-compress.config" || die
+		CONFIG_MODULE_COMPRESS=y
+		CONFIG_MODULE_COMPRESS_XZ=y
+	EOF
+	# CONFIG_MODULE_COMPRESS_ALL is supported only by >=6.12, for older
+	# versions we accomplish the same by overriding suffix-y=
+	if use modules-compress; then
+		echo "CONFIG_MODULE_COMPRESS_ALL=y" \
+			>> "${WORKDIR}/module-compress.config" || die
+	else
+		echo "# CONFIG_MODULE_COMPRESS_ALL is not set" \
+			>> "${WORKDIR}/module-compress.config" || die
+	fi
+	merge_configs+=( "${WORKDIR}/module-compress.config" )
 
 	kernel-build_merge_configs "${merge_configs[@]}"
 }
