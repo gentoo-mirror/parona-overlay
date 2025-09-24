@@ -1,0 +1,92 @@
+# Copyright 2023-2025 Gentoo Authors
+# Distributed under the terms of the GNU General Public License v2
+
+EAPI=8
+
+PYTHON_COMPAT=( python3_{12..13} )
+DISTUTILS_USE_PEP517=setuptools
+inherit desktop distutils-r1 xdg
+
+APPNAME="net.davidotek.pupgui2"
+
+DESCRIPTION="Install and manage proton with Steam and Lutris"
+HOMEPAGE="
+	https://davidotek.github.io/protonup-qt
+	https://github.com/DavidoTek/ProtonUp-Qt
+"
+SRC_URI="https://github.com/DavidoTek/ProtonUp-Qt/archive/refs/tags/v${PV}.tar.gz -> ${P}.tar.gz"
+S="${WORKDIR}/ProtonUp-Qt-${PV}"
+
+LICENSE="GPL-3"
+SLOT="0"
+KEYWORDS="~amd64"
+
+RESTRICT="test"
+PROPERTIES="test_network"
+
+RDEPEND="
+	>=dev-python/pyside-6.3.0:6[dbus,designer,gui,uitools(+),widgets,${PYTHON_USEDEP}]
+	>=dev-python/requests-2.27.0[${PYTHON_USEDEP}]
+	>=dev-python/vdf-4.0[${PYTHON_USEDEP}]
+	dev-python/inputs[${PYTHON_USEDEP}]
+	>=dev-python/pyxdg-0.27[${PYTHON_USEDEP}]
+	>=dev-python/steam-1.6.1[${PYTHON_USEDEP}]
+	>=dev-python/pyyaml-6.0[${PYTHON_USEDEP}]
+	>=dev-python/zstandard-0.19.0[${PYTHON_USEDEP}]
+"
+BDEPEND="
+	test? (
+		sys-apps/dbus
+	)
+"
+
+EPYTEST_PLUGINS=( pyfakefs pytest-mock pytest-responses )
+distutils_enable_tests pytest
+
+src_prepare() {
+	eapply_user
+
+	# User friendly'er executable name
+	sed -i "s/Exec=${APPNAME}/Exec=${PN}/" share/applications/${APPNAME}.desktop || die
+
+	sed -e '/PySide6-Essentials/d' \
+		-i setup.cfg || die
+}
+
+python_install() {
+	distutils-r1_python_install
+
+	python_newscript - ${PN} <<-EOF
+	#!{EPREFIX}/usr/bin/python
+	from pupgui2.pupgui2 import main
+	main()
+	EOF
+}
+
+python_install_all() {
+	distutils-r1_python_install_all
+
+	domenu share/applications/${APPNAME}.desktop
+
+	for size in {64,128,256}; do
+		doicon -s ${size} share/icons/hicolor/${size}x${size}/apps/${APPNAME}.png
+	done
+}
+
+python_test() {
+	local dbus_params=(
+		$(dbus-daemon --session --print-address --fork --print-pid)
+	)
+
+	local -x DBUS_SESSION_BUS_ADDRESS=${dbus_params[0]}
+	local -x QT_QPA_PLATFORM="offscreen"
+	local -X TEMP_DIR="${T}/test"
+
+	nonfatal epytest
+	local ret=$?
+
+	kill "${dbus_params[1]}" || die
+
+	[[ ${ret} != 0 ]] && die "Tests failed"
+
+}
