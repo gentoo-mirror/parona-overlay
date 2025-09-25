@@ -78,7 +78,7 @@ dev-python/steam 1.6.1 2.0.0_alpha1: Python package for interacting with Steam
 dev-tex/altacv 1.7.4_p20250730: Yet another alternative curriculum vitae/résumé class with LaTeX
 dev-util/umr 1.0.10 1.0.11 9999: umr is a userspace debugging and diagnostic tool for AMD GPUs
 dev-vcs/gcli 2.8.0 2.9.0: Portable CLI tool for interacting with Git(Hub|Lab|Tea) from the command line.
-games-action/vintagestory 1.20.12 1.21.0 1.21.1: Uncompromising wilderness survival sandbox game (requires paid account)
+games-action/vintagestory 1.20.12 1.21.0 1.21.1 1.21.2_rc2: Uncompromising wilderness survival sandbox game (requires paid account)
 games-util/gamehub 0.16.3_p2: All your games in one place
 games-util/goverlay 1.3_p3 1.4.1: Graphical UI to help manage Linux overlays.
 games-util/heroic-gogdl 9999: GOG Downloading module for Heroic Games Launcher
