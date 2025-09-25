@@ -38,6 +38,7 @@ www-client/icecat:system-icu - Use the system-wide dev-libs/icu instead of bundl
 www-client/icecat:system-jpeg - Use the system-wide media-libs/libjpeg-turbo instead of bundled.
 www-client/icecat:system-libevent - Use the system-wide dev-libs/libevent instead of bundled.
 www-client/icecat:system-libvpx - Use the system-wide media-libs/libvpx instead of bundled.
+www-client/icecat:system-pipewire - Use system media-video/pipewire for WebRTC and screencast instead of bundled one
 www-client/icecat:system-png - Use the system-wide media-libs/libpng instead of bundled (requires APNG patches)
 www-client/icecat:system-webp - Use the system-wide media-libs/libwebp instead of bundled.
 www-client/icecat:wasm-sandbox - Sandbox certain third-party libraries through WebAssembly using RLBox
