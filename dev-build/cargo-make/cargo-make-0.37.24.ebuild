@@ -243,6 +243,8 @@ CRATES="
 	zopfli@0.8.1
 "
 
+RUST_MIN_VER="1.81"
+
 inherit cargo
 
 DESCRIPTION="Rust task runner and build tool"
