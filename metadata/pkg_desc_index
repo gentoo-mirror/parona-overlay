@@ -86,7 +86,7 @@ games-util/heroic-gogdl 9999: GOG Downloading module for Heroic Games Launcher
 games-util/limo 1.2.2 9999: A simple Qt based mod manager
 games-util/loot 0.26.1: A modding utility for Starfield and some Elder Scrolls and Fallout games.
 games-util/mangohud 0.8.1 9999: Overlay for monitoring FPS, temperatures, CPU/GPU load and more
-games-util/nexusmodsapp 0.16.4 0.17.0: Nexus Mods App, a mod installer, creator and manager for all your popular games
+games-util/nexusmodsapp 0.17.0 0.17.2: Nexus Mods App, a mod installer, creator and manager for all your popular games
 games-util/protonup-qt 2.13.0 2.14.0: Install and manage proton with Steam and Lutris
 games-util/r2modman 3.2.6 3.2.7 3.2.8: A simple and easy to use mod manager for several games using Thunderstore
 games-util/steamtinkerlaunch 9999: Tool for use with the Steam client for custom launch options
@@ -99,7 +99,7 @@ gui-libs/dfl-login1 0.2.0: DFL Login1 class implements a part of the systemd log
 gui-libs/dfl-utils 0.2.0: This library provides single-instance Application classes for various utilities.
 gui-libs/ftxui 6.1.9: C++ Functional Terminal User Interface
 gui-libs/wayqt 0.2.0 9999: A Qt-based wrapper for various wayland protocols.
-gui-wm/cage 0.2.0: A Wayland kiosk
+gui-wm/cage 0.2.0 0.2.1: A Wayland kiosk
 kde-apps/toad 9999: Organize your tasks
 kde-misc/plasma-gamemode 9999: Plasma widget to show processes running in gamemode
 media-fonts/almendra 1.004: Almendra is a typeface design based on calligraphy
