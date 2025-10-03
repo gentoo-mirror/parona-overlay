@@ -9,4 +9,7 @@
 		<doc>https://docs.coolercontrol.org/</doc>
 		<remote-id type="gitlab">coolercontrol/coolercontrol</remote-id>
 	</upstream>
+	<use>
+		<flag name="liquidctl">Support for interacting with AIO liquid coolers and other devices with <pkg>app-misc/liquidctl</pkg></flag>
+	</use>
 </pkgmetadata>
