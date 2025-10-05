@@ -1,4 +1,4 @@
-BDEPEND=virtual/pkgconfig opencl? ( || ( dev-lang/python:3.14 dev-lang/python:3.13 ) ) vulkan? ( dev-util/glslang ) app-alternatives/ninja >=dev-build/cmake-3.20.5
+BDEPEND=virtual/pkgconfig opencl? ( || ( dev-lang/python:3.14 dev-lang/python:3.13 ) ) vulkan? ( dev-util/glslang ) app-alternatives/ninja >=dev-build/cmake-3.28.5
 DEFINED_PHASES=compile configure install prepare pretend setup test
 DEPEND=blas? ( virtual/blas ) opencl? ( virtual/opencl ) vulkan? ( dev-util/vulkan-headers )
 DESCRIPTION=Tensor library for machine learning
@@ -12,5 +12,5 @@ RDEPEND=blas? ( virtual/blas ) opencl? ( virtual/opencl ) media-libs/vulkan-load
 RESTRICT=!test? ( test )
 SLOT=0/0_p20250611
 SRC_URI=https://github.com/ggml-org/ggml/archive/b6d2ebd488ecf03368b365e69fcf64f03f14e949.tar.gz -> ggml-b6d2ebd488ecf03368b365e69fcf64f03f14e949.tar.gz
-_eclasses_=toolchain-funcs	a0b29008c671a362b505f96fa80ce9c0	flag-o-matic	a7afe42e95fb46ce9691605acfb24672	multiprocessing	1e32df7deee68372153dca65f4a7c21f	ninja-utils	2df4e452cea39a9ec8fb543ce059f8d6	xdg-utils	42869b3c8d86a70ef3cf75165a395e09	cmake	460729dc36f68cf03b044bc1d367e34a	python-utils-r1	0b620dd604ab8af0bc9cd1bcc66d4f7c	python-any-r1	891415dfe39ad9b41b461f2b86354af0
+_eclasses_=toolchain-funcs	a0b29008c671a362b505f96fa80ce9c0	flag-o-matic	a7afe42e95fb46ce9691605acfb24672	multiprocessing	1e32df7deee68372153dca65f4a7c21f	ninja-utils	2df4e452cea39a9ec8fb543ce059f8d6	xdg-utils	42869b3c8d86a70ef3cf75165a395e09	cmake	cf95ad72ab207889c1668fc0d1bee181	python-utils-r1	0b620dd604ab8af0bc9cd1bcc66d4f7c	python-any-r1	891415dfe39ad9b41b461f2b86354af0
 _md5_=d3bad5355bb400efbde0659c45ece97c
