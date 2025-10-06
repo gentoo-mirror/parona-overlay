@@ -78,9 +78,8 @@ dev-python/sqlmodel 0.0.24 0.0.25: SQL databases in Python, designed for simplic
 dev-python/steam 1.6.1 2.0.0_alpha1: Python package for interacting with Steam
 dev-tex/altacv 1.7.4_p20250730: Yet another alternative curriculum vitae/résumé class with LaTeX
 dev-util/umr 1.0.10 1.0.11 9999: umr is a userspace debugging and diagnostic tool for AMD GPUs
-dev-vcs/gcli 2.8.0 2.9.0: Portable CLI tool for interacting with Git(Hub|Lab|Tea) from the command line.
-games-action/vintagestory 1.20.12 1.21.0 1.21.1 1.21.2_rc2: Uncompromising wilderness survival sandbox game (requires paid account)
-games-util/gamehub 0.16.3_p2: All your games in one place
+dev-vcs/gcli 2.9.0 2.9.1: Portable CLI tool for interacting with Git(Hub|Lab|Tea) from the command line.
+games-action/vintagestory 1.20.12 1.21.1 1.21.2: Uncompromising wilderness survival sandbox game (requires paid account)
 games-util/goverlay 1.3_p3 1.4.1: Graphical UI to help manage Linux overlays.
 games-util/heroic-gogdl 9999: GOG Downloading module for Heroic Games Launcher
 games-util/limo 1.2.2 9999: A simple Qt based mod manager
@@ -126,7 +125,7 @@ sys-kernel/xanmod-sources 6.12.31 6.12.32 6.12.33 6.12.34 6.12.35 6.12.36 6.12.3
 sys-power/corectrl 1.5.1 1.5.2: Profile based system control utility
 virtual/dist-kernel 6.12.41 6.12.47 6.12.48 6.12.49 6.12.50 6.16.7 6.16.8 6.16.9 6.16.10: Virtual to depend on any Distribution Kernel
 virtual/linux-sources 3-r8: Virtual for Linux kernel sources
-www-apps/rdrview 0.1.4: Firefox Reader View as a command line tool
+www-apps/rdrview 0.1.4 0.1.5: Firefox Reader View as a command line tool
 www-apps/vikunja 0.24.5: The to-do app to organize your life.
 www-client/icecat 128.14.0 140.3.1: GNU IceCat Web Browser
-www-plugins/firefoxpwa 2.15.0 2.16.0: A tool to install, manage and use Progressive Web Apps (PWAs) in Mozilla Firefox
+www-plugins/firefoxpwa 2.16.0 2.17.1: A tool to install, manage and use Progressive Web Apps (PWAs) in Mozilla Firefox

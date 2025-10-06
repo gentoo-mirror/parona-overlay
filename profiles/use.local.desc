@@ -13,7 +13,6 @@ dev-build/cargo-make:openssl - Enable TLS support with dev-libs/openssl
 dev-build/cargo-make:rustls - Enable TLS support with rustls
 dev-libs/vala-language-server:gnome - Build GNOME Builder plugin
 dev-vcs/gcli:lowdown - Use lowdown to render markdown.
-games-util/gamehub:overlayfs - Build support for OverlayFS
 games-util/mangohud:mangoapp - Install mangoapp, a transparent background application with a built in mangohud.
 games-util/mangohud:plots - Install mangoplot plotting script which generates a 1D heatmap of a log files framerates.
 gnome-extra/yad:sourceview - Enable syntax highlighting in text-info dialog with x11-libs/gtksourceview:3.0
