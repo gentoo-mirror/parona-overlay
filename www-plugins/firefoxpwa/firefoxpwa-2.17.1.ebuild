@@ -12,6 +12,7 @@ declare -A GIT_CRATES=(
 	[web_app_manifest]='https://github.com/filips123/WebAppManifestRS;477c5bbc7406eec01aea40e18338dafcec78c917;WebAppManifestRS-%commit%'
 )
 
+RUST_MAX_VER="1.88.0"
 RUST_MIN_VER="1.85.0"
 
 inherit cargo shell-completion xdg
@@ -21,9 +22,13 @@ HOMEPAGE="https://pwasforfirefox.filips.si/"
 SRC_URI="
 	https://github.com/filips123/PWAsForFirefox/archive/refs/tags/v${PV}.tar.gz
 		-> ${P}.tar.gz
-	https://gitlab.com/api/v4/projects/32909921/packages/generic/firefoxpwa/${PV}/firefoxpwa-${PV}-crates.tar.xz
 	${CARGO_CRATE_URIS}
 "
+if [[ ${PKGBUMPING} != ${PVR} ]]; then
+	SRC_URI+="
+		https://github.com/filips123/PWAsForFirefox/releases/download/v${PV}/firefoxpwa-${PV}-crates.tar.xz
+	"
+fi
 S="${WORKDIR}/PWAsForFirefox-${PV}/native"
 
 LICENSE="MPL-2.0"
