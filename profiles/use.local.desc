@@ -21,6 +21,7 @@ gnome-extra/yad:tools - Install extra tools such as yad-tools, yad-icon-browser,
 gui-apps/qtgreet:greetwl - Build the greetwl compositor to use it instead of requiring other compositors.
 media-sound/spotify:local-playback - Allows playing local files with the Spotify client
 media-sound/spotify:pax-kernel - Triggers a paxmarking of the main Spotify binary
+sys-apps/coolercontrold:liquidctl - Support for interacting with AIO liquid coolers and other devices with app-misc/liquidctl
 sys-kernel/xanmod-kernel:initramfs - Build initramfs along with the kernel.
 virtual/linux-sources:firmware - Install linux kernel firmware
 www-client/icecat:clang - Use Clang compiler instead of GCC
