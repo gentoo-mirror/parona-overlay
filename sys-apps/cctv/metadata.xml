@@ -6,10 +6,6 @@
 		<name>Alfred Wingate</name>
 	</maintainer>
 	<upstream>
-		<doc>https://docs.coolercontrol.org/</doc>
-		<remote-id type="gitlab">coolercontrol/coolercontrol</remote-id>
+		<remote-id type="gitlab">coolercontrol/cctv</remote-id>
 	</upstream>
-	<use>
-		<flag name="liquidctl">Support for interacting with AIO liquid coolers and other devices with <pkg>app-misc/liquidctl</pkg></flag>
-	</use>
 </pkgmetadata>
