@@ -63,7 +63,7 @@ dev-perl/match-simple 0.012: simplified clone of smartmatch operator
 dev-python/asyncpg 0.30.0: A fast PostgreSQL Database Client Library for Python/asyncio.
 dev-python/databases 0.9.0: Async database support for Python.
 dev-python/docopt-ng 0.9.0: Humane command line arguments parser.
-dev-python/fastapi 0.116.2 0.117.1 0.118.0 9999: FastAPI framework, high performance, easy to learn, ready for production
+dev-python/fastapi 0.117.1 0.118.0 0.118.2 9999: FastAPI framework, high performance, easy to learn, ready for production
 dev-python/fastapi-cli 0.0.12 0.0.13: Run and manage FastAPI apps from the command line with FastAPI CLI
 dev-python/gbinder 1.1.2-r1: Python bindings for libgbinder
 dev-python/inputs 0.5: Cross-platform Python support for keyboards, mice and gamepads.
@@ -74,7 +74,7 @@ dev-python/pydantic-settings 2.10.1 2.11.0: Settings management using pydantic
 dev-python/pytest-examples 0.0.18: Pytest plugin for testing Python code examples in docstrings and markdown files.
 dev-python/pytest-responses 0.5.1: py.test integration for responses
 dev-python/rich-toolkit 0.15.0 0.15.1: Rich toolkit for building command-line applications
-dev-python/sqlmodel 0.0.24 0.0.25: SQL databases in Python, designed for simplicity, compatibility, and robustness.
+dev-python/sqlmodel 0.0.25 0.0.27: SQL databases in Python, designed for simplicity, compatibility, and robustness.
 dev-python/steam 1.6.1 2.0.0_alpha1: Python package for interacting with Steam
 dev-tex/altacv 1.7.4_p20250730: Yet another alternative curriculum vitae/résumé class with LaTeX
 dev-util/umr 1.0.10 1.0.11 9999: umr is a userspace debugging and diagnostic tool for AMD GPUs
@@ -100,6 +100,7 @@ gui-libs/ftxui 6.1.9: C++ Functional Terminal User Interface
 gui-libs/wayqt 0.2.0 9999: A Qt-based wrapper for various wayland protocols.
 gui-wm/cage 0.2.0 0.2.1: A Wayland kiosk
 kde-apps/toad 9999: Organize your tasks
+kde-misc/kwlejka 9999: A text area for Plasma
 kde-misc/plasma-gamemode 9999: Plasma widget to show processes running in gamemode
 media-fonts/almendra 1.004: Almendra is a typeface design based on calligraphy
 media-fonts/intel-one-mono 1.4.0: Intel's monospaced font family with clarity and legibility in mind.

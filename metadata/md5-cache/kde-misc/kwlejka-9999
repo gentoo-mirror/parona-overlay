@@ -1,0 +1,12 @@
+BDEPEND=>=dev-vcs/git-1.8.2.1[curl]
+DEFINED_PHASES=install unpack
+DESCRIPTION=A text area for Plasma
+EAPI=8
+HOMEPAGE=https://codeberg.org/dcz/kwlejka
+INHERIT=git-r3
+LICENSE=GPL-2+
+PROPERTIES=live
+RDEPEND=dev-qt/qtdeclarative:6 kde-plasma/libplasma:6 kde-frameworks/kirigami:6 kde-frameworks/ksvg:6
+SLOT=0
+_eclasses_=git-r3	875eb471682d3e1f18da124be97dcc81
+_md5_=383620fc9b374ec6823f946618d2212f
