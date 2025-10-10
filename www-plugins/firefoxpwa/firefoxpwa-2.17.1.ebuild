@@ -13,7 +13,7 @@ declare -A GIT_CRATES=(
 )
 
 RUST_MAX_VER="1.88.0"
-RUST_MIN_VER="1.85.0"
+RUST_MIN_VER="1.88.0"
 
 inherit cargo shell-completion xdg
 
