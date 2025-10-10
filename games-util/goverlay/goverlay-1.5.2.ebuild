@@ -3,14 +3,15 @@
 
 EAPI=8
 
-inherit multiprocessing xdg
+LAZARUS_WIDGET=qt6
+inherit lazarus xdg
 
 MY_PV="${PV/_p/-}"
 
 DESCRIPTION="Graphical UI to help manage Linux overlays."
 HOMEPAGE="https://github.com/benjamimgois/goverlay"
 SRC_URI="
-	https://github.com/benjamimgois/goverlay/archive/refs/tags/${MY_PV}.tar.gz
+	https://github.com/benjamimgois/goverlay/archive/refs/tags/v${MY_PV}.tar.gz
 		-> ${PN}-${MY_PV}.tar.gz
 "
 S="${WORKDIR}/${PN}-${MY_PV}"
@@ -23,21 +24,20 @@ KEYWORDS="~amd64"
 FEATURES="test"
 
 DEPEND="
-	dev-libs/libqt6pas:=
 	x11-libs/libX11
 "
 RDEPEND="
 	${DEPEND}
 	app-shells/bash
-	dev-util/vulkan-tools
+	dev-util/vulkan-tools[cube]
 	games-util/mangohud
 	media-gfx/vkBasalt
+	media-libs/mesa
 	sys-apps/iproute2
-	x11-apps/mesa-progs
 "
-BDEPEND="
-	dev-lang/lazarus[qt6(-)]
-"
+# https://github.com/benjamimgois/goverlay/commit/ad333cba6a071179efc902f15f4f0a7bc9b77863
+# gui-apps/pascube
+# media-libs/mesa[video_cards_zink]
 
 QA_FLAGS_IGNORED=".*"
 
@@ -46,23 +46,10 @@ src_prepare() {
 
 	# Disable stripping
 	sed -i -e '/<Linking>/,/<\/Linking>/ { /<Debugging>/,/<\/Debugging>/d }' goverlay.lpi || die
-
-	sed -i -e 's|/sbin/ip|ip|' overlayunit.pas || die
-}
-
-src_configure() {
-	export lazbuildopts=(
-		--max-process-count=$(get_makeopts_jobs)
-		--verbose
-		--lazarusdir=/usr/share/lazarus/
-		${MY_LAZBUILDOPTS}
-	)
-
-	#TODO: ability to give flags to FPC by the user?
 }
 
 src_compile() {
-	emake LAZBUILDOPTS="${lazbuildopts[*]}"
+	elazbuild goverlay.lpi
 }
 
 src_install() {
