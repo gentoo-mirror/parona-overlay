@@ -27,7 +27,7 @@ dev-build/cargo-make 0.37.24: Rust task runner and build tool
 dev-cpp/args 6.4.7: A simple header-only C++ argument parser library
 dev-cpp/cpr 1.12.0: C++ Requests: Curl for People, a spiritual port of Python Requests.
 dev-cpp/hjson-cpp 2.6: Hjson for C++
-dev-cpp/libloot 0.25.5 0.26.3 0.28.1 0.28.2: A library for accessing LOOT's metadata and sorting functionality (C++ wrapper)
+dev-cpp/libloot 0.25.5 0.26.3 0.28.2: A library for accessing LOOT's metadata and sorting functionality (C++ wrapper)
 dev-cpp/ogdf 2023.09: Open Graph algorithms and Data structure Framework.
 dev-cpp/tinygltf 2.9.6: Header only C++11 tiny glTF 2.0 library
 dev-cpp/trompeloeil 49: Header only C++14 mocking framework
@@ -63,7 +63,7 @@ dev-perl/match-simple 0.012: simplified clone of smartmatch operator
 dev-python/asyncpg 0.30.0: A fast PostgreSQL Database Client Library for Python/asyncio.
 dev-python/databases 0.9.0: Async database support for Python.
 dev-python/docopt-ng 0.9.0: Humane command line arguments parser.
-dev-python/fastapi 0.117.1 0.118.0 0.118.2 9999: FastAPI framework, high performance, easy to learn, ready for production
+dev-python/fastapi 0.118.2 0.119.0 9999: FastAPI framework, high performance, easy to learn, ready for production
 dev-python/fastapi-cli 0.0.12 0.0.13: Run and manage FastAPI apps from the command line with FastAPI CLI
 dev-python/gbinder 1.1.2-r1: Python bindings for libgbinder
 dev-python/inputs 0.5: Cross-platform Python support for keyboards, mice and gamepads.
@@ -83,7 +83,7 @@ games-action/vintagestory 1.20.12 1.21.1 1.21.2: Uncompromising wilderness survi
 games-util/goverlay 1.4.1 1.5.2: Graphical UI to help manage Linux overlays.
 games-util/heroic-gogdl 9999: GOG Downloading module for Heroic Games Launcher
 games-util/limo 1.2.2 9999: A simple Qt based mod manager
-games-util/loot 0.26.1: A modding utility for Starfield and some Elder Scrolls and Fallout games.
+games-util/loot 0.26.1 0.28.0: A modding utility for Starfield and some Elder Scrolls and Fallout games.
 games-util/mangohud 0.8.1 9999: Overlay for monitoring FPS, temperatures, CPU/GPU load and more
 games-util/nexusmodsapp 0.17.0 0.17.2: Nexus Mods App, a mod installer, creator and manager for all your popular games
 games-util/protonup-qt 2.13.0 2.14.0: Install and manage proton with Steam and Lutris
@@ -113,7 +113,7 @@ media-sound/spotify 1.2.63: Spotify is a social music platform
 media-sound/transistor 9999: Internet radio player
 media-video/mpv-mpris 1.1: MPRIS plugin for mpv
 net-im/discord 0.0.110 0.0.111: All-in-one voice and text chat for gamers
-net-im/discord-ptb 0.0.160 0.0.161: All-in-one voice and text chat for gamers
+net-im/discord-ptb 0.0.161 0.0.162: All-in-one voice and text chat for gamers
 net-misc/wlvncc 9999: A Wayland Native VNC Client
 sci-ml/ggml 0_p20250611 9999: Tensor library for machine learning
 sci-ml/whispercpp 1.7.6 9999: Port of OpenAI's Whisper model in C/C++
