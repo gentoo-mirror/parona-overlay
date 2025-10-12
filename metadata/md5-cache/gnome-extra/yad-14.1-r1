@@ -12,5 +12,5 @@ LICENSE=GPL-3
 RDEPEND=dev-libs/glib:2 >=x11-libs/gtk+-3.22.0:3 x11-libs/cairo x11-libs/gdk-pixbuf:2 x11-libs/pango sourceview? ( x11-libs/gtksourceview:3.0= ) spell? ( app-text/gspell:= ) webkit? ( net-libs/webkit-gtk:4.1 )
 SLOT=0
 SRC_URI=https://github.com/v1cont/yad/releases/download/v14.1/yad-14.1.tar.xz
-_eclasses_=toolchain-funcs	a0b29008c671a362b505f96fa80ce9c0	xdg-utils	42869b3c8d86a70ef3cf75165a395e09	gnome2-utils	a8cf148ec7f5ae0b1f1d33ae5f7f9e88	xdg	3ef49a87c52c8b77c476351195dfe575
+_eclasses_=toolchain-funcs	98d9f464d912ae6b7316fb8a3721f5db	xdg-utils	42869b3c8d86a70ef3cf75165a395e09	gnome2-utils	a8cf148ec7f5ae0b1f1d33ae5f7f9e88	xdg	3ef49a87c52c8b77c476351195dfe575
 _md5_=35ffaccd210758c19cd4eeaced2b284f

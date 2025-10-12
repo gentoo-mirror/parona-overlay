@@ -9,5 +9,5 @@ KEYWORDS=~amd64
 LICENSE=OFL-1.1
 SLOT=0
 SRC_URI=https://github.com/cyrealtype/Lora-Cyrillic/releases/download/v3.005/Lora-v3.005.zip
-_eclasses_=font	aa113a3df9cd0a9693a1c1ee7c34a6eb	multiprocessing	1e32df7deee68372153dca65f4a7c21f	toolchain-funcs	a0b29008c671a362b505f96fa80ce9c0	unpacker	3b4ee72d1e2e0374fd8cd3eddfa00627
+_eclasses_=font	aa113a3df9cd0a9693a1c1ee7c34a6eb	multiprocessing	1e32df7deee68372153dca65f4a7c21f	toolchain-funcs	98d9f464d912ae6b7316fb8a3721f5db	unpacker	3b4ee72d1e2e0374fd8cd3eddfa00627
 _md5_=af0ebc728a3bbdb46137fe9acf6d2700
