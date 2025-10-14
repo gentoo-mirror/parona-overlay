@@ -130,5 +130,5 @@ virtual/dist-kernel 6.12.41 6.12.47 6.12.48 6.12.49 6.12.50 6.12.51 6.12.52 6.16
 virtual/linux-sources 3-r8: Virtual for Linux kernel sources
 www-apps/rdrview 0.1.4 0.1.5: Firefox Reader View as a command line tool
 www-apps/vikunja 0.24.5: The to-do app to organize your life.
-www-client/icecat 128.14.0 140.3.1: GNU IceCat Web Browser
+www-client/icecat 140.3.1 140.4.0: GNU IceCat Web Browser
 www-plugins/firefoxpwa 2.16.0 2.17.1: A tool to install, manage and use Progressive Web Apps (PWAs) in Mozilla Firefox
