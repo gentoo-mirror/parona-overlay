@@ -3,7 +3,7 @@
 
 EAPI=8
 
-PYTHON_COMPAT=( python3_{12..13} )
+PYTHON_COMPAT=( python3_{12..14} )
 inherit meson-multilib python-single-r1
 
 DESCRIPTION="Overlay for monitoring FPS, temperatures, CPU/GPU load and more"
