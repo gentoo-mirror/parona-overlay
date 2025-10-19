@@ -61,7 +61,6 @@ dev-perl/Test-RandomResult 0.001-r1: Test that results of a running code look ra
 dev-perl/Test-Synopsis-Expectation 0.12: Test that SYNOPSIS code produces expected results
 dev-perl/match-simple 0.012: simplified clone of smartmatch operator
 dev-python/asyncpg 0.30.0: A fast PostgreSQL Database Client Library for Python/asyncio.
-dev-python/databases 0.9.0: Async database support for Python.
 dev-python/docopt-ng 0.9.0: Humane command line arguments parser.
 dev-python/fastapi 0.118.2 0.119.0 9999: FastAPI framework, high performance, easy to learn, ready for production
 dev-python/fastapi-cli 0.0.12 0.0.13: Run and manage FastAPI apps from the command line with FastAPI CLI
@@ -71,9 +70,9 @@ dev-python/pwdlib 0.2.1: Modern password hashing for Python
 dev-python/pyclip 0.7.0: Cross-platform Clipboard module for Python with binary support.
 dev-python/pycryptodomex 3.23.0: A self-contained cryptographic library for Python
 dev-python/pydantic-settings 2.10.1 2.11.0: Settings management using pydantic
-dev-python/pytest-examples 0.0.18: Pytest plugin for testing Python code examples in docstrings and markdown files.
+dev-python/pytest-examples 0.0.18 0.0.18-r1: Pytest plugin for testing Python code examples in docstrings and markdown files.
 dev-python/pytest-responses 0.5.1: py.test integration for responses
-dev-python/rich-toolkit 0.15.0 0.15.1: Rich toolkit for building command-line applications
+dev-python/rich-toolkit 0.15.1: Rich toolkit for building command-line applications
 dev-python/sqlmodel 0.0.25 0.0.27: SQL databases in Python, designed for simplicity, compatibility, and robustness.
 dev-python/steam 1.6.1 2.0.0_alpha1: Python package for interacting with Steam
 dev-tex/altacv 1.7.4_p20250730: Yet another alternative curriculum vitae/résumé class with LaTeX
