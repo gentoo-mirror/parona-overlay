@@ -3,8 +3,8 @@
 
 EAPI=8
 
-PYTHON_COMPAT=( python3_{12..13} )
-inherit meson-multilib python-single-r1
+PYTHON_COMPAT=( python3_{12..14} )
+inherit meson-multilib python-single-r1 xdg
 
 DESCRIPTION="Overlay for monitoring FPS, temperatures, CPU/GPU load and more"
 HOMEPAGE="https://github.com/flightlessmango/MangoHud"
