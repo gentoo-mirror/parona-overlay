@@ -62,8 +62,8 @@ dev-perl/Test-Synopsis-Expectation 0.12: Test that SYNOPSIS code produces expect
 dev-perl/match-simple 0.012: simplified clone of smartmatch operator
 dev-python/asyncpg 0.30.0: A fast PostgreSQL Database Client Library for Python/asyncio.
 dev-python/docopt-ng 0.9.0: Humane command line arguments parser.
-dev-python/fastapi 0.118.2 0.119.0 9999: FastAPI framework, high performance, easy to learn, ready for production
-dev-python/fastapi-cli 0.0.12 0.0.13: Run and manage FastAPI apps from the command line with FastAPI CLI
+dev-python/fastapi 0.119.0 0.119.1 9999: FastAPI framework, high performance, easy to learn, ready for production
+dev-python/fastapi-cli 0.0.13 0.0.14: Run and manage FastAPI apps from the command line with FastAPI CLI
 dev-python/gbinder 1.1.2-r1: Python bindings for libgbinder
 dev-python/inputs 0.5: Cross-platform Python support for keyboards, mice and gamepads.
 dev-python/pwdlib 0.2.1: Modern password hashing for Python
@@ -122,10 +122,10 @@ sys-apps/coolercontrol-liqctld 2.2.2: Monitor and control your cooling and other
 sys-apps/coolercontrold 2.2.2 3.0.1: Monitor and control your cooling and other devices (daemon)
 sys-apps/gsmartcontrol 9999: Hard Disk Drive and SSD Health Inspection Tool
 sys-boot/uefitool 72_alpha: UEFI firmware image viewer and editor
-sys-kernel/xanmod-kernel 6.12.41 6.12.47 6.12.48 6.12.49 6.12.50 6.12.51 6.12.52 6.12.53 6.16.7 6.16.8 6.16.9 6.16.10 6.16.11 6.16.12 6.17.1 6.17.2 6.17.3: Linux kernel built with XanMod and Gentoo patches
-sys-kernel/xanmod-sources 6.12.31 6.12.32 6.12.33 6.12.34 6.12.35 6.12.36 6.12.37 6.12.39 6.12.40 6.12.41 6.12.42 6.12.43 6.12.44 6.12.44-r1 6.12.45 6.12.46 6.12.47 6.12.48 6.12.49 6.12.50 6.12.51 6.12.52 6.12.53 6.15.1 6.15.2 6.15.3 6.15.4 6.15.5 6.15.6 6.15.7 6.15.8 6.15.9 6.15.9-r1 6.15.10 6.15.11 6.16.0 6.16.1 6.16.2 6.16.3 6.16.4 6.16.4-r1 6.16.5 6.16.6 6.16.7 6.16.8 6.16.9 6.16.10 6.16.11 6.16.12 6.17.1 6.17.2 6.17.3: Full XanMod sources including the Gentoo patchset
+sys-kernel/xanmod-kernel 6.12.41 6.12.47 6.12.48 6.12.49 6.12.50 6.12.51 6.12.52 6.12.53 6.12.54 6.16.7 6.16.8 6.16.9 6.16.10 6.16.11 6.16.12 6.17.1 6.17.2 6.17.3 6.17.4: Linux kernel built with XanMod and Gentoo patches
+sys-kernel/xanmod-sources 6.12.31 6.12.32 6.12.33 6.12.34 6.12.35 6.12.36 6.12.37 6.12.39 6.12.40 6.12.41 6.12.42 6.12.43 6.12.44 6.12.44-r1 6.12.45 6.12.46 6.12.47 6.12.48 6.12.49 6.12.50 6.12.51 6.12.52 6.12.53 6.12.54 6.15.1 6.15.2 6.15.3 6.15.4 6.15.5 6.15.6 6.15.7 6.15.8 6.15.9 6.15.9-r1 6.15.10 6.15.11 6.16.0 6.16.1 6.16.2 6.16.3 6.16.4 6.16.4-r1 6.16.5 6.16.6 6.16.7 6.16.8 6.16.9 6.16.10 6.16.11 6.16.12 6.17.1 6.17.2 6.17.3 6.17.4: Full XanMod sources including the Gentoo patchset
 sys-power/corectrl 1.5.1 1.5.2: Profile based system control utility
-virtual/dist-kernel 6.12.41 6.12.47 6.12.48 6.12.49 6.12.50 6.12.51 6.12.52 6.12.53 6.16.7 6.16.8 6.16.9 6.16.10 6.16.11 6.16.12 6.17.1 6.17.2 6.17.3: Virtual to depend on any Distribution Kernel
+virtual/dist-kernel 6.12.41 6.12.47 6.12.48 6.12.49 6.12.50 6.12.51 6.12.52 6.12.53 6.12.54 6.16.7 6.16.8 6.16.9 6.16.10 6.16.11 6.16.12 6.17.1 6.17.2 6.17.3 6.17.4: Virtual to depend on any Distribution Kernel
 virtual/linux-sources 3-r8: Virtual for Linux kernel sources
 www-apps/rdrview 0.1.4 0.1.5: Firefox Reader View as a command line tool
 www-apps/vikunja 0.24.5: The to-do app to organize your life.
