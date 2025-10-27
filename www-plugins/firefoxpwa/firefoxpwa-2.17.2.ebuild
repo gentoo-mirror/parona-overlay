@@ -7,13 +7,12 @@ CRATES="
 "
 
 declare -A GIT_CRATES=(
-	[mime-parse]='https://github.com/filips123/mime;57416f447a10c3343df7fe80deb0ae8a7c77cf0a;mime-%commit%/mime-parse'
-	[mime]='https://github.com/filips123/mime;57416f447a10c3343df7fe80deb0ae8a7c77cf0a;mime-%commit%'
-	[web_app_manifest]='https://github.com/filips123/WebAppManifestRS;477c5bbc7406eec01aea40e18338dafcec78c917;WebAppManifestRS-%commit%'
+	[mime-parse]='https://github.com/filips123/mime;e3e2e55459d2989a3f4699566ff8f203a8720add;mime-%commit%/mime-parse'
+	[mime]='https://github.com/filips123/mime;e3e2e55459d2989a3f4699566ff8f203a8720add;mime-%commit%'
+	[web_app_manifest]='https://github.com/filips123/WebAppManifestRS;c3329f3378a0039c96bd2b3f32529ea6b438c350;WebAppManifestRS-%commit%'
 )
 
-RUST_MAX_VER="1.88.0"
-RUST_MIN_VER="1.85.0"
+RUST_MIN_VER="1.88.0"
 
 inherit cargo shell-completion xdg
 
@@ -26,7 +25,7 @@ SRC_URI="
 "
 if [[ ${PKGBUMPING} != ${PVR} ]]; then
 	SRC_URI+="
-		https://gitlab.com/api/v4/projects/32909921/packages/generic/firefoxpwa/${PV}/firefoxpwa-${PV}-crates.tar.xz
+		https://github.com/filips123/PWAsForFirefox/releases/download/v${PV}/firefoxpwa-${PV}-crates.tar.xz
 	"
 fi
 S="${WORKDIR}/PWAsForFirefox-${PV}/native"
