@@ -1,0 +1,38 @@
+Subject: x86: Disable SSE4A
+Sent: October 27, 2025 11:40:59 AM UTC
+From: Peter Zijlstra <peterz@infradead.org>
+To: x86@kernel.org, Leyvi Rose <leyvirose@gmail.com>
+Cc: Samuel Holland <samuel.holland@sifive.com>, "Christian König" <christian.koenig@amd.com>, Masami Hiramatsu <mhiramat@kernel.org>
+
+Hi,
+
+Leyvi Rose reported that his X86_NATIVE_CPU=y build is failing because
+our instruction decoder doesn't support SSE4A and the AMDGPU code seems
+to be generating those with his compiler of choice (CLANG+LTO).
+
+Now, our normal build flags disable SSE MMX SSE2 3DNOW AVX, but then
+CC_FLAGS_FPU re-enable SSE SSE2.
+
+Since nothing mentions SSE3 or SSE4, I'm assuming that -msse (or its
+negative) control all SSE variants -- but why then explicitly enumerate
+SSE2 ?
+
+Anyway, until the instruction decoder gets fixed, explicitly disallow
+SSE4A (an AMD specific SSE4 extension).
+
+Fixes: ea1dcca1de12 ("x86/kbuild/64: Add the CONFIG_X86_NATIVE_CPU option to locally optimize the kernel with '-march=native'")
+Signed-off-by: Peter Zijlstra (Intel) <peterz@infradead.org>
+---
+
+diff --git a/arch/x86/Makefile b/arch/x86/Makefile
+index 4db7e4bf69f5..8fbff3106c56 100644
+--- a/arch/x86/Makefile
++++ b/arch/x86/Makefile
+@@ -75,7 +75,7 @@ export BITS
+ #
+ #    https://gcc.gnu.org/bugzilla/show_bug.cgi?id=53383
+ #
+-KBUILD_CFLAGS += -mno-sse -mno-mmx -mno-sse2 -mno-3dnow -mno-avx -mno-avx2
++KBUILD_CFLAGS += -mno-sse -mno-mmx -mno-sse2 -mno-3dnow -mno-avx -mno-avx2 -mno-sse4a
+ KBUILD_RUSTFLAGS += --target=$(objtree)/scripts/target.json
+ KBUILD_RUSTFLAGS += -Ctarget-feature=-sse,-sse2,-sse3,-ssse3,-sse4.1,-sse4.2,-avx,-avx2
