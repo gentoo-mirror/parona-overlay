@@ -21,7 +21,7 @@ app-emulation/winegui 2.8.1: A user-friendly WINE manager
 app-misc/json-tui 1.4.1: A JSON terminal UI made in C++
 app-misc/parona-scripts 9999: Scripts and hooks that I use on my machines
 app-misc/readpe 0.85 0.85.1: The PE file analysis toolkit
-app-misc/spicetify-cli 2.41.0 2.42.0: Commandline tool to customize Spotify client.
+app-misc/spicetify-cli 2.41.0 2.42.0-r1: Commandline tool to customize Spotify client.
 app-text/klevernotes 9999: A note-taking and management application using markdown.
 dev-build/cargo-make 0.37.24: Rust task runner and build tool
 dev-cpp/args 6.4.7: A simple header-only C++ argument parser library
@@ -109,7 +109,7 @@ media-fonts/juliamono 0.060 0.061: JuliaMono - a monospaced font for scientific 
 media-fonts/lora 3.005: Lora fonts — serif family for text. Variable Open Source Font
 media-fonts/montserrat 9.000: Montserrat font
 media-libs/phonon-mpv 0.1.0-r1: Phonon Backend using MPV Player(libmpv)
-media-sound/spotify 1.2.63: Spotify is a social music platform
+media-sound/spotify 1.2.63 1.2.74: Spotify is a social music platform
 media-sound/transistor 9999: Internet radio player
 media-video/mpv-mpris 1.1: MPRIS plugin for mpv
 net-im/discord 0.0.112 0.0.113: All-in-one voice and text chat for gamers
